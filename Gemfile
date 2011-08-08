@@ -8,6 +8,16 @@ gem 'rails', '3.0.9'
 gem 'pg'
 gem 'jquery-rails'
 gem 'formtastic', '~> 1.2.3'
+gem 'haml'
+gem 'haml-rails'
+gem 'sass'
+gem "compass", ">= 0.11.5"
+
+# Setup coffescripts 
+#gem 'execjs'
+#gem "json" # Only needed if on Ruby 1.8 / a platform that ships without JSON
+#gem "barista"
+#gem 'json_pure'
 
 # Use unicorn as the web server
 # gem 'unicorn'
@@ -30,5 +40,7 @@ gem 'formtastic', '~> 1.2.3'
 # and rake tasks are available in development mode:
 
 group :development, :test do
- gem 'webrat'
+  gem 'hpricot'
+  gem 'ruby_parser'
+  gem 'webrat'
 end
