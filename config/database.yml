@@ -9,11 +9,13 @@
 #       Choose the win32 build.
 #       Install PostgreSQL and put its /bin directory on your path.
 development:
-  adapter: postgresql
+  adapter: mysql2
   encoding: UTF8
-  database: fd
-  username: first-developer
+  database: first_developer
+  username: root
   password: 
+  pool: 5
+  timeout: 5000
 
   # Connect on a TCP socket. Omitted by default since the client uses a
   # domain socket that doesn't need configuration. Windows does not have
