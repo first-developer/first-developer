@@ -36,22 +36,28 @@
 					  list-style:none;
 					  float:left;
 					  a {
-					    @include border-radius(2px);
-							background:none repeat scroll 0 0 #802727;
-							border:1px solid #A63434;
+					    //@include border-radius(2px);
+							//background:none repeat scroll 0 0 #802727;
+							//border:1px solid #A63434;
 							color:#FFFFFF;
 							cursor:pointer;
 							display:block;
-							font-size:10px;
+							font-size:12px;
 							height:25px;
 							line-height:27px;
 							margin:6px 5px 0 0;
-							padding:0 15px;
+							padding:0 15px 0 0;
+							text-shadow:0 1px 0 #222222;
 							text-decoration:none;
 					  	&:hover {
-					  	  @include box-shadow(0 0 7px -1px #470606 inset);
-								background-color:#742525;
+					  	  //@include box-shadow(0 0 7px -1px #470606 inset);
+								background:none;
 								color:#FFFFFF;
+								
+					  	}
+					  	&:after {
+					  	  padding-left:20px;
+					  		content: "☆";
 					  	}
 						}
 					}
