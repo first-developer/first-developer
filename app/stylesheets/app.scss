@@ -23,12 +23,14 @@
 	
 	  // ====== menu_nav_bar =========
 	  #menu_nav_bar {
-	  
-	  	.pill-content {
+	  	.tabs-content { margin: 0; display: block; }
+			.tabs-content div.row { display:none; }
+			.tabs-content div.row.active { display: block; }
+	  	.tabs-content {
 	  		background-color:#902220;
 				height:38px;
 				
-				.pill-content-list {
+				.tabs-content-list {
 				
 					li {
 					  list-style:none;
