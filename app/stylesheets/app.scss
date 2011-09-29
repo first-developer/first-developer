@@ -1,0 +1,149 @@
+
+/* Imports
+=================================== */
+	/* Compass frameworks  */
+	@import "partials/base";
+
+	/*  Colors Themes   */
+	@import "partials/colors";
+	
+	/* Bootstrap */
+	@import "lib/bootstrap";
+	
+	* {
+	
+		font-family:  "Droid Sans" !important, arial, sans-serif;
+	}
+/* App Stylesheet
+=================================== */
+
+	/*  Header > 
+	--------------------------------- */
+	#header {
+	
+	  // ====== menu_nav_bar =========
+	  #menu_nav_bar {
+	  
+	  	.pill-content {
+	  		background-color:#902220;
+				height:30px;
+	  	}
+	  }
+	
+		// ====== fd_header_content  =======		
+		#fd_user_status {
+		  .welcome_user { 
+				font-size:12px;
+				background-color:#fff;
+				border-left:1px solid #ccc;
+				border-top:1px solid #ccc;
+				border-bottom:1px solid #ccc;
+				float: right;
+		    @include border-radius(2px 0 0 2px);
+				height: 19px;
+				margin: -2px 3px 0 0;
+				padding: 5px 15px;}
+		
+			ul,li {
+				list-style:none;  
+			}
+			
+			li {
+			  position:relative;
+			  
+			  .fd_credit {
+			    display: block;
+					float: right;
+					position: absolute;
+					right: 9px;
+					top: 39px;
+					z-index: 3;
+			  }
+			}  
+			  			
+			.avatar {
+			background-color:#fff;
+			  float: right;
+				position: relative;
+				border: 1px solid #ccc;
+				padding: 2px;
+				@include box-shadow(0 0 0.6px 3px #e0e0e0);
+				img {
+				  text-align:center;
+				  background:#fff;
+					
+				}
+			}
+		}
+		// ====== fd_header_content  =======		
+		.fd_header_content { background-color: #f7f7f7;padding:0px;}	
+		
+		// ====== topbar  =======
+		.topbar {
+	
+			ul {
+			  margin:0;
+			}
+			
+			ul.nav {
+			  float:right;	
+			  height:38px;
+			  
+			  li { 
+			  
+			    a {
+			    	color:#AAAAAA;
+			      font-weight:bold;
+			      font-size: $small_font;
+			    }
+			    a:hover {
+			      color:#fff;
+			    }
+			  }
+			  
+			  li.open a {
+			  	text-shadow:0 2px 0 #000000;
+			  	color:#fff;
+			  }
+			  
+			  .menu .menu-dropdown {
+			    left:-78px;
+					top:38px;
+					opacity: 0.95;
+				
+			  	li a {
+					  font-weight:bold;
+					  font-size: 11px;
+						line-height:19px;
+						padding:5px 10px;
+						margin: 5px 0px;
+						color:#aaa;
+						text-shadow:none;
+					}
+					
+					li a:hover {
+			      color:#fff;
+			    }
+			  }
+			}
+		}
+		
+		// ====== logo  =======
+		.fd_centerBar {
+		  margin-top:70px;
+		  
+		  .fd_logo {background: url("../images/main_logo.png") no-repeat scroll 0 0 transparent;display: block;height: 65px;}
+		}
+		
+		
+	} 
+	
+	
+	/*  Content > 
+  --------------------------------- */
+	
+	
+	
+	/*  Footer >  
+	--------------------------------- */
+

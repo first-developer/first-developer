@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>First-developer</title>
+  <%= stylesheet_link_tag :all %>
+  <%= csrf_meta_tag %>
+  <%= yield :head %>
+</head>
+<body>
+
+  <div id="header" class="fd_header">
+    <div class="fd_header_content ">
+      <%= render "layouts/top_bar" %>
+      <div class="container">
+        <div class="row fd_centerBar ">
+        
+          <%# fd logo %>
+          <div class="span6">
+            <%= render "layouts/logo" %>
+          </div>
+          <%# / fd logo %>
+          
+          <%# user_status %>
+          <div class="span10">
+            <%= render "layouts/user_status" %>
+          </div>
+          <%# / user_status %>
+          
+        </div>
+      </div>
+      
+      <%# menu nav bar %>
+      <%= render "layouts/menu_nav_bar" %>
+      <%# / menu nav bar %>
+      
+    </div>
+  </div>
+

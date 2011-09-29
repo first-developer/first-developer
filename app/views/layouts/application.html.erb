@@ -1,0 +1,42 @@
+<%= render "layouts/header" %> 
+
+<div id="content" class="fd_content">
+
+    <%# fd_content_top %>
+    <div class="fd_content_top">
+      <%= yield  :fd_content_top %>
+      
+      <%# Notifications display %>
+      <div id="fd_notifications">
+        <div class="fd_user_notice">
+          <% flash.each do |key, value| %>
+            <div class="flash <%= key %>"><%= value %></div>
+          <% end %>
+        </div>
+      </div>
+      <%# / Notifications display %>    
+    </div>
+    <%# / fd_content_top %>
+    
+    <%# fd_content_left %>
+    <div class="fd_content_left">
+      <%= yield  :fd_content_left %>
+    </div>
+    <%# / fd_content_left %>
+    
+    <%# fd_content_right %>
+    <div class="fd_content_right">
+       <%= yield  :fd_content_right %>
+    </div>
+    <%# / fd_content_right %>
+    
+    <%# fd_content_bottom %>
+    <div class="fd_content_bottom">
+       <%= yield  :fd_content_bottom %>
+    </div>
+    <%# / fd_content_bottom %>
+    
+</div>
+
+<%= render "layouts/footer" %> 
+
