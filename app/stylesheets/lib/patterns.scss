@@ -608,8 +608,8 @@ input[type=submit].btn {
 				display:block;
 				float:right;
 				height:30px;
-				margin-right:-24px;
-				right:0;
+				position:relative;
+				right:-25px;
 				width:10px;
     }
       &:hover {

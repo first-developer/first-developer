@@ -26,7 +26,34 @@
 	  
 	  	.pill-content {
 	  		background-color:#902220;
-				height:30px;
+				height:38px;
+				
+				.pill-content-list {
+				
+					li {
+					  list-style:none;
+					  float:left;
+					  a {
+					    @include border-radius(2px);
+							background:none repeat scroll 0 0 #802727;
+							border:1px solid #A63434;
+							color:#FFFFFF;
+							cursor:pointer;
+							display:block;
+							font-size:10px;
+							height:25px;
+							line-height:27px;
+							margin:6px 5px 0 0;
+							padding:0 15px;
+							text-decoration:none;
+					  	&:hover {
+					  	  @include box-shadow(0 0 7px -1px #470606 inset);
+								background-color:#742525;
+								color:#FFFFFF;
+					  	}
+						}
+					}
+				}
 	  	}
 	  }
 	
