@@ -1,9 +1,9 @@
 <%= render "layouts/header" %> 
 
-<div id="content" class="fd_content">
-
+<div id="content" class="fd_content container">
+  <div class ="row">
     <%# fd_content_top %>
-    <div class="fd_content_top">
+    <div class="fd_content_top span16">
       <%= yield  :fd_content_top %>
       
       <%# Notifications display %>
@@ -17,25 +17,27 @@
       <%# / Notifications display %>    
     </div>
     <%# / fd_content_top %>
-    
+  </div>
+  <div class="row">  
     <%# fd_content_left %>
-    <div class="fd_content_left">
+    <div class="fd_content_left span10">
       <%= yield  :fd_content_left %>
     </div>
     <%# / fd_content_left %>
     
     <%# fd_content_right %>
-    <div class="fd_content_right">
+    <div class="fd_content_right span5 offset1">
        <%= yield  :fd_content_right %>
     </div>
     <%# / fd_content_right %>
-    
+  </div>
+  <div class="row">
     <%# fd_content_bottom %>
-    <div class="fd_content_bottom">
+    <div class="fd_content_bottom span16">
        <%= yield  :fd_content_bottom %>
     </div>
     <%# / fd_content_bottom %>
-    
+  </div>  
 </div>
 
 <%= render "layouts/footer" %> 

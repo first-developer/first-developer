@@ -10,9 +10,19 @@
 	/* Bootstrap */
 	@import "lib/bootstrap";
 	
+	// Default style 
+	a { 
+	  color:$fd_red;
+	  text-decoration:none;
+	  &:hover {
+	    color:$bred;  	
+      text-decoration:none;
+	  }
+	}
+	
 	* {
 	
-		font-family:  "Droid Sans" !important, arial, sans-serif;
+		font-family: $basic_fonts;
 	}
 /* App Stylesheet
 =================================== */
@@ -28,7 +38,7 @@
 			.tabs-content div.row.active { display: block; }
 	  	.tabs-content {
 	  		background-color:#902220;
-				height:38px;
+				height:35px;
 				
 				.tabs-content-list {
 				
@@ -44,7 +54,7 @@
 							display:block;
 							font-size:12px;
 							height:25px;
-							line-height:27px;
+							line-height:23px;
 							margin:6px 5px 0 0;
 							padding:0 15px 0 0;
 							text-shadow:0 1px 0 #222222;
@@ -176,7 +186,79 @@
 	
 	/*  Content > 
   --------------------------------- */
+  #content {
+  	margin-top:20px;
+  }
+  
+	.fd_tuts {
+	  list-style:none;
+	  margin:0;
+	  padding:0;
+	  li {
+	    border-bottom:1px dashed #E3E3E3;
+			padding:20px 0 15px;
+	  }
+	}
 	
+	.fd_tut {
+	
+		.fd_tut_header {
+		  height:115px;
+		  .fd_tut_image {
+		    position:relative;
+		    margin:0;
+		    a { 
+		      background-color:$lyellow;
+		      @include box-shadow(0 0 0 3px #FFFFFF inset);
+					border:1px solid #CCCCCC;
+					display:block;
+					height:100px;
+					padding:5px;
+					text-decoration:none;
+					width:150px;
+					
+					
+		    }
+		    .fd_tut_info_mark {
+					bottom:35px;
+					float:left;
+					left:5px;
+					position:relative;
+					.large-bande {
+					  padding: 0 10px 0 5px;
+					}
+					.large-corner-right {
+						margin:0 0 0 0;
+				    width:16px;
+					}
+		
+				}
+				.fd_tut_info_time {
+					bottom:30px;
+					float:right;
+					right:5px;
+					position:relative;	
+					.small-bande {
+					  padding-left:0;	
+					  padding-right:10px;						
+					}	
+				}
+		  }
+		  
+		}
+		.fd_tut_content {
+		  .fd_tut_title {
+				a {
+				  text-shadow:0 1px 0 #222222;
+				}
+			}
+			.fd_tut_subtitle {
+	
+		
+			}
+			
+		}
+	}
 	
 	
 	/*  Footer >  

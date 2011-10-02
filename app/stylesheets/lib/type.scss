@@ -167,7 +167,7 @@ address {
 // Inline and block code styles
 code, pre {
   padding: 0 3px 2px;
-  font-family: Monaco, Andale Mono, Courier New, monospace;
+  font-family: $code_fonts;
   font-size: 12px;
   @include border-radius(3px);
 }

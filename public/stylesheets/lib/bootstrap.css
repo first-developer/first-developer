@@ -1,11 +1,11 @@
 /*
 Syntax error: Undefined variable: "$fd_red".
         on line 156 of /home/first-developer/Sites/first-developer/app/stylesheets/lib/type.scss
-        from line 23 of /home/first-developer/Sites/first-developer/app/stylesheets/lib/bootstrap.scss
+        from line 24 of /home/first-developer/Sites/first-developer/app/stylesheets/lib/bootstrap.scss
 
 Backtrace:
 /home/first-developer/Sites/first-developer/app/stylesheets/lib/type.scss:156
-/home/first-developer/Sites/first-developer/app/stylesheets/lib/bootstrap.scss:23
+/home/first-developer/Sites/first-developer/app/stylesheets/lib/bootstrap.scss:24
 /usr/local/lib/ruby/gems/1.9.1/gems/sass-3.1.7/lib/sass/script/variable.rb:50:in `_perform'
 /usr/local/lib/ruby/gems/1.9.1/gems/sass-3.1.7/lib/sass/script/node.rb:40:in `perform'
 /usr/local/lib/ruby/gems/1.9.1/gems/sass-3.1.7/lib/sass/tree/visitors/perform.rb:215:in `visit_prop'
@@ -88,4 +88,4 @@ Backtrace:
 body:before {
   white-space: pre;
   font-family: monospace;
-  content: "Syntax error: Undefined variable: \"$fd_red\".\A         on line 156 of /home/first-developer/Sites/first-developer/app/stylesheets/lib/type.scss\A         from line 23 of /home/first-developer/Sites/first-developer/app/stylesheets/lib/bootstrap.scss"; }
+  content: "Syntax error: Undefined variable: \"$fd_red\".\A         on line 156 of /home/first-developer/Sites/first-developer/app/stylesheets/lib/type.scss\A         from line 24 of /home/first-developer/Sites/first-developer/app/stylesheets/lib/bootstrap.scss"; }

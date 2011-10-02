@@ -1,21 +1,10 @@
-<h1>Listing tuts</h1>
+<% content_for :fd_content_left do %>
 
-<table>
-  <tr>
-    <th></th>
-    <th></th>
-    <th></th>
-  </tr>
+<ul class="fd_tuts">
+  <% 10.times do %>
+    <%= render "tuts/tut_li" %>
+  <% end %>
+</ul>
 
-<% @tuts.each do |tut| %>
-  <tr>
-    <td><%= link_to 'Show', tut %></td>
-    <td><%= link_to 'Edit', edit_tut_path(tut) %></td>
-    <td><%= link_to 'Destroy', tut, :confirm => 'Are you sure?', :method => :delete %></td>
-  </tr>
+
 <% end %>
-</table>
-
-<br />
-
-<%= link_to 'New Tut', new_tut_path %>

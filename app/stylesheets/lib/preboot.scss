@@ -6,10 +6,14 @@
 // VARIABLES
 // ---------
 
+// Font-family 
+
+$code_fonts:				Monaco, Andale Mono, Courier New, monospace;
+
 // Font-sizes
 $small_font:				10px;
 $medium_font:				14px;
-$large_fon:t				16px;
+$large_font:				16px;
 
 // Links
 $linkColor:         #0069d6;
@@ -60,6 +64,11 @@ $analog2:           adjust-hue($baseColor, -22);
 
 // MIXINS
 // ------
+// reset link behavior
+@mixin reset_link {
+  text-decoration:none;
+}
+
 
 // Gradients
 @mixin horizontal-gradient ($startColor: #555, $endColor: #333) {

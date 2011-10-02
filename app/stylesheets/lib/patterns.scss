@@ -2,6 +2,11 @@
  * Repeatable UI elements outside the base styles provided from the scaffolding
  * ---------------------------------------------------------------------------- */
 
+// Tools 
+// ------------
+
+
+
 
 // corners
 // ---------
@@ -13,6 +18,12 @@
 	float: left;
 	margin: 0 0 0 -15px;
 	width: 20px;
+}
+.small2-corner-size {
+  @extend .large-corner-size;
+	height: 25px;
+	margin:0;
+	
 }
 
 .small-corner-size {
@@ -34,6 +45,16 @@
 	float: left;
 	font-size: 22px;
 	font-style: italic;
+}
+
+.small-bande-size {
+	@extend .large-bande-size;
+	font-size:14px;
+	font-style:italic;
+	font-weight:bold;
+	height:25px;
+	line-height:26px;
+	padding:0 5px;
 }
 
 
@@ -82,6 +103,56 @@
 	@extend .large-corner-size;
 } 
 
+// small one
+// ---------------
+
+.red.small-corner-left {
+	background:  url(../images/fd-ui-icons.png) -66px -36px no-repeat;
+	@extend .small2-corner-size;
+}
+
+.bleu.small-corner-left {
+	background: url(../images/fd-ui-icons.png) -66px -0.9px no-repeat;
+	@extend .small2-corner-size;
+}
+
+.black.small-corner-left {
+	background: url(../images/fd-ui-icons.png) -66px -72px no-repeat;
+	@extend .small2-corner-size;
+}
+
+.yellow.small-corner-left {
+	background: url(../images/fd-ui-icons.png) -52px -108px no-repeat;
+	@extend .small2-corner-size;
+}
+
+// right corners
+.small-corner-right {
+	background: url(../images/fd-ui-icons.png) -52px -36px no-repeat;
+	@extend .small2-corner-size;
+}
+.red.small-corner-right {
+	background: url(../images/fd-ui-icons.png) -52px -36px no-repeat;
+	@extend .small2-corner-size;
+}
+
+.bleu.small-corner-right {
+	background: url(../images/fd-ui-icons.png) -52px -0.9px no-repeat;
+	@extend .large-corner-size;
+}
+
+.black.small-corner-right {
+	background: url(../images/fd-ui-icons.png) -52px -72px no-repeat;
+	@extend .small2-corner-size;
+}
+
+.yellow.small-corner-right {
+	background: url(../images/fd-ui-icons.png) -52px -108px no-repeat;
+	@extend .small2-corner-size;
+} 
+
+
+
 // large bande different color 
 // --------------------------------
 
@@ -103,6 +174,29 @@
 .black.large-bande {
 	background-color: $mblack;
 	@extend .large-bande-size;
+}
+
+// small bande different color 
+// --------------------------------
+
+.blue.small-bande {
+	background-color: $fd_bleu;
+	@extend .small-bande-size;
+}
+
+.red.small-bande {
+	background-color: $fd_red;
+	@extend .small-bande-size;
+}
+
+.yellow.small-bande {
+	background-color: $fd_yellow;
+	@extend .small-bande-size;
+}
+
+.black.small-bande {
+	background-color: $mblack;
+	@extend .small-bande-size;
 }
 
 // Small corner all directions  
