@@ -995,3 +995,65 @@ input[type=submit].btn {
     }
   }
 }
+
+
+
+// PATTERN ANIMATIONS
+// ------------------
+
+.fade {
+  @include transition(opacity .15s linear);
+  opacity: 0;
+  &.in {
+    opacity: 1;
+  }
+}
+
+// LABELS
+// ------
+
+.label {
+  padding: 3px 4px 2px 3px;
+  background-color: $grayLight;
+  font-size: 10px;
+  font-weight: bold;
+  margin:0 2px;
+  color: $white;
+  text-transform: uppercase;
+  border-bottom:1px solid #666;
+  @include border-radius(2px);
+  &.important { background-color: $fd_red; }
+  &.warning { background-color: $myellow;}
+  &.success { background-color: $green; }
+  &.notice { background-color: $fd_bleu }
+  &.hard { background-color: $mblack; }
+  &.lowercase { text-transform:none;}
+}
+
+
+// MEDIA GRIDS
+// -----------
+
+.media-grid {
+  margin-left: -20px;
+  margin-bottom: 0;
+  @include clearfix();
+  li {
+    display: inline;
+  }
+  a {
+    float: left;
+    padding: 4px;
+    margin: 0 0 20px 20px;
+    border: 1px solid #ddd;
+    @include border-radius(4px);
+    @include box-shadow(0 1px 1px rgba(0,0,0,.075));
+    img {
+      display: block;
+    }
+    &:hover {
+      border-color: $linkColor;
+      @include box-shadow(0 1px 4px rgba(0,105,214,.25));
+    }
+  }
+}
