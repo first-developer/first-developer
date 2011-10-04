@@ -203,6 +203,24 @@
 	
 	.fd_tut {
 	 	
+	 	&:hover  {
+	 	  .fd_tut_go {
+		 	  cursor:pointer;
+		 	  background:url("../images/fd-ui-icons.png") no-repeat scroll 0 -159px transparent;
+				display:block;
+				height:120px;
+				position:absolute;
+				right:0;
+				top:0;
+				width:29px;
+				z-index:2;
+			
+				&:hover {
+					background:url("../images/fd-ui-icons.png") no-repeat scroll -33px -159px transparent;
+				}
+			}
+	 	}
+	 	position:relative;
 	 	margin-left:-22px;
 		.fd_tut_header {
 		  height:115px;
