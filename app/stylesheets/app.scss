@@ -205,18 +205,20 @@
 	 	
 	 	&:hover  {
 	 	  .fd_tut_go {
-		 	  cursor:pointer;
-		 	  background:url("../images/fd-ui-icons.png") no-repeat scroll 0 -159px transparent;
+		 	  background-image:url("../images/fd-ui-icons.png");
+		 	  background-repeat: no-repeat;
+		 	  background-position: -96px -158px;
+				bottom:0;
+				cursor:pointer;
 				display:block;
-				height:120px;
+				height:50px;
 				position:absolute;
 				right:0;
-				top:0;
 				width:29px;
 				z-index:2;
 			
 				&:hover {
-					background:url("../images/fd-ui-icons.png") no-repeat scroll -33px -159px transparent;
+					//background:url("../images/fd-ui-icons.png") no-repeat scroll -96px -158px transparent;
 				}
 			}
 	 	}
