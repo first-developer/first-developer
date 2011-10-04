@@ -9,7 +9,7 @@ $(function() {
     //Animate .fd_tut_go btn 
     $(".fd_tut_go").bind({
       mouseover: function(){
-        $(this).animate({backgroundPosition: "-65px -158px"}, 100);
+        $(this).animate({backgroundPosition: "-65px -158px"}, 150);
       },
       mouseout:function(){
          $(this).animate({backgroundPosition: "-96px -158px"}, 100);
