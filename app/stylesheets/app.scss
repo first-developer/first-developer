@@ -275,8 +275,18 @@
 				}
 			}
 			.fd_tut_subtitle {
-				text-transform:lowercase;
-		
+				margin:10px 0;
+				display:block;
+		    .fd_tut_date {
+		    	text-transform:lowercase;
+		    	margin:0 20px;
+		    	font-size:12px;
+		    	font-style:italic;
+		    	&:before {
+		    	  padding-right:15px;
+		    		content: "☆";
+		    	}
+		    }
 			}
 			
 		}
