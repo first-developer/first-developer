@@ -229,6 +229,7 @@
 		  .fd_tut_image {
 		    position:relative;
 		    margin:0;
+		    height:100px;
 		    a { 
 		      background-color:$lyellow;
 		      @include box-shadow(0 0 0 3px #FFFFFF inset);
@@ -246,9 +247,8 @@
 					height:32px;
 					left:5px;
 					position:absolute;
-					top:20px;
+					margin-top:5px;
 					width:68px;
-		    	
 		    }
 		    
 		    .fd_tut_info_mark {
