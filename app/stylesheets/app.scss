@@ -227,7 +227,7 @@
 		.fd_tut_header {
 		  height:115px;
 		  .fd_tut_image {
-		    position:relative;
+		    //position:relative;
 		    margin:0;
 		    height:100px;
 		    a { 
@@ -244,10 +244,10 @@
 		    }
 		    .fd_tut_info_done {
 		      background:url("../images/fd-ui-icons.png") no-repeat scroll -203px 0 transparent;
-					height:32px;
-					left:5px;
+					height:32px;					
+					margin:5px 0 0;
 					position:absolute;
-					margin-top:5px;
+					left:25px;
 					width:68px;
 		    }
 		    

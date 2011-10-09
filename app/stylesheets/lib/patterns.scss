@@ -712,7 +712,7 @@ input[type=submit].btn {
         background-color: $fd_red;
         
         .corner {
-     		background:url("../images/fd-ui-icons.png") no-repeat scroll -178px 0 transparent;
+     			background:url("../images/fd-ui-icons.png") no-repeat scroll -178px 0 transparent;
      		}
       }
       
@@ -1036,6 +1036,44 @@ input[type=submit].btn {
 .beginner { border-left:2px solid $grey;}
 .intermediate { border-left:2px solid $fd_bleu;}
 .advanced { border-left:2px solid $fd_orange;}
+
+
+// PAGINATION
+// ------------
+
+.fd_pgb {
+	border-bottom:1px solid #DDDDDD;
+	height:33px;
+	.fd_pgb_content {
+	  list-style:none;
+	  margin:0;
+		li {
+			list-style:none;
+			float:left;
+			margin-right:2px;
+			.fd_pgb_left {
+			  height:32px;
+			  width:48px;  //-65px
+			  display:block;
+			  cursor:pointer;
+			  &.disabled {	background:url("../images/fd-ui-icons.png") no-repeat scroll -309px 0 transparent; cursor:default;}  // -298px
+			  &.enabled {	background:url("../images/fd-ui-icons.png") no-repeat scroll -374px 0 transparent;}  //-363px
+				
+			}
+		  .fd_pgb_right {
+				cursor:pointer;
+				display:block;
+				height:27px;
+				margin-top:5px;
+				width:55px;
+				&.disabled {	background:url("../images/fd-ui-icons.png") no-repeat scroll -629px -5px transparent; cursor:default;}
+			  &.enabled {	background:url("../images/fd-ui-icons.png") no-repeat scroll -564px -5px transparent;}
+				
+		  }
+		  	
+		}
+	}
+}
 
 
 // MEDIA GRIDS

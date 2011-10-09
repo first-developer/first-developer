@@ -180,3 +180,26 @@
 
 	};
 })(jQuery);
+
+  
+(function($) {
+  // ==================================================
+  //  Extend Jquery with plugins 
+  // ==================================================
+  
+  // SlideBackground: to slide the background image of an element
+  // -------------------------------------------------------------
+  $.fn.slideBackground = function(defaultPos,slidePos, start_duration, end_duration) {
+    start_duration=  start_duration || 150;
+    end_duration=  end_duration || 100;
+    
+    $(this).bind({
+      mouseover: function(){
+      $(this).animate({backgroundPosition: slidePos}, start_duration);
+      },
+      mouseout:function(){
+         $(this).animate({backgroundPosition: defaultPos}, end_duration);
+      } 
+    });
+  }
+})(jQuery);
