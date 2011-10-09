@@ -192,8 +192,8 @@
   $.fn.slideBackground = function(defaultPos,slidePos, start_duration, end_duration) {
     start_duration=  start_duration || 150;
     end_duration=  end_duration || 100;
-    
-    $(this).bind({
+    var elt =$(this);
+    elt.bind({
       mouseover: function(){
       $(this).animate({backgroundPosition: slidePos}, start_duration);
       },

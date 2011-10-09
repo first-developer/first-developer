@@ -1,21 +1,21 @@
 /*
 Syntax error: Undefined variable: "$fd_bleu".
-        on line 160 of /home/first-developer/Sites/first-developer/app/stylesheets/lib/patterns.scss
+        on line 162 of /home/first-developer/Sites/first-developer/app/stylesheets/lib/patterns.scss
 
-155: 
-156: // large bande different color 
-157: // --------------------------------
-158: 
-159: .blue.large-bande {
-160: 	background-color: $fd_bleu;
-161: 	@extend .large-bande-size;
-162: }
-163: 
-164: .red.large-bande {
-165: 	background-color: $fd_red;
+157: 
+158: // large bande different color 
+159: // --------------------------------
+160: 
+161: .blue.large-bande {
+162: 	background-color: $fd_bleu;
+163: 	@extend .large-bande-size;
+164: }
+165: 
+166: .red.large-bande {
+167: 	background-color: $fd_red;
 
 Backtrace:
-/home/first-developer/Sites/first-developer/app/stylesheets/lib/patterns.scss:160
+/home/first-developer/Sites/first-developer/app/stylesheets/lib/patterns.scss:162
 /usr/local/lib/ruby/gems/1.9.1/gems/sass-3.1.7/lib/sass/script/variable.rb:50:in `_perform'
 /usr/local/lib/ruby/gems/1.9.1/gems/sass-3.1.7/lib/sass/script/node.rb:40:in `perform'
 /usr/local/lib/ruby/gems/1.9.1/gems/sass-3.1.7/lib/sass/tree/visitors/perform.rb:215:in `visit_prop'
@@ -93,4 +93,4 @@ Backtrace:
 body:before {
   white-space: pre;
   font-family: monospace;
-  content: "Syntax error: Undefined variable: \"$fd_bleu\".\A         on line 160 of /home/first-developer/Sites/first-developer/app/stylesheets/lib/patterns.scss\A \A 155: \A 156: // large bande different color \A 157: // --------------------------------\A 158: \A 159: .blue.large-bande {\A 160: 	background-color: $fd_bleu;\A 161: 	@extend .large-bande-size;\A 162: }\A 163: \A 164: .red.large-bande {\A 165: 	background-color: $fd_red;"; }
+  content: "Syntax error: Undefined variable: \"$fd_bleu\".\A         on line 162 of /home/first-developer/Sites/first-developer/app/stylesheets/lib/patterns.scss\A \A 157: \A 158: // large bande different color \A 159: // --------------------------------\A 160: \A 161: .blue.large-bande {\A 162: 	background-color: $fd_bleu;\A 163: 	@extend .large-bande-size;\A 164: }\A 165: \A 166: .red.large-bande {\A 167: 	background-color: $fd_red;"; }
