@@ -104,6 +104,7 @@
 					right: 9px;
 					top: 39px;
 					z-index: 3;
+					padding:0 0 0 15px;
 			  }
 			}  
 			  			
@@ -244,7 +245,7 @@
 		    }
 		    .fd_tut_info_done {
 		      background:url("../images/fd-ui-icons.png") no-repeat scroll -203px 0 transparent;
-					height:32px;					
+					height:25px;					
 					margin:5px 0 0;
 					position:absolute;
 					left:25px;
@@ -268,7 +269,7 @@
 				.fd_tut_info_time {
 					bottom:30px;
 					float:right;
-					right:5px;
+					right:3px;
 					position:relative;	
 					.small-bande {
 					  padding-left:0;	
