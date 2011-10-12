@@ -1175,3 +1175,116 @@ input[type=submit].btn {
     }
   }
 }
+
+
+
+
+
+// ACTION BOX
+// -----------
+
+
+.fd_admin_action {
+//	background: url("../images/upDown.jpg") no-repeat scroll center -66px #FFFFFF;
+	background:url("../images/fd-ui-icons.png") no-repeat scroll -209px -68px #FFFFFF;
+  //border: 1px solid #CCCCCC;
+  //border-radius: 1px 1px 1px 1px;
+  cursor: pointer;
+  display: block;
+  float: right;
+  font-size: 12px;
+  font-weight: bold;
+  height: 15px;
+  padding: 5px;
+  position: relative;
+  right: 2px;
+  text-align: center;
+  top: 0px;
+  width: 12px;
+ 
+ 	&:hover {
+ 		background:url("../images/fd-ui-icons.png") no-repeat scroll -209px -101px #FFFFFF;
+ 	}
+}
+.fd_admin_action_hover {
+	background:url("../images/fd-ui-icons.png") no-repeat scroll -209px -101px #FFFFFF;
+}
+
+.fd_admin_action .fd_admin_action_content {
+	background: url("../images/upDown.jpg") no-repeat scroll center 4px #fff;
+    display: none;
+    left: -9px;
+    margin-top: 26px;
+    padding: 14px 0 0;
+    position: absolute;
+    top: 0;
+     z-index:3;
+}
+
+.fd_admin_action ul{
+    background:none repeat scroll 0 0 #FFFFFF;
+		border:1px solid #CCCCCC;
+		display:block;
+		list-style:none outside none;
+		margin:0;
+		padding:4px 3px 1px 4px;
+    
+    li {
+    	padding:0;
+			border-bottom:none;
+    }
+}
+
+/*.fd_admin_action:hover ul{
+	background: none repeat scroll 0 0 #FFFFFF;
+    border: 1px solid #CCCCCC;
+    border-radius: 2px 2px 2px 2px;
+    box-shadow: 6px 6px 0 -2px #C0C0C0;
+    display: block;
+    padding: 5px;
+}*/
+
+.fd_admin_action_item_size {
+	height: 30px;
+	width: 30px;
+	margin:0 0 3px;
+}
+
+.fd_admin_action li{
+	margin-bottom: 2px;
+	list-style:none;
+	
+}
+.fd_admin_action .fd_edit_action {
+	background: url("../images/ui_fd.png") no-repeat scroll 0 0 transparent;
+	@extend .fd_admin_action_item_size;
+}
+.fd_admin_action .fd_delete_action {
+	background: url("../images/ui_fd.png") no-repeat  0px -30px transparent;
+	@extend .fd_admin_action_item_size;
+}
+.fd_admin_action .fd_lock_action {
+	background: url("../images/ui_fd.png") no-repeat  0px -90px transparent;
+	@extend .fd_admin_action_item_size;
+}
+.fd_admin_action .fd_add_action {
+	background: url("../images/ui_fd.png") no-repeat scroll 0 -57px transparent;
+	@extend .fd_admin_action_item_size;
+}
+.fd_admin_action .fd_edit_action:hover {
+	background: url("../images/ui_fd.png") no-repeat scroll right 0 transparent;
+	@extend .fd_admin_action_item_size;
+}
+.fd_admin_action .fd_delete_action:hover {
+	background: url("../images/ui_fd.png") no-repeat scroll right -30px transparent;
+	@extend .fd_admin_action_item_size;
+}
+.fd_admin_action .fd_lock_action:hover {
+	background: url("../images/ui_fd.png") no-repeat scroll right -90px transparent;
+	@extend .fd_admin_action_item_size;
+}
+.fd_admin_action .fd_add_action:hover {
+	background: url("../images/ui_fd.png") no-repeat scroll right -57px transparent;
+	@extend .fd_admin_action_item_size;
+}
+

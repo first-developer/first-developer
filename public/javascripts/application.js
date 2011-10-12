@@ -20,19 +20,32 @@ $(function() {
     $(".fd_pgb .fd_pgb_content .fd_pgb_right.enabled").slideBackground("-564px -5px", "-501px -5px", 200, 150 );
     
   
-    
-//$("#jpId").jPlayer( {
-//  ready: function() {
-//    $(this).jPlayer( "setMedia", {
-//      mp3: "../songs/sound1.mp3"
-//    });
-//  },
-//  loop: true,
-//  swfPath: "/javascripts"
-//}).jPlayer("play");
+    // Handle displaying of admin box
+	  // ---------------------------------
+	  $(this).click(function() {	
+	    $(".fd_admin_action")
+	      .removeClass('fd_admin_action_hover') 
+	      .find(".fd_admin_action_content").hide();
+	  });	
+	
+	  //$(".fd_admin_action ul").hide();
+	
+	  $(".fd_admin_action").bind("click",function(e) {
+	    e.stopPropagation();
+	    // Hide other action box
+	    if ($(this).hasClass('fd_admin_action_hover')) {
+	      $(this).find(".fd_admin_action_content").hide();
+	      $(this).removeClass('fd_admin_action_hover'); 
+	    }	
+	    else {
+	      $(".fd_admin_action")
+	        .removeClass('fd_admin_action_hover') 
+	        .find(".fd_admin_action_content").hide();
+	      $(this).addClass('fd_admin_action_hover');
+	      $(this).find(".fd_admin_action_content").show(); 
+	    }  	  
+	  });
 
-//    
-    
 
 
     
