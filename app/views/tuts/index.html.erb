@@ -1,10 +1,11 @@
 <% content_for :fd_content_left do %>
+  <%= render "shared/pagination_bar" %>
+  
+  <ul class="fd_tuts">
+    <%= render "tuts/tut_display" %>
+  </ul>
+<% end %>
 
-<%= render "shared/pagination_bar" %>
-
-<ul class="fd_tuts">
-  <%= render "tuts/tut_li" %>
-</ul>
-
-
+<% content_for :fd_content_right do %>
+  <%= render "layouts/sidebar" %>
 <% end %>

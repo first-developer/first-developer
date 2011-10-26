@@ -325,3 +325,61 @@ $.sound = {
   }
   
 })(jQuery);
+
+
+/**
+ * @author first-developer
+ */
+/*
+ * 		MENU ACCORDEON
+ */
+$(function(){
+//CELUI PERMETTANT D'AFFICHER LES TUTORIELS
+
+// Initialisation des parametres next("div")
+$(".accordeon .open").next("div").hide();
+var b = true;
+				
+/*//Animation(opacité) du header
+header.fadeTo("fast", 0.5);
+header.mouseover(function() {
+	header.fadeTo("normal", 0.99);
+});
+header.mouseout(function() {
+	header.fadeTo("normal", 0.5);
+});
+*/
+
+// Initialisation du menu accordeon
+$(".accordeon .open").click(function(){
+	if (b) {
+		b = false;
+		$(this).css({backgroundPosition:"top left"});
+		$(this).next("div").fadeIn('slow');
+	}
+	else {
+		b=true;
+		$(this).css({backgroundPosition:"top right"});
+		$(this).next("div").fadeOut('medium');
+	}
+});
+
+//CELUI RESERVER AUX BOUTONS +/- DE LA SIDEBAR
+var tb = true;
+
+// Initialisation du menu accordeon
+$(".sidebar div.ctSidebar .ctSidebarElem .toggleNextContent").click(function(){
+	if (tb) {
+		tb = false;
+		$(this).css({backgroundPosition:"top left"});
+		$(this).next('div').slideUp('slow');
+	}
+	else {
+		tb=true;
+		$(this).css({backgroundPosition:"bottom left"});
+		$(this).next('div').slideDown('slow');
+	}
+	
+});
+});
+

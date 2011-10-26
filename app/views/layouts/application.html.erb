@@ -8,6 +8,7 @@
       
       <%# Notifications display %>
       <div id="fd_notifications">
+      	<%= render "shared/flash_message" %>
         <div class="fd_user_notice">
           <% flash.each do |key, value| %>
             <div class="flash <%= key %>"><%= value %></div>
@@ -39,6 +40,6 @@
     <%# / fd_content_bottom %>
   </div>  
 </div>
-
+<%= render "shared/loader" %>
 <%= render "layouts/footer" %> 
 

@@ -1,0 +1,47 @@
+<% date = Time.now.strftime("le %m %B %Y  à  %I:%M")  %>
+
+<li>
+  <section class="fd_tut_show row intermediate">
+    <%= render "shared/actions_box" %>
+    <div class="fd_tut_header span11">
+      <span class="fd_tut_image">
+        <span class="fd_tut_info_mark">
+          <span class="red large-bande">+50</span>
+          <span class="red large-corner-right"></span>
+        </span>
+        <span class="fd_tut_info_title">
+          <hgroup>
+            <h3 class="">GOOGLE Gmail</h3>
+            <h7 class="fd_tut_subtitle"><span class="label notice">Mobile</span><span class="label hard lowercase"> iOS</span><span class="fd_tut_date"><%= date   %></span></h7>
+          </hgroup>
+        </span>
+      </span>
+      
+    </div>
+    <div class="fd_tut_content span11">
+      <div class="fd_tut_video">
+        <iframe 
+          width="640" 
+          height="404" 
+          src="http://www.youtube.com/embed/9ha5ujHnYXg" 
+          frameborder="0" allowfullscreen>
+        </iframe>
+      </div>
+    </div>
+    <span class="fd_tut_go"></span>
+  </section>
+  <span class="clear"></span>
+  <section>
+    <ul class="fd_section open">
+      <li class="fd_section_title no-padding <%= cycle('black', 'blue', 'red') %> ">
+      <h3><%= "informations".capitalize %><span class="no-expendable"></span></h3>
+    </li>
+    <li class="fd_section_subtitle accordeon_item divider">
+      <h4><%= "auteur".capitalize %></h4>
+    </li>
+    <li class="accordeon_item"></li>
+    <li class="accordeon_item"></li>
+  </ul>
+
+  </section>
+</li>

@@ -1,0 +1,15 @@
+
+<div class="fd_sidebar">
+  <% 3.times do %>
+  <ul class="fd_section accordeon open">
+    <li class="fd_section_title <%= cycle('black', 'blue', 'red') %> ">
+      <h3><%= "informations".capitalize %><span class="no-expendable"></span></h3>
+    </li>
+    <li class="fd_section_subtitle accordeon_item divider">
+      <h4><%= "auteur".capitalize %></h4>
+    </li>
+    <li class="accordeon_item"></li>
+    <li class="accordeon_item"></li>
+  </ul>
+  <% end %>
+</div>

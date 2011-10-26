@@ -8,8 +8,6 @@ gem 'rails', '3.0.9'
 gem 'mysql2', '0.2.6'
 gem 'jquery-rails'
 gem 'formtastic', '~> 1.2.3'
-gem 'haml'
-gem 'haml-rails'
 gem 'sass'
 gem "compass", ">= 0.11.5"
 

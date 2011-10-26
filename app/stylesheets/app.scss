@@ -6,13 +6,13 @@
 
 	/*  Colors Themes   */
 	@import "partials/colors";
-	
+
 	/* Bootstrap */
 	@import "lib/bootstrap";
 	
 	// Default style 
 	a { 
-	  color:$fd_red;
+color:$fd_red;
 	  text-decoration:none;
 	  &:hover {
 	    color:$bred;  	
@@ -180,6 +180,10 @@
 		  margin-top:70px;
 		  
 		  .fd_logo {background: url("../images/main_logo.png") no-repeat scroll 0 0 transparent;display: block;height: 65px;}
+      #fd_user_status {
+        margin:0;
+        min-height: 90px;
+      }
 		}
 		
 		
@@ -192,6 +196,16 @@
   	margin-top:20px;
   }
   
+  
+  // SIDEBAR
+  // ------------
+  .fd_sidebar {
+  	margin:7px 0 0 10px;
+  }
+  
+  //  FD_TUTS
+  // -------------
+  
 	.fd_tuts {
 	  list-style:none;
 	  margin:0;
@@ -201,7 +215,8 @@
 			padding:20px 0 15px;
 	  }
 	}
-	
+
+
 	.fd_tut {
 	 	
 	 	&:hover  {
@@ -301,7 +316,44 @@
 			}
 			
 		}
-	}
+  }
+
+  .fd_tut_show {
+    @extend .fd_tut;  
+    li { padding:0;}
+    .fd_tut_header {
+      height:80px;
+      .fd_tut_image {
+        background:none;
+        .fd_tut_info_mark {
+          top:0; 
+        }
+        .fd_tut_info_title {
+          h3 {
+            background: none repeat scroll 0 0 transparent;
+            border-bottom: 4px solid #EEEEEE;
+            margin: 0 0 5px;
+            padding: 0 0 0 80px;
+            text-shadow: 0 1px 0 #000000;
+          }
+          h7 {
+				    margin:10px 0;
+				    display:block;
+		        .fd_tut_date {
+		        	text-transform:lowercase;
+		        	margin:0 20px;
+		        	font-size:12px;
+		        	font-style:italic;
+		        	&:before {
+		        	  padding-right:15px;
+		        		content: "☆";
+		        	}
+            }
+          }
+        }
+      }
+    }
+  } 
 	
 	
 	/*  Footer >  

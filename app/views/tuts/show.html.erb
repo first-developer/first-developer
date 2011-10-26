@@ -1,5 +1,14 @@
-<p id="notice"><%= notice %></p>
+
+<% content_for :fd_content_left do %>
+  <%= render "shared/pagination_bar" %>
+  
+  <ul class="fd_tuts">
+    <%= render "tuts/tut_display" %>
+  </ul>
+<% end %>
+
+<% content_for :fd_content_right do %>
+  <%= render "layouts/sidebar" %>
+<% end %>
 
 
-<%= link_to 'Edit', edit_tut_path(@tut) %> |
-<%= link_to 'Back', tuts_path %>

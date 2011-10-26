@@ -10,7 +10,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20110725234741) do
+ActiveRecord::Schema.define(:version => 20110925123201) do
 
   create_table "categories", :force => true do |t|
     t.string   "name"
@@ -20,15 +20,8 @@ ActiveRecord::Schema.define(:version => 20110725234741) do
   end
 
   create_table "tuts", :force => true do |t|
-    t.string   "title"
-    t.text     "description"
-    t.integer  "duration"
-    t.integer  "category_id"
-    t.string   "slug"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
-
-  add_index "tuts", ["id", "slug"], :name => "index_tuts_on_id_and_slug"
 
 end
