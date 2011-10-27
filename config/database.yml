@@ -13,7 +13,7 @@ development:
   encoding: UTF8
   database: first_developer
   username: root
-  password: fd 
+  password:  
   pool: 5
   timeout: 5000
 

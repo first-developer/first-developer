@@ -2,13 +2,21 @@
  * Repeatable UI elements outside the base styles provided from the scaffolding
  * ---------------------------------------------------------------------------- */
 
-// Alerts
+// Utils
 // ------------
 
 .no-padding {
   padding:0 !important;
 }
 
+.divider {
+	background: none repeat scroll 0 0 #DDDDDD;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  display: block;
+  height: 0;
+  margin: 10px 0;
+  overflow: hidden;
+}
 
 // corners
 // ---------
@@ -928,24 +936,39 @@ input[type=submit].btn {
 
 .fd_section {
 	list-style:none;
-	margin:0;
+	margin:0 0 20px 0;
 	.section-title-size {
 			padding:0 2px 0 10px;
 			height:27px;
 			line-height:30px;
 	}
 	
-	.fd_section_subtitle {
-		@extend .section-title-size; 
-		h4 { font-size: $basefont;	 }
-	}
-	
 	.fd_section_title {
 	
 		font-weight:bold;
-		margin-top:5px;
-		height:27px;
-		
+		margin:5px 0 10px;
+	  font-size: $basefont;
+	  color:$bblack;
+		@extend .section-title-size;
+		background-color: $lgrey;
+		position:relative;
+		.expendable-size {height:27px;position:absolute;right:-14px;top:0;width:60px;}
+		.no-expandable {
+			background: url(../images/fd-ui-icons.png) no-repeat scroll -310px -111px transparent;
+			@extend .expendable-size;
+ 		}
+ 		.expandable {
+			background: url(../images/fd-ui-icons.png) no-repeat scroll -310px -138px transparent;
+			@extend .expendable-size;
+			curso:pointer;
+ 		}
+ 		
+ 		.minimize {
+			background: url(../images/fd-ui-icons.png) no-repeat scroll -310px -166px transparent;
+			@extend .expendable-size;
+			curso:pointer;
+ 		}
+	
 	 	&.red { border-bottom:2px solid $fd_lred;}
 	 	&.black { border-bottom:2px solid $fd_black;}
 	 	&.blue {border-bottom:2px solid $fd_bleu;}
@@ -953,31 +976,21 @@ input[type=submit].btn {
 	 	
 	 	
 		
-		h3 {
-		  font-size: $basefont;
-		  color:$bblack;
-			@extend .section-title-size;
-			background-color: $lgrey;
-			position:relative;
-			.expendable-size {height:27px;position:absolute;right:-14px;top:0;width:60px;}
-			.no-expendable {
-				background: url(../images/fd-ui-icons.png) no-repeat scroll -310px -111px transparent;
-				@extend .expendable-size;
-	 		}
-	 		.expend {
-				background: url(../images/fd-ui-icons.png) no-repeat scroll -310px -138px transparent;
-				@extend .expendable-size;
-				curso:pointer;
-	 		}
-	 		
-	 		.minimize {
-				background: url(../images/fd-ui-icons.png) no-repeat scroll -310px -166px transparent;
-				@extend .expendable-size;
-				curso:pointer;
-	 		}
+		
+	}
+
+  .fd_section_content { 
+    .fd_section_subtitle {
+			@extend .section-title-size; 
+			& { font-size: $basefont;	 }
 		}
-		.accordeon_item {
-			&.divider { border-bottom: 1px solid $lblack;}
+		.fd_section_details {
+			border:none;
+			font-size: $basefont;
+			p {
+				text-align:justify;
+				text-indent:10px;
+			}
 		}
 	}
 }
