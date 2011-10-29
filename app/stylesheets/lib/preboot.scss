@@ -23,7 +23,7 @@ $linkColorHover:    darken($linkColor, 10);
 $black:             #000;
 $grayDark:          lighten($black, 25%);
 $gray:              lighten($black, 50%);
-$grayLight:         lighten($black, 75%);
+$grayLight:         darken($black, 90%);
 $grayLighter:       lighten($black, 90%);
 $white:             #fff;
 
@@ -275,14 +275,22 @@ $analog2:           adjust-hue($baseColor, -22);
   // Danger and error appear as red
   &.danger,
   &.error {
-    @include gradientBar(#ee5f5b, #c43c35);
+    @include gradientBar(#C9433F, #9D2B27);
   }
   // Success appears as green
   &.success {
-    @include gradientBar(#62c462, #57a957);
+    @include gradientBar(#34965D, #4A9663);
   }
   // Info appears as a neutral blue
   &.info {
-    @include gradientBar(#5bc0de, #339bb9);
+    @include gradientBar(#4993B0, #2E7484);
+  }
+  // Action
+  &.primary {
+    @include gradientBar(#444, #222222);
+  }
+  // default
+  &.default {
+    @include gradientBar(#444, #222222);
   }
 }

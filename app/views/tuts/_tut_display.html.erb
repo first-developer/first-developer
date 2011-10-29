@@ -20,22 +20,24 @@
     </div>
     <div class="fd_tut_content span11">
       <div class="fd_tut_video">
-        <iframe 
-          width="640" 
-          height="404" 
-          src="http://www.youtube.com/embed/9ha5ujHnYXg" 
-          frameborder="0" allowfullscreen>
-        </iframe>
+        <iframe width="640" height="404" src="http://www.youtube.com/embed/lzc-p6uvkOE" frameborder="0" allowfullscreen></iframe>
       </div>
     </div>
-    <span class="fd_tut_go"></span>
   </section>
   <span class="clear"></span>
   <% 
     details  = "In broad strokes, this involves deciding what should be sent as the response and calling an appropriate method to create that response. \nIf the response is a full-blown view, Rails also does some extra work to wrap the view in a layout and possibly to pull in partial views. You’ll see all of those paths later in this guide."
     details = simple_format(details)
+    
+    buttons  = '<span class="btn primary space_right-1">valider</span>' \
+            + '<span class="btn info space_right-1">supprimer</span>' \
+            + '<span class="btn space_right-1">supprimer</span>' \
+            + '<span class="btn error space_right-1">supprimer</span>' \
+            + '<span class="btn">annuler</span>'
+    buttons = buttons.html_safe
+    
   %>
   <%= render "layouts/section", :section_title => "description", :section_details => details     %>
   <%= render "layouts/section", :section_title => "quizz", :section_details => details, :section_title_class => "blue"   %>
-  <%= render "layouts/section", :section_title => "commentaires", :section_details => details, :section_title_class => "red"   %>
+  <%= render "layouts/section", :section_title => "buttons", :section_details => buttons, :section_title_class => "red"   %>
 </li>

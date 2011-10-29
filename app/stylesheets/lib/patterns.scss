@@ -18,6 +18,34 @@
   overflow: hidden;
 }
 
+.space_right-1 {
+	margin-right:10px;
+}
+.space_right-2 {
+	margin-right:20px;
+}
+.space_right-3 {
+	margin-right:30px;
+}
+.space_right-4 {
+	margin-right:40px;
+}
+
+.space_left-1 {
+	margin-left:10px;
+}
+.space_left-2 {
+	margin-left:20px;
+}
+.space_left-3 {
+	margin-left:30px;
+}
+.space_left-4 {
+	margin-left:40px;
+}
+
+
+
 // corners
 // ---------
 
@@ -220,6 +248,8 @@
 }
 
 
+
+//  BUUTTONS 
 
 
 // TOPBAR
@@ -480,7 +510,7 @@
     letter-spacing: -1px;
   }
   p {
-    font-size: 18px;
+    font-size:18px;
     font-weight: 200;
     line-height: $baseline * 1.5;
   }
@@ -522,12 +552,12 @@ footer {
   @include vertical-three-colors-gradient(#fff, #fff, 0.25, darken(#fff, 10%));
   padding: 5px 14px 6px;
   text-shadow: 0 1px 1px rgba(255,255,255,.75);
-  color: #333;
-  font-size: 13px;
+  color: #222;
+  font-size: 12px;
   line-height: normal;
   border: 1px solid #ccc;
   border-bottom-color: #bbb;
-  @include border-radius(4px);
+  @include border-radius(2px);
   $shadow: inset 0 1px 0 rgba(255,255,255,.2), 0 1px 2px rgba(0,0,0,.05);
   @include box-shadow($shadow);
 
@@ -540,7 +570,7 @@ footer {
   // Primary Button Type
   &.primary {
     color:#fff;
-    @include btnColor($blue, $blueDark);
+    @include btnColor(#444, #222);
   }
 
    // Transitions
@@ -626,7 +656,7 @@ input[type=submit].btn {
 // ------------------
 
 #gritter-notice-wrapper {
-  @extend .span6;
+  @extend .span5;
   opacity: 0.95;
   position: fixed;
   right: 33px;
@@ -635,7 +665,9 @@ input[type=submit].btn {
   min-height: 70px;
   .gritter-item-wrapper {
     margin:10px 0;
-    @include box-shadow(0 3px 3px 0 #333333);
+    @include box-shadow(0 2px 2px 0px #555);
+     @include border-radius(2px);
+    //@include box-shadow(0 3px 3px 0 #333333);
     .close {
       background: url("../images/fd-ui-icons.png") no-repeat scroll -128px -159px transparent;
       height: 60px;
@@ -651,11 +683,13 @@ input[type=submit].btn {
     .gritter-top {  }
     .gritter-item {
       padding: 10px 10px 10px 50px;
+      min-height: 42px;
       .gritter-without-image {
         .gritter-title {}
         p {
           color: $black;
           text-shadow:0 1px 0 #fff;
+          margin-bottom:0;
         }
       }
     }
@@ -944,7 +978,7 @@ input[type=submit].btn {
 	}
 	
 	.fd_section_title {
-	
+		text-shadow: 0 1px 0 white;
 		font-weight:bold;
 		margin:5px 0 10px;
 	  font-size: $basefont;
@@ -980,6 +1014,7 @@ input[type=submit].btn {
 	}
 
   .fd_section_content { 
+  	color:#333;
     .fd_section_subtitle {
 			@extend .section-title-size; 
 			& { font-size: $basefont;	 }
