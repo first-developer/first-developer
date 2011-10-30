@@ -1,24 +1,24 @@
 /*
-Syntax error: Undefined variable: "$fd_bleu".
-        on line 203 of /home/fd/Sites/first-developer/app/stylesheets/lib/patterns.scss
+Syntax error: Undefined mixin 'box-shadow'.
+        on line 55 of /home/fd/Sites/first-developer/app/stylesheets/lib/patterns.scss, in `box-shadow'
+        from line 55 of /home/fd/Sites/first-developer/app/stylesheets/lib/patterns.scss
 
-198: 
-199: // large bande different color 
-200: // --------------------------------
-201: 
-202: .blue.large-bande {
-203: 	background-color: $fd_bleu;
-204: 	@extend .large-bande-size;
-205: }
-206: 
-207: .red.large-bande {
-208: 	background-color: $fd_red;
+50: 
+51: // profile
+52: 
+53: .profile_image {
+54: 	border: 1px solid #d0D0D0;
+55:  	@include box-shadow(0 0 0 2px #FFFFFF inset);
+56:   display: block;
+57:   margin: 0 0 0 10px;
+58:   padding: 4px;
+59: 	
+60: 	&.width50 {
 
 Backtrace:
-/home/fd/Sites/first-developer/app/stylesheets/lib/patterns.scss:203
-/home/fd/.rvm/gems/ruby-1.9.2-p290@rails309/gems/sass-3.1.10/lib/sass/script/variable.rb:50:in `_perform'
-/home/fd/.rvm/gems/ruby-1.9.2-p290@rails309/gems/sass-3.1.10/lib/sass/script/node.rb:40:in `perform'
-/home/fd/.rvm/gems/ruby-1.9.2-p290@rails309/gems/sass-3.1.10/lib/sass/tree/visitors/perform.rb:214:in `visit_prop'
+/home/fd/Sites/first-developer/app/stylesheets/lib/patterns.scss:55:in `box-shadow'
+/home/fd/Sites/first-developer/app/stylesheets/lib/patterns.scss:55
+/home/fd/.rvm/gems/ruby-1.9.2-p290@rails309/gems/sass-3.1.10/lib/sass/tree/visitors/perform.rb:168:in `visit_mixin'
 /home/fd/.rvm/gems/ruby-1.9.2-p290@rails309/gems/sass-3.1.10/lib/sass/tree/visitors/base.rb:37:in `visit'
 /home/fd/.rvm/gems/ruby-1.9.2-p290@rails309/gems/sass-3.1.10/lib/sass/tree/visitors/perform.rb:18:in `visit'
 /home/fd/.rvm/gems/ruby-1.9.2-p290@rails309/gems/sass-3.1.10/lib/sass/tree/visitors/base.rb:53:in `block in visit_children'
@@ -93,4 +93,4 @@ Backtrace:
 body:before {
   white-space: pre;
   font-family: monospace;
-  content: "Syntax error: Undefined variable: \"$fd_bleu\".\A         on line 203 of /home/fd/Sites/first-developer/app/stylesheets/lib/patterns.scss\A \A 198: \A 199: // large bande different color \A 200: // --------------------------------\A 201: \A 202: .blue.large-bande {\A 203: 	background-color: $fd_bleu;\A 204: 	@extend .large-bande-size;\A 205: }\A 206: \A 207: .red.large-bande {\A 208: 	background-color: $fd_red;"; }
+  content: "Syntax error: Undefined mixin 'box-shadow'.\A         on line 55 of /home/fd/Sites/first-developer/app/stylesheets/lib/patterns.scss, in `box-shadow'\A         from line 55 of /home/fd/Sites/first-developer/app/stylesheets/lib/patterns.scss\A \A 50: \A 51: // profile\A 52: \A 53: .profile_image {\A 54: 	border: 1px solid #d0D0D0;\A 55:  	@include box-shadow(0 0 0 2px #FFFFFF inset);\A 56:   display: block;\A 57:   margin: 0 0 0 10px;\A 58:   padding: 4px;\A 59: 	\A 60: 	&.width50 {"; }

@@ -48,6 +48,28 @@
 }
 
 
+// profile
+
+.profile_image {
+	border: 1px solid #d0D0D0;
+ 	@include box-shadow(0 0 0 2px #FFFFFF inset);
+  display: block;
+  margin: 0 0 0 10px;
+  padding: 4px;
+	
+	&.width50 {
+		height:45px;
+		width:45px;
+	}
+	&.width30 {
+		height:25px;
+		width:25px;
+	}
+	&.default {
+		background:url("../images/default-user.png") no-repeat scroll center 2px #E7E7E7;
+	}
+}
+
 
 // corners
 // ---------
@@ -977,6 +999,7 @@ input[type=submit].btn {
     display: block;
     height: 25px;
     width: 120px;
+    margin: 0 0 5px;
     
     &.left {
     	float:left;
