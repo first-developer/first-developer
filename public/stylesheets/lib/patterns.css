@@ -1,23 +1,23 @@
 /*
 Syntax error: Undefined mixin 'box-shadow'.
-        on line 55 of /home/fd/Sites/first-developer/app/stylesheets/lib/patterns.scss, in `box-shadow'
-        from line 55 of /home/fd/Sites/first-developer/app/stylesheets/lib/patterns.scss
+        on line 76 of /home/fd/Sites/first-developer/app/stylesheets/lib/patterns.scss, in `box-shadow'
+        from line 76 of /home/fd/Sites/first-developer/app/stylesheets/lib/patterns.scss
 
-50: 
-51: // profile
-52: 
-53: .profile_image {
-54: 	border: 1px solid #d0D0D0;
-55:  	@include box-shadow(0 0 0 2px #FFFFFF inset);
-56:   display: block;
-57:   margin: 0 0 0 10px;
-58:   padding: 4px;
-59: 	
-60: 	&.width50 {
+71: 
+72: // profile
+73: 
+74: .profile_image {
+75: 	border: 1px solid #d0D0D0;
+76:  	@include box-shadow(0 0 0 2px #FFFFFF inset);
+77:   display: block;
+78:   margin: 0 0 0 10px;
+79:   padding: 4px;
+80: 	
+81: 	&.width50 {
 
 Backtrace:
-/home/fd/Sites/first-developer/app/stylesheets/lib/patterns.scss:55:in `box-shadow'
-/home/fd/Sites/first-developer/app/stylesheets/lib/patterns.scss:55
+/home/fd/Sites/first-developer/app/stylesheets/lib/patterns.scss:76:in `box-shadow'
+/home/fd/Sites/first-developer/app/stylesheets/lib/patterns.scss:76
 /home/fd/.rvm/gems/ruby-1.9.2-p290@rails309/gems/sass-3.1.10/lib/sass/tree/visitors/perform.rb:168:in `visit_mixin'
 /home/fd/.rvm/gems/ruby-1.9.2-p290@rails309/gems/sass-3.1.10/lib/sass/tree/visitors/base.rb:37:in `visit'
 /home/fd/.rvm/gems/ruby-1.9.2-p290@rails309/gems/sass-3.1.10/lib/sass/tree/visitors/perform.rb:18:in `visit'
@@ -93,4 +93,4 @@ Backtrace:
 body:before {
   white-space: pre;
   font-family: monospace;
-  content: "Syntax error: Undefined mixin 'box-shadow'.\A         on line 55 of /home/fd/Sites/first-developer/app/stylesheets/lib/patterns.scss, in `box-shadow'\A         from line 55 of /home/fd/Sites/first-developer/app/stylesheets/lib/patterns.scss\A \A 50: \A 51: // profile\A 52: \A 53: .profile_image {\A 54: 	border: 1px solid #d0D0D0;\A 55:  	@include box-shadow(0 0 0 2px #FFFFFF inset);\A 56:   display: block;\A 57:   margin: 0 0 0 10px;\A 58:   padding: 4px;\A 59: 	\A 60: 	&.width50 {"; }
+  content: "Syntax error: Undefined mixin 'box-shadow'.\A         on line 76 of /home/fd/Sites/first-developer/app/stylesheets/lib/patterns.scss, in `box-shadow'\A         from line 76 of /home/fd/Sites/first-developer/app/stylesheets/lib/patterns.scss\A \A 71: \A 72: // profile\A 73: \A 74: .profile_image {\A 75: 	border: 1px solid #d0D0D0;\A 76:  	@include box-shadow(0 0 0 2px #FFFFFF inset);\A 77:   display: block;\A 78:   margin: 0 0 0 10px;\A 79:   padding: 4px;\A 80: 	\A 81: 	&.width50 {"; }

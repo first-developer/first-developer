@@ -12,6 +12,27 @@
   margin:0 !important;
 }
 
+.no-list-style {
+	list-style:none;
+	ul,li {
+		list-style:none;
+	}
+}
+
+.float-list {
+	ul {
+		margin:0;
+		&.well {
+			height:60px !important;
+			padding: 10px 10px 10px 36px;
+		}
+		li {
+			float:left;
+			margin: 0 10px 0 0;
+		}
+	}
+}
+
 .divider {
 	background: none repeat scroll 0 0 #DDDDDD;
   border-bottom: 1px solid rgba(255, 255, 255, 0.1);

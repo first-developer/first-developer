@@ -31,5 +31,17 @@
     :section_subtitle_class => '',
     :section_content => contents
   %>
+  
+  <%# Social media %>
+  <%= render "layouts/section",
+    :section_title => "Partagez sur les réseaux sociaux ...", 
+    :section_title_class => 'blue',
+    :section_class => "no-list-style float-list",
+    :section_subtitle_class => '',
+    :section_content => [ { :section_details => render("shared/social_items") } ]
+  %>
+  
+  
+  
 </div>
 
