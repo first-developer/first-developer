@@ -284,10 +284,10 @@ $.sound = {
     var elt =$(this);
     elt.bind({
       mouseover: function(){
-      $(this).animate({backgroundPosition: slidePos}, start_duration);
+      $(this).stop().animate({backgroundPosition: slidePos}, start_duration);
       },
       mouseout:function(){
-         $(this).animate({backgroundPosition: defaultPos}, end_duration);
+         $(this).stop().animate({backgroundPosition: defaultPos}, end_duration);
       } 
     });
   }
