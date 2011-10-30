@@ -71,6 +71,30 @@
 }
 
 
+.fd_skills_bar {
+	display:block;
+	//background:#dfdfdf;
+	margin:10px 0 0 0;
+	height:12px;
+	width:130px;
+	float:right;
+	.fd_skills_indicator-size {
+    display: block;
+    height: 10px;
+    width: 130px;
+    border:none !important;
+    background-image: url("../images/fd-ui-icons.png");
+    background-repeat:none;
+	}
+	.fd_skills_indicator {
+		
+		&.beginner 			{ background-position: -344px -68px;	} //$grey
+		&.intermediate 	{ background-position: -344px -78px;	} // $fd_bleu;}
+		&.advanced 			{ background-position: -344px -87px;;	}//$fd_orange;}
+		@extend .fd_skills_indicator-size;
+	} 
+}
+
 // corners
 // ---------
 
