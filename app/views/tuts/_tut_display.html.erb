@@ -29,15 +29,22 @@
     details  = "In broad strokes, this involves deciding what should be sent as the response and calling an appropriate method to create that response. \nIf the response is a full-blown view, Rails also does some extra work to wrap the view in a layout and possibly to pull in partial views. You’ll see all of those paths later in this guide."
     details = simple_format(details)
     
-    buttons  = '<span class="btn primary space_right-1">valider</span>' \
+    buttons  = '<div class ="actions"><span class="btn primary space_right-1">valider</span>' \
             + '<span class="btn info space_right-1">supprimer</span>' \
             + '<span class="btn space_right-1">supprimer</span>' \
             + '<span class="btn error space_right-1">supprimer</span>' \
-            + '<span class="btn">annuler</span>'
+            + '<span class="btn">annuler</span></div>'
     buttons = buttons.html_safe
     
+    follow  = '<div class ="fd_follow"><span class="fd_follow_action on space_right-1"></span><span class="fd_follow_action space_right-1"></span></div>'
+    follow = follow.html_safe
+    
+    
+    
   %>
-  <%= render "layouts/section", :section_title => "description", :section_details => details     %>
-  <%= render "layouts/section", :section_title => "quizz", :section_details => details, :section_title_class => "blue"   %>
-  <%= render "layouts/section", :section_title => "buttons", :section_details => buttons, :section_title_class => "red"   %>
+  <br/>
+  <%= render "layouts/section", :section_title => "description", :section_content => [{:section_subtitle =>"", :section_details => details}]     %>
+  <%= render "layouts/section", :section_title => "quizz", :section_content => [{:section_subtitle =>"", :section_details => buttons}], :section_title_class => "blue"   %>
+  <%= render "layouts/section", :section_title => "tutoriels similaires ...", :section_class => "no-margin", :section_content => [], :section_title_class => "red"   %>
+ 
 </li>

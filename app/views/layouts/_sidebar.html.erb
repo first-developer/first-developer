@@ -1,13 +1,32 @@
 
 <div class="fd_sidebar">
-  <% 3.times do %>
-    <%= render "layouts/section",
-      :section_title => "informations", 
-      :section_subtitle => "auteur", 
-      :section_title_class => 'red',
-      :section_subtitle_class => 'no-padding',
-      :section_details => "details"
-    %>
-  <% end %>
+  <%
+    details  = "In broad strokes, this involves deciding what should be sent as the response and calling an appropriate method to create that response. \nIf the response is a full-blown view, Rails also does some extra work to wrap the view in a layout and possibly to pull in partial views. You’ll see all of those paths later in this guide."
+    details = simple_format(details)
+  
+    follow  = '<div class ="fd_follow"><span class=" on space_right-1"></span><span class="fd_follow_action right on"></span></div>'
+    follow = follow.html_safe
+    contents = [
+      {
+        :section_subtitle => "Auteur",
+        :section_details  => follow
+      },
+      {
+        :section_subtitle => "Description",
+        :section_details  => truncate(details, :length =>100, :separator => '...')
+      },
+      {
+        :section_subtitle => "Comptétences",
+        :section_details  => "<ul class='checkmark'><li>jQuery</li><li>Uix/linux</li><li>HTML5/CSS3</li></ul>"
+      }
+    ]
+  %>
+
+  <%= render "layouts/section",
+    :section_title => "informations", 
+    :section_title_class => 'red',
+    :section_subtitle_class => '',
+    :section_content => contents
+  %>
 </div>
 
