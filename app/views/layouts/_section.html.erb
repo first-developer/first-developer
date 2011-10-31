@@ -5,6 +5,7 @@
 <% section_title_class ||= 'black' %>
 <% section_subtitle_class ||= 'black' %>
 <% section_content ||= nil %>
+<% with_divider ||= false %>
 
 
 <% unless section_title.nil?  %>
@@ -23,7 +24,9 @@
         <div class="fd_section_details">
           <%= raw(content[:section_details]) %>
         </div>
+        <% if with_divider %>
         <span class="clear divider"></span>
+        <% end %>
       <% end -%>
     <% end %>
   </div>

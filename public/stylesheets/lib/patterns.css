@@ -1,24 +1,24 @@
 /*
-Syntax error: Undefined mixin 'box-shadow'.
-        on line 76 of /home/fd/Sites/first-developer/app/stylesheets/lib/patterns.scss, in `box-shadow'
-        from line 76 of /home/fd/Sites/first-developer/app/stylesheets/lib/patterns.scss
+Syntax error: Undefined variable: "$fd_red".
+        on line 11 of /home/fd/Sites/first-developer/app/stylesheets/lib/patterns.scss
 
-71: 
-72: // profile
-73: 
-74: .profile_image {
-75: 	border: 1px solid #d0D0D0;
-76:  	@include box-shadow(0 0 0 2px #FFFFFF inset);
-77:   display: block;
-78:   margin: 0 0 0 10px;
-79:   padding: 4px;
-80: 	
-81: 	&.width50 {
+6: // ------------
+7: 
+8: // text color 
+9: 
+10: .text-red {
+11: 	color: $fd_red;
+12: }
+13: 
+14: .text-mblack {
+15: 	color: $mblack;
+16: }
 
 Backtrace:
-/home/fd/Sites/first-developer/app/stylesheets/lib/patterns.scss:76:in `box-shadow'
-/home/fd/Sites/first-developer/app/stylesheets/lib/patterns.scss:76
-/home/fd/.rvm/gems/ruby-1.9.2-p290@rails309/gems/sass-3.1.10/lib/sass/tree/visitors/perform.rb:168:in `visit_mixin'
+/home/fd/Sites/first-developer/app/stylesheets/lib/patterns.scss:11
+/home/fd/.rvm/gems/ruby-1.9.2-p290@rails309/gems/sass-3.1.10/lib/sass/script/variable.rb:50:in `_perform'
+/home/fd/.rvm/gems/ruby-1.9.2-p290@rails309/gems/sass-3.1.10/lib/sass/script/node.rb:40:in `perform'
+/home/fd/.rvm/gems/ruby-1.9.2-p290@rails309/gems/sass-3.1.10/lib/sass/tree/visitors/perform.rb:214:in `visit_prop'
 /home/fd/.rvm/gems/ruby-1.9.2-p290@rails309/gems/sass-3.1.10/lib/sass/tree/visitors/base.rb:37:in `visit'
 /home/fd/.rvm/gems/ruby-1.9.2-p290@rails309/gems/sass-3.1.10/lib/sass/tree/visitors/perform.rb:18:in `visit'
 /home/fd/.rvm/gems/ruby-1.9.2-p290@rails309/gems/sass-3.1.10/lib/sass/tree/visitors/base.rb:53:in `block in visit_children'
@@ -93,4 +93,4 @@ Backtrace:
 body:before {
   white-space: pre;
   font-family: monospace;
-  content: "Syntax error: Undefined mixin 'box-shadow'.\A         on line 76 of /home/fd/Sites/first-developer/app/stylesheets/lib/patterns.scss, in `box-shadow'\A         from line 76 of /home/fd/Sites/first-developer/app/stylesheets/lib/patterns.scss\A \A 71: \A 72: // profile\A 73: \A 74: .profile_image {\A 75: 	border: 1px solid #d0D0D0;\A 76:  	@include box-shadow(0 0 0 2px #FFFFFF inset);\A 77:   display: block;\A 78:   margin: 0 0 0 10px;\A 79:   padding: 4px;\A 80: 	\A 81: 	&.width50 {"; }
+  content: "Syntax error: Undefined variable: \"$fd_red\".\A         on line 11 of /home/fd/Sites/first-developer/app/stylesheets/lib/patterns.scss\A \A 6: // ------------\A 7: \A 8: // text color \A 9: \A 10: .text-red {\A 11: 	color: $fd_red;\A 12: }\A 13: \A 14: .text-mblack {\A 15: 	color: $mblack;\A 16: }"; }
