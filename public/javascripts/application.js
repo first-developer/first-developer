@@ -49,13 +49,24 @@ $(function() {
 
   // Handle select checkbock for interest
   //---------------------------------------
-  $(".fd_poll-item-answer").each(function() {
-    if ($(this).is(":checked")) {
-     $(this).parent().addClass("ok");
-    }
-    $(this).bind("click", function(){
-      $(".fd_poll-item-answer").not(":checked").parent().removeClass("ok");
-      $(this).parent().addClass("ok");
+  // Unchecked answer
+  $(".fd_poll-item-checked").attr("checked","");
+  $(".fd_poll-item-li").each(function() {
+    var checked_class = "ok fd_poll-item-checked";
+    var answer = $(this).find("input.fd_poll-item-answer");
+    
+    answer.each(function(){
+      if ($(this).is(":checked")) {
+        $(this).parent().addClass(checked_class);
+      }  
+    });
+    
+    answer.bind("click", function(){
+      $(this).not(":checked")
+        .parent().removeClass(checked_class);
+      $(this)
+        .parent()
+          .addClass(checked_class);
     });
 
   });
