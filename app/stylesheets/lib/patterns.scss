@@ -14,6 +14,9 @@
 .text-mblack {
 	color: $mblack;
 }
+.text-black {
+	color: $black;
+}
 
 .no-padding {
   padding:0 !important;
@@ -393,14 +396,24 @@
 							font-size: $basefont;
 							color:$mblack;
 						}
-						&.ok {
+						&.answering {
 							background-position:-3px -658px;
-						}					
+							@extend .text-black;
+							background-color:$lblack;
+						}				
 						&.wrong {
 							background-position: -3px -703px ;
+							background-color:$lred;
+							@extend .text-black;
 						}
-						&.fd_poll-item-checked {
-							background-color:#eaeaea;
+						&.fd_poll-answer-checked {
+							background-color:$mblue;
+							@extend .text-black;
+						}
+						&.fd_poll-answer-ok {
+							background-position:-3px -811px;
+							background-color:$fd_lgreen;
+							@extend .text-black;
 						}
 					}
 				}

@@ -52,24 +52,24 @@ $(function() {
   // Unchecked answer
   $(".fd_poll-item-checked").attr("checked","");
   $(".fd_poll-item-li").each(function() {
-    var checked_class = "ok fd_poll-item-checked";
-    var answer = $(this).find("input.fd_poll-item-answer");
+    var poll_li = $(this);
+    var checked_class = "answering fd_poll-answer-checked";
+    var answer = poll_li.find("input.fd_poll-item-answer");
+    poll_li.find("input.fd_poll-item-answer:checked").parent().addClass(checked_class);
     
     answer.each(function(){
-      if ($(this).is(":checked")) {
-        $(this).parent().addClass(checked_class);
-      }  
+      var a =$(this);
+      a.bind("click", function(){ 
+        if (a.not(":checked")) {
+          poll_li.find("input.fd_poll-item-answer").parent(".fd_poll-answer-checked")
+            .removeClass(checked_class);
+          a.parent().addClass(checked_class);
+        }  
+      });
+      
     });
-    
-    answer.bind("click", function(){
-      $(this).not(":checked")
-        .parent().removeClass(checked_class);
-      $(this)
-        .parent()
-          .addClass(checked_class);
-    });
-
-  });
+      
+ });
 
   // Handle follow and unfollow acion
   // ---------------------------------
