@@ -23,29 +23,42 @@ $(function() {
       
   // Handle displaying of admin box
 	// ---------------------------------
-	  $(this).click(function() {	
-	    $(".fd_admin_action")
-	      .removeClass('fd_admin_action_hover') 
-	      .find(".fd_admin_action_content").hide();
-	  });	
+  $(this).click(function() {	
+    $(".fd_admin_action")
+      .removeClass('fd_admin_action_hover') 
+      .find(".fd_admin_action_content").hide();
+  });	
 
-	  //$(".fd_admin_action ul").hide();
-	
-	  $(".fd_admin_action").bind("click",function(e) {
-	    e.stopPropagation();
-	    // Hide other action box
-	    if ($(this).hasClass('fd_admin_action_hover')) {
-	      $(this).find(".fd_admin_action_content").hide();
-	      $(this).removeClass('fd_admin_action_hover'); 
-	    }	
-	    else {
-	      $(".fd_admin_action")
-	        .removeClass('fd_admin_action_hover') 
-	        .find(".fd_admin_action_content").hide();
-	      $(this).addClass('fd_admin_action_hover');
-	      $(this).find(".fd_admin_action_content").show(); 
-	    }  	  
-	  });
+  //$(".fd_admin_action ul").hide();
+
+  $(".fd_admin_action").bind("click",function(e) {
+    e.stopPropagation();
+    // Hide other action box
+    if ($(this).hasClass('fd_admin_action_hover')) {
+      $(this).find(".fd_admin_action_content").hide();
+      $(this).removeClass('fd_admin_action_hover'); 
+    }	
+    else {
+      $(".fd_admin_action")
+        .removeClass('fd_admin_action_hover') 
+        .find(".fd_admin_action_content").hide();
+      $(this).addClass('fd_admin_action_hover');
+      $(this).find(".fd_admin_action_content").show(); 
+    }  	  
+  });
+
+  // Handle select checkbock for interest
+  //---------------------------------------
+  $(".fd_poll-item-answer").each(function() {
+    if ($(this).is(":checked")) {
+     $(this).parent().addClass("ok");
+    }
+    $(this).bind("click", function(){
+      $(".fd_poll-item-answer").not(":checked").parent().removeClass("ok");
+      $(this).parent().addClass("ok");
+    });
+
+  });
 
   // Handle follow and unfollow acion
   // ---------------------------------

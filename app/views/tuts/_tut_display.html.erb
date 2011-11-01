@@ -44,7 +44,8 @@
   %>
   <br/>
   <%= render "layouts/section", :section_title => "description", :section_content => [{:section_subtitle =>"", :section_details => details}]     %>
-  <%= render "layouts/section", :section_title => "quizz", :section_content => [{:section_subtitle =>"", :section_details => buttons}], :section_title_class => "blue"   %>
+  <%= render "layouts/section", :section_title => "quizz", :section_content => [{:section_subtitle =>"", :section_details => raw(
+    render("shared/poll") + buttons) }], :section_title_class => "blue"   %>
   <%= render "layouts/section", :section_title => "tutoriels similaires ...", :section_class => "no-margin", :section_content => [], :section_title_class => "red"   %>
  
 </li>

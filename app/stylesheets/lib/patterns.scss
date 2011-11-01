@@ -329,7 +329,84 @@
 
 
 
-//  BUUTTONS 
+// POLLS
+// --------
+
+.fd_poll {
+	.fd_poll-header {}
+	.fd_poll-content {
+		ul {
+			margin:0;
+		}
+		.fd_poll-item-li {
+			list-style:none;
+			.fd_poll-item-title {
+				color: $bblack;
+				display: block;
+				font-size: $basefont;
+				font-weight: bold;
+				margin:5px 0 3px;
+				.fd_poll-item-title-id{
+					background: url("../images/fd-ui-icons.png") no-repeat scroll 0 -47pc transparent;
+					color: #FFFFFF;
+					float: left;
+					font-size: 14px;
+					font-weight: bold;
+					height: 38px;
+					padding: 9px 0 0 6px;
+					text-align: left;
+					text-shadow: 0 -1px 0 #222222;
+					width: 30px;
+				}
+			}
+			.fd_poll-item-subtitle {
+				margin:5px 0;
+				display:block;
+				font-size: 11px;
+				font-style:italic;
+			}
+			.fd_poll-item-content {
+				margin:10px 0;
+				.fd_poll-item-answers {
+					margin:10px 0;
+					list-style:none;
+					.pre-background {
+						background-color:#eee;
+						background-image:url(../images/fd-ui-icons.png);
+						background-repeat:none;
+					}
+					li {
+						@extend .pre-background; 
+						background-position: -3px -607px;
+						border: none;
+						
+						height: 27px;
+						line-height: 27px;
+						margin: 3px 0;
+						padding: 0;
+						width: 75%;
+						.fd_poll-item-answer{
+							float: left;
+    					margin: 7px 30px 0 10px;
+						}	
+						span {
+							font-size: $basefont;
+							color:$mblack;
+						}
+						&.ok {
+							background-position:-3px -658px;
+						}					
+						&.wrong {
+							background-position: -3px -703px ;
+						}
+					}
+				}
+			}
+		}
+	}
+	.fd_poll-footer {}
+}
+ 
 
 
 // TOPBAR

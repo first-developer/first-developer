@@ -216,6 +216,10 @@ color:$fd_red;
 	  li {
 	    border-bottom:1px dashed #E3E3E3;
 			padding:20px 0 15px;
+			&:last-child {
+			  border-bottom:none;
+			  padding-bottom:5px;
+			}
 	  }
 	}
 
@@ -405,10 +409,14 @@ color:$fd_red;
     color:#666666;
     font-size:10px;
     font-weight:bold;
-    line-height:40px;
-    text-transform:uppercase; 
+    text-transform:uppercase;
+    border : 1px solid #ddd;
+    background-color:#eee; 
+    margin: 3px 0 0;
+    padding: 4px 14px 1px;
     position :absolute;
     right:0;
+    @include border-radius(2px);
     span {
       
     }
