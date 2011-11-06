@@ -1,0 +1,26 @@
+<div class="fd_poll">
+  <div class="fd_poll-header"></div>
+
+  <div class="fd_poll-content">
+    <ul>
+      <% 14.times do |i| %>
+      <li class="fd_poll-item-li">
+        <span class="fd_poll-item-title">
+          <span class="fd_poll-item-title-id"><%= (i+1).to_s %></span>
+          Quel est d'après vous le meilleur langae de programmation jamais créé ?
+        </span>
+        <span class="fd_poll-item-subtitle">C'est un langage de programmation objet ^^</span>
+        <span class="fd_poll-item-content">
+          <ul class="fd_poll-item-answers">
+            <li><input type="radio" name="pi_<%= (i+1).to_s %>" value="1" class="fd_poll-item-answer"/><span>JAVA</span></li>
+            <li><input type="radio" name="pi_<%= (i+1).to_s %>" value="2" class="fd_poll-item-answer" /><span>ActionScript3</span></li>
+            <li><input type="radio" name="pi_<%= (i+1).to_s %>" value="3" class="fd_poll-item-answer" /><span>Ruby</span></li>
+          </ul>
+        </span>
+      </li>
+      <% end %>
+    </ul>
+  </div>
+  
+  <div class="fd_poll-footer"></div>
+</div>

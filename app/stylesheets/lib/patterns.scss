@@ -129,6 +129,63 @@
 	} 
 }
 
+
+// FD-UI-LIST-ITEM
+// ----------------
+
+.fd-ui-list {
+  margin:0;
+  .fd-ui-list-item {
+    .fd-ui-list-item-hd {
+    
+    }
+    .fd-ui-list-item-ct {
+      width:100%;
+      > div {
+        position:relative;
+      }
+      .fd-ui-list-item-left {
+        float:left;
+        &.with-image {
+          &.image-size-50 {
+            width:60px;
+            height: 60px;
+          }
+          &.image-size-30 {
+            width:30px;
+            height: 30px;
+          }
+          .profile_image {
+            margin:0;
+          }
+        }
+      }
+      .fd-ui-list-item-center {
+        float: left;
+        padding: 0 15px;
+        width: 80%;
+        text-align: justify;
+        .fd-ui-list-item-center-title {}
+        .fd-ui-list-item-center-subtitle {}
+        .fd-ui-list-item-center-ct {}
+        .fd-ui-list-item-center-ft {}
+      }
+      .fd-ui-list-item-right {
+        float:right;
+      }
+
+      
+    }
+    .fd-ui-list-item-ft {
+    
+    }
+  }
+}
+
+
+
+
+
 // corners
 // ---------
 

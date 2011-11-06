@@ -1,0 +1,52 @@
+<section id="comments" class="fd-ui-list">
+  <article class="fd-ui-list-item">
+  	<header class="fd-ui-list-item-hd"></header>
+  	<div class="fd-ui-list-item-ct">
+      <div class="fd-ui-list-item-left with-image image-size-50">
+        <span class="profile_image default width50"></span>
+      </div>
+      <div class="fd-ui-list-item-center">
+        <span class="fd-ui-list-item-center-title"></span>
+        <span class="fd-ui-list-item-center-subtitle"></span>
+        <span class="fd-ui-list-item-center-ct">
+          <p>
+            <span class="text-red">Stephane</span>
+            I hurt myself today to see if I still feel I focus on the 
+            pain the only thing that's real the needle tears a 
+            hole the old familiar sting try to kill it all away but I 
+          </p>
+        </span>
+        <span class="fd-ui-list-item-center-ft"></span>
+      </div>
+      <div class="fd-ui-list-item-right fd-ui-item-action-box">
+        <%= render "shared/actions_box" %>
+      </div>
+    </div>
+  	<footer class="fd-ui-list-item-ft"></footer>
+  </article>
+
+<% d=true %>
+<%  unless d %>
+  <div class="fd_tut_header span11">
+    <span class="fd_tut_image">
+      <span class="fd_tut_info_mark">
+        <span class="red large-bande">+50</span>
+        <span class="red large-corner-right"></span>
+      </span>
+      <span class="fd_tut_info_title">
+        <hgroup>
+          <h3 class="">Les designs patterns en HTML/CSS</h3>
+          <h7 class="fd_tut_subtitle"><span class="label notice">Mobile</span><span class="label hard lowercase"> iOS</span><span class="fd_tut_date"><%= date   %></span></h7>
+        </hgroup>
+      </span>
+    </span>
+    
+  </div>
+  <div class="fd_tut_content span11">
+    <div class="fd_tut_video">
+      <iframe width="640" height="404" src="http://www.youtube.com/embed/lzc-p6uvkOE" frameborder="0" allowfullscreen></iframe>
+    </div>
+  </div>
+</section>
+<span class="clear"></span>
+<% end %>

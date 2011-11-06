@@ -1,0 +1,21 @@
+#Sun Nov 06 17:54:02 CET 2011
+indent.when=true
+wrap.comments=false
+line.first.before=0
+indent.case=false
+line.method.before=1
+formatter.profiles.active=org.eclipse.dltk.ruby.formatter.profiles.default
+eclipse.preferences.version=1
+indent.blocks=true
+line.module.before=1
+line.file.module.between=1
+wrap.comments.length=80
+indent.module=true
+line.file.class.between=1
+indent.method=true
+line.file.method.between=1
+line.file.require.after=1
+line.class.before=1
+lines.preserve=1
+indent.class=true
+indent.if=true
