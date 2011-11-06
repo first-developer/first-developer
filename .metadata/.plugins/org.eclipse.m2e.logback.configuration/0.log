@@ -1,2 +1,0 @@
-2011-11-06 20:48:29,186 [Worker-31] INFO  o.e.m.c.i.i.nexus.NexusIndexManager - Updating index for repository: central|http://repo1.maven.org/maven2
-2011-11-06 20:48:56,717 [Worker-31] INFO  o.e.m.c.i.i.nexus.NexusIndexManager - Updated index for repository: central|http://repo1.maven.org/maven2 in 27630 ms
