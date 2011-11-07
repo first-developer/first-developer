@@ -12,7 +12,7 @@
 	
 	// Default style 
 	a { 
-color:$fd_red;
+    color:$fd_red;
 	  text-decoration:none;
 	  &:hover {
 	    color:$bred;  	
@@ -21,11 +21,8 @@ color:$fd_red;
 	}
 	
 	* {
-	
+	  p { color: $lblack;}
 		font-family: $basic_fonts;
-    p {
-      line-height:24px;
-    }
 	}
 /* App Stylesheet
 =================================== */
@@ -312,7 +309,7 @@ color:$fd_red;
 		    .fd_tut_date {
 		    	text-transform:lowercase;
 		    	margin:0 20px;
-		    	font-size:12px;
+		    	font-size:$basefont;
 		    	font-style:italic;
 		    	&:before {
 		    	  padding-right:15px;
@@ -349,7 +346,7 @@ color:$fd_red;
 		        .fd_tut_date {
 		        	text-transform:lowercase;
 		        	margin:0 20px;
-		        	font-size:12px;
+		        	font-size:$basefont;
 		        	font-style:italic;
 		        	&:before {
 		        	  padding-right:15px;

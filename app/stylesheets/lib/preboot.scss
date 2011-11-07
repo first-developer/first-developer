@@ -22,6 +22,7 @@ $linkColorHover:    darken($linkColor, 10);
 // Grays
 $black:             #000;
 $grayDark:          lighten($black, 25%);
+$lblack:						#555;
 $gray:              lighten($black, 50%);
 $grayLight:         darken($black, 90%);
 $grayLighter:       lighten($black, 90%);
@@ -38,7 +39,7 @@ $pink:              #c3325f;
 $purple:            #7a43b6;
 
 // Baseline grid
-$basefont:          12px;
+$basefont:          11.7px;
 $baseline:          18px;
 
 

@@ -1,0 +1,43 @@
+<% imageSize ||= "50" %>
+ <% 5.times do %>
+
+<article class="fd-ui-list-item">
+	<header class="fd-ui-list-item-hd"></header>
+	<div class="fd-ui-list-item-ct">
+    <div class="fd-ui-list-item-left with-image image-size-<%= imageSize %>">
+      <span class="profile_image default width<%= imageSize %>"></span>
+    </div>
+    <div class="fd-ui-list-item-center">
+      <span class="fd-ui-list-item-center-title"></span>
+      <span class="fd-ui-list-item-center-subtitle"></span>
+      <span class="fd-ui-list-item-center-ct">
+        <p>
+          <span class="text-red bold space_right-0-5">Anne Laure Gac :</span>
+          I hurt myself today to see if I still feel I focus on the 
+          pain the only thing that's real the needle tears a 
+          hole the old familiar sting try to kill it all away but I 
+        </p>
+        <p><span class="fd-label-time">il y a 12 minutes</span></p>
+      </span>
+      <span class="fd-ui-list-item-center-ft">
+        
+        <div class="fd-ui-list comment-reply">
+          <p class="fd_comment_info_count"><span class="fd_comment_count">12</span> Commentaires supplémentaires<span class="fd-open-and-close-indicator close"></span></p>
+          <div class="commentsContainer" style="display:block;clear:both;overflow:hidden;width:100%;">
+            <% 5.times do %>
+            <%= render "shared/comment_reply" , :imageSize => 30 %>
+            <% end %>
+          </div> 
+        </div>
+      </span>
+    </div>
+    <div class="fd-ui-list-item-right fd-ui-item-action-box">
+      <%= render "shared/actions_box" %>
+    </div>
+  </div>
+	<footer class="fd-ui-list-item-ft">
+   
+  </footer>
+</article>
+
+ <% end %>

@@ -293,6 +293,14 @@ $.sound = {
   }
   
   
+  // Handle slide Effect like in Google + 
+  // -------------------------------------
+  
+   
+
+
+  
+  
   // Show slide effect with direction options
   // -------------------------------------------
   $.fn.showSlideAndUpdateCredit = function ( direction, duration, credit) {

@@ -1,29 +1,5 @@
 <section id="comments" class="fd-ui-list">
-  <article class="fd-ui-list-item">
-  	<header class="fd-ui-list-item-hd"></header>
-  	<div class="fd-ui-list-item-ct">
-      <div class="fd-ui-list-item-left with-image image-size-50">
-        <span class="profile_image default width50"></span>
-      </div>
-      <div class="fd-ui-list-item-center">
-        <span class="fd-ui-list-item-center-title"></span>
-        <span class="fd-ui-list-item-center-subtitle"></span>
-        <span class="fd-ui-list-item-center-ct">
-          <p>
-            <span class="text-red">Stephane</span>
-            I hurt myself today to see if I still feel I focus on the 
-            pain the only thing that's real the needle tears a 
-            hole the old familiar sting try to kill it all away but I 
-          </p>
-        </span>
-        <span class="fd-ui-list-item-center-ft"></span>
-      </div>
-      <div class="fd-ui-list-item-right fd-ui-item-action-box">
-        <%= render "shared/actions_box" %>
-      </div>
-    </div>
-  	<footer class="fd-ui-list-item-ft"></footer>
-  </article>
+  <%= render "shared/comment" %> 
 
 <% d=true %>
 <%  unless d %>
@@ -47,6 +23,7 @@
       <iframe width="640" height="404" src="http://www.youtube.com/embed/lzc-p6uvkOE" frameborder="0" allowfullscreen></iframe>
     </div>
   </div>
+<% end %>
 </section>
 <span class="clear"></span>
-<% end %>
+

@@ -1,0 +1,29 @@
+<% imageSize ||= "30" %>
+
+<article class="fd-ui-list-item">
+  	<header class="fd-ui-list-item-hd"></header>
+  	<div class="fd-ui-list-item-ct">
+      <div class="fd-ui-list-item-left with-image image-size-<%= imageSize %>">
+        <span class="profile_image default width<%= imageSize %>"></span>
+      </div>
+      <div class="fd-ui-list-item-center">
+        <span class="fd-ui-list-item-center-title"></span>
+        <span class="fd-ui-list-item-center-subtitle"></span>
+        <span class="fd-ui-list-item-center-ct">
+          <p>
+            <span class="text-red bold space_right-0-5">Stephane :</span>
+            I hurt myself today to see if I still feel I focus on the 
+            pain the only thing that's real the needle tears a 
+            hole the old familiar sting try to kill it all away but I 
+          </p>
+          <p><span class="fd-label-time">il y a 12 minutes</span></p>
+        </span>
+        <span class="fd-ui-list-item-center-ft"></span>
+      </div>
+      <div class="fd-ui-list-item-right fd-ui-item-action-box">
+        <%= render "shared/actions_box" %>
+      </div>
+    </div>
+  	<footer class="fd-ui-list-item-ft">
+    </footer>
+  </article>

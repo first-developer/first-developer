@@ -83,7 +83,23 @@ $(function() {
     }
   );*/
     
+  // Handle sliding up of the comment infos 
+  // ---------------------------------------
+  
+  $(".fd_comment_info_count").live("click", function() {
+    var comments = $(this).parent().find(".fd-ui-list-item:not(:last-child)");
+    var indic = $(this).find(".fd-open-and-close-indicator");
+    var h = comments.height();
+    comments.slideToggle({ duration:1500, easing : "easeInOutQuint"} );
+     
+    if ( indic.hasClass("open") ) {
+      indic.removeClass("open").addClass("close");
+    }
+    else {
+      indic.removeClass("close").addClass("open");
+    }
 
+  });
     
     
 });

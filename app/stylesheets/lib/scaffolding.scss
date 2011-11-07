@@ -79,7 +79,7 @@ html, body {
 body {
   margin: 0;
   font-family: $basic_fonts;
-  color: $gray;
+  color: $lblack;
   text-rendering: optimizeLegibility;
 }
 
@@ -127,7 +127,7 @@ a {
   padding: 4px 14px;
   text-shadow: 0 1px 1px rgba(255,255,255,.75);
   color: #333;
-  font-size: 13px;
+  font-size: $basefont;
   line-height: $baseline;
   border: 1px solid #ccc;
   border-bottom-color: #bbb;
