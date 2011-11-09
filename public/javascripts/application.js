@@ -90,7 +90,7 @@ $(function() {
     var comments = $(this).parent().find(".fd-ui-list-item:not(:last-child)");
     var indic = $(this).find(".fd-open-and-close-indicator");
     var h = comments.height();
-    comments.slideToggle({ duration:1500, easing : "easeInOutQuint"} );
+    comments.slideToggle({ duration:1500, easing : "easeInOutBack"} );
      
     if ( indic.hasClass("open") ) {
       indic.removeClass("open").addClass("close");
