@@ -1,0 +1,25 @@
+<% imageSize ||= "30" %>
+
+<article class="fd-ui-list-item fd_comment_reply_form">
+  	<header class="fd-ui-list-item-hd"></header>
+  	<div class="fd-ui-list-item-ct">
+      <div class="fd-ui-list-item-left with-image image-size-<%= imageSize %>">
+        <span class="profile_image default width<%= imageSize %>"></span>
+      </div>
+      <div class="fd-ui-list-item-center">
+        <span class="fd-ui-list-item-center-title"></span>
+        <span class="fd-ui-list-item-center-subtitle"></span>
+        <span class="fd-ui-list-item-center-ct">
+          <p>
+            <input type="text" name="reply" class="fd_comment_reply_form_input span8"/>
+          </p>
+        </span>
+        <span class="fd-ui-list-item-center-ft"></span>
+      </div>
+      <div class="fd-ui-list-item-right fd-ui-item-action-box">
+        <%= render "shared/actions_box" %>
+      </div>
+    </div>
+  	<footer class="fd-ui-list-item-ft">
+    </footer>
+  </article>

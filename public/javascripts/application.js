@@ -100,6 +100,15 @@ $(function() {
     }
 
   });
+  
+  // Handle the display of the reply comment form
+  // ----------------------------------------------
+  
+  $(".fd_comment_reply_icon").live("click", function() {
+    var cf = $(this).closest(".fd-ui-list-item-center").find(".fd_comment_reply_form");
+    $(this).toggleClass("on");
+    cf.slideToggle();
+  });
     
     
 });

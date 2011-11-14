@@ -225,6 +225,15 @@
 // ---------------------------
 
 #comments {
+	.fd_comment_reply_form {
+		display:none;
+		.fd_comment_reply_form_input {
+			@include border-radius(0);
+		  height: 20px;
+		  margin: 7px 0;
+		  padding: 2px 5px;
+		}
+	}
 	.fd_comment_reply_icon {
 		background: url("../images/fd-ui-icons.png") no-repeat scroll -190px -294px transparent;
 		display:block;
@@ -232,11 +241,13 @@
 		height:20px;
 		float:right;
 		opacity:0.3;
-		&:hover {
+		&.on {
 			background: url("../images/fd-ui-icons.png") no-repeat scroll -218px -294px transparent;
 			cursor:pointer;
 			opacity:0.88;
-			
+		}
+		&:hover {
+			@extend .on;
 		}
 	}
   .comment-reply {
