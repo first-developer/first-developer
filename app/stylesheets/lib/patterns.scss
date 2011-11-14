@@ -225,6 +225,14 @@
 // ---------------------------
 
 #comments {
+	.fd_comment_actions_icons {
+		visibility:hidden;
+	}
+	.fd-ui-list-item:hover {
+		.fd_comment_actions_icons {
+			visibility:visible;
+		}
+	}
 	.fd_comment_reply_form {
 		display:none;
 		.fd_comment_reply_form_input {
@@ -235,14 +243,28 @@
 		}
 	}
 	.fd_comment_reply_icon {
-		background: url("../images/fd-ui-icons.png") no-repeat scroll -190px -294px transparent;
-		display:block;
-		width:25px;
-		height:20px;
-		float:right;
-		opacity:0.3;
+		background: url("../images/fd-ui-icons.png") no-repeat scroll -190px -299px transparent;
+    border-left: 1px dashed;
+    display: block;
+    float: right;
+    height: 15px;
+    opacity: 0.3;
+    padding: 0 4px 0 0;
+    width: 25px;
 		&.on {
-			background: url("../images/fd-ui-icons.png") no-repeat scroll -218px -294px transparent;
+			background: url("../images/fd-ui-icons.png") no-repeat scroll -218px -299px transparent;
+			cursor:pointer;
+			opacity:0.88;
+		}
+		&:hover {
+			@extend .on;
+		}
+	}
+	.fd_comment_signaled_icon {
+		@extend .fd_comment_reply_icon;
+		background: url("../images/fd-ui-icons.png") no-repeat scroll -193px -323px transparent;
+		&.on {
+			background: url("../images/fd-ui-icons.png") no-repeat scroll -220px -323px transparent;
 			cursor:pointer;
 			opacity:0.88;
 		}
