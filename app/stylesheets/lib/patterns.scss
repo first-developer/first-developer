@@ -225,6 +225,20 @@
 // ---------------------------
 
 #comments {
+	.fd_comment_reply_icon {
+		background: url("../images/fd-ui-icons.png") no-repeat scroll -190px -294px transparent;
+		display:block;
+		width:25px;
+		height:20px;
+		float:right;
+		opacity:0.3;
+		&:hover {
+			background: url("../images/fd-ui-icons.png") no-repeat scroll -218px -294px transparent;
+			cursor:pointer;
+			opacity:0.88;
+			
+		}
+	}
   .comment-reply {
 		.fd_comment_info_count {
 			cursor:pointer;
