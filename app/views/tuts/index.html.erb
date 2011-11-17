@@ -1,13 +1,16 @@
 <% content_for :fd_content_left do %>
   <%= render "shared/pagination_bar" %>
-  
+  <br>
+  <%= render "shared/user_profile" %>
+  <span class="clear"></span>
+  <br>
   <ul class="fd_tuts">
     <%= render "tuts/tut_display" %>
   </ul>
    <ul class="fd_tuts">
     <%= render "tuts/tut_li" %>
   </ul>
-  <br/>
+  <br>
   <ul class="fd-ui-list">
     <% 3.times do %>
     <li class="fd-ui-list-item grippy">Rapide: inscrivez-vous (ou connectez-vous) & démarrez</li>
@@ -15,7 +18,7 @@
     <li class="fd-ui-list-item grippy">Gratuit: Des centaines de leçons disponibles</li>
     <% end %>
   </ul>
-  <br/>
+  <br>
   <%= render "shared/comment_section" %>
 
 

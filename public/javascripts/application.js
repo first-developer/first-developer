@@ -87,10 +87,10 @@ $(function() {
   // ---------------------------------------
   
   $(".fd_comment_info_count").live("click", function() {
-    var comments = $(this).parent().find(".fd-ui-list-item:not(:last-child)");
+    var wrap = $(this).parent().find(".wrap");
     var indic = $(this).find(".fd-open-and-close-indicator");
-    var h = comments.height();
-    comments.slideToggle({ duration:1500, easing : "easeInOutBack"} );
+    
+    wrap.slideToggle({ duration:200});
      
     if ( indic.hasClass("open") ) {
       indic.removeClass("open").addClass("close");
@@ -107,7 +107,7 @@ $(function() {
   $(".fd_comment_reply_icon").live("click", function() {
     var cf = $(this).closest(".fd-ui-list-item-center").find(".fd_comment_reply_form");
     $(this).toggleClass("on");
-    cf.slideToggle();
+    cf.slideToggle({ duration:200});
   });
     
     

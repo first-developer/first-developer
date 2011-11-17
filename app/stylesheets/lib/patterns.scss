@@ -27,6 +27,7 @@
 	color: $black;
 }
 
+
 .no-padding {
   padding:0 !important;
 }
@@ -143,6 +144,93 @@
 }
 
 
+//  NICE HEADER FOR TITLE
+// -----------------------------
+
+.fd_nice_header_corner {
+	height:50px;
+	width:30px;
+	display:block;
+	position:absolute;
+	top:0;
+	left:0;
+	background-image: url("../images/fd-ui-icons.png");
+	&.gray 	{ background-position: -684px -197px; 	}
+	&.blue 	{	background-position: -684px -197px;	}
+	&.red 	{	background-position: -684px -197px;	}
+	&.black {	background-position: -684px -197px;	}
+}
+
+
+
+
+
+// FD - USER - MINIMALIST
+// -------------------------
+$border-color: #DDDDDD;
+#user_profile_minimalist {
+	display:block;
+	border-right: 1px solid $border-color;
+	border-left: 1px solid $border-color;
+	.fd_user_minimalist_hd {
+		@extend .span11;
+		@extend .no-margin;
+		display:block;
+		.fd_user_minimalist_hd_l{
+			float: left;
+			.fd_user_minimilist_details {
+				visibility:visible;
+				position:relative;
+				hgroup {
+					padding: 0 0 0 20px;
+					h2 {
+						font-weight:normal;
+						font-size: 21px;
+    				line-height: 20px;
+					}
+					h4 {
+						font-size: 14px;
+    				font-weight: 700;
+					}
+				}
+			}
+		}
+		.fd_user_minimalist_hd_r{
+			float: right;
+			position:relative;
+			.fd_user_minimilist_image {
+				img {
+					padding:20px;
+					margin-right:4px;
+					border:1px solid $fd_black;
+					@include box-shadow(0 0 0 4px #E4E4E4);
+				}
+			}
+		}
+	}
+	.fd_user_minimalist_ct {
+		display:block;
+		@extend .span11;
+		@extend .no-margin;
+		.fd_user_minimalist_dashboard {
+			background-color: #E8E8E8;
+			border-bottom: 1px solid $border-color;
+			height: 30px;
+    	margin: 10px 2px 10px 0;
+    	padding: 5px;
+		}
+	}
+	.fd_user_minimalist_ft{
+		@extend .span11;
+		@extend .no-margin;
+	}
+}
+
+
+
+
+
+
 // FD-UI-LIST-ITEM
 // ----------------
 .level-1 {
@@ -236,6 +324,7 @@
 // ---------------------------
 
 #comments {
+	ul,li { list-style: none;}
 	.fd_comment_actions_icons {
 		visibility:hidden;
 	}
