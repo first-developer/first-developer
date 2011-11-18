@@ -155,10 +155,10 @@
 	top:0;
 	left:0;
 	background-image: url("../images/fd-ui-icons.png");
-	&.gray 	{ background-position: -684px -197px; 	}
-	&.blue 	{	background-position: -684px -197px;	}
+	&.gray 	{ background-position: -684px -389px; 	}
+	&.blue 	{	background-position: -684px -101px;	}
 	&.red 	{	background-position: -684px -197px;	}
-	&.black {	background-position: -684px -197px;	}
+	&.black {	background-position: -684px -294px;	}
 }
 
 
@@ -181,8 +181,16 @@ $border-color: #DDDDDD;
 			.fd_user_minimilist_details {
 				visibility:visible;
 				position:relative;
+				.valid {
+					background: url("../images/fd-ui-icons.png") no-repeat scroll -202px -213px transparent;
+					display: block;
+					float: right;
+					height: 30px;
+					margin: -4px 25px 0;
+					width: 55px;
+				}
 				hgroup {
-					padding: 0 0 0 20px;
+					padding: 0 0 0 25px;
 					h2 {
 						font-weight:normal;
 						font-size: 21px;
@@ -198,7 +206,16 @@ $border-color: #DDDDDD;
 		.fd_user_minimalist_hd_r{
 			float: right;
 			position:relative;
+			.fd_follow {
+				left: -134px;
+		    position: absolute;
+  		  top: 78px;
+			}
+			
 			.fd_user_minimilist_image {
+			.small-corner-r-u {
+				margin-right:5px;
+			}
 				img {
 					padding:20px;
 					margin-right:4px;
