@@ -122,10 +122,10 @@
 .fd_skills_bar {
 	display:block;
 	//background:#dfdfdf;
-	margin:10px 0 0 0;
+	//margin:10px 0 0 0;
 	height:12px;
 	width:130px;
-	float:right;
+	//float:right;
 	.fd_skills_indicator-size {
     display: block;
     height: 10px;
@@ -142,6 +142,42 @@
 		@extend .fd_skills_indicator-size;
 	} 
 }
+
+ul.grippy-list {
+	list-style-image: url("../images/grippy.png") ;
+	list-style-position: inside;
+	margin:0;
+	li {
+		margin: 0 0 10px 0;
+	}
+}
+
+// SWITCHES 
+// --------------------------
+
+	.switches {
+		&.switches_size {
+			background: url("../images/fd-ui-icons.png") 0 0 no-repeat;
+			display: block;
+			float: right;
+			height: 22px;
+			width:65px;
+		}
+		&.on {
+			background-position: -197px -474px;			
+			@extend .switches_size;
+			&:hover {
+				background-position:-269px -474px ;		
+			}	
+		}
+		&.off {
+			background-position:-269px -474px ;		
+			@extend .switches_size;		
+			&:hover {
+				background-position: -197px -474px;			
+			}		
+		}
+	}
 
 
 //  NICE HEADER FOR TITLE
@@ -169,6 +205,7 @@
 // -------------------------
 $border-color: #DDDDDD;
 #user_profile_minimalist {
+	overflow: hidden;
 	display:block;
 	border-right: 1px solid $border-color;
 	border-left: 1px solid $border-color;
@@ -182,11 +219,11 @@ $border-color: #DDDDDD;
 				visibility:visible;
 				position:relative;
 				.valid {
-					background: url("../images/fd-ui-icons.png") no-repeat scroll -202px -213px transparent;
+					background: url("../images/fd-ui-icons.png") no-repeat scroll -201px -430px transparent;
 					display: block;
 					float: right;
 					height: 30px;
-					margin: -4px 25px 0;
+					margin: -4px 16px 0;
 					width: 55px;
 				}
 				hgroup {
@@ -235,6 +272,17 @@ $border-color: #DDDDDD;
 			height: 30px;
     	margin: 10px 2px 10px 0;
     	padding: 5px;
+		}
+		.fd_user_minimalist_body {
+			p,ul {
+				padding: 0 15px;
+				line-height:24px;
+			}
+//			.fd_section {
+//				position:relative;
+//				left:-2px;
+//				padding: 0 0 0 2px
+//			}
 		}
 	}
 	.fd_user_minimalist_ft{
@@ -1563,9 +1611,16 @@ input[type=submit].btn {
 // ----------------------
 
 ul {
+	list-style: none;
 	&.checkmark {
 		list-style-image: url(../images/checkmark2.png); 
+		list-style-position: inside;
+		li {
+			margin: 0 0 10px 0;
+		}
 	}
+	
+	
 }
 
 
