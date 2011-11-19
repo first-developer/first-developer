@@ -110,5 +110,17 @@ $(function() {
     cf.slideToggle({ duration:200});
   });
     
-    
+  // Handle switches
+  // -----------------------------------------------
+  
+  $(".switches").live("click", function() {
+    var s = $(this);
+    if (s.hasClass("on")) {
+      s.removeClass("on").addClass("off");
+    }
+    else {
+      s.removeClass("off").addClass("on");
+    }
+  });
+      
 });

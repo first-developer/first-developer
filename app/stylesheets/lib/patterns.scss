@@ -156,6 +156,7 @@ ul.grippy-list {
 // --------------------------
 
 	.switches {
+		cursor:pointer;
 		&.switches_size {
 			background: url("../images/fd-ui-icons.png") 0 0 no-repeat;
 			display: block;
@@ -167,14 +168,14 @@ ul.grippy-list {
 			background-position: -197px -474px;			
 			@extend .switches_size;
 			&:hover {
-				background-position:-269px -474px ;		
+				//background-position:-269px -474px ;		
 			}	
 		}
 		&.off {
 			background-position:-269px -474px ;		
 			@extend .switches_size;		
 			&:hover {
-				background-position: -197px -474px;			
+				//background-position: -197px -474px;			
 			}		
 		}
 	}
