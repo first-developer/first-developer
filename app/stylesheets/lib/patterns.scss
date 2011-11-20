@@ -136,19 +136,22 @@
 	}
 	.fd_skills_indicator {
 		
-		&.beginner 			{ background-position: -344px -68px;	} //$grey
-		&.intermediate 	{ background-position: -344px -78px;	} // $fd_bleu;}
+		&.beginner 			{ background-position: -344px -67px;	} //$grey
+		&.intermediate 	{ background-position: -344px -77px;	} // $fd_bleu;}
 		&.advanced 			{ background-position: -344px -87px;;	}//$fd_orange;}
 		@extend .fd_skills_indicator-size;
 	} 
 }
 
 ul.grippy-list {
-	list-style-image: url("../images/grippy.png") ;
-	list-style-position: inside;
+	span.grippy-list-item {
+		//background: url("../images/grippy.png") 0 0 no-repeat;
+		//padding:0 0 0 15px;
+	}
 	margin:0;
 	li {
-		margin: 0 0 10px 0;
+		margin: 0 50px 10px 11px;
+		float:left;
 	}
 }
 
@@ -251,9 +254,10 @@ $border-color: #DDDDDD;
 			}
 			
 			.fd_user_minimilist_image {
-			.small-corner-r-u {
-				margin-right:5px;
-			}
+				margin: 4px 0 0 0;
+				.small-corner-r-u {
+					margin-right:5px;
+				}
 				img {
 					padding:20px;
 					margin-right:4px;
@@ -277,7 +281,7 @@ $border-color: #DDDDDD;
 		.fd_user_minimalist_body {
 			p,ul {
 				padding: 0 15px;
-				line-height:24px;
+				line-height:$baseline;
 			}
 //			.fd_section {
 //				position:relative;
@@ -344,6 +348,15 @@ $border-color: #DDDDDD;
       .fd-ui-list-item-left {
         float:left;
         &.with-image {
+        position:relative;
+        	.valid{
+        		background: url("../images/fd-ui-icons.png") no-repeat scroll -201px -430px transparent;
+						display: block;
+						height: 30px;
+						left: 22%;
+						position: absolute;
+						width: 55px;
+        	}
           &.image-size-50 {
             width:60px;
             height: 60px;
@@ -1544,6 +1557,7 @@ input[type=submit].btn {
 // ----------
 
 .fd_section {
+	clear:both;
 	list-style:none;
 	margin:0 0 20px 0;
 	.section-title-size {
@@ -1601,8 +1615,8 @@ input[type=submit].btn {
 			font-size: $basefont;
 			p {
 				text-align:justify;
-				text-indent:10px;
 			}
+			@extend .row;
 		}
 	}
 }

@@ -90,7 +90,7 @@ $(function() {
     var wrap = $(this).parent().find(".wrap");
     var indic = $(this).find(".fd-open-and-close-indicator");
     
-    wrap.slideToggle({ duration:200});
+    wrap.slideToggle({ duration:500});
      
     if ( indic.hasClass("open") ) {
       indic.removeClass("open").addClass("close");
