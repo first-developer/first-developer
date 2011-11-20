@@ -3,7 +3,7 @@
   <%
     details  = "In broad strokes, this involves deciding what should be sent as the response and calling an appropriate method to create that response. \nIf the response is a full-blown view, Rails also does some extra work to wrap the view in a layout and possibly to pull in partial views. You’ll see all of those paths later in this guide."
     details = simple_format(details)
-  
+    join_us = '<span class="fd_join_us"></span>'
     follow  = '<span class="profile_image default width50"></span><div class ="fd_follow"><span class=" on space_right-1"></span><span class="fd_follow_action right on"></span></div>'
     follow = follow.html_safe
     contents = [
@@ -41,8 +41,18 @@
     :section_title_class => 'blue',
     :section_class => "no-list-style float-list",
     :section_subtitle_class => '',
-    :with_divider => true,
+    :with_divider => false,
     :section_content => [ { :section_details => render("shared/social_items") } ]
+  %>
+  
+  <%# Join us %>
+  <%= render "layouts/section",
+    :section_title => "Qu'attendez-vous ?", 
+    :section_title_class => 'red',
+    :section_class => "no-list-style float-list",
+    :section_subtitle_class => '',
+    :with_divider => false,
+    :section_content => [ { :section_details => join_us } ]
   %>
   
   <%# publicité media %>
