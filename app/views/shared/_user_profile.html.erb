@@ -1,0 +1,75 @@
+
+<%
+    details  = "In broad strokes, this involves deciding what should be sent as the response and calling an appropriate method to create that response. \nIf the response is a full-blown view, Rails also does some extra work to wrap the view in a layout and possibly to pull in partial views. You’ll see all of those paths later in this guide."
+    details = simple_format(details)
+  
+    contents = [
+      {
+        :section_subtitle => "Qui suis-je ?",
+        :section_details  => details + raw('<span class="divider"></span>')
+      },
+      {
+        :section_subtitle => "Comptétences ",
+        :section_details  => '<ul class="grippy-list"><li><span class="grippy-list-item">jQuery</span><div class="fd_skills_bar"><span class="fd_skills_indicator advanced"></span></div></li>
+          <li><span class="grippy-list-item">Uix/linux </span><div class="fd_skills_bar"><span class="fd_skills_indicator beginner"></span></div></li>
+          <li><span class="grippy-list-item">HTML5/CSS3</span><div class="fd_skills_bar"><span class="fd_skills_indicator intermediate"></span></div></li>
+          </ul><span class="clear"></span>'*2 + '<br />'
+      }
+    ]
+    
+    contents_paramaters = [
+      {
+        :section_subtitle => "Paramètres de sécurités",
+        :section_details  =>  render("shared/parameters") + raw('<br />')
+      },
+      {
+        :section_subtitle => "Parametres de supplémentaires ",
+        :section_details  => render("shared/parameters")
+      }
+    ]
+  %>
+
+<section id="user_profile_minimalist" class="row no-margin">
+  <header class="fd_user_minimalist_hd">
+    <div class="fd_user_minimalist_hd_l">
+      <div class="fd_user_minimilist_details">
+         <span class="fd_nice_header_corner red"></span>
+        <hgroup>
+          <h2>Mamadou <span class="text-black">SANOKO SIDIKI</span><span class="valid"></span></h2>
+          <h4><span class="text-red">Formateur</span></h4>
+        </hgroup>
+        
+      </div>
+    </div>
+    <div class="fd_user_minimalist_hd_r">
+      <div class ="fd_follow"><span class=" on space_right-1"></span><span class="fd_follow_action right on"></span></div>
+      <div class="fd_user_minimilist_image">
+        <span class="red small-corner-r-u"></span>
+        <a href="#" class="avatar"><img src="images/user1.png" /></a>
+      </div>
+      <div class="fd_user_minimilist_credit"></div>
+    </div>
+  </header>
+  <div class="fd_user_minimalist_ct">
+    <nav class="fd_user_minimalist_dashboard"></nav>
+    <br />
+    <div class="fd_user_minimalist_body">
+      <%= render "layouts/section",
+        :section_title => "informations", 
+        :section_title_class => 'black',
+        :section_subtitle_class => '',
+        :with_divider => false,
+        :section_content => contents
+      %>
+      <%= render "layouts/section",
+        :section_title => "Paramètres du compte", 
+        :section_title_class => 'black',
+        :section_subtitle_class => '',
+        :with_divider => false,
+        :section_content => contents_paramaters
+      %>
+      
+    </div>
+  </div>
+  <footer class="fd_user_minimalist_ft"></footer>
+</section>
