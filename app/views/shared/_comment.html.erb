@@ -34,12 +34,9 @@
             <div class="wrap">
               <% 5.times do |i| %>
               <%= render "shared/comment_reply" , :imageSize => 30 %>
-                <% if i == 3 %>
-                  </div>
-                <% end %>
               <% end %>
-              <%= render "shared/comment_reply_form" , :imageSize => 30 %>
-  
+            </div>
+            <%= render "shared/comment_reply_form" , :imageSize => 30 %>
           </div> 
         </div>
       </span>

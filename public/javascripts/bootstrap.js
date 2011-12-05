@@ -296,7 +296,18 @@ $.sound = {
   // Handle slide Effect like in Google + 
   // -------------------------------------
   
-   
+  // Handle corner 
+  // -------------------------------------------
+  $.fn.corned = function ( options) {
+    var item = $(this).find(".fd-title-corner");
+    var border = "";  
+    item.each(function() {
+      border = item.css("border");  
+      item.corner(options).css({borderBottom: border});
+    });
+    
+    
+  }
 
 
   
@@ -342,52 +353,52 @@ $.sound = {
  * 		MENU ACCORDEON
  */
 $(function(){
-//CELUI PERMETTANT D'AFFICHER LES TUTORIELS
+  //CELUI PERMETTANT D'AFFICHER LES TUTORIELS
 
-// Initialisation des parametres next("div")
-$(".accordeon .open").next("div").hide();
-var b = true;
+  // Initialisation des parametres next("div")
+  $(".accordeon .open").next("div").hide();
+  var b = true;
 				
-/*//Animation(opacité) du header
-header.fadeTo("fast", 0.5);
-header.mouseover(function() {
-	header.fadeTo("normal", 0.99);
-});
-header.mouseout(function() {
-	header.fadeTo("normal", 0.5);
-});
-*/
+  /*//Animation(opacité) du header
+  header.fadeTo("fast", 0.5);
+  header.mouseover(function() {
+	  header.fadeTo("normal", 0.99);
+  });
+  header.mouseout(function() {
+	  header.fadeTo("normal", 0.5);
+  });
+  */
 
-// Initialisation du menu accordeon
-$(".accordeon .open").click(function(){
-	if (b) {
-		b = false;
-		$(this).css({backgroundPosition:"top left"});
-		$(this).next("div").fadeIn('slow');
-	}
-	else {
-		b=true;
-		$(this).css({backgroundPosition:"top right"});
-		$(this).next("div").fadeOut('medium');
-	}
-});
+  // Initialisation du menu accordeon
+  $(".accordeon .open").click(function(){
+	  if (b) {
+		  b = false;
+		  $(this).css({backgroundPosition:"top left"});
+		  $(this).next("div").fadeIn('slow');
+	  }
+	  else {
+		  b=true;
+		  $(this).css({backgroundPosition:"top right"});
+		  $(this).next("div").fadeOut('medium');
+	  }
+  });
 
-//CELUI RESERVER AUX BOUTONS +/- DE LA SIDEBAR
-var tb = true;
+  //CELUI RESERVER AUX BOUTONS +/- DE LA SIDEBAR
+  var tb = true;
 
-// Initialisation du menu accordeon
-$(".sidebar div.ctSidebar .ctSidebarElem .toggleNextContent").click(function(){
-	if (tb) {
-		tb = false;
-		$(this).css({backgroundPosition:"top left"});
-		$(this).next('div').slideUp('slow');
-	}
-	else {
-		tb=true;
-		$(this).css({backgroundPosition:"bottom left"});
-		$(this).next('div').slideDown('slow');
-	}
+  // Initialisation du menu accordeon
+  $(".sidebar div.ctSidebar .ctSidebarElem .toggleNextContent").click(function(){
+	  if (tb) {
+		  tb = false;
+		  $(this).css({backgroundPosition:"top left"});
+		  $(this).next('div').slideUp('slow');
+	  }
+	  else {
+		  tb=true;
+		  $(this).css({backgroundPosition:"bottom left"});
+		  $(this).next('div').slideDown('slow');
+	  }
 	
-});
+  });
 });
 

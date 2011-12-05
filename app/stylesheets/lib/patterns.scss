@@ -11,7 +11,12 @@
 .italic {
   font-style:italic;
 }
-
+.right {
+	float:right;
+}
+.left {
+	float:left;
+}
 
 
 // text color 
@@ -272,11 +277,13 @@ $border-color: #DDDDDD;
 		@extend .span11;
 		@extend .no-margin;
 		.fd_user_minimalist_dashboard {
-			background-color: #E8E8E8;
+			background-color: $lgrey;
 			border-bottom: 1px solid $border-color;
+			border-top: 1px solid #e8e8e8;
 			height: 30px;
     	margin: 10px 2px 10px 0;
     	padding: 5px;
+    	@include box-shadow(0 -1px 0 0 #FFFFFF inset);
 		}
 		.fd_user_minimalist_body {
 			p,ul {
@@ -336,7 +343,7 @@ $border-color: #DDDDDD;
 		  }
   	}
 	  border-bottom: 1px solid #E0E0E0;
-    padding: 10px 0;
+    padding: 5px 0;
      .fd-label-time {
         //background-color: #555555;
         //border-bottom: 1px solid #666666;
@@ -463,6 +470,15 @@ $border-color: #DDDDDD;
 		}
 	}
   .comment-reply {
+  	.commentsContainer {
+  		display:block;
+  		visibility:visible;
+  		.wrap {
+    		display:block;
+	  		visibility:visible;
+  		}
+  	}
+  	
 		.fd_comment_info_count {
 			cursor:pointer;
 			background: url("../images/fd-ui-icons.png") no-repeat scroll 0 -934px transparent;
@@ -503,8 +519,8 @@ $border-color: #DDDDDD;
     .fd-ui-list-item {
       padding:5px;
       background-color:$llyellow;
-      border-top:3px solid #fff;
-      border-bottom:1px solid $fd_black;
+      border-top:2px solid #fff;
+      border-bottom:1px solid #E6E4CB;
 
       .fd-ui-list-item-center {
         p {
@@ -751,7 +767,7 @@ $border-color: #DDDDDD;
 					font-size: 14px;
 					font-weight: bold;
 					height: 38px;
-					padding: 9px 0 0 6px;
+					padding: 7px 0 0 6px;
 					text-align: left;
 					text-shadow: 0 -1px 0 #222222;
 					width: 30px;
@@ -769,13 +785,13 @@ $border-color: #DDDDDD;
 					margin:10px 0;
 					list-style:none;
 					.pre-background {
-						background-color:#eee;
+						background-color:$lgrey;
 						background-image:url(../images/fd-ui-icons.png);
 						background-repeat:none;
 					}
 					li {
 						@extend .pre-background; 
-						background-position: -3px -607px;
+						background-position: -3px -611px;
 						border: none;
 						
 						height: 27px;
@@ -880,7 +896,7 @@ $border-color: #DDDDDD;
       background-color: #999;
       @include sans-serif-font(13px, normal, 1);
       width: 400px;
-      padding: 4px 9px;
+      padding: 0px 9px;
       color: #fff;
       color: rgba(255,255,255,.75);
       border: 1px solid #111;
@@ -908,7 +924,7 @@ $border-color: #DDDDDD;
         color: $grayDark;
         text-shadow: 0 1px 0 #fff;
         border: 0;
-        padding: 5px 10px;
+        padding: 1px 10px;
         @include box-shadow(0 0 3px rgba(0,0,0,.15));
       }
     }
@@ -1232,16 +1248,16 @@ input[type=submit].btn {
   z-index: 3;
   min-height: 70px;
   .gritter-item-wrapper {
-    margin:10px 0;
-    @include box-shadow(0 2px 2px 0px #555);
-     @include border-radius(2px);
+    height: 65px;
+    //@include box-shadow(0 2px 2px 0px #555);
+    //@include border-radius(2px);
     //@include box-shadow(0 3px 3px 0 #333333);
     .close {
       background: url("../images/fd-ui-icons.png") no-repeat scroll -128px -159px transparent;
       height: 60px;
-      margin-top: -4px;
+      margin-top: 2px;
       position: absolute;
-      right: -17px;
+      right: -15px;
       width: 17px;
       cursor:pointer;
       &:hover {
@@ -1250,14 +1266,21 @@ input[type=submit].btn {
     }
     .gritter-top {  }
     .gritter-item {
-      padding: 10px 10px 10px 50px;
+      padding: 10px 10px 6px 62px;
       min-height: 42px;
       .gritter-without-image {
         .gritter-title {}
         p {
-          color: $black;
-          text-shadow:0 1px 0 #fff;
+          color: $lgrey;
+          line-height:21px;
+          text-shadow:0 1px 0 #000;
           margin-bottom:0;
+          .title {
+          	color:$white;
+          	font-size: 12px;
+		    font-weight: bold;
+		    line-height: 21px;
+          }
         }
       }
     }
@@ -1269,43 +1292,43 @@ input[type=submit].btn {
       width:46px;
     }
     &.error{
-      border-top:4px solid $fd_red;
-      background-color: $lred;      
+    	background: url(../images/fd-ui-icons.png) -516px -474px no-repeat transparent; 
+      //border-top:4px solid $fd_red;
+      //background-color: $lred;      
       .icon { 
-        background: url(../images/fd-ui-icons.png) 0 -351px no-repeat transparent; 
-        @extend .icon-size;
+        //@extend .icon-size;
       }
     }
     &.warning {
-      border-top:4px solid $byellow;
-      background-color: $lyellow;   
+    	background: url(../images/fd-ui-icons.png) -516px  -683px no-repeat transparent; 
+      //border-top:4px solid $byellow;
+      //background-color: $lyellow;   
       .icon {
-        background: url(../images/fd-ui-icons.png) 0 -395px no-repeat transparent; 
-        @extend .icon-size; 
+        //@extend .icon-size; 
       }
     }
     &.success { 
-      border-top:4px solid $fd_bgreen;
-      background-color: $fd_lgreen; 
+    	background: url(../images/fd-ui-icons.png) -516px  -609px no-repeat transparent; 
+      //border-top:4px solid $fd_bgreen;
+      //background-color: $fd_lgreen; 
       .icon { 
-        background: url(../images/fd-ui-icons.png) 0 -307px no-repeat transparent; 
-        @extend .icon-size; 
+        //@extend .icon-size; 
       }
     }
     &.notice  { 
-      border-top:4px solid $fd_bleu;
-      background-color: $mblue; 
+    	background: url(../images/fd-ui-icons.png) -516px  -540px no-repeat transparent; 
+      //border-top:4px solid $fd_bleu;
+      //background-color: $mblue; 
       .icon { 
-        background: url(../images/fd-ui-icons.png) 0 -439px no-repeat transparent; 
-        @extend .icon-size; 
+        //@extend .icon-size; 
       }
     }
     &.saved  { 
-      border-top:4px solid $mblack;
-      background-color: $lgrey; 
+    	background: url(../images/fd-ui-icons.png) 0 -351px no-repeat transparent; 
+      //border-top:4px solid $mblack;
+      //background-color: $lgrey; 
       .icon { 
-        background: url(../images/fd-ui-icons.png) 0 -483px no-repeat transparent; 
-        @extend .icon-size; 
+        //@extend .icon-size; 
       }
     }
   }
@@ -1614,7 +1637,7 @@ input[type=submit].btn {
 	}
 
   .fd_section_content { 
-  	color:#333;
+  	
     .fd_section_subtitle {
 			@extend .section-title-size; 
 			& { font-size: $basefont;	 }
@@ -1728,6 +1751,88 @@ ul {
       margin-left: 10px;
     }
   }
+}
+
+
+// DASHBOARD ICONS 
+// --------------------
+
+.fd-ui-icons {
+	li {
+		float:left;
+		margin:0 5px;
+		background: url("../images/grippy.png") 0 11px no-repeat;
+	  margin: 0;
+	  padding: 0 22px;
+	  &.right {
+	  	float:right !important;
+	  }
+		a {
+			&.disabled {
+				opacity:0.1;
+				cursor:default;
+				&:hover {
+					opacity:0.1;
+				cursor:default;
+				}
+			}
+		}
+	}
+	.fd-ui-icon-shared {
+		background-image: url(../images/fd-ui-icons.png);
+		background-repeat:none;
+		display:block;
+		height:30px;
+		width: 29px;
+		background-position: 0 -1063px;
+		cursor:pointer;
+		opacity:0.5;
+		&:hover {
+			opacity:1;
+		}
+	}
+	.add-tut-icon {
+		@extend .fd-ui-icon-shared;
+    width: 40px;
+	}
+	.playlist-icon {
+		@extend .fd-ui-icon-shared;
+		background-position: -39px -1063px;
+	}
+	.mail-icon {
+		background-position: -96px -1063px;
+		@extend .fd-ui-icon-shared;
+	}
+	.flag-icon {
+		background-position: -150px -1063px;
+		@extend .fd-ui-icon-shared;
+		width: 22px;
+	}
+	.msg-icon {
+		background-position: -68px -1063px;
+		width: 28px;
+		@extend .fd-ui-icon-shared;
+	}
+	.flip-icon {
+		background-position: -172px -1063px;
+		@extend .fd-ui-icon-shared;
+		height: 32px;
+    width: 28px;
+	}
+	.follower-icon {
+		background-position: -125px -1063px;
+		@extend .fd-ui-icon-shared;
+		width: 27px;
+	}
+	.search-icon {
+		background-position: -201px -1063px;
+		@extend .fd-ui-icon-shared;
+		width: 24px;
+	}
+	.mini-search-icon {
+		background-position: -39px -1063px;
+		@extend .fd-ui-icon-shared;
+	}
 }
 
 

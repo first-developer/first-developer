@@ -122,5 +122,22 @@ $(function() {
       s.removeClass("off").addClass("on");
     }
   });
+  
+  // Handle opacity animation on dashbord icons 
+  // ----------------------------------------------
+  
+  /*$(".fd_user_minimalist_dashboard .fd-ui-icons li a:not(.disabled)").hover(
+    function() {
+      $(this).stop().fadeTo("",0.99);
+    },
+    function() {
+      $(this).stop().fadeTo("", 0.5);
+    } 
+  );*/
+  
+  // Handle title corner 
+  // ------------------------
+  // for the sidebar 
+  $(".fd_sidebar ").corned("10px bevel tr");
       
 });

@@ -21,7 +21,7 @@
 	}
 	
 	* {
-	  p { color: $lblack;}
+	  //p { color: $lblack;}
 		font-family: $basic_fonts;
 	}
 /* App Stylesheet
@@ -78,6 +78,7 @@
 	
 		// ====== fd_header_content  =======		
 		#fd_user_status {
+		 
 		  .welcome_user { 
 				font-size:12px;
 				background-color:#fff;
@@ -87,8 +88,10 @@
 				float: right;
 		    @include border-radius(2px 0 0 2px);
 				height: 19px;
-				margin: -2px 3px 0 0;
-				padding: 5px 15px;}
+        margin: -1px 3px 0 0;
+        padding: 2px 21px 8px;
+				  
+				}
 		
 			ul,li {
 				list-style:none;  
@@ -181,7 +184,7 @@
 		  
 		  .fd_logo {background: url("../images/main_logo.png") no-repeat scroll 0 0 transparent;display: block;height: 65px;}
       #fd_user_status {
-        margin:0;
+         margin: 0 0 0 35px;
         min-height: 90px;
       }
 		}
@@ -340,6 +343,7 @@
             margin: 0 0 5px;
             padding: 0 0 0 80px;
             text-shadow: 0 1px 0 #000000;
+            line-height:34px;
             /*font-family:ff-nuvo-web-pro !important;*/
           }
           h7 {
