@@ -1266,7 +1266,7 @@ input[type=submit].btn {
     }
     .gritter-top {  }
     .gritter-item {
-      padding: 10px 10px 6px 62px;
+      padding: 10px 10px 6px 85px;
       min-height: 42px;
       .gritter-without-image {
         .gritter-title {}
@@ -1274,10 +1274,10 @@ input[type=submit].btn {
           color: $lgrey;
           line-height:21px;
           text-shadow:0 1px 0 #000;
+          font-size: 11px;
           margin-bottom:0;
           .title {
           	color:$white;
-          	font-size: 12px;
 		    font-weight: bold;
 		    line-height: 21px;
           }
@@ -1292,7 +1292,7 @@ input[type=submit].btn {
       width:46px;
     }
     &.error{
-    	background: url(../images/fd-ui-icons.png) -516px -474px no-repeat transparent; 
+    	background: url(../images/fd-ui-icons.png) -493px -474px no-repeat transparent; 
       //border-top:4px solid $fd_red;
       //background-color: $lred;      
       .icon { 
@@ -1300,7 +1300,7 @@ input[type=submit].btn {
       }
     }
     &.warning {
-    	background: url(../images/fd-ui-icons.png) -516px  -683px no-repeat transparent; 
+    	background: url(../images/fd-ui-icons.png) -493px  -683px no-repeat transparent; 
       //border-top:4px solid $byellow;
       //background-color: $lyellow;   
       .icon {
@@ -1308,7 +1308,7 @@ input[type=submit].btn {
       }
     }
     &.success { 
-    	background: url(../images/fd-ui-icons.png) -516px  -609px no-repeat transparent; 
+    	background: url(../images/fd-ui-icons.png) -493px  -609px no-repeat transparent; 
       //border-top:4px solid $fd_bgreen;
       //background-color: $fd_lgreen; 
       .icon { 
@@ -1316,7 +1316,7 @@ input[type=submit].btn {
       }
     }
     &.notice  { 
-    	background: url(../images/fd-ui-icons.png) -516px  -540px no-repeat transparent; 
+    	background: url(../images/fd-ui-icons.png) -493px  -540px no-repeat transparent; 
       //border-top:4px solid $fd_bleu;
       //background-color: $mblue; 
       .icon { 
