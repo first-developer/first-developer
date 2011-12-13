@@ -1781,6 +1781,7 @@ ul {
 	  	float:right !important;
 	  }
 		a {
+			position:relative;
 			&.disabled {
 				opacity:0.1;
 				cursor:default;
@@ -1788,6 +1789,23 @@ ul {
 					opacity:0.1;
 				cursor:default;
 				}
+			}
+
+			.fd-count-item {
+				background-color: $fd_red;
+			    @include border-radius(12px);
+			    @include box-shadow(-2px 2px 0 0 #FFFFFF);
+			    color: $white;
+			    font-size: $basefont;
+			    font-weight: bold;
+			    height: 20px;
+			    line-height: 20px;
+			    opacity: 0.99;
+			    position: absolute;
+			    right: -10px;
+			    text-align: center;
+			    top: -12px;
+			    width: 20px;
 			}
 		}
 	}
@@ -1799,7 +1817,7 @@ ul {
 		width: 29px;
 		background-position: 0 -1063px;
 		cursor:pointer;
-		opacity:0.5;
+		//opacity:0.5;
 		&:hover {
 			opacity:1;
 		}
