@@ -229,8 +229,8 @@ $border-color: #DDDDDD;
 #user_profile_minimalist {
 	overflow: hidden;
 	display:block;
-	border-right: 1px solid $border-color;
-	border-left: 1px solid $border-color;
+	//border-right: 1px solid $border-color;
+	//border-left: 1px solid $border-color;
 	.fd_user_minimalist_hd {
 		@extend .span11;
 		@extend .no-margin;
@@ -291,17 +291,23 @@ $border-color: #DDDDDD;
 		@extend .no-margin;
 		.fd_user_minimalist_dashboard {
 			background-color: $lgrey;
-			border-bottom: 1px solid $border-color;
-			border-top: 1px solid #e8e8e8;
+			//border-bottom: 1px solid $border-color;
+			border: 1px solid $border-color;
+			//border-top: 1px solid #e8e8e8;
 			height: 30px;
-    	margin: 10px 2px 10px 0;
-    	padding: 5px;
-    	@include box-shadow(0 -1px 0 0 #FFFFFF inset);
+	    	margin: 10px 2px 10px 0;
+	    	padding: 5px;
+	    	@include box-shadow(0 -1px 0 0 #FFFFFF inset);
+	    	@include border-radius(2px);
+	    	//@extend .bkg-ray;
 		}
 		.fd_user_minimalist_body {
 			p,ul {
-				padding: 0 15px;
+				
 				line-height:$baseline;
+			}
+			p {
+				//padding: 0 15px;
 			}
 //			.fd_section {
 //				position:relative;
@@ -356,7 +362,7 @@ $border-color: #DDDDDD;
 		  }
   	}
 	  border-bottom: 1px solid #E0E0E0;
-    padding: 5px 0;
+    padding:5px 0 10px;
      .fd-label-time {
         //background-color: #555555;
         //border-bottom: 1px solid #666666;
@@ -521,11 +527,14 @@ $border-color: #DDDDDD;
 			}
 			.open {
 				@extend .expend-tools;
-				background: url("../images/fd-ui-icons.png") no-repeat scroll -54px -980px transparent;
+				width: 40px;
+				background: url("../images/fd-ui-icons.png") no-repeat scroll -50px -983px transparent;
 			}
 			.close {
 				@extend .expend-tools;
-				background: url("../images/fd-ui-icons.png") no-repeat scroll -5px -980px transparent;
+				width: 40px;
+				opacity: 0.5;
+				background: url("../images/fd-ui-icons.png") no-repeat scroll -5px -978px transparent;
 				
 			}
 		}
@@ -1228,14 +1237,16 @@ input[type=submit].btn {
   left: 0;
   position: fixed;
   top: 50%;
-  width: 250px;
+  width: 213px;
   .loader-icon {
     background:url(../images/loader-icon.gif) 0 0 no-repeat transparent;
     height:50px;
     display:block;
     width:50px;
     float:right;
-    margin: 6px 60px 0 0;
+    margin: 6px 0 0 0;
+    position: relative;
+    right: 24px
   }
   .label {
     background: none repeat scroll 0 0 transparent;
@@ -1653,11 +1664,12 @@ input[type=submit].btn {
   	
     .fd_section_subtitle {
 			@extend .section-title-size; 
+			padding:0;
 			& { font-size: $basefont;	 }
 		}
 		.fd_section_details {
 			margin: 5px 0;
-	    min-height: 25px;
+	    	min-height: 25px;
 			border:none;
 			font-size: $basefont;
 			p {
@@ -1783,16 +1795,16 @@ ul {
 		a {
 			position:relative;
 			&.disabled {
-				opacity:0.1;
+				opacity:0.3;
 				cursor:default;
 				&:hover {
-					opacity:0.1;
-				cursor:default;
+					opacity:0.3;
+					cursor:default;
 				}
 			}
 
 			.fd-count-item {
-				background-color: $fd_red;
+				background-color: $fd_shiny_green;
 			    @include border-radius(12px);
 			    @include box-shadow(-2px 2px 0 0 #FFFFFF);
 			    color: $white;
@@ -1839,6 +1851,11 @@ ul {
 		@extend .fd-ui-icon-shared;
 		width: 22px;
 	}
+	.stat-icon {
+		background-position: -247px -1063px;
+    	width: 27px;
+    	@extend .fd-ui-icon-shared;
+	}
 	.msg-icon {
 		background-position: -68px -1063px;
 		width: 28px;
@@ -1856,7 +1873,7 @@ ul {
 		width: 27px;
 	}
 	.search-icon {
-		background-position: -201px -1063px;
+		background-position: -201px -1068px;
 		@extend .fd-ui-icon-shared;
 		width: 24px;
 	}
