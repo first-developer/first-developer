@@ -63,7 +63,7 @@
 
 .divider {
 	background: none repeat scroll 0 0 #DDDDDD;
-  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  border-bottom: 1px dashed rgba(255, 255, 255, 0.1);
   display: block;
   height: 0;
   margin: 10px 0;
@@ -361,7 +361,7 @@ $border-color: #DDDDDD;
 		  	background-color: #f9f9f9;
 		  }
   	}
-	  border-bottom: 1px solid #E0E0E0;
+	border-bottom: 1px dashed #E0E0E0;
     padding:5px 0 10px;
      .fd-label-time {
         //background-color: #555555;
@@ -1657,6 +1657,32 @@ input[type=submit].btn {
 	 	
 	 	
 		
+		
+	}
+	.fd_section_title2 {
+		background: url("../images/title_section.png") repeat scroll 0 -11px #fff;
+		text-shadow: 0 1px 0 white;
+		font-weight:bold;
+		margin:5px 0 10px;
+		text-align:center;
+	  	font-size: $basefont;
+	  	
+		@extend .section-title-size;
+		position:relative;
+		
+		.fd_section_title2_text {
+			text-transform: uppercase;
+			text-shadow: 0 1px 0 #444444;
+	 		background-color: #FFFFFF;
+    		padding: 0 25px;
+	 	
+		}
+	 	
+	 	&.red 	{ color:  $fd_lred; }
+ 		&.black { color:  #777;}
+ 		&.blue 	{ color:  $fd_bleu; }
+ 		&.yellow{ color:  $byellow; }
+	
 		
 	}
 
