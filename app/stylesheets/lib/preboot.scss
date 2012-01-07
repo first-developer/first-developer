@@ -23,7 +23,7 @@ $linkColorHover:    darken($linkColor, 10);
 $black:             #000;
 $grayDark:          lighten($black, 25%);
 $lblack:						#555;
-$gray:              lighten($black, 50%);
+$gray:              #555; //lighten($black, 50%);
 $grayLight:         darken($black, 90%);
 $grayLighter:       lighten($black, 90%);
 $white:             #fff;

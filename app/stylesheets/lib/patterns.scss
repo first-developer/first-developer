@@ -186,14 +186,14 @@ ul.grippy-list {
 			width:65px;
 		}
 		&.on {
-			background-position: -197px -474px;			
+			background-position: -181px -474px;			
 			@extend .switches_size;
 			&:hover {
 				//background-position:-269px -474px ;		
 			}	
 		}
 		&.off {
-			background-position:-269px -474px ;		
+			background-position:-252px -474px ;		
 			@extend .switches_size;		
 			&:hover {
 				//background-position: -197px -474px;			
@@ -259,6 +259,42 @@ $border-color: #DDDDDD;
 						font-size: 14px;
     				font-weight: 700;
 					}
+				}
+			}
+
+			.fd_dashboard_stats {
+				background: url("../images/fd-ui-icons.png") no-repeat scroll -473px -782px transparent;
+				height: 75px;
+				margin: 10px 0;
+				ul {
+					margin:0;
+					li {
+						margin: 15px 17px 30px;
+						float: left;
+					    height: 60px;
+					    list-style: none outside none;
+					    width: 80px;
+					    TEXT-ALIGN:CENTER;
+						.stats_size {
+							COLOR:#FFF;
+							display: block;
+							font-weight:bold;
+						}
+						.stats_number {
+							font-size: 40px;
+						    //font-style: italic;
+						    padding: 0 0 5px;
+						    @include text-shadow(-1px -3px 0 #000000);
+							@extend .stats_size;
+						}
+						.stats_title {
+							font-size:12px;
+							color: #BBBBBB;
+						    font-size: $basefont;
+						    @include text-shadow(0 2px 0 #000000);
+							@extend .stats_size;
+						}
+					}	
 				}
 			}
 		}
@@ -356,7 +392,7 @@ $border-color: #DDDDDD;
 			}
 		  font-size:  $basefont;
 		  list-style: none outside none;
-		  padding-left: 10px;
+		  padding: 5px 0;
 		  &:nth-child(2n+1) {
 		  	background-color: #f9f9f9;
 		  }
@@ -776,6 +812,7 @@ $border-color: #DDDDDD;
 		}
 		.fd_poll-item-li {
 			list-style:none;
+			padding: 5 0px;
 			.fd_poll-item-title {
 				color: $bblack;
 				display: block;
@@ -1672,14 +1709,14 @@ input[type=submit].btn {
 		
 		.fd_section_title2_text {
 			text-transform: uppercase;
-			text-shadow: 0 1px 0 #444444;
+			//text-shadow: 0 1px 0 #444444;
 	 		background-color: #FFFFFF;
     		padding: 0 25px;
 	 	
 		}
 	 	
 	 	&.red 	{ color:  $fd_lred; }
- 		&.black { color:  #777;}
+ 		&.black { color:  #888;}
  		&.blue 	{ color:  $fd_bleu; }
  		&.yellow{ color:  $byellow; }
 	
