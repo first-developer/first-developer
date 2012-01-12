@@ -168,7 +168,7 @@ ul.grippy-list {
 	}
 	margin:0;
 	li {
-		margin: 0 50px 10px 11px;
+		margin: 0 50px 10px 0px;
 		float:left;
 	}
 }
@@ -369,7 +369,14 @@ $border-color: #DDDDDD;
 	background: url("../images/fd-ui-icons.png") no-repeat scroll -810px -4px transparent;
 	display:block;
 	cursor:pointer;
+
+	&:hover {
+		@include box-shadow(0 1px 0 #E0E0E0);
+	}
 }
+
+
+
 
 // FD-UI-LIST-ITEM
 // ----------------
@@ -1712,7 +1719,12 @@ input[type=submit].btn {
 			//text-shadow: 0 1px 0 #444444;
 	 		background-color: #FFFFFF;
     		padding: 0 25px;
-	 	
+	 		&.code {
+	 			color: #569EAF;
+			    font-family: "droid sans",ubuntu,consola,arial,sans-serif;
+			    font-size: 18px;
+			    letter-spacing: 1px;
+	 		}
 		}
 	 	
 	 	&.red 	{ color:  $fd_lred; }
@@ -1868,7 +1880,7 @@ ul {
 
 			.fd-count-item {
 				background-color: $fd_shiny_green;
-			    @include border-radius(12px);
+			    @include border-radius(2px);
 			    @include box-shadow(-2px 2px 0 0 #FFFFFF);
 			    color: $white;
 			    font-size: $basefont;
@@ -1910,7 +1922,7 @@ ul {
 		@extend .fd-ui-icon-shared;
 	}
 	.flag-icon {
-		background-position: -150px -1063px;
+		background-position: -150px -1066px;
 		@extend .fd-ui-icon-shared;
 		width: 22px;
 	}
