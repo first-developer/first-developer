@@ -85,12 +85,17 @@ $(function() {
     
   // Handle sliding up of the comment infos 
   // ---------------------------------------
-  
+    
+    var size;
+    var wrap = $(".wrap");
+    size = wrap.first().children().length - 1;
+    var wrap_resize = $(".wrap").find(".fd-ui-list-item:lt(" + size + ")"); 
+    wrap_resize.hide();
   $(".fd_comment_info_count").live("click", function() {
-    var wrap = $(this).parent().find(".wrap");
+    var wrap_resize = $(this).parent().find(".wrap .fd-ui-list-item:lt(" + size + ")");
     var indic = $(this).find(".fd-open-and-close-indicator");
     
-    wrap.slideToggle({ duration:500});
+    wrap_resize.slideToggle({ duration:500});
      
     if ( indic.hasClass("open") ) {
       indic.removeClass("open").addClass("close");
