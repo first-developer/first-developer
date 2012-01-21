@@ -117,7 +117,7 @@
 // profile
 // ---------------------------------------
 .profile_image {
-	border: 1px solid #d0D0D0;
+	border: 1px solid $white;
  	@include box-shadow(0 0 0 2px #FFFFFF inset);
   display: block;
   margin: 0 0 0 10px;
@@ -132,7 +132,7 @@
 		width:25px;
 	}
 	&.default {
-		background:url("../images/default-user.png") no-repeat scroll center 2px #E7E7E7;
+		background:url("../images/user-design.png") no-repeat scroll center -3px $white;
 	}
 }
 
@@ -193,6 +193,7 @@ ul.grippy-list {
 	}
 	.fd_post_social {
 		@extend .well;
+		@include border-radius(1px);
 	}
 	.post-type-icon {
 		height:30px;
@@ -381,7 +382,7 @@ $border-color: #DDDDDD;
 	    	margin: 10px 2px 10px 0;
 	    	padding: 5px;
 	    	@include box-shadow(0 -1px 0 0 #FFFFFF inset);
-	    	@include border-radius(2px);
+	    	@include border-radius(1px);
 	    	//@extend .bkg-ray;
 		}
 		.fd_user_minimalist_body {
