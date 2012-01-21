@@ -173,6 +173,53 @@ ul.grippy-list {
 	}
 }
 
+// =============================
+//  	POST
+// =============================
+
+.fd_post {
+	.fd_post_info_mark {
+		left:0 !important;
+	}
+	.fd_post_image {
+		margin: 10px 0 20px;
+		.fd-post-image-wrapper {
+			border: 1px solid #D0D0D0; 
+			box-shadow: 0 0 0 3px #FFFFFF inset;
+			display: block; 
+			height: 200px; 
+			width: 100%;
+		}
+	}
+	.fd_post_social {
+		@extend .well;
+	}
+	.post-type-icon {
+		height:30px;
+		width: 70px;
+		display:block;
+		background: url("../images/fd-ui-icons.png") no-repeat;
+
+		
+		&.article {
+			background-position: -798px -194px;
+		}
+		&.update {
+			background-position: -798px -132px;	
+		}
+		&.video {
+			background-position: -798px -164px;
+		}
+		&.music {
+			background-position: -798px -255px;
+		}
+		&.flash {
+			background-position: -798px -225px;
+		}
+	}
+}
+
+
 // SWITCHES 
 // --------------------------
 
