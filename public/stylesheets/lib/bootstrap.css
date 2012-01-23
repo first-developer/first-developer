@@ -1,10 +1,10 @@
 /*
 Syntax error: Undefined variable: "$fd_red".
-        on line 156 of /home/fd/Sites/first-developer/app/stylesheets/lib/type.scss
+        on line 162 of /home/fd/Sites/first-developer/app/stylesheets/lib/type.scss
         from line 24 of /home/fd/Sites/first-developer/app/stylesheets/lib/bootstrap.scss
 
 Backtrace:
-/home/fd/Sites/first-developer/app/stylesheets/lib/type.scss:156
+/home/fd/Sites/first-developer/app/stylesheets/lib/type.scss:162
 /home/fd/Sites/first-developer/app/stylesheets/lib/bootstrap.scss:24
 /home/fd/.rvm/gems/ruby-1.9.2-p180/gems/sass-3.1.10/lib/sass/script/variable.rb:50:in `_perform'
 /home/fd/.rvm/gems/ruby-1.9.2-p180/gems/sass-3.1.10/lib/sass/script/node.rb:40:in `perform'
@@ -88,4 +88,4 @@ Backtrace:
 body:before {
   white-space: pre;
   font-family: monospace;
-  content: "Syntax error: Undefined variable: \"$fd_red\".\A         on line 156 of /home/fd/Sites/first-developer/app/stylesheets/lib/type.scss\A         from line 24 of /home/fd/Sites/first-developer/app/stylesheets/lib/bootstrap.scss"; }
+  content: "Syntax error: Undefined variable: \"$fd_red\".\A         on line 162 of /home/fd/Sites/first-developer/app/stylesheets/lib/type.scss\A         from line 24 of /home/fd/Sites/first-developer/app/stylesheets/lib/bootstrap.scss"; }

@@ -1,15 +1,17 @@
 <% content_for :fd_content_left do %>
   <%= render "shared/pagination_bar" %>
+  <%#= render "shared/user_profile" %>
+  <span class="clear"></span>
   <br>
-  <%= render "shared/user_profile" %>
+  <%= render "shared/login_form" %>
   <span class="clear"></span>
   <br>
   <div class="fd_tuts">
-    <%= render "shared/post" %>
+    <%#= render "shared/post" %>
   </div>
   <br>
   <ul class="fd_tuts">
-    <%= render "tuts/tut_display" %>
+    <%#= render "tuts/tut_display" %>
   </ul>
    <ul class="fd_tuts">
     <%= render "tuts/tut_li" %>

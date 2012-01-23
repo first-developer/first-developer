@@ -1,21 +1,21 @@
 /*
 Syntax error: Undefined variable: "$fd_red".
-        on line 25 of /home/fd/Sites/first-developer/app/stylesheets/lib/patterns.scss
+        on line 50 of /home/fd/Sites/first-developer/app/stylesheets/lib/patterns.scss
 
-20: 
-21: 
-22: // text color 
-23: 
-24: .text-red {
-25: 	color: $fd_red;
-26: }
-27: 
-28: .text-mblack {
-29: 	color: $mblack;
-30: }
+45: }
+46: 
+47: // text color 
+48: 
+49: .text-red {
+50: 	color: $fd_red;
+51: }
+52: 
+53: .text-mblack {
+54: 	color: $mblack;
+55: }
 
 Backtrace:
-/home/fd/Sites/first-developer/app/stylesheets/lib/patterns.scss:25
+/home/fd/Sites/first-developer/app/stylesheets/lib/patterns.scss:50
 /home/fd/.rvm/gems/ruby-1.9.2-p180/gems/sass-3.1.10/lib/sass/script/variable.rb:50:in `_perform'
 /home/fd/.rvm/gems/ruby-1.9.2-p180/gems/sass-3.1.10/lib/sass/script/node.rb:40:in `perform'
 /home/fd/.rvm/gems/ruby-1.9.2-p180/gems/sass-3.1.10/lib/sass/tree/visitors/perform.rb:214:in `visit_prop'
@@ -93,4 +93,4 @@ Backtrace:
 body:before {
   white-space: pre;
   font-family: monospace;
-  content: "Syntax error: Undefined variable: \"$fd_red\".\A         on line 25 of /home/fd/Sites/first-developer/app/stylesheets/lib/patterns.scss\A \A 20: \A 21: \A 22: // text color \A 23: \A 24: .text-red {\A 25: 	color: $fd_red;\A 26: }\A 27: \A 28: .text-mblack {\A 29: 	color: $mblack;\A 30: }"; }
+  content: "Syntax error: Undefined variable: \"$fd_red\".\A         on line 50 of /home/fd/Sites/first-developer/app/stylesheets/lib/patterns.scss\A \A 45: }\A 46: \A 47: // text color \A 48: \A 49: .text-red {\A 50: 	color: $fd_red;\A 51: }\A 52: \A 53: .text-mblack {\A 54: 	color: $mblack;\A 55: }"; }

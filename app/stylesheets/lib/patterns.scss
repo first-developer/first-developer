@@ -18,6 +18,31 @@
 	float:left;
 }
 
+// icons
+
+.type-icon {
+	height:30px;
+	width: 70px;
+	display:block;
+	background: url("../images/fd-ui-icons.png") no-repeat;
+
+	
+	&.article {
+		background-position: -798px -194px;
+	}
+	&.update {
+		background-position: -798px -132px;	
+	}
+	&.video {
+		background-position: -798px -164px;
+	}
+	&.music {
+		background-position: -798px -255px;
+	}
+	&.flash {
+		background-position: -798px -225px;
+	}
+}
 
 // text color 
 
@@ -196,27 +221,7 @@ ul.grippy-list {
 		@include border-radius(1px);
 	}
 	.post-type-icon {
-		height:30px;
-		width: 70px;
-		display:block;
-		background: url("../images/fd-ui-icons.png") no-repeat;
-
-		
-		&.article {
-			background-position: -798px -194px;
-		}
-		&.update {
-			background-position: -798px -132px;	
-		}
-		&.video {
-			background-position: -798px -164px;
-		}
-		&.music {
-			background-position: -798px -255px;
-		}
-		&.flash {
-			background-position: -798px -225px;
-		}
+		@extend .type-icon; 
 	}
 }
 
@@ -364,7 +369,7 @@ $border-color: #DDDDDD;
 					padding:20px;
 					margin-right:4px;
 					border:1px solid $fd_black;
-					@include box-shadow(0 0 0 4px #E4E4E4);
+					@include box-shadow(0 0 0 4px #e2e2e2);
 				}
 			}
 		}
@@ -2354,3 +2359,165 @@ ul {
 	@extend .fd_admin_action_item_size;
 }
 
+// ========================
+// SECTION_TITLE_&_SUBTITLE
+// ========================
+
+.fd_article_title {
+	//position:relative;
+	margin:0;
+	height:100px;
+	a { 
+		background-color:$lyellow;
+		@include box-shadow(0 0 0 3px #FFFFFF inset);
+		border:1px solid #CCCCCC;
+		display:block;
+		height:100px;
+		padding:5px;
+		text-decoration:none;
+		width:150px;
+	
+	
+	}
+	.fd_article_info_done {
+		background:url("../images/fd-ui-icons.png") no-repeat scroll -203px 0 transparent;
+		height:25px;					
+		margin:5px 0 0;
+		position:absolute;
+		left:25px;
+		width:68px;
+	}
+
+	.fd_article_info_mark {
+		bottom:35px;
+		float:left;
+		left:5px;
+		position:relative;
+		.large-bande {
+			padding: 0 10px 0 5px;
+		}
+		.large-corner-right {
+			margin:0 0 0 0;
+		  width:16px;
+		}
+
+	}
+	.fd_article_info_time {
+		bottom:30px;
+		float:right;
+		right:3px;
+		position:relative;	
+		.small-bande {
+			padding-left:0;	
+			padding-right:10px;						
+		}	
+	}
+}
+
+.fd_article_title {
+
+  background:none;
+  
+  .fd_article-type-icon {
+  	@extend .type-icon; 
+  }
+  .fd_article_info_mark {
+    top:0; 
+  }
+  .fd_article_info_title {
+    h3 {
+      background: none repeat scroll 0 0 transparent;
+      border-bottom: 4px solid #EEEEEE;
+      margin: 0 0 5px;
+      padding: 0 0 0 80px;
+      text-shadow: 0 1px 0 #000000;
+      line-height:34px;
+      /*font-family:ff-nuvo-web-pro !important;*/
+    }
+    h7 {
+	    margin:10px 0;
+	    display:block;
+      .fd_article_date {
+      	text-transform:lowercase;
+      	margin:0 20px;
+      	font-size:$basefont;
+      	font-style:italic;
+      	&:before {
+      	  padding-right:15px;
+      		content: "☆";
+      	}
+      }
+    }
+  }
+}
+
+
+
+// ========================
+// FORM LOGIN / SIGN IN
+// ========================
+
+.fd_login {
+	.well {
+		margin-top:20px;
+		.btn {
+			//margin:0 auto;
+			position:relative;
+		}
+	}
+	.fd_login_image {
+		margin:20px auto 0;
+		img {
+			padding:20px;
+			border:1px solid $fd_black;
+			margin: 0 auto;
+			position: relative;
+			@include box-shadow(0 0 0 4px #e2e2e2);
+		}
+	}
+	.fd_login_input {
+		label {
+			//width:100%;
+			text-align:left;
+			float:none;
+		} 
+		margin:0 auto;
+		padding: 20px 0 0;	
+		.fd_login_input_bg {
+			background:url("../images/fd-ui-icons.png") no-repeat scroll -885px -704px transparent;
+			
+	    margin: 0 0 20px;
+		}
+		
+		.fd_login_input_standart,
+		.fd_login_input_username,
+		.fd_login_input_password 
+		{
+			
+			input {
+				padding: 5px 0 5px 50px; 
+				display:block;
+				width: 315px;
+				font-size:12px;
+				font-weight:bold;
+				background: none repeat scroll 0 0 transparent;
+			}
+		}
+		.fd_login_input_username {
+			@extend .fd_login_input_bg;
+			width: 315px;
+			height: 37px;
+			background-position: -879px -319px;
+		}
+		.fd_login_input_standart {
+			@extend .fd_login_input_bg;
+			background-position: -885px -704px;
+		}
+		.fd_login_input_password {
+			@extend .fd_login_input_bg;
+			width: 315px;
+			height: 37px;
+			background-position: -879px -440px;
+		}
+	}
+}
