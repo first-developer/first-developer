@@ -42,8 +42,10 @@
 	&.flash {
 		background-position: -798px -225px;
 	}
+	&.login {
+		background-position: -798px -285px;
+	}
 }
-
 // text color 
 
 .text-red {
@@ -2479,6 +2481,7 @@ ul {
 		label {
 			//width:100%;
 			text-align:left;
+			font-size:$basefont;
 			float:none;
 		} 
 		margin:0 auto;
@@ -2518,6 +2521,27 @@ ul {
 			width: 315px;
 			height: 37px;
 			background-position: -879px -440px;
+		}
+		.fd_login_input_checkbox {
+			@include  border-radius(2px);
+		  margin: 0;
+		 	padding: 8px 10px 4px;
+   	 	width: 347px;
+   	 	border-bottom: 1px solid $white;
+   	 	label {
+ 	 			font-weight:bold;
+				left: 8px;
+				position: relative;
+				top: -2px;
+			}
+		  &.checked {
+		  	background-color: $fd_bgreen;
+		  	border-bottom: 1px solid #278C29;
+		  	label {
+					color: #FFFFFF;
+				}
+		  }
+		 
 		}
 	}
 }

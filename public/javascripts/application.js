@@ -71,6 +71,26 @@ $(function() {
       
  });
 
+
+  // Handle checkbox to confirm password 
+  // -----------------------------------
+  
+  if ($('.fd_login_input_checkbox input[type=checkbox]').is(':checked')) {
+    $(".fd_login_input_checkbox").addClass('checked');
+  } 
+  else {
+    $(".fd_login_input_checkbox").removeClass('checked');
+  }
+  $('.fd_login_input_checkbox input[type=checkbox]').click(function() {
+    if ($(this).is(':checked')) {
+      $(".fd_login_input_checkbox").addClass('checked');
+    } 
+    else {
+      $(".fd_login_input_checkbox").removeClass('checked');
+    }
+  });
+
+  
   // Handle follow and unfollow acion
   // ---------------------------------
   /* $(".fd_follow_action.on").hover(
