@@ -21,7 +21,7 @@
 	}
 	
 	* {
-	  	p {color: $lblack;}
+	  	p {color: $lblack; text-align:justify;}
 		font-family: $basic_fonts;
 	}
 /* App Stylesheet
@@ -305,7 +305,8 @@
 		  .fd_tut_title {
 		  		line-height:25px;
 				a {
-				  text-shadow:0 1px 0 #222222;
+				  //text-shadow:0 1px 0 #222222;
+				  font-size:17px;
 				}
 			}
 			.fd_tut_subtitle {
@@ -343,8 +344,9 @@
             background: none repeat scroll 0 0 transparent;
             border-bottom: 4px solid #EEEEEE;
             margin: 0 0 5px;
+            font-size:17px;
             padding: 0 0 0 80px;
-            text-shadow: 0 1px 0 #000000;
+            //text-shadow: 0 1px 0 #000000;
             line-height:34px;
             /*font-family:ff-nuvo-web-pro !important;*/
           }

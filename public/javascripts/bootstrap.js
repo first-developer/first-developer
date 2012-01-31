@@ -17,7 +17,6 @@
  * limitations under the License.
  * ============================================================ */
 
-
 !function( $ ){
 
   var d = 'a.menu, .dropdown-toggle';
@@ -309,7 +308,16 @@ $.sound = {
     
   }
 
-
+  // Hide and Show from top
+  // -------------------------------------------
+  $.fn.showInTop = function (duration) {
+    var d = (duration) ? duration : 1500;
+    $(this).show("slide", {direction: "up", easing: "easeOutQuint"}, d);
+  }
+  $.fn.hideInTop = function (duration) {
+    var d = (duration) ? duration : 1500;
+    $(this).hide("slide", {direction: "up", easing: "easeOutQuint"}, d);
+  }
   
   
   // Show slide effect with direction options
@@ -352,7 +360,7 @@ $.sound = {
 /*
  * 		MENU ACCORDEON
  */
-$(function(){
+(function( $ ){
   //CELUI PERMETTANT D'AFFICHER LES TUTORIELS
 
   // Initialisation des parametres next("div")
@@ -400,5 +408,6 @@ $(function(){
 	  }
 	
   });
-});
+})(jQuery);
+
 

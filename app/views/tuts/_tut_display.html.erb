@@ -47,6 +47,7 @@
   <%= render "shared/modal" %>
   <%= render "layouts/section", :section_title => "quizz", :section_content => [{:section_subtitle =>"", :section_details => raw(
     render("shared/poll") + buttons) }], :section_title_class => "blue"   %>
-  <%= render "layouts/section", :section_title => "Vos reactions", :section_class => "no-margin", :section_content =>[{:section_subtitle =>"", :section_details => render("shared/comment_section")}] , :section_title_class => "red"   %>
+   <%= render "layouts/section", :section_title => "reagissez", :section_class => "no-margin", :section_content =>[{:section_subtitle =>"", :section_details => render("shared/comment_form")}] , :section_title_class => "red"   %>
+  <%= render "layouts/section", :section_title => "vos commentaires des autres", :section_class => "no-margin", :section_content =>[{:section_subtitle =>"", :section_details => render("shared/comment_section")}] , :section_title_class => "black"   %>
  
 </li>
