@@ -21,7 +21,11 @@ group :assets do
 	gem 'coffee-rails', '~> 3.1.1'
 	gem 'therubyracer'
 	gem 'uglifier', '>= 1.0.3'
-	gem 'twitter-bootstrap-rails'
+	#gem 'twitter-bootstrap-rails'
+  gem 'bootstrap-sass'
+  #gem 'bourbon'
+  gem 'oily_png'
+  gem 'compass-rails'
 end
 
 
