@@ -1,62 +1,21 @@
 <%= render "layouts/header" %>
-<div class="navbar">
-	<div class="navbar-inner">
-		<div class="container-fluid">
 
-			<!-- .btn-navbar is used as the toggle for collapsed navbar content -->
-			<a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
-				<span class="icon-bar"></span>
-				<span class="icon-bar"></span>
-				<span class="icon-bar"></span>
-			</a>
-
-			<!-- Everything you want hidden at 940px or less, place within here -->
-			<div class="nav-collapse">
-				<!-- .nav, .navbar-search, .navbar-form, etc -->
-				<ul class="nav pull-right">
-					<li class="">
-						<a href="#">Blog</a>
-					</li>
-					<li class="">
-						<a href="#">About</a>
-					</li>
-					<li class="">
-						<a href="#">Labs</a>
-					</li>
-					<li class="divider-vertical"></li>
-					<li class="">
-						<a href="#">Create account</a>
-					</li>
-					<li class="">
-						<a href="#">Login</a>
-					</li>
-					<li class="divider-vertical no mr"></li>
-					<li class="dropdown">
-            <a data-toggle="dropdown" class="dropdown-toggle" href="#"></i> <b class="caret"></b></a>
-            <ul class="dropdown-menu">
-            	<li><a href="#">Features</a></li>
-              <li><a href="#">Support</a></li>
-              <li><a href="#">Contact</a></li>
-              <li class="divider"></li>
-              <li><a href="#">Sign up</a></li>
-            </ul>
-          </li>
-				</ul>
-			</div>
-		</div>
+<div class="fd-ui-container">
+	<div id="fd-ui-sidebar-left">
+		<%= render "layouts/sidebar" %>
+	</div>
+	<div id="fd-ui-center" >
+		<div  class="">
+			<%= yield %>
+		</div><!-- / -->
+	</div>
+	<div id="fd-ui-sidebar-right1">
+		<%= render "layouts/sidebar_infos" %>
+	</div>
+	<div id="fd-ui-sidebar-right2">
+		<%= render "layouts/sidebar_infos" %>
 	</div>
 </div>
-</div>
-<div class="container-fluid">
-	<div class="row-fluid">
-		<div class="span2">
-			<!--Sidebar content-->
-		</div>
-		<div class="span10">
-			<!--Body content-->
-		</div>
-	</div>
-</div>
-<%= yield %>
+
 
 <%= render "layouts/footer" %>

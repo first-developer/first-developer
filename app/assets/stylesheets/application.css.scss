@@ -6,3 +6,130 @@
  *= require utils
  *= require bootstrap_and_overrides 
 */
+
+@import "settings";
+
+* { font-size-adjust: 0.57;  }
+
+
+// =======================
+// HEADER
+// =======================
+
+#header.fd-ui-ct-header {
+	background: $fd-ui-bg-img-lgry transparent;
+	border-bottom:4px solid #eee ;
+	height: 100px;
+	width: 100%;
+
+
+	#hire-me {
+		background: image-url(image-url.gif) no-repeat transparent;
+	}
+}
+
+
+// =======================
+// CONTENT
+// =======================
+
+
+#sidebar {
+	//position:fixed;
+	//left:0;
+	height:100%;
+	ul.sidebar-menu { 
+		background: $fd-ui-bg-img-red transparent; 
+		width:200px;
+		list-style: none;
+		margin:0;
+		height:100%;
+	}
+
+	li {
+		background-color: $fd-ui-ly-col-red;
+		
+		a {
+			display: block;
+			padding: 8px 20px;
+			color: #fff;
+			.icon-plus {
+				opacity:0.5;
+			}
+		}
+		ul.sidebar-submenu {
+			margin:0;
+			li {
+				background-color: $fd-ui-al-col-lred;
+				a {
+					color: $linkColor;
+					cursor: pointer;
+					display:block;
+				}
+				&:hover {
+					background-color: #EBB4B4;
+				}
+			}
+		}
+	}
+	li:hover {
+		background-color: $fd-ui-ly-col-red;
+		a {
+			.icon-plus {
+				opacity:0.99;
+			}
+		}
+	}
+}
+
+#sidebar_infos {
+	height:100%;
+	background: $fd-ui-bg-img-blk transparent; 
+}
+
+#content {
+	margin-left: 180px;	
+}
+
+// =======================
+// FOOTER
+// =======================
+
+#footer {
+
+}
+
+.fd-ui-container {
+	#fd-ui-sidebar-left {
+		display: block;
+    position: fixed;
+    width: 200px;
+    left:0;
+    height:100%;
+	}
+	#fd-ui-center {
+		float: left;
+    margin-left: 200px;
+    width: 800px;
+	}
+	#fd-ui-sidebar-right1 {
+		border-left: 1px solid #787373;
+    border-right: 1px solid #111111;
+    box-shadow: -1px 0 0 #000000;
+    display: block;
+    float: right;
+    height: 100%;
+    position: fixed;
+    right: 320px;
+    width: 320px;
+	}
+	#fd-ui-sidebar-right2 {
+		border-left: 1px solid #3A3A3A;
+    display: block;
+    float: right;
+    height: 100%;
+    position: fixed;
+    right: -1px;
+    width: 320px;
+	}
+}

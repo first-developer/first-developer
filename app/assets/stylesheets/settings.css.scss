@@ -3,7 +3,7 @@
 // ==========================
 
 
-// Default colors
+// Defaults
 // ---------------
 
 // layout color
@@ -21,26 +21,27 @@ $fd-ui-ft-col-blk4: #E9E9E9;
 $fd-ui-ft-col-blk5: #F6F6F6;
 
 // alert messages color
-$fd-ui-ft-col-lred: #FFD0D0;
-$fd-ui-ft-col-bgrn: #4F8E50;
-$fd-ui-ft-col-lgrn: #CBEEB8;
-$fd-ui-ft-col-btwt: #45B0E3;
-$fd-ui-ft-col-ltwt: #E6F2F8;
+$fd-ui-al-col-lred: #FFD0D0;
+$fd-ui-al-col-bgrn: #4F8E50;
+$fd-ui-al-col-lgrn: #CBEEB8;
+$fd-ui-al-col-btwt: #45B0E3;
+$fd-ui-al-col-ltwt: #E6F2F8;
 
+// background images
+$fd-ui-bg-img-blk: image-url("ui/pattern-blk.jpg") repeat-y;
+$fd-ui-bg-img-red: image-url("ui/pattern-red.jpg") repeat-y;
+$fd-ui-bg-img-lgry: image-url("ui/pattern-lgry.jpg") repeat-x;
+$fd-ui-bg-img-bgry: image-url("ui/pattern-bgry.jpg") repeat;
 
+body {
+	background: $fd-ui-bg-img-bgry;
+}
 // BOOTSTRAP
 // ----------
 
-
-// Set the correct sprite paths
-
-
-
-// 
-
-
 // Scaffolding
-$bodyBackground $textColor
+//$bodyBackground 	:;	
+$textColor				: $fd-ui-ft-col-blk2;
 
 // Links
 $linkColor 					: $fd-ui-ly-col-red;
@@ -69,8 +70,8 @@ $iconWhiteSpritePath	: image-path('glyphicons-halflings-white.png');
 //$fluidGridGutterWidth :;
 
 // Typography
-//$baseFontSize 				:;
-//$baseFontFamily				:;
+$baseFontSize 				  : 11px;
+$baseFontFamily				  : 'droid sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
 //$baseLineHeight 			:;
 //$altFontFamily 				:;
 //$headingsFontFamily 	:;	

@@ -7,33 +7,25 @@ body { padding-top:0px;}
 
 @import "bootstrap-responsive";
 
+//@import "ui/*.png";
 
-// Your custom LESS stylesheets goes here
-//
-// Since bootstrap was imported above you have access to its mixins which
-// you may use and inherit here
-//
-// If you'd like to override bootstrap's own variables, you can do so here as well
-// See http://twitter.github.com/bootstrap/less.html for their names and documentation
-//
-// Example:
-// @linkColor: #ff0000;
-
-@import "ui/*.png";
-@include all-ui-sprites;
-
+// ===========================
+// RESET
+// ===========================
+a:hover { text-decoration: none;}
 
 // ===========================
 // NAVBAR
 // ===========================
-
 .navbar {
 	.navbar-inner {
 		@include border-radius(0px);
 
 
-		.nav.pull-right .dropdown-menu:after {
-			right:7px;
+		.nav.pull-right {
+			.dropdown-menu:after {
+				right:7px;
+			}
 		}
 	}
 }
