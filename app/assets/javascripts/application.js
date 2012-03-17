@@ -7,6 +7,7 @@
 //= require jquery
 //= require jquery_ujs
 //= require bootstrap-dropdown
+//= require bootstrap-collapse
 //= require amplify
 //= require vendor
 //= require_tree .

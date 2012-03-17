@@ -1,23 +1,6 @@
 
 @import "settings";
 
-
-// Set the correct sprite paths
-$iconSpritePath: image-path('glyphicons-halflings.png');
-$iconWhiteSpritePath: image-path('glyphicons-halflings-white.png');
-
-// Settings
-// ---------
-
-// dropdown
-//$dropdownBackground					: ;	
-//$dropdownBorder							: ;	
-//$dropdownLinkColor					: ;	
-//$dropdownLinkColorHover			: ;	
-
-// colors
-$linkColor: $fd-ui-ly-col-red;
-
 @import "bootstrap";
 
 body { padding-top:0px;}
