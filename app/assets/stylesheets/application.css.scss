@@ -18,13 +18,33 @@
 
 #header.fd-ui-ct-header {
 	background: $fd-ui-bg-img-lgry transparent;
-	border-bottom:4px solid #eee ;
-	height: 100px;
-	width: 100%;
+  border-bottom: 4px solid #EEEEEE;
+  display: block;
+  height: 126px;
+  position: fixed;
+  top: 40px;
+  width: 100%;
+  z-index: 1;
 
+  #logo {
+		background: image-url("ui/fd-ui-ux-sprite.png") left 0 no-repeat transparent;
+    float: left;
+    height: 60px;
+    overflow: hidden;
+    position: relative;
+    top: 25px;
+    width: 310px;
+	}
 
 	#hire-me {
-		background: image-url(image-url.gif) no-repeat transparent;
+		background: image-url("ui/fd-ui-ux-sprite.png") right -124px no-repeat transparent;
+    height: 126px;
+    overflow: hidden;
+    width: 370px;
+    float:right;
+    &:hover {
+    	background: image-url("ui/fd-ui-ux-sprite.png") right -262px no-repeat transparent;
+    }
 	}
 }
 
@@ -40,7 +60,7 @@
 	height:100%;
 	ul.sidebar-menu { 
 		background: $fd-ui-bg-img-red transparent; 
-		width:200px;
+		width: 230px;
 		list-style: none;
 		margin:0;
 		height:100%;
@@ -103,13 +123,16 @@
 	#fd-ui-sidebar-left {
 		display: block;
     position: fixed;
-    width: 200px;
+    width: 230px;
     left:0;
     height:100%;
+    top: 170px;
 	}
 	#fd-ui-center {
 		float: left;
-    margin-left: 200px;
+    margin-left: 230px;
+    position: relative;
+    top: 112px;
     width: 800px;
 	}
 	#fd-ui-sidebar-right1 {
