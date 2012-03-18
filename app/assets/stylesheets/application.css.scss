@@ -193,6 +193,10 @@
                     @extend .fd-divider-top;
                     padding: 5px;
                     width: 99%;
+                    p {
+                        @extend .pd-10-20;
+                        text-align:justify;
+                    }
                     &.full-bg {
                         background-color:$fd-ui-ft-col-blk5;
                         height:35px;
@@ -211,10 +215,11 @@
         		.fd-ui-tl-item-title {
         			float:left;
         			h1 {
-        				font-size:14px;
+        				font-size:16px;
         				color: $fd-ui-ft-col-blk2;
         				line-height:21px;
     				    @include text-shadow($fd-ui-sh-white);
+                        text-transform: uppercase;
         			}
         			h4 {
         				font-size: $baseFontSize;
