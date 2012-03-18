@@ -7,6 +7,7 @@
 	<div id="fd-ui-center" >
 		<div id="" class="fd-ui-tools"></div>
 		<div class="timeline">
+			<% 3.times do %>
 			<article id="" class="fd-ui-tl-item">
 				<span class="fd-ui-icon post"></span>
 				<span class="fd-ui-tl-item-indic"></span>
@@ -33,6 +34,8 @@
 					
 				</footer>
 			</article>
+			<% end %>
+
 		</div>
 		<div  class="">
 			<%= yield %>
