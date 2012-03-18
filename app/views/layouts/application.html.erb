@@ -5,9 +5,38 @@
 		<%= render "layouts/sidebar" %>
 	</div>
 	<div id="fd-ui-center" >
+		<div id="" class="fd-ui-tools"></div>
+		<div class="timeline">
+			<article id="" class="fd-ui-tl-item">
+				<span class="fd-ui-icon post"></span>
+				<span class="fd-ui-tl-item-indic"></span>
+				<header class="fd-ui-tl-item-hd">
+					<span class="fd-ui-avt small default" style="background-image:url(<%= asset_path("ui/fd-ui-ux-sprite.png"); %>)"></span>
+					<hgroup class="fd-ui-tl-item-title">
+						<h1>Working on the UI for a web app we're developing</h1>
+						<h4>by Nathan Pitman | November 17, 2010</h4>
+					</hgroup>
+				</header>
+				<div id=""  class="fd-ui-tl-item-ct">
+					<div id=""  class="fd-ui-tl-item-ct-el full-size">
+						<p class=" pd-20">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+						tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+						quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+						consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+						cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+						proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+					</div>	
+					<div id=""  class="fd-ui-tl-item-ct-el full-bg"></div>	
+					<div id=""  class="fd-ui-tl-item-ct-el full-bg"></div>	
+				</div>
+				<footer class="fd-ui-tl-item-ft">
+					
+				</footer>
+			</article>
+		</div>
 		<div  class="">
 			<%= yield %>
-		</div><!-- / -->
+		</div>
 	</div>
 	<div id="fd-ui-sidebar-right1">
 		<%= render "layouts/sidebar_infos" %>

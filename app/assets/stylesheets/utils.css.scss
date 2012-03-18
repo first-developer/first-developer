@@ -23,3 +23,30 @@
 		margin-up: 		0px !important;
 	}
 }
+
+.pd-20 {
+	padding: 20px !important;
+}
+.pd-40 {
+	padding: 40px !important;
+}
+.pd-10 {
+	padding: 10px !important;
+}
+
+
+// divider
+.fd-divider-common {
+	clear:both;
+	display: block;	
+}
+.fd-divider-bottom {
+	border-bottom: 1px solid $fd-ui-ly-col-gry;
+	@include box-shadow(0 1px 0 0 $white);
+	@extend .fd-divider-common;
+}
+.fd-divider-top {
+	border-top: 1px solid $fd-ui-ly-col-gry;
+	@include box-shadow(0 -1px 0 0 $white);
+	@extend .fd-divider-common;
+}
