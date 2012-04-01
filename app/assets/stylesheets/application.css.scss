@@ -89,9 +89,22 @@
 					color: $linkColor;
 					cursor: pointer;
 					display:block;
+                    span.count {
+                        float: right;
+                        color: $fd-ui-ft-col-blk3;
+                        background-color: #F5F5F5;
+                        @include border-radius(2px);
+                        text-align: center;
+                        width: 15%;
+                        font-weight:bold;
+                        //@include box-shadow(0 0 4px 1px #000000 inset);
+                    }
 				}
 				&:hover {
 					background-color: #EBB4B4;
+                    span.count {
+                        color: $fd-ui-ft-col-blk2;
+                    }
 				}
 			}
 		}
@@ -117,6 +130,7 @@
         @extend .end;
         &.me {
             &.profile {
+                margin: 30px 0 0 0;
                 .avatar {
                     display:block;
                     @include border-radius(1000px);
@@ -238,6 +252,13 @@
 
 .fd-ui-container {
     overflow-x:hidden;
+
+    display: block;
+    height: 100%;
+    position: absolute;
+    top: 207px;
+    width: 1000px;
+
 	#fd-ui-sidebar-left {
 		display: block;
         position: fixed;
@@ -248,10 +269,18 @@
         z-index: 7;
 	}
 	#fd-ui-center {
-    	float: left;
+    	// float: left;
+     //    margin-left: 230px;
+     //    position: relative;
+     //    top: 171px;
+
+        clear: both;
+        float: left;
         margin-left: 230px;
-        position: relative;
-        top: 171px;
+        position: absolute;
+        top: 0;
+        bottom:0;
+
         @extend .span9;
         .fd-ui-tools {
         	border: 1px solid $fd-ui-ly-col-gry;
@@ -266,7 +295,7 @@
         }
         .timeline {
     	    background: image-url("ui/timeline-indic.png") 77px top repeat-y transparent;
-    	    padding-top: 50px;
+    	    padding-top: 40px;
 
     	    .fd-ui-divider {
     	    	@extend .fd-divider-bottom;
@@ -344,6 +373,7 @@
                 }  
         		.fd-ui-tl-item-title {
         			float:left;
+                     margin-top: 3px;
         			h1 {
         				font-size:13px;
         				color: $fd-ui-ft-col-blk2;
