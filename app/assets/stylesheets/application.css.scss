@@ -4,12 +4,13 @@
  * the top of the compiled file, but it's generally better to create a new file per style scope.
  *= require_self
  *= require bootstrap_and_overrides 
+ //= require jquery.jscrollpane
 */
 
 @import "settings";
 @import "compass";
 @import "utils";
-
+@import "bootstrap";
 
 * { font-size-adjust: 0.57;  }
 
@@ -28,25 +29,25 @@
   width: 100%;
   z-index: 5;
 
-  #logo {
+    #logo {
 		background: image-url("ui/fd-ui-ux-sprite.png") left 0 no-repeat transparent;
-    float: left;
-    height: 60px;
-    overflow: hidden;
-    position: relative;
-    top: 25px;
-    width: 310px;
+        float: left;
+        height: 60px;
+        overflow: hidden;
+        position: relative;
+        top: 25px;
+        width: 310px;
 	}
 
 	#hire-me {
 		background: image-url("ui/fd-ui-ux-sprite.png") right -124px no-repeat transparent;
-    height: 126px;
-    overflow: hidden;
-    width: 370px;
-    float:right;
-    &:hover {
-    	background: image-url("ui/fd-ui-ux-sprite.png") right -262px no-repeat transparent;
-    }
+        height: 126px;
+        overflow: hidden;
+        width: 370px;
+        float:right;
+        &:hover {
+        	background: image-url("ui/fd-ui-ux-sprite.png") right -262px no-repeat transparent;
+        }
 	}
 }
 
@@ -74,7 +75,7 @@
 		
 		a {
 			display: block;
-			padding: 8px 20px;
+			padding: 5px 20px;
 			color: $white;
 			.icon-plus {
 				opacity:0.5;
@@ -108,6 +109,119 @@
 #sidebar_infos {
 	height:100%;
 	background: $fd-ui-bg-img-blk transparent; 
+    @extend .row;
+    border: 1px solid #000000;
+    @include box-shadow(1px 0 0 0 #444444 inset);
+    height: 100%;
+    section {
+        @extend .end;
+        &.me {
+            &.profile {
+                .avatar {
+                    display:block;
+                    @include border-radius(1000px);
+                    border: 3px solid #FFFFFF;
+                    @include box-shadow(0 1px 2px 0 #333333 inset);
+                    margin: 10px 20px;
+                    position:relative;
+                    float:left;
+                    
+                    background-position: center center;
+                    &.default {
+                        background-position: -339px -3019px;
+                        background-image: url("/assets/ui/fd-ui-ux-sprite.png");
+                    }
+                    &.big {
+                        height:75px;
+                        width:75px;
+                    }
+                }
+                .info {
+                    position:relative;
+                    top:5px;
+                    .fst-txt {
+                        color: $fd-ui-ft-col-blk3;
+                    }
+                    .snd-txt {
+                        color: $white;
+                    }
+                    dt {
+                        font-size:$mediumFontSize;
+                        font-weight:normal;
+                        line-height:$txtLineHeight;
+                        margin-bottom: 5px;
+                        @extend .snd-txt;
+                    }
+                    dd {
+                        font-size:12px;
+                        color: $fd-ui-ly-col-yel;
+                    }
+                }
+            }
+        }
+        .section-ct {
+            padding:15px 25px 25px;
+            text-align:justify;
+            line-height:$txtLineHeight;
+            color: $fd-ui-ft-col-blk3;
+        }
+        .section-title {
+            text-align:center;
+            background:transparent image-url('ui/section-title-bg.png') center center  no-repeat;
+            font-size:$baseFontSize;
+            height: 20px;
+            line-height:20px;
+            text-transform:uppercase;
+            color: $fd-ui-ft-col-blk4;
+            @include text-shadow(0 1px 0 #000);
+        }
+        p{
+            @extend .section-ct;
+        }
+
+        &.ntkw {
+            ul { 
+                list-style:none; 
+                margin:15px 0 25px;
+                height:50px;
+            }
+            li {
+                &:first-child {
+                    margin-left:15px;
+                }
+                list-style:none;
+                float: left;
+                margin: 0 5px;
+                a {
+                    cursor: pointer;
+                    display:block;
+                }
+            }
+        }
+
+        &.skills {
+            ul {list-style:none; }
+            .section-tags {
+                @extend .section-ct;
+                padding-left:0;
+                li  {
+                    display: block;
+                    padding: 5px 8px 5px 0;
+                    span.meta {
+                        float: right;
+                        color: $fd-ui-ft-col-blk2;
+                        background-color:$fd-ui-ly-col-yel;
+                        @include border-radius(2px);
+                        text-align: center;
+                        width: 15%;
+                        font-weight:bold;
+                        @include box-shadow($fd-ui-sh-black);
+                    }
+                }
+            }
+        }
+
+    }
 }
 
 #content {
@@ -123,7 +237,7 @@
 }
 
 .fd-ui-container {
-    overflow:hidden;
+    overflow-x:hidden;
 	#fd-ui-sidebar-left {
 		display: block;
         position: fixed;
@@ -138,7 +252,7 @@
         margin-left: 230px;
         position: relative;
         top: 171px;
-        width: 800px;
+        @extend .span9;
         .fd-ui-tools {
         	border: 1px solid $fd-ui-ly-col-gry;
             width:100%;
@@ -168,18 +282,21 @@
     	    position:relative;
 
         	.fd-ui-tl-item-hd {
-        		padding: 5px;
+        		padding: 2px  5px 7px 5px;
     		    
         		.fd-ui-avt {
         			display:block;
-        			margin-right:20px;
+                    @include border-radius(1000px);
+                    border: 2px solid #FFFFFF;
+                    @include box-shadow(0 1px 2px 0 #333333 inset);
+        			margin-right:10px;
         			float:left;
         			&.default {
-        				background-position:-449px -3057px;
+        				background-position:-451px -3057px;
         			}
     		  		&.small {
-    		    		height:40px;
-    		    		width:40px;
+    		    		height:35px;
+    		    		width:35px;
     		    	}
     		  	}	
         	}
@@ -199,7 +316,7 @@
                     }
                     &.full-bg {
                         background-color:$fd-ui-ft-col-blk5;
-                        height:35px;
+                        height:30px;
                     }
                     &.full-size {
                         min-height: 250px;    
@@ -210,14 +327,27 @@
                 }
         	}
         	.fd-ui-tl-item-hd {
-        		height: 40px;
+        		height: 35px;
                 background-color: $fd-ui-ft-col-blk4;
+                position:relative;
+                // <div id="" class="fd-ui-actions btns">
+                //         <i class="fd-ui-icons icon-clip fd-ui-btn"></i>
+                //         <i class="fd-ui-icons icon-more fd-ui-btn"></i>
+                //     </div>
+                .fd-ui-actions {
+                    position:absolute;
+                    right: 10px;
+                    top: 8px;
+                    &.btns .fd-ui-btn{
+                        margin: 0 5px;
+                    }
+                }  
         		.fd-ui-tl-item-title {
         			float:left;
         			h1 {
-        				font-size:16px;
+        				font-size:13px;
         				color: $fd-ui-ft-col-blk2;
-        				line-height:21px;
+        				line-height:17px;
     				    @include text-shadow($fd-ui-sh-white);
                         text-transform: uppercase;
         			}

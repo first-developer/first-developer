@@ -12,7 +12,7 @@ gem 'jquery-rails'
 # DATABASES
 # ==============================================
 #gem 'sqlite3'
-gem "mysql"
+gem "mysql2"
 
 # ASSETS 
 # ==============================================
@@ -71,7 +71,7 @@ gem 'redcarpet' 			# Markdown
 gem 'albino'
 gem 'nokogiri'
 gem 'rack-pygmentize'
-
+gem "lograge"
 # To use ActiveModel has_secure_password
 # gem 'bcrypt-ruby', '~> 3.0.0'
 

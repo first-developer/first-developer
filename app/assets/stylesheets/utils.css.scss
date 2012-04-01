@@ -53,3 +53,68 @@
 	@include box-shadow(0 -1px 0 0 $white);
 	@extend .fd-divider-common;
 }
+
+.fd-ui-icons {
+	background:transparent $fd-ui-bg-sprite no-repeat !important;
+	display:block;
+	height:20px;
+	width:20px;
+	&.fd-ui-btn {
+		cursor:pointer;
+	}
+	&.icon-more {
+		background-position: 3px -131px !important;
+    height: 24px;
+    width: 20px;
+    &:hover {
+    	background-position: -37px -131px !important;
+    }
+	}
+	&.icon-clip {
+		background-position: -140px -173px !important ;//-86px -173px !important;
+    height: 24px;
+    width: 20px;
+    &:hover {
+    	background-position: -140px -173px !important;
+    }
+	}
+}
+
+.end {
+	margin:0;
+}
+
+
+
+// SOCIALS 
+
+.fd-social {
+	&.fd-ico-size {
+		height:50px;
+		width:50px;
+	}
+	&.twitter {
+		background: $fd-ui-ico-twt;
+		@extend .fd-ico-size;
+	}	
+	&.facebook {
+		background: $fd-ui-ico-fbk;
+		@extend .fd-ico-size;
+	}
+	&.google-plus {
+		background: $fd-ui-ico-gpl;
+		@extend .fd-ico-size;
+	}
+	&.github {
+		background: $fd-ui-ico-ghb;
+		@extend .fd-ico-size;
+	}
+	&.skype {
+		@extend .fd-ico-size;
+		background: $fd-ui-ico-skp;
+	}
+}
+
+.clear {
+	clear:both;
+}

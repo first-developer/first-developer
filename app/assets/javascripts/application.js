@@ -7,8 +7,10 @@
 //= require jquery
 //= require jquery_ujs
 //= require bootstrap-dropdown
-//= require bootstrap-collapse
 //= require amplify
-//= require vendor
+//= require jquery.placeholder
+//= require jquery.jscrollpane.min
+//= require jquery.mousewheel
+//= require mwheelIntent
 //= require_tree .
 

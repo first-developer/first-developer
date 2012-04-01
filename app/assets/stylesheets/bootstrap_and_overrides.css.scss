@@ -27,12 +27,6 @@ a,a:hover { text-decoration: none;cursor:pointer;}
 				right:7px;
 			}
 		}
-		.nav {
-			.dropdown.open {
-				a.dropdown-toggle {
-					background-color: $navbarLinkBackgroundActive;
-				}
-			}
-		}
+		
 	}
 }
