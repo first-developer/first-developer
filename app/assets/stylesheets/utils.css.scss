@@ -22,12 +22,31 @@
 	&.mu {
 		margin-up: 		0px !important;
 	}
+
+	&.p {
+		padding: 			0px !important;
+	}
+	&.pl {
+		padding-left: 	0px !important;
+	}
+	&.pr {
+		padding-right: 0px !important;
+	}
+	&.pd {
+		padding-down: 	0px !important;
+	}
+	&.pu {
+		padding-up: 		0px !important;
+	}
 }
 
 .pd-20 {
 	padding: 20px !important;
 }
 .pd-10-20 {
+	padding: 10px 20px;
+}
+.pd-10-20-b {
 	padding: 10px 20px !important;
 }
 .pd-40 {
@@ -117,4 +136,32 @@
 
 .clear {
 	clear:both;
+}
+
+// AVATAR
+
+.fd-utils-avatar {
+	display:block;
+	@include border-radius(1000px);
+	border: 2px solid #FFFFFF;
+	@include box-shadow(0 1px 2px 0 #333333 inset);
+	margin-right:10px;
+	float:left;
+	&.default {
+		background-position:-451px -3057px;
+	}
+	&.small {
+		height:35px;
+		width:35px;
+	}
+}
+
+
+.cite {
+	border-left: 4px solid #EEEEEE;
+  color: #9A9A9A;
+  display: block;
+  font-style: italic;
+  margin: 10px 0;
+  padding: 0 0 0 15px;
 }

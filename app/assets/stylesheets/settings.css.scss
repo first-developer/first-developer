@@ -45,6 +45,14 @@ $fd-ui-ico-skp		:transparent $fd-ui-bg-sprite -452px 5px no-repeat;
 $fd-ui-ico-gpl		:transparent $fd-ui-bg-sprite -633px 5px no-repeat;
 $fd-ui-ico-ghb		:transparent $fd-ui-bg-sprite -693px 5px no-repeat;
 
+// BORDERS
+$dashed						: 1px dashed $fd-ui-ft-col-blk3;
+$solid 						: 1px solid  $fd-ui-ft-col-blk3;
+$dotted						: 1px dotted $fd-ui-ft-col-blk3;
+$dashed-blk				: 1px dashed $fd-ui-ft-col-blk1;
+$solid-blk 				: 1px solid  $fd-ui-ft-col-blk1;
+$dotted-blk				: 1px dotted $fd-ui-ft-col-blk1;
+
 
 // shadow
 $fd-ui-sh-white: 0 1px 0 $white;

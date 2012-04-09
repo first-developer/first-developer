@@ -314,19 +314,7 @@
         		padding: 2px  5px 7px 5px;
     		    
         		.fd-ui-avt {
-        			display:block;
-                    @include border-radius(1000px);
-                    border: 2px solid #FFFFFF;
-                    @include box-shadow(0 1px 2px 0 #333333 inset);
-        			margin-right:10px;
-        			float:left;
-        			&.default {
-        				background-position:-451px -3057px;
-        			}
-    		  		&.small {
-    		    		height:35px;
-    		    		width:35px;
-    		    	}
+        			@extend .fd-utils-avatar;
     		  	}	
         	}
         	.fd-ui-tl-item-ct {
@@ -339,13 +327,18 @@
                     @extend .fd-divider-top;
                     padding: 5px;
                     width: 99%;
-                    p {
-                        @extend .pd-10-20;
+                    > p {
+                        @extend .pd-10-20-b;
                         text-align:justify;
                     }
                     &.full-bg {
                         background-color:$fd-ui-ft-col-blk5;
-                        height:30px;
+                        &.dark {
+                            background-color:$fd-ui-ft-col-blk2;
+                            border-top: 1px solid $fd-ui-ft-col-blk1;
+                        }
+                        min-height:30px;
+
                     }
                     &.full-size {
                         min-height: 250px;    
@@ -443,4 +436,70 @@
         right: -1px;
         @extend .fd-ui-sidebar-common;
 	}
+}
+
+
+// ===================
+// COMMMENTS
+// ===================
+
+.fd-ui-comments {
+    list-style: none outside none;
+    margin: 0;
+    padding: 0 10px;
+        
+    .default-cmt-height {
+        height:23px;
+        line-height: 23px;
+    }
+    .cmt {
+        border-bottom: $dashed;
+        padding: 0 0 10px;
+        margin: 10px 0;
+        &:last-child {
+            border-bottom: none;
+            padding: 0px;
+        }
+        .cmt-avt{
+            display: block;
+            float: left;
+        }
+        .cmt-ct {
+            margin: 0 0 0 60px;
+            display: block;
+            // .cmt-ct-hd {
+            //     @extend .default-cmt-height;
+            //     .cmt-user {
+            //         color: $white;
+            //         font-weight:bold;
+            //     }
+
+            // }
+            .cmt-ct-txt {
+                .cmt-user {
+                    color: $white;
+                    font-weight:bold;
+                    .arrow {
+                        color: $fd-ui-ly-col-yel;
+                        font-size: 15px;
+                        padding: 0 10px 0 2px;
+                    }
+                }
+                p {
+                    color: $fd-ui-ft-col-blk3;
+                    font-style: italic;  
+                    padding: 0;
+                    @extend .no.m;
+                }
+            }    
+            .cmt-ct-ft {
+                @extend .default-cmt-height;
+                .cmt-time {
+                    color: $fd-ui-ly-col-yel;
+                    font-style: italic;  
+                }            
+                //margin: 0 0 10px 0;
+            }
+        }
+    }
 }
