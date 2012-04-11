@@ -4,7 +4,6 @@
  * the top of the compiled file, but it's generally better to create a new file per style scope.
  *= require_self
  *= require bootstrap_and_overrides 
- //= require jquery.jscrollpane
 */
 
 @import "settings";
@@ -252,10 +251,10 @@
 
 .fd-ui-container {
     overflow-x:hidden;
-
+    //overflow-y: scroll;
     display: block;
-    height: 100%;
-    position: absolute;
+    //height: 100%;
+    //position: absolute;
     top: 207px;
     width: 1000px;
 
@@ -278,7 +277,7 @@
         float: left;
         margin-left: 230px;
         position: absolute;
-        top: 0;
+        top: 200px;
         bottom:0;
 
         @extend .span9;
@@ -456,6 +455,7 @@
         border-bottom: $dashed;
         padding: 0 0 10px;
         margin: 10px 0;
+        position: relative;
         &:last-child {
             border-bottom: none;
             padding: 0px;
@@ -463,6 +463,8 @@
         .cmt-avt{
             display: block;
             float: left;
+            position: relative;
+            top: 15px;
         }
         .cmt-ct {
             margin: 0 0 0 60px;
@@ -487,7 +489,7 @@
                 }
                 p {
                     color: $fd-ui-ft-col-blk3;
-                    font-style: italic;  
+                    //font-style: italic;  
                     padding: 0;
                     @extend .no.m;
                 }

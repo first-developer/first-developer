@@ -9,8 +9,9 @@
 //= require bootstrap-dropdown
 //= require amplify
 //= require jquery.placeholder
-//= require jquery.jscrollpane.min
-//= require jquery.mousewheel
-//= require mwheelIntent
+// require jquery.mousewheel
+// require ui.core
+// require ui.draggable
+// require jquery.scroll
 //= require_tree .
 
