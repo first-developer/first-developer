@@ -105,6 +105,15 @@
 
 
 
+// FLOATING
+
+.f-l {
+	float:left;
+}
+.f-r {
+	float:right;
+}
+
 // SOCIALS 
 
 .fd-social {
@@ -164,4 +173,44 @@
   font-style: italic;
   margin: 10px 0;
   padding: 0 0 0 15px;
+}
+
+// .cite {
+//     border-left: 4px solid #EEEEEE;
+//     color: #9A9A9A;
+//     display: block;
+//     font-style: italic;
+//     margin: 10px 20px;
+//     padding: 0 0 0 15px;
+//     width: 528px;
+// }
+
+.fd-ui-btn {
+	display:block;
+	line-height: 23px;
+	border: 1px solid #E7E7E7;
+	margin: 0 5px 0 0;
+	&.common-style {
+		color: $fd-ui-ft-col-blk3;
+		background: $fd-ui-ft-col-blk5;
+    @include border-radius(20px);
+    padding: 0 10px;
+    cursor:pointer;
+    &:hover {
+    	color: $fd-ui-ly-col-red;
+    	background: $fd-ui-ft-col-blk4;
+    }
+	}
+	&.tag-style {
+		@extend .common-style;
+	}
+	&.tag {
+		@extend .common-style;
+		background: $fd-ui-ly-col-yel;
+		&:hover {
+    	color: $fd-ui-ft-col-blk3;
+    	cursor: default;
+    	background: $fd-ui-ly-col-yel;
+    }
+	}
 }
