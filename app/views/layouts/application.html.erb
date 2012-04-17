@@ -24,9 +24,9 @@
 				        <h4>By <span class="author">Nathan Pitman</span> | November 17, 2010</h4>
 				        <h1>Working on the UI for a web app we're developing</h1>
 				        <p class="details"> 
-				        	<span class="fd-ui-btn tag f-l">Ruby</span>
-				        	<span class="fd-ui-btn tag f-l">Programming</span>
-				        	<span class="fd-ui-btn tag-style f-r">26 Comments →</span><span class="clear"></span></p>
+				        	<span class="fd-ui-cst-btn tag f-l">Ruby</span>
+				        	<span class="fd-ui-cst-btn tag f-l">Programming</span>
+				        	<span class="fd-ui-cst-btn tag-style f-r">26 Comments →</span><span class="clear"></span></p>
 				    </hgroup>
 						<iframe width="550" height="350" frameborder="0" allowfullscreen="" src="http://blip.tv/play/AYLv%2BzQC.html?p=1" style="border: 1px none; margin: 21px;"></iframe>
 						
@@ -61,6 +61,29 @@
 									</div>
 								</div>
 								<span class="clear"></span>
+							
+								<ol class="cmt-reply">
+									<% 3.times do %>
+									<li>
+										<div class="cmt-avt">
+										<span class="fd-utils-avatar small default" style="background-image:url(<%= asset_path("ui/fd-ui-ux-sprite.png"); %>)"></span>
+									</div>
+									<div class="cmt-ct">
+										<!-- <div class="cmt-ct-hd">
+											<a href="" class="cmt-user">Chris Brown</a>
+										</div> -->
+										<div class="cmt-ct-txt">
+											<p> <a href="" class="cmt-user">Chris Brown <span class="arrow">→</span> </a>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+													tempor incididunt ut labore et dolore magna aliqua.
+											</p>
+										</div>
+										<div class="cmt-ct-ft">
+											<span class="cmt-time">Il y a 25 minutes | 21h15</span>
+										</div>
+									</div>
+									</li>
+									<% end %>
+								</ol>
 							</li>
 							<% end %>
 						</ol><!-- / -->
