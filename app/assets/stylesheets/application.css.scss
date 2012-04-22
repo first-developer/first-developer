@@ -10,6 +10,7 @@
 @import "compass";
 @import "utils";
 @import "bootstrap";
+@import "bourbon";
 
 * { font-size-adjust: 0.53;  }
 
@@ -62,60 +63,71 @@
 
 	height:100%;
 	ul.sidebar-menu { 
-		background: $fd-ui-bg-img-red transparent; 
+		background: $fd-ui-bg-img-blk transparent; 
 		width: 230px;
 		list-style: none;
 		margin:0;
 		height:100%;
-	}
-
-	li {
-		background-color: $fd-ui-ly-col-red;
-		
-		a {
-			display: block;
-			padding: 5px 20px;
-			color: $white;
-			.icon-plus {
-				opacity:0.5;
-			}
-		}
-		ul.sidebar-submenu {
-			margin:0;
-			li {
-				background-color: $fd-ui-al-col-lred;
-				a {
-					color: $linkColor;
-					cursor: pointer;
-					display:block;
-                    span.count {
-                        float: right;
-                        color: $fd-ui-ft-col-blk3;
-                        background-color: #F5F5F5;
-                        @include border-radius(2px);
-                        text-align: center;
-                        width: 15%;
-                        font-weight:bold;
-                        //@include box-shadow(0 0 4px 1px #000000 inset);
-                    }
-				}
-				&:hover {
-					background-color: #EBB4B4;
-                    span.count {
-                        color: $fd-ui-ft-col-blk2;
-                    }
-				}
-			}
-		}
-	}
-	li:hover {
-		background-color: $fd-ui-ly-col-red;
-		a {
-			.icon-plus {
-				opacity:0.99;
-			}
-		}
-	}
+        padding: 10px 0 0;  
+    	li {
+    		
+    		
+    		>a {
+    			display: block;
+    			padding: 5px 20px;
+                cursor:default;
+    			color: #555;
+                font-weight: bold;
+                padding: 5px 20px;
+                @include text-shadow(0 -1px 0 #000);
+    			.icon-plus {
+    				opacity:0.5;
+    			}
+    		}
+    		ul.sidebar-submenu {
+    			margin:0 0 25px 0px;
+    			li {
+    				a {
+    					color: #ccc;
+                        font-weight: normal;
+    					cursor: pointer;
+    					display:block;
+                        text-transform: normal;
+                         @include text-shadow(none);
+                        span.count {
+                            float: right;
+                            color: $fd-ui-ft-col-blk3;
+                            background-color: $fd-ui-ft-col-blk1;
+                            border-top: 1px solid #000000;
+                            @include border-radius(10px);
+                            text-align: center;
+                            width: 15%;
+                            font-weight:bold;
+                             position: relative;
+                             top:-1px;
+                            //@include box-shadow(0 0 4px 1px #000000 inset);
+                        }
+    				}
+    				&:hover {
+                        @include linear-gradient(#9F3737, #89302D);
+                        @include box-shadow(0 0 1px 0 #C96B6B inset);
+                        span.count {
+                            background-color:$white;
+                            color: $fd-ui-ft-col-blk2;
+                        }
+    				}
+    			}
+    		}
+    	}
+    	li:hover {
+    		
+    		a {
+    			.icon-plus {
+    				opacity:0.99;
+    			}
+    		}
+    	}
+    }
 }
 
 #sidebar_infos {
@@ -281,13 +293,13 @@
         top: 200px;
         bottom:0;
 
-        @extend .span9;
+        @extend .span10;
         .fd-ui-tools {
         	border: 1px solid $fd-ui-ly-col-gry;
             width:100%;
-            background-color: #E9E9E9;
-            @include box-shadow(0 2px 8px 0 #E7E7E7);
-            height: 35px;
+            background-color: $fd-ui-ft-col-blk4;
+            @include box-shadow(0 4px 0px 0 $fd-ui-ft-col-blk5);
+            height: 40px;
             opacity: 0.94;
             position: fixed;
             top: 170px;
@@ -307,7 +319,7 @@
         	border: 1px solid $white;
         	background-color:$fd-ui-ft-col-blk5;
     	    @include box-shadow(0 0 1px 1px $fd-ui-ft-col-blk3);
-    	    margin: 0px 0 50px 97px;
+    	    margin: 0px 0 50px 120px;
     	    position:relative;
 
         	.fd-ui-tl-item-hd {
@@ -327,6 +339,57 @@
                     @extend .fd-divider-top;
                     padding: 5px;
                     width: 99%;
+                    .liking {
+                        float: right;
+                        padding: 0 10px;
+                        &:before {
+                            color: #ccc;
+                            content: "•••";
+                        }
+                        .likers {
+                            border-left: 1px solid #FFFFFF;
+                            float: left;
+                            margin: 0 15px 0 0;
+                            padding: 0 0 0 10px;
+                            position: relative;
+                            top: -2px;
+                            cursor: pointer;
+                            display: block;
+                            .fd-utils-avatar {
+                                margin-right: -10px;
+                                height: 30px;
+                                width: 30px;
+                                &.default {
+                                    background-position: -453px -3057px;
+                                }
+                            }
+                        }
+                        .likes {
+                            border-right: 1px solid #DDDDDD;
+                            border-left: 1px solid #DDDDDD;
+                            float: left;
+                            height: 30px;
+                            margin: 0 0 0 10px;
+                            padding: 0 10px;
+                            .icon-heart {
+                                position:relative;
+                                top:1px;
+                            }
+                            .likes-count {
+                                background: none repeat scroll 0 0 $white;
+                                border-bottom: 1px solid #E0E0E0;
+                                border-radius: 10px 10px 10px 10px;
+                                border-top: 1px solid $fd-ui-ft-col-blk3;
+                                color: $fd-ui-ft-col-blk3;
+                                font-size: 13.7px;
+                                font-weight: bold;
+                                margin: 0 5px;
+                                padding: 1px 8px 0 6px;
+                                position: relative;
+                                top: 7px;
+                            }
+                        }
+                    }
                     > p {
                         @extend .pd-10-20-b;
                         text-align:justify;
@@ -350,11 +413,11 @@
                     .fd-ui-tl-item-title {
                         float:left;
                         margin:10px 20px 0 ;
+                        width: 605px;
                         h1 {
                             font-size: 18.9px;
                             font-weight: normal;
                             line-height: 36px;
-                            width: 550px;
                             color: $fd-ui-ly-col-red;
                         }
                         h4 {
@@ -378,7 +441,7 @@
         	}
         	.fd-ui-tl-item-hd {
         		height: 35px;
-                background-color: $fd-ui-ft-col-blk4;
+                background-color: $fd-ui-ft-col-blk5;
                 position:relative;
                 // <div id="" class="fd-ui-actions btns">
                 //         <i class="fd-ui-icons icon-clip fd-ui-btn"></i>
@@ -395,6 +458,7 @@
         		.fd-ui-tl-item-title {
         			float:left;
                     margin-top: 3px;
+
                     h1 {
                         font-size: 21.6px;
                         font-weight: normal;
@@ -424,16 +488,16 @@
         	}
         	.fd-ui-tl-item-indic {
         		background: $fd-ui-bg-sprite -597px -97px transparent;
-        		width:54px;
+        		width:67px;
         		height:100px;
         		position:absolute;
         		top:0;
         		z-index: 2;
-        		left:-55px;
+        		left:-78px;
         	}
         	&:hover {
         		.fd-ui-tl-item-indic {
-        			background-position: -657px -97px;
+        			background-position: -695px -97px;
         		}
         		.fd-ui-icon.post {
         			background-position: -670px -202px;
@@ -449,7 +513,7 @@
         		position:absolute;
         		top:0;
         		z-index: 2;
-        		left:-70px;
+        		left:-94px;
         		opacity:0.5;
         	}
         }
@@ -554,14 +618,15 @@
 }
 
 
-// form 
-// border: 1px solid #CCCCCC;
-// border-radius: 0 0 0 0;
-// font-size: 11.6px;
-// height: 21px;
-// margin: 0;
-// padding: 5px 10px;
-// width: 568px;
+.fd-ui-cst-form {
+    border: 1px solid #CCCCCC;
+    border-radius: 0 0 0 0;
+    font-size: 11.6px;
+    height: 21px;
+    margin: 0;
+    padding: 5px 10px;
+    width: 568px;
+}
 
 
 

@@ -76,25 +76,57 @@
 .fd-ui-icons {
 	background:transparent $fd-ui-bg-sprite no-repeat !important;
 	display:block;
-	height:20px;
-	width:20px;
+	@extend .icon-size;
 	&.fd-ui-btn {
 		cursor:pointer;
 	}
+	&.icon-size {
+		width:24px;
+		height:24px;
+	}
 	&.icon-more {
-		background-position: 3px -131px !important;
-    height: 24px;
-    width: 20px;
+		background-position: -125px -723px  !important;
+    @extend .icon-size;
     &:hover {
-    	background-position: -37px -131px !important;
+    	background-position: -125px -747px !important;
     }
 	}
 	&.icon-clip {
-		background-position: -140px -173px !important ;//-86px -173px !important;
-    height: 24px;
-    width: 20px;
+		background-position: -15px -723px !important ;//-86px -173px !important;
+    @extend .icon-size;
     &:hover {
-    	background-position: -140px -173px !important;
+    	background-position: -15px -744px !important;
+    }
+	}
+	&.icon-heart {
+		background-position: -182px -723px !important ;//-86px -173px !important;
+    @extend .icon-size;
+    &:hover {
+    	background-position: -182px -748px !important;
+    }
+    &.like {
+    	background-position: -182px -748px !important;	
+    }
+	}
+	&.icon-star {
+		background-position: -239px -723px !important ;//-86px -173px !important;
+    @extend .icon-size;
+    &:hover {
+    	background-position: -239px -748px !important;
+    }
+	}
+	&.icon-reply {
+		background-position: -15px -723px !important ;//-86px -173px !important;
+    @extend .icon-size;
+    &:hover {
+    	background-position: -15px -744px !important;
+    }
+	}
+	&.icon-share {
+		background-position: -353px -725px !important ;//-86px -173px !important;
+    @extend .icon-size;
+    &:hover {
+    	background-position: -354px -747px !important;
     }
 	}
 }
@@ -191,7 +223,7 @@
 	border: 1px solid #E7E7E7;
 	margin: 0 5px 0 0;
 	&.common-style {
-		color: $fd-ui-ft-col-blk3;
+		color: $fd-ui-ft-col-blk2;
 		background: $fd-ui-ft-col-blk5;
     @include border-radius(20px);
     padding: 0 10px;
@@ -208,7 +240,7 @@
 		@extend .common-style;
 		background: $fd-ui-ly-col-yel;
 		&:hover {
-    	color: $fd-ui-ft-col-blk3;
+    	color: $fd-ui-ft-col-blk2;
     	cursor: default;
     	background: $fd-ui-ly-col-yel;
     }
