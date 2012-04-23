@@ -299,11 +299,89 @@
             width:100%;
             background-color: $fd-ui-ft-col-blk4;
             @include box-shadow(0 4px 0px 0 $fd-ui-ft-col-blk5);
-            height: 40px;
+            height: 33px;
             opacity: 0.94;
             position: fixed;
             top: 170px;
+            z-index: 3;
+        }
+
+        // alert messages 
+        .fd-ui-flash-msg {
+            @extend .fd-ui-tools;
             z-index: 5;
+            p {
+                line-height: 33px;
+                margin: 0 0 0 80px;
+            }
+            .flash-icon-size {
+                    background-image: $fd-ui-bg-sprite;
+                    height: 34px;
+                    left: 0;
+                    position: absolute;
+                    width: 80px;
+
+                }
+            .flash-close {
+                font-size: 32px;
+                font-weight: normal;
+                opacity: 0.9;
+                position: absolute;
+                right: 594px;
+                @include text-shadow(none);
+                top: 7px;
+                opacity:0.2;
+                cursor:pointer;
+                &:hover {
+                    opacity:0.99;
+                }   
+            }
+            &.errors {
+                background-color: $fd-ui-al-col-lred;
+                //@include box-shadow(0 4px 0 0 #FFE6E6);
+                border: 1px solid $fd-ui-ly-col-red;
+                color:$fd-ui-ly-col-red;;
+                .flash-icon {
+                    @extend .flash-icon-size;
+                    background-position: -470px -174px;
+                    img { display:none;}
+                }
+            }
+            &.warning {
+                background-color: $fd-ui-ly-col-yel;
+                //@include box-shadow(0 4px 0 0 #FFE6E6);
+                border: 1px solid $fd-ui-ly-col-byel;
+                color:#7B6E1A;
+                .flash-icon {
+                    @extend .flash-icon-size;
+                    background-position:-470px -81px;
+                    img { display:none;}
+                }
+            }
+            &.success {
+                background-color: $fd-ui-al-col-lgrn;
+                //@include box-shadow(0 4px 0 0 #FFE6E6);
+                border: 1px solid $fd-ui-al-col-bgrn;
+                color:$fd-ui-al-col-bgrn;
+                .flash-icon {
+                    @extend .flash-icon-size;
+                    background-position:-470px -221px;
+                    img { display:none;}
+                }
+            }
+            &.loading {
+                background-color: $fd-ui-ft-col-blk2;
+                //@include box-shadow(0 4px 0 0 #FFE6E6);
+                border: 1px solid $fd-ui-ft-col-blk2;
+                color:$fd-ui-ft-col-blk3;
+                .flash-icon {
+                    @extend .flash-icon-size;
+                    background-position:-470px -128px;
+                    img {
+                         padding: 4px 15px;
+                    }
+                }
+            }
         }
         .timeline {
     	    background: image-url("ui/timeline-indic.png") 77px top repeat-y transparent;

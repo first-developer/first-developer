@@ -5,6 +5,10 @@
 		<%= render "layouts/sidebar" %>
 	</div>
 	<div id="fd-ui-center" >
+		<div id="" class="fd-ui-flash-msg loading">
+			<i class="flash-icon"><img src="<%= asset_path("ui/loader.gif"); %>" alt=""></i><p>Waiting ...</p>
+			<i class="flash-close">×</i>
+		</div>
 		<div id="" class="fd-ui-tools"></div>
 		<div class="timeline">
 			<% 3.times do %>
