@@ -11,9 +11,9 @@
 		</div>
 		<div id="" class="fd-ui-tools"></div>
 		<div class="timeline">
-			<% 3.times do %>
+			<% ["post", "video","music", "edit", "update"].each do |type|%>
 			<article id="" class="fd-ui-tl-item">
-				<span class="fd-ui-icon post"></span>
+				<span class="fd-ui-icon <%= type %>"></span>
 				<span class="fd-ui-tl-item-indic"></span>
 				<header class="fd-ui-tl-item-hd">
 					<span class="fd-ui-avt small default" style="background-image:url(<%= asset_path("ui/fd-ui-ux-sprite.png"); %>)"></span>
@@ -56,7 +56,7 @@
 						</div>
 					</div>
 					<div id=""  class="fd-ui-tl-item-ct-el full-bg">
-						<input type="text"  class="fd-ui-cst-form" name="" value="" placeholder="Enter your comment here ...">
+						<input type="text"  class="full" name="" value="" placeholder="Enter your comment here ...">
 					</div>	
 					<div id=""  class="fd-ui-tl-item-ct-el full-bg">
 						<ol id="" class="fd-ui-comments">

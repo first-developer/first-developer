@@ -34,3 +34,22 @@ a,a:hover { text-decoration: none;cursor:pointer;}
 #scrollbar{
 	float:right !important;
 }
+
+// ========================
+// Inputs 
+// ========================
+
+input, textarea {
+  border: 1px solid #CCCCCC;
+  border-radius: 0 0 0 0;
+  height: 21px;
+  margin: 0;
+  padding: 4px 10px 3px;
+}
+
+
+input:focus, textarea:focus {
+  border-color: rgba(198, 75, 75, 0.8);
+  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.075) inset, 0 0 8px rgba(248, 202, 202, 0.6) inset;
+  outline: 0 none;
+}

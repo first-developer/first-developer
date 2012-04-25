@@ -203,7 +203,7 @@
   color: #9A9A9A;
   display: block;
   font-style: italic;
-  margin: 10px 0;
+  margin: 10px 0 10px 22px;
   padding: 0 0 0 15px;
 }
 
@@ -220,7 +220,7 @@
 .fd-ui-cst-btn {
 	display:block;
 	line-height: 23px;
-	border: 1px solid #E7E7E7;
+	border: 1px solid #ccc;
 	margin: 0 5px 0 0;
 	&.common-style {
 		color: $fd-ui-ft-col-blk2;
