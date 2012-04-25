@@ -191,6 +191,9 @@
                         font-size:12px;
                         color: $fd-ui-ly-col-yel;
                     }
+                    p {
+                        padding-top:0;
+                    }
                 }
             }
         }
@@ -212,7 +215,7 @@
         }
         p{
             @extend .section-ct;
-            padding: 0 25px 25px;   
+            padding: 25px;   
         }
 
         &.ntkw {
@@ -246,12 +249,15 @@
                     span.meta {
                         float: right;
                         color: $fd-ui-ft-col-blk2;
+                        border-top: 1px solid #000000;
                         background-color:$fd-ui-ly-col-yel;
-                        @include border-radius(2px);
+                        @include border-radius(25px);
                         text-align: center;
-                        width: 15%;
+                        color: $fd-ui-ft-col-blk3;
                         font-weight:bold;
                         @include box-shadow($fd-ui-sh-black);
+                        background-color: #111111;
+                        padding: 1px 0px;
                     }
                 }
             }
