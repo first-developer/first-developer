@@ -44,7 +44,7 @@
         top: 40px;
         left: 37px;
         input[type=search] {
-            background: url("/assets/ui/search-ico.png") no-repeat scroll 630px 8px White;
+            background: url("/assets/ui/search-ico.png") no-repeat scroll 631px 6px White;
             height: 30px;
             width: 645px;
         }
@@ -188,7 +188,7 @@
                         @extend .snd-txt;
                     }
                     dd {
-                        font-size:12px;
+                        font-size: $baseFontSize;
                         color: $fd-ui-ly-col-yel;
                     }
                     p {
@@ -215,13 +215,13 @@
         }
         p{
             @extend .section-ct;
-            padding: 25px;   
+            padding: 12px 25px;   
         }
 
         &.ntkw {
             ul { 
                 list-style:none; 
-                margin:15px 0 25px;
+                margin:10px 0 25px;
                 height:50px;
             }
             li {
@@ -442,6 +442,18 @@
                              width: 626px;
                         }
                     } 
+                    .btn {
+                        margin-right:3px;
+                        &.default, &.primary, &.danger {
+                           //top: 2px;
+                        }
+                    }
+                    .continue-reading {
+                        @extend .no.pt;
+                        .btn {
+                            @include border-radius(25px);
+                        }
+                    }
                     .liking {
                         float: right;
                         padding: 0 10px;
@@ -477,26 +489,46 @@
                             padding: 0 10px;
                             .icon-heart {
                                 position:relative;
-                                top:1px;
+                                top:0px;
                             }
                             .likes-count {
-                                background: none repeat scroll 0 0 $white;
-                                border-bottom: 1px solid #E0E0E0;
-                                border-radius: 10px 10px 10px 10px;
-                                border-top: 1px solid $fd-ui-ft-col-blk3;
-                                color: $fd-ui-ft-col-blk3;
-                                font-size: 13.7px;
+                                color: $fd-ui-ly-col-red;
+                                font-size: 20px;
+                                font-style: inherit;
                                 font-weight: bold;
                                 margin: 0 5px;
-                                padding: 1px 8px 0 6px;
                                 position: relative;
                                 top: 7px;
+                                &:before {
+                                    content:"+";
+                                }
                             }
                         }
                     }
-                    > p {
-                        @extend .pd-10-20-b;
-                        text-align:justify;
+                    .fd-ui-item-ct-text {
+                        margin: 0px 20px;;
+                        > p,h3,h4, blockquote {
+                            
+                            text-align:justify;
+                        }
+                        > p {
+                            margin:5px 0 20px;
+                        }
+                        blockquote {
+                            @extend .cite;
+                        }
+                        h3 {
+                            //border-bottom: 2px solid #EEEEEE;
+                            color: $fd-ui-ly-col-red; //$fd-ui-ft-col-blk2;
+                            font-size: 1.3em;
+                            font-weight: normal;
+                            margin: 10px 0 0;
+                        }
+                        h4 {
+                            color: $fd-ui-ft-col-blk3;
+                            font-size: $baseFontSize;
+                            font-weight: normal;
+                        }
                     }
                     &.full-bg {
                         background-color:$fd-ui-ft-col-blk5;
@@ -519,7 +551,7 @@
                         margin:10px 20px 0 ;
                         width: 605px;
                         h1 {
-                            font-size: 18.9px;
+                            font-size: $PostTitleFontSize; // 18.9px;
                             font-weight: normal;
                             line-height: 36px;
                             color: $fd-ui-ly-col-red;
@@ -728,9 +760,24 @@
             background: $fd-ui-bg-reply-arrow;
             padding-left: 58px;
             list-style:none;
+            li {
+                &.highlight {
+                    .cmt-ct {
+                        background-color:$fd-ui-ly-col-yel;
+                    }
+                }
+                &.agree {
+                    .cmt-ct {
+                        background-color:$successBackground;
+                    }
+                    &:after {
+                        content: '';
+                    }
+                }
+            }
         }
         border-bottom: $dashed;
-        padding: 0 0 0px;
+        padding: 5px 0;
         margin: 5px 0;
         position: relative;
         &:last-child {
@@ -745,7 +792,8 @@
             top: 10px;
         }
         .cmt-ct {
-            margin: 0 0 0 60px;
+            margin: 0 0 0 50px;
+            padding-left: 10px;
             display: block;
             // .cmt-ct-hd {
             //     @extend .default-cmt-height;

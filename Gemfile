@@ -62,6 +62,7 @@ end
 
 # EXTRAS / UTILS
 # ==============================================
+gem "RedCloth"
 gem "simple_form" 
 gem 'country_select'
 gem "amplify" 		    # Use Request - Store - Pubsub from AmplifyJS

@@ -35,8 +35,8 @@
 	&.pd {
 		padding-down: 	0px !important;
 	}
-	&.pu {
-		padding-up: 		0px !important;
+	&.pt {
+		padding-top: 		0px !important;
 	}
 }
 
@@ -203,7 +203,7 @@
   color: #9A9A9A;
   display: block;
   font-style: italic;
-  margin: 10px 0 10px 22px;
+  line-height: 22px;
   padding: 0 0 0 15px;
 }
 
@@ -252,4 +252,21 @@
 
 .orange {
 	color: #FFA900 !important;
+}
+
+// AUDIO PLAYER
+
+.fd-audio-player {
+	background: $fd-ui-ico-player;
+	display: inline-block;
+  height: 50px;
+  margin: 20px 56px;
+  padding: 0 0 0 191px;
+	.player {
+		display: inline-block;
+		border: 8px solid $fd-ui-ft-col-blk4;
+		@include border-radius(4px);
+		height:40px;
+		@include box-shadow(0 1px 0px 0px #ddd);
+	}
 }

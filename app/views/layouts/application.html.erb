@@ -33,14 +33,24 @@
 				        	<span class="fd-ui-cst-btn tag f-l">Programming</span>
 				        	<span class="fd-ui-cst-btn tag-style f-r">26 Comments →</span><span class="clear"></span></p>
 				    </hgroup>
-						<iframe width="604" height="375" frameborder="0" allowfullscreen="" src="http://blip.tv/play/AYLv%2BzQC.html?p=1" style="border: 1px none; margin: 21px;"></iframe>
-						
-						<p class="">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-						tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-						quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-						consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-						cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-						proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+				    <div class="fd-ui-item-ct-text">
+					    <%= render("shared/audio_player") %>
+							<!--<iframe width="604" height="375" frameborder="0" allowfullscreen="" src="http://blip.tv/play/AYLv%2BzQC.html?p=1" style="border: 1px none; margin: 21px;"></iframe>-->
+							
+							<% text = "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut ore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+
+h3. Organize your template files →
+
+h4. Everything about templating sytem
+
+
+Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. \"first-developer.fr\":http://first-developer.fr Ut enim ad minim veniam,quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo.
+" 
+%>
+							<%= raw RedCloth.new(text).to_html %>
+							<p class="continue-reading"><button class="btn">Continue reading  →</button></p>
+				    	
+				    </div>
 					</div>	
 					<div id=""  class="fd-ui-tl-item-ct-el full-bg">
 						<div class="liking">
@@ -57,6 +67,11 @@
 					</div>
 					<div id=""  class="fd-ui-tl-item-ct-el full-bg">
 						<input type="text"  class="full" name="" value="" placeholder="Enter your comment here ...">
+					</div>	
+					<div id=""  class="fd-ui-tl-item-ct-el full-bg">
+						<button class="btn default">Save   </button>
+						<button class="btn primary">Cancel </button>
+						<button class="btn  danger">Delete </button>
 					</div>	
 					<div id=""  class="fd-ui-tl-item-ct-el full-bg">
 						<ol id="" class="fd-ui-comments">
@@ -105,6 +120,9 @@
 							</li>
 							<% end %>
 						</ol><!-- / -->
+					</div>	
+					<div id=""  class="fd-ui-tl-item-ct-el full-bg">
+						<button class="btn"><i class="icon-plus"></i></button>
 					</div>	
 				</div>
 				<footer class="fd-ui-tl-item-ft">

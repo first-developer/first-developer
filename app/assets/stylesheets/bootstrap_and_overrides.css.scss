@@ -10,6 +10,63 @@ body { padding-top:0px;}
 //@import "ui/*.png";
 
 // ===========================
+// BUTTONS
+// ===========================
+
+.btn {
+	@include border-radius(2px);
+	padding: 3px 10px;
+	line-height:19px;
+	@include box-shadow(none);
+	@include buttonBackground($btnBackground, $btnBackgroundHighlight);
+	border: 1px solid $btnBorder;
+	position: relative;
+	top: 2px;
+	font-weight:bold;
+	&:hover {
+		border: 1px solid $btnHoverBorder;
+		//@include box-shadow(0 0 1px 0 $btnBackgroundHighlight);
+	}
+	&.more {
+		
+	}
+	&.default {
+		color: $fd-ui-ft-col-blk2;
+		text-shadow:0 1px 0 #FFFFFF;
+		&:hover {
+    	color: $fd-ui-ft-col-blk1;
+    }
+	}
+	&.primary, &.danger {
+		text-shadow: 0 -1px 0 #000000;
+		color: $white;
+    &:hover {
+    	color: $fd-ui-ft-col-blk5;
+    }
+	}
+	&.primary {
+		@include buttonBackground($fd-ui-ft-col-blk2, $fd-ui-ft-col-blk1);
+		border: 1px solid #000;
+		background-color: $fd-ui-ft-col-blk1;
+		&:hover {
+			border: 1px solid #000;
+			background-color: $fd-ui-ft-col-blk1;
+		}
+	}
+	&.danger {
+		@include buttonBackground($btnDanger, $btnDanger2);
+		border: 1px solid $btnDangerBorder;
+	}
+}
+
+.btn.active, .btn:active {
+    background-image: none;
+    border: 1px solid #BBBBBB;
+    box-shadow: 0 0 4px 0 #E0E0E0 inset;
+    outline: 0 none;
+}
+
+// ===========================
 // RESET
 // ===========================
 a,a:hover { text-decoration: none;cursor:pointer;}
@@ -52,4 +109,9 @@ input:focus, textarea:focus {
   border-color: rgba(198, 75, 75, 0.8);
   box-shadow: 0 1px 1px rgba(0, 0, 0, 0.075) inset, 0 0 8px rgba(248, 202, 202, 0.6) inset;
   outline: 0 none;
+}
+
+input[type=submit]:focus {
+	border-color: $btnHoverBorder;
+	@include box-shadow(none);
 }

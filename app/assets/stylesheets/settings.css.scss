@@ -39,7 +39,7 @@ $fd-ui-bg-img-red:			image-url("ui/pattern-red.jpg") repeat-y;
 $fd-ui-bg-img-lgry: 		image-url("ui/pattern-lgry.jpg") repeat-x;
 $fd-ui-bg-img-bgry: 		image-url("ui/pattern-bgry.jpg") repeat;
 $fd-ui-bg-sprite: 			image-url("ui/fd-ui-ux-sprite.png");
-$fd-ui-bg-reply-arrow: 	image-url("ui/corner-arrow.png") no-repeat scroll 10px -15px transparent;
+$fd-ui-bg-reply-arrow: 	image-url("ui/arrow.png") no-repeat scroll 7px -26px transparent;
 
 // SOCIAL ICONS 
 $fd-ui-ico-twt		:transparent $fd-ui-bg-sprite -513px 5px no-repeat;
@@ -47,6 +47,7 @@ $fd-ui-ico-fbk		:transparent $fd-ui-bg-sprite -573px 5px no-repeat;
 $fd-ui-ico-skp		:transparent $fd-ui-bg-sprite -452px 5px no-repeat;
 $fd-ui-ico-gpl		:transparent $fd-ui-bg-sprite -633px 5px no-repeat;
 $fd-ui-ico-ghb		:transparent $fd-ui-bg-sprite -693px 5px no-repeat;
+$fd-ui-ico-player	:transparent $fd-ui-bg-sprite -780px -2px no-repeat;
 
 // BORDERS
 $dashed						: 1px dashed $fd-ui-ft-col-blk41;
@@ -85,6 +86,14 @@ $linkColor 					: $fd-ui-ly-col-red;
 //$orange 		:;
 //$pink 			:;
 //$purple 		:;
+$warningText 			 :	#c09853; 	
+$warningBackground : 	#f3edd2; 	
+$errorText 				 :	#b94a48; 	
+$errorBackground 	 :	#f2dede; 	
+$successText 			 :	#468847; 	
+$successBackground : 	#dff0d8; 	
+$infoText 				 :	#3a87ad; 	
+$infoBackground 	 :	#d9edf7;
 
 // Sprites
 $iconSpritePath 			: image-path('glyphicons-halflings.png');
@@ -94,13 +103,14 @@ $iconWhiteSpritePath	: image-path('glyphicons-halflings-white.png');
 //$gridColumns 				:;
 //$gridColumnWidth		:;		 
 //$gridGutterWidth		:;
-
 // Fluid grid system
 //$fluidGridColumnWidth :;
 //$fluidGridGutterWidth :;
 
 // Typography
 $baseFontSize 				  : 12.5px; //12px;
+$PostTitleFontSize 			: 1.5em; 
+$PostSectionFontSize 		: 1.3em; 
 $mediumFontSize					: 16px;
 $baseFontFamily				  : Arial, sans-serif;//'droid sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
 $titleFontFamily				: 'Helvetica Neue', 'droid sans', Arial, sans-serif; // 'whitney-medium', 
@@ -156,3 +166,12 @@ $navbarLinkBackgroundActive 		: $fd-ui-ft-col-blk1;
 //$successBackground 	:;			
 //$infoText 					:;
 //$infoBackground			:;	
+
+// Buttons
+$btnBackground: $white;
+$btnBackgroundHighlight: $fd-ui-ft-col-blk5;
+$btnBorder: #ccc;
+$btnHoverBorder: $fd-ui-ft-col-blk3;
+$btnDanger:  #BB4845;//#9F3737, 
+$btnDanger2: #89302D;
+$btnDangerBorder: #761414;
