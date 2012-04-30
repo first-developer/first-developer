@@ -369,7 +369,7 @@
                 //@include box-shadow(0 4px 0 0 #FFE6E6);
                 border-left: 1px solid $fd-ui-ly-col-byel;
                 border-top: 1px solid $fd-ui-ly-col-byel;
-                color:#7B6E1A;
+                color:$warningText ;
                 .flash-icon {
                     @extend .flash-icon-size;
                     background-position:-470px -81px;
@@ -447,13 +447,12 @@
                         &.default, &.primary, &.danger {
                            //top: 2px;
                         }
-                    }
-                    .continue-reading {
-                        @extend .no.pt;
-                        .btn {
+                        &.continue-reading {
                             @include border-radius(25px);
+                            margin-bottom: 15px;
                         }
                     }
+                    
                     .liking {
                         float: right;
                         padding: 0 10px;
@@ -513,7 +512,36 @@
                         }
                         > p {
                             margin:5px 0 20px;
+                            &.fd-ui-text-info, &.fd-ui-text-info.warning {
+                                background-color: $fd-ui-ly-col-yel;
+                                border: 1px solid $fd-ui-ly-col-yel;
+                                @include border-radius(none);
+                                @include box-shadow(none);
+                                min-height: 20px;
+                                padding: 5px 10px;
+                                color: $warningText ;
+                                &.success {
+                                    background-color: $successBackground;
+                                    border: 1px solid $successBackground;
+                                    color: $successText ;
+                                }
+                                &.error {
+                                    background-color: $errorBackground;
+                                    border: 1px solid $errorBackground;
+                                    color: $errorText;
+                                }
+                                &.update{
+                                    background-color: $infoBackground;
+                                    border: 1px solid $infoBackground;
+                                    color: $infoText ;
+                                }
+                            }
+                            i {
+                                padding-right:10px;
+                                opacity:0.4;
+                            }
                         }
+
                         blockquote {
                             @extend .cite;
                         }
