@@ -257,7 +257,7 @@
                         font-weight:bold;
                         @include box-shadow($fd-ui-sh-black);
                         background-color: #111111;
-                        padding: 1px 0px;
+                        padding: 1px 5px;
                     }
                 }
             }
@@ -450,6 +450,20 @@
                         &.continue-reading {
                             @include border-radius(25px);
                             margin-bottom: 15px;
+                            &:after {
+                                content: "→";
+                                padding-left: 6px;
+                            }
+                            &.pending {
+                                background-image: $fd-ui-bg-img-loadm;
+                                background-position: 88% 11px;
+                                background-repeat: no-repeat;
+                                padding-right: 45px;
+                                &:after {
+                                    content: "";
+                                    padding-left: 0px;
+                                }
+                            }
                         }
                     }
                     

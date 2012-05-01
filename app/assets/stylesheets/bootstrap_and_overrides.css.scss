@@ -27,8 +27,30 @@ body { padding-top:0px;}
 		border: 1px solid $btnHoverBorder;
 		//@include box-shadow(0 0 1px 0 $btnBackgroundHighlight);
 	}
+	&.pending {
+		background-image: $fd-ui-bg-img-loadm;
+    background-position: 80% 11px;
+    background-repeat: no-repeat;
+    padding-right: 40px;
+	}
 	&.more {
-		
+		width: 99.5%;	
+		i { 
+			opacity: 0.5;
+		}
+		&:hover, &:active {
+			i { 
+				opacity: 0.99;
+			}
+		}
+		&.pending {
+			i {
+				visibility:hidden;
+			}
+			background-image: $fd-ui-bg-img-load;
+		  background-position: center 10px;
+		  background-repeat: no-repeat;
+		}
 	}
 	&.default {
 		color: $fd-ui-ft-col-blk2;
