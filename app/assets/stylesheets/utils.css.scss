@@ -102,17 +102,17 @@
 		background-position: -182px -723px !important ;//-86px -173px !important;
     @extend .icon-size;
     &:hover {
-    	background-position: -182px -748px !important;
+    	background-position: -182px -747px !important;
     }
     &.like {
     	background-position: -182px -748px !important;	
     }
 	}
 	&.icon-star {
-		background-position: -239px -723px !important ;//-86px -173px !important;
+		background-position: -241px -723px !important ;//-86px -173px !important;
     @extend .icon-size;
     &:hover {
-    	background-position: -239px -748px !important;
+    	background-position: -241px -750px !important;
     }
 	}
 	&.icon-reply {
@@ -267,6 +267,6 @@
 		border: 8px solid $fd-ui-ft-col-blk4;
 		@include border-radius(4px);
 		height:40px;
-		@include box-shadow(0 1px 0px 0px #ddd);
+		@include box-shadow(0 -1px 0px 0px #ddd);
 	}
 }

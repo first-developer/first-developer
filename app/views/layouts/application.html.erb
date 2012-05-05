@@ -5,11 +5,11 @@
 		<%= render "layouts/sidebar" %>
 	</div>
 	<div id="fd-ui-center" >
-		<div id="" class="fd-ui-flash-msg loading">
-			<i class="flash-icon"><img src="<%= asset_path("ui/loader.gif"); %>" alt=""></i><p>Waiting ...</p>
-			<i class="flash-close">×</i>
+		<div id="" class="fd-ui-tools">
+			<button class="btn">Daily</button>
+	    <button class="btn">Weekly</button>
+	    <button class="btn">Monthly</button>
 		</div>
-		<div id="" class="fd-ui-tools"></div>
 		<div class="timeline">
 			<% ["post", "video","music", "edit", "update"].each do |type|%>
 			<article id="" class="fd-ui-tl-item">
@@ -50,6 +50,7 @@ p(fd\-ui\-text\-info). <i class=\"icon-info-sign\"></i> Lorem ipsum dolor sit am
 " 
 %>
 							<%= raw RedCloth.new(text).to_html %>
+
 							<button class="btn continue-reading">Continue reading</button>
 				    	
 				    </div>
@@ -69,6 +70,12 @@ p(fd\-ui\-text\-info). <i class=\"icon-info-sign\"></i> Lorem ipsum dolor sit am
 					</div>
 					<div id=""  class="fd-ui-tl-item-ct-el full-bg">
 						<input type="text"  class="full" name="" value="" placeholder="Enter your comment here ...">
+					</div>	
+					<div id=""  class="fd-ui-tl-item-ct-el full-bg">
+						<div id="" class="fd-ui-flash-msg warning">
+							<i class="flash-icon"><img src="<%= asset_path("ui/loader.gif"); %>" alt=""></i><p>You must login to comment this post!</p>
+							<i class="flash-close">×</i>
+						</div>
 					</div>	
 					<div id=""  class="fd-ui-tl-item-ct-el full-bg">
 						<button class="btn default">Save   </button>
