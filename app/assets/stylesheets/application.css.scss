@@ -336,9 +336,8 @@
                 float:right;
                 display:block;
                 .btn {
-                    @extend .btn.default;
                     &.count {
-                        margin: -9px -11px -2px 11px;
+                        margin: -9px -11px -2px 7px;
                         position: relative;
                     }
                 }
