@@ -23,7 +23,7 @@ body { padding-top:0px;}
 	position: relative;
 	top: 2px;
 	font-weight:bold;
-	&:hover {
+	&:hover, &:focus, :active {
 		border: 1px solid $btnHoverBorder;
 		//@include box-shadow(0 0 1px 0 $btnBackgroundHighlight);
 	}
@@ -55,14 +55,14 @@ body { padding-top:0px;}
 	&.default {
 		color: $fd-ui-ft-col-blk2;
 		text-shadow:0 1px 0 #FFFFFF;
-		&:hover {
+		&:hover, &:focus, :active {
     	color: $fd-ui-ft-col-blk1;
     }
 	}
 	&.primary, &.danger {
 		text-shadow: 0 -1px 0 #000000;
 		color: $white;
-    &:hover {
+    &:hover, &:focus, :active {
     	color: $fd-ui-ft-col-blk5;
     }
 	}
@@ -70,7 +70,7 @@ body { padding-top:0px;}
 		@include buttonBackground($fd-ui-ft-col-blk2, $fd-ui-ft-col-blk1);
 		border: 1px solid #000;
 		background-color: $fd-ui-ft-col-blk1;
-		&:hover {
+		&:hover, &:focus, :active {
 			border: 1px solid #000;
 			background-color: $fd-ui-ft-col-blk1;
 		}
@@ -81,12 +81,41 @@ body { padding-top:0px;}
 	}
 }
 
-.btn.active, .btn:active {
+.btn-group{
+	&.active {
+		.btn {
+			background-image: none;
+	    border: 1px solid $fd-ui-ft-col-blk3;
+	    box-shadow: 0 0 4px 0 #E0E0E0 inset;
+	    outline: 0 none;
+		}
+	}   
+	.btn.active, .btn:active {
     background-image: none;
-    border: 1px solid #BBBBBB;
-    box-shadow: 0 0 4px 0 #E0E0E0 inset;
+    box-shadow: 0 2px 4px rgba(137, 137, 137, 0.15) inset, 0 1px 2px transparent;
     outline: 0 none;
+	}
+	.btn:hover, .btn.disabled, .btn[disabled] {
+    background-color: #F6F6F6;
+    border: 1px solid #A3A3A3;
+	}
+	.btn:active, .btn.active {
+		background-color: $fd-ui-ft-col-blk2;
+	  border: 1px solid $fd-ui-ft-col-blk1;
+	  color: $white;
+	  text-shadow: 0 -1px 0 #000000;
+	}
 }
+
+.btn-group .btn:first-child {
+  border-bottom-left-radius: 	2px;
+  border-top-left-radius: 		2px;
+}
+.btn-group .btn:last-child {
+  border-bottom-right-radius: 2px;
+  border-top-right-radius: 		2px;
+}    
+
 
 // ===========================
 // RESET

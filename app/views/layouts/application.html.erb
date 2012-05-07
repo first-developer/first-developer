@@ -5,10 +5,10 @@
 		<%= render "layouts/sidebar" %>
 	</div>
 	<div id="fd-ui-center" >
-		<div id="" class="fd-ui-tools">
-			<button class="btn">Daily</button>
-	    <button class="btn">Weekly</button>
-	    <button class="btn">Monthly</button>
+		<div id="" class="fd-ui-tools btn-group" data-toggle="buttons-radio">
+				<button class="btn">Daily</button>
+		    <button class="btn">Weekly</button>
+		    <button class="btn">Monthly</button>
 		</div>
 		<div class="timeline">
 			<% ["post", "video","music", "edit", "update"].each do |type|%>

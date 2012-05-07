@@ -9,6 +9,7 @@
 //= require bootstrap-dropdown
 //= require amplify
 //= require jquery.placeholder
+//= require jquery.buttons
 //= require bootstrap-tooltip
 // require jquery.mousewheel
 // require ui.core
