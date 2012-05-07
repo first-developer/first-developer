@@ -222,7 +222,7 @@ DEPENDENCIES
   albino
   amplify
   annotate (= 2.4.0)
-  bootstrap-sass
+  bootstrap-sass (~> 2.0.2)
   bourbon
   capybara
   coffee-rails (~> 3.1.1)

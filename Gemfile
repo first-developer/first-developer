@@ -22,7 +22,7 @@ group :assets do
 	gem 'therubyracer'
 	gem 'uglifier', '>= 1.0.3'
 	#gem 'twitter-bootstrap-rails'
-  gem 'bootstrap-sass'
+  gem 'bootstrap-sass', '~> 2.0.2'
   gem 'bourbon'
   gem 'oily_png'
   gem 'compass-rails'

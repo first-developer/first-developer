@@ -98,8 +98,8 @@ $infoText 				 :	#3a87ad;
 $infoBackground 	 :	#d9edf7;
 
 // Sprites
-$iconSpritePath 			: image-path('glyphicons-halflings.png');
-$iconWhiteSpritePath	: image-path('glyphicons-halflings-white.png');
+$iconSpritePath 			: asset-url('glyphicons-halflings.png', image);
+$iconWhiteSpritePath	: asset-url('glyphicons-halflings-white.png', image);
 
 // Grid system
 //$gridColumns 				:;
