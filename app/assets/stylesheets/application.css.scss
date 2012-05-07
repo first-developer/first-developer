@@ -325,6 +325,24 @@
 
             .btn {
                 //margin-left: -4px;
+
+            }
+            .notifs {
+                float: right;
+                margin-right: 33%;
+                position: absolute;
+                right: 0;
+                top: 8px;
+                float:right;
+                display:block;
+                .btn {
+                    @extend .btn.default;
+                    &.count {
+                        margin: -9px -11px -2px 11px;
+                        position: relative;
+                    }
+                }
+
             }
         }
 
