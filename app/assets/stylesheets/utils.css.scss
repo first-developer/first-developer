@@ -79,54 +79,58 @@
 	@extend .icon-size;
 	&.fd-ui-btn {
 		cursor:pointer;
+		border-left: 1px solid #EBEBEB;
+    box-shadow: -1px 0 0 0 #FFFFFF;
+    margin: 0 5px;
+    padding: 0 0 0 10px;
 	}
 	&.icon-size {
 		width:24px;
 		height:24px;
 	}
 	&.icon-more {
-		background-position: -125px -723px  !important;
+		background-position: -113px -723px  !important;
     @extend .icon-size;
     &:hover {
-    	background-position: -125px -747px !important;
+    	background-position: -113px -748px !important;
     }
 	}
 	&.icon-clip {
-		background-position: -15px -723px !important ;//-86px -173px !important;
+		background-position: -5px -723px !important ;//-86px -173px !important;
     @extend .icon-size;
     &:hover {
-    	background-position: -15px -744px !important;
+    	background-position: -5px -749px !important;
     }
 	}
 	&.icon-heart {
-		background-position: -182px -723px !important ;//-86px -173px !important;
+		background-position: -170px -723px !important ;//-86px -173px !important;
     @extend .icon-size;
     &:hover {
-    	background-position: -182px -747px !important;
+    	background-position: -170px -747px !important;
     }
     &.like {
     	background-position: -182px -748px !important;	
     }
 	}
 	&.icon-star {
-		background-position: -241px -723px !important ;//-86px -173px !important;
+		background-position: -229px -723px !important ;//-86px -173px !important;
     @extend .icon-size;
     &:hover {
-    	background-position: -241px -750px !important;
+    	background-position: -229px -747px !important;
     }
 	}
 	&.icon-reply {
-		background-position: -15px -723px !important ;//-86px -173px !important;
+		background-position: -343px -723px !important ;//-86px -173px !important;
     @extend .icon-size;
     &:hover {
-    	background-position: -15px -744px !important;
+    	background-position: -343px -744px !important;
     }
 	}
 	&.icon-share {
-		background-position: -353px -725px !important ;//-86px -173px !important;
+		background-position: -284px -722px !important ;//-86px -173px !important;
     @extend .icon-size;
     &:hover {
-    	background-position: -354px -747px !important;
+    	background-position: -284px -749px !important;
     }
 	}
 }

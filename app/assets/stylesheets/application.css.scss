@@ -328,13 +328,11 @@
 
             }
             .notifs {
-                float: right;
-                margin-right: 33%;
+                display: block;
+                float: left;
+                left: 640px;
                 position: absolute;
-                right: 0;
                 top: 8px;
-                float:right;
-                display:block;
                 .btn {
                     &.count {
                         margin: -9px -11px -2px 7px;
@@ -612,13 +610,16 @@
                             .icon-heart {
                                 position:relative;
                                 top:0px;
+                                border:none;
+                                margin:0;
                             }
                             .likes-count {
                                 color: $fd-ui-ly-col-red;
                                 font-size: 20px;
-                                font-style: inherit;
-                                font-weight: bold;
-                                margin: 0 5px;
+                                //font-style: inherit;
+                                //font-family:'Magra';
+                                //font-weight: bold;
+                                //margin: 0 5px 0 0;
                                 position: relative;
                                 top: 7px;
                                 &:before {
