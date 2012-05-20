@@ -105,7 +105,6 @@ GEM
     json (1.7.0)
     launchy (2.1.0)
       addressable (~> 2.2.6)
-    libnotify (0.7.2)
     libv8 (3.3.10.4)
     libwebsocket (0.1.3)
       addressable
@@ -236,7 +235,6 @@ DEPENDENCIES
   jquery-rails
   js-routes
   launchy
-  libnotify
   lograge
   mysql2
   nifty-generators

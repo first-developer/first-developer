@@ -37,7 +37,7 @@ group :development do
   	gem 'nifty-generators'   	# another scaffold
   	gem 'faker', '0.3.1'
   	gem 'guard'
-  	gem 'libnotify'
+  	#gem 'libnotify'
 end
 
 

@@ -7,8 +7,9 @@ development:
   adapter: mysql2
   encoding: utf8
   host: localhost
-  database: fd
-  username: root
+  database: fd_dev
+  username: fd
+  password: fd
   pool: 5
   timeout: 5000
 
