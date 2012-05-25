@@ -1,13 +1,32 @@
-jQuery ->
-	#$("a[rel=popover]").popover()
-	#$(".tooltip").tooltip()
-	#$("a[rel=tooltip]").tooltip()
+(($) ->
+
+	#$(".btn-group .btn").button()
+
 	$(".icon-clip").bind "click", () ->
 		$this = $(this)
 		ct = $this.closest(".fd-ui-tl-item").find(".fd-ui-tl-item-ct")
 		ct.toggle("clip")
 
-	options = {
-		placement: 'top'
-	}
-	$(".timeline .fd-ui-btn").tooltip(options)
+
+	$(".timeline .fd-ui-btn").tooltip({placement: 'top'})
+
+
+	# --------------------------------
+	# PLACEHOLDERS
+	# --------------------------------
+	#$('input[placeholder], textarea[placeholder]').placeholder()
+
+
+	# --------------------------------
+	# ANIMATIONS
+	# --------------------------------
+
+	# Silding sidebar info and category sidebar
+	$('.hide-sidebar').toggleSidebar '#fd-ui-sidebar-left'
+
+	$('.hide-sidebar-info').toggleSidebar '#fd-ui-sidebar-right2', 'right'
+
+
+	return
+
+)(jQuery)

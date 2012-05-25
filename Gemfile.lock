@@ -1,3 +1,11 @@
+GIT
+  remote: git://github.com/anjlab/bootstrap-rails.git
+  revision: 6ee3cb3dc6b4cc440528819c560d674f9cca06c2
+  specs:
+    anjlab-bootstrap-rails (2.0.3.2)
+      railties (>= 3.0)
+      sass
+
 GEM
   remote: http://rubygems.org/
   specs:
@@ -39,7 +47,6 @@ GEM
     annotate (2.4.0)
     ansi (1.4.2)
     arel (2.2.3)
-    bootstrap-sass (2.0.2)
     bourbon (1.4.0)
       sass (>= 3.1)
     builder (3.0.0)
@@ -220,8 +227,8 @@ DEPENDENCIES
   RedCloth
   albino
   amplify
+  anjlab-bootstrap-rails!
   annotate (= 2.4.0)
-  bootstrap-sass (~> 2.0.2)
   bourbon
   capybara
   coffee-rails (~> 3.1.1)

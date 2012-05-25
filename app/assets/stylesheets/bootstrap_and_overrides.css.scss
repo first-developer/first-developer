@@ -1,6 +1,6 @@
 
 @import "settings";
-
+@import "compass";
 @import "bootstrap";
 
 body { padding-top:0px;}
@@ -29,9 +29,9 @@ body { padding-top:0px;}
 	}
 	&.pending {
 		background-image: $fd-ui-bg-img-loadm;
-    background-position: 80% 11px;
-    background-repeat: no-repeat;
-    padding-right: 40px;
+	    background-position: 80% 11px;
+	    background-repeat: no-repeat;
+	    padding-right: 40px;
 	}
 	&.more {
 		width: 99.5%;	
@@ -176,7 +176,7 @@ input[type=submit]:focus {
 // ========================
 
 .tooltip-inner {
-		opacity:0.99;
+	opacity:0.99;
     background-color: $fd-ui-ft-col-blk1;
     @include border-radius(2px);
     padding: 4px 8px;
@@ -187,3 +187,139 @@ input[type=submit]:focus {
     text-decoration: none;
     text-shadow: 0 -1px 0 #000;
 }
+
+
+
+
+// ===========================
+// MODALS
+// ===========================
+
+.overlay {
+	background: rgba(0, 0, 0, 0.5);
+	width: 100%;
+	height: 100%;
+	display: block;
+	z-index: 9;
+	position:fixed;
+}
+
+.modal {
+	@include border-radius(3px);
+	@include box-shadow(0 6px 18px 4px rgba(0, 0, 0, 0.3));
+	.modal-header {
+		background-color: $fd-ui-ft-col-blk6;
+		.icon {
+			float:left;
+			background: $fd-ui-bg-sprite;
+			margin-right:20px;
+			display: block;
+			height:30px;
+			width:30px;
+			&.window {
+				opacity:0.5;
+				background-position: -336px -310px;
+			}
+		}
+		h3 {
+			color: $fd-ui-ft-col-blk1; //$fd-ui-ft-col-blk2;
+            font-size: 1.3em;
+            font-weight: bold;
+            margin: 1px 0 0;
+		}
+	}
+	.modal-footer {
+		padding: 5px 9px 10px;
+		background-color: $fd-ui-ft-col-blk5;
+	}
+
+	.modal-body {
+		.fd-ui-flash-msg {
+			margin: 10px 0;
+            position:relative;
+            width: 99.5%;
+            border:none;
+            z-index: 1;
+
+            @include  border-radius(2px);
+            p {
+                line-height: 33px;
+                margin: 0 0 0 60px;
+            }
+            .flash-icon-size {
+                background-image: $fd-ui-bg-sprite;
+                height: 33px;
+                left: 0;
+                position: absolute;
+                width: 48px;
+                @include  border-radius(2px 0 0 2px);
+                }
+            .flash-close {
+                font-size: 32px;
+                font-weight: normal;
+                opacity: 0.9;
+                position: absolute;
+                right: 2%;
+                @include text-shadow(none);
+                top: 8px;
+                opacity:0.2;
+                cursor:pointer;
+                &:hover {
+                    opacity:0.99;
+                }   
+            }
+            &.errors {
+                background-color: $fd-ui-al-col-lred;
+                //@include box-shadow(0 4px 0 0 #FFE6E6);
+                //border-left: 1px solid $fd-ui-ly-col-red;
+                //border-top: 1px solid $fd-ui-ly-col-red;
+                color:$fd-ui-ly-col-red;;
+                .flash-icon {
+                    @extend .flash-icon-size;
+                    background-position: -472px -174px;
+                    img { display:none;}
+                }
+            }
+            &.warning {
+                background-color: $fd-ui-ly-col-yel;
+                //@include box-shadow(0 4px 0 0 #FFE6E6);
+                //border-left: 1px solid $fd-ui-ly-col-byel;
+                //border-top: 1px solid $fd-ui-ly-col-byel;
+                color:$warningText ;
+                .flash-icon {
+                    @extend .flash-icon-size;
+                    background-position:-470px -78px;
+                    img { display:none;}
+                }
+            }
+            &.success {
+                background-color: $fd-ui-al-col-lgrn;
+                //@include box-shadow(0 4px 0 0 #FFE6E6);
+                //border-left: 1px solid $fd-ui-al-col-bgrn;
+                //border-top: 1px solid $fd-ui-al-col-bgrn;
+                color:$fd-ui-al-col-bgrn;
+                .flash-icon {
+                    @extend .flash-icon-size;
+                    background-position:-474px -221px;
+                    img { display:none;}
+                }
+            }
+            &.loading {
+                background-color: $fd-ui-ft-col-blk2;
+                //@include box-shadow(0 4px 0 0 #FFE6E6);
+                //border-left: 1px solid $fd-ui-ft-col-blk2;
+                //border-top: 1px solid $fd-ui-ft-col-blk2;
+                color:$fd-ui-ft-col-blk3;
+                .flash-icon {
+                    @extend .flash-icon-size;
+                    background-position:-470px -129px;
+                    img {
+                         padding: 4px 12px;
+                    }
+                }
+            }
+        }
+	}
+}
+
+

@@ -105,33 +105,34 @@
 	&.icon-heart {
 		background-position: -170px -723px !important ;//-86px -173px !important;
     @extend .icon-size;
-    &:hover {
-    	background-position: -170px -747px !important;
-    }
+	    &:hover {
+	    	background-position: -170px -747px !important;
+	    }
     &.like {
     	background-position: -182px -748px !important;	
     }
 	}
 	&.icon-star {
 		background-position: -229px -723px !important ;//-86px -173px !important;
-    @extend .icon-size;
-    &:hover {
-    	background-position: -229px -747px !important;
-    }
+	    @extend .icon-size;
+	    &:hover {
+	    	background-position: -229px -747px !important;
+	    }
 	}
 	&.icon-reply {
 		background-position: -343px -723px !important ;//-86px -173px !important;
-    @extend .icon-size;
-    &:hover {
-    	background-position: -343px -744px !important;
-    }
+	    @extend .icon-size;
+	    &:hover {
+	    	background-position: -343px -744px !important;
+	    }
 	}
 	&.icon-share {
-		background-position: -284px -722px !important ;//-86px -173px !important;
-    @extend .icon-size;
-    &:hover {
-    	background-position: -284px -749px !important;
-    }
+		background-position: -290px -719px !important ;//-86px -173px !important;
+    	@extend .icon-size;
+	    &:hover {
+	    	background-position: -290px -746px !important;
+	    }
+
 	}
 }
 

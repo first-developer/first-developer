@@ -46,7 +46,7 @@
         input[type=search] {
             background: url("/assets/ui/search-ico.png") no-repeat scroll 485px 6px white;
             height: 30px;
-            width: 500px;
+            width: 400px;
         }
     }
 	#hire-me {
@@ -140,6 +140,26 @@
     }
 }
 
+.hide-sidebar-info {
+    display:block;
+    width:30px;
+    height:65px;
+    background: image-url("ui/expand.png") no-repeat left bottom;
+    position: absolute;
+    left: -30px;
+    top:50%;
+    opacity: 0.8;
+    &:hover {
+        opacity: 0.99;
+    }
+    &.opened {
+        background-position: left bottom;
+    }
+    &.closed {
+        background-position: left top;
+    }
+}
+
 #sidebar_infos {
 	height:100%;
 	background: $fd-ui-bg-img-blk transparent; 
@@ -147,6 +167,7 @@
     border: 1px solid #000000;
     @include box-shadow(1px 0 0 0 #444444 inset);
     height: 100%;
+    margin-left:0px;
     section {
         @extend .end;
         &.me {
@@ -293,8 +314,28 @@
         width: 230px;
         left:0;
         height:100%;
-        top: 170px;
+        top: 169px;
         z-index: 7;
+
+        .hide-sidebar {
+            display:block;
+            width:30px;
+            height:65px;
+            background: image-url("ui/expand.png") no-repeat right bottom;
+            position: absolute;
+            right: -30px;
+            top:50%;
+            opacity: 0.8;
+            &:hover {
+                opacity: 0.99;
+            }
+            &.opened {
+                background-position: right bottom;
+            }
+            &.closed {
+                background-position: right top;
+            }
+        }
 	}
 	#fd-ui-center {
     	// float: left;
@@ -313,15 +354,16 @@
         > .fd-ui-tools {
         	border: 1px solid $fd-ui-ly-col-gry;
             width:100%;
-            background-color: $fd-ui-ft-col-blk4;
+            background-color: $fd-ui-ft-col-blk5;
             @include box-shadow(0 5px 5px -7px rgba(0, 0, 0, 0.5));
             //@include box-shadow(0 4px 0px 0 $fd-ui-ft-col-blk5);
             height: 40px;
             opacity: 0.94;
             position: fixed;
-            top: 170px;
+            top: 169px;
             z-index: 3;
-            padding: 8px 20px 0;
+            left:0;
+            padding: 10px 20px 0 240px;
 
             .btn {
                 //margin-left: -4px;
@@ -330,7 +372,7 @@
             .notifs {
                 display: block;
                 float: left;
-                left: 640px;
+                left: 864px; // 640px;
                 position: absolute;
                 top: 8px;
                 .btn {
@@ -638,8 +680,8 @@
                             margin:5px 0 20px;
                             &.fd-ui-text-info, &.fd-ui-text-info.warning {
                                 background-color: $fd-ui-ly-col-yel;
-                                border: 1px solid $fd-ui-ly-col-yel;
-                                @include border-radius(none);
+                                border: 1px solid $fd-ui-ly-col-byel;
+                                @include border-radius(30px);
                                 @include box-shadow(none);
                                 min-height: 20px;
                                 padding: 5px 10px;
@@ -876,7 +918,7 @@
         float: right;
         width: 320px;
         height: 100%;
-        top:170px;
+        top:169px;
         z-index: 5;
     }
 	#fd-ui-sidebar-right1 {
@@ -887,7 +929,7 @@
         @extend .fd-ui-sidebar-common;
 	}
 	#fd-ui-sidebar-right2 {
-		border-left: 1px solid #3A3A3A;
+		//border-left: 1px solid #3A3A3A;
         right: -1px;
         @extend .fd-ui-sidebar-common;
 	}

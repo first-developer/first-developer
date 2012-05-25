@@ -6,14 +6,9 @@
 //
 //= require jquery
 //= require jquery_ujs
-//= require bootstrap-dropdown
-//= require amplify
-//= require jquery.placeholder
-//= require bootstrap-button
+//= require vendor
 //= require bootstrap-tooltip
-// require jquery.mousewheel
-// require ui.core
-// require ui.draggable
-// require jquery.scroll
+//= require bootstrap-dropdown
+//= require jquery.buttons
 //= require_tree .
 

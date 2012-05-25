@@ -22,7 +22,9 @@ group :assets do
 	gem 'therubyracer'
 	gem 'uglifier', '>= 1.0.3'
 	#gem 'twitter-bootstrap-rails'
-  gem 'bootstrap-sass', '~> 2.0.2'
+  #gem 'bootstrap-sass', '~> 2.0.2', git: 'https://github.com/thomas-mcdonald/bootstrap-sass.git'
+  gem 'anjlab-bootstrap-rails', :require => 'bootstrap-rails',
+                              :git => 'git://github.com/anjlab/bootstrap-rails.git'
   gem 'bourbon'
   gem 'oily_png'
   gem 'compass-rails'
