@@ -9,6 +9,6 @@
 //= require vendor
 //= require bootstrap-tooltip
 //= require bootstrap-dropdown
-//= require jquery.buttons
+//= require bootstrap-button
 //= require_tree .
 
