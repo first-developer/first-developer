@@ -46,15 +46,16 @@
         input[type=search] {
             background: url("/assets/ui/search-ico.png") no-repeat scroll 485px 6px white;
             height: 30px;
-            width: 400px;
+            width: 500px;
         }
     }
 	#hire-me {
 		background: image-url("ui/fd-ui-ux-sprite.png") right -124px no-repeat transparent;
-        height: 126px;
         overflow: hidden;
         width: 370px;
-        float:right;
+        height: 126px;
+        position: absolute;
+        right: 0;
         &:hover {
         	background: image-url("ui/fd-ui-ux-sprite.png") right -262px no-repeat transparent;
         }
@@ -79,6 +80,7 @@
 		margin:0;
 		height:100%;
         padding: 10px 0 0;  
+        
     	li {
     		
     		
@@ -168,6 +170,9 @@
     @include box-shadow(1px 0 0 0 #444444 inset);
     height: 100%;
     margin-left:0px;
+    &.hide {
+        left:-230px !important;
+    }
     section {
         @extend .end;
         &.me {
@@ -316,7 +321,9 @@
         height:100%;
         top: 169px;
         z-index: 7;
-
+        &.sidebar-closed {
+            left:-230px;
+        }
         .hide-sidebar {
             display:block;
             width:30px;
@@ -381,7 +388,6 @@
                         position: relative;
                     }
                 }
-
             }
         }
 
@@ -932,6 +938,10 @@
 		//border-left: 1px solid #3A3A3A;
         right: -1px;
         @extend .fd-ui-sidebar-common;
+        &.sidebar-closed {
+            right: -320px !important;
+        }
+
 	}
 }
 

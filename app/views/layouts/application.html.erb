@@ -43,23 +43,22 @@
 							<div class="fd-ui-item-ct-text">
 								<%= render("shared/audio_player") %>
 								<!--<iframe width="604" height="375" frameborder="0" allowfullscreen="" src="http://blip.tv/play/AYLv%2BzQC.html?p=1" style="border: 1px none; margin: 21px;"></iframe>-->
-								
+
 								<% text = "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut ore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
 
-								h3. Organize your template files →
+h3. Organize your template files →
 
-								h4. Everything about templating sytem
+h4. Everything about templating sytem
 
 
 								Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. \"first-developer.fr\":http://first-developer.fr Ut enim ad minim veniam,quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo.
 
-									p(fd\-ui\-text\-info). <i class=\"icon-share-alt\"></i> Lorem ipsum dolor sit amet, consectetur adipisicing elit, seo eiusmod tempor incididu 
-									" 
+p(fd\-ui\-text\-info). <i class=\"icon-share-alt\"></i> Lorem ipsum dolor sit amet, consectetur adipisicing elit, seo eiusmod tempor incididu " 
 									%>
 									<%= raw RedCloth.new(text).to_html %>
 
 									<button class="btn continue-reading">Continue reading</button>
-									
+
 								</div>
 							</div>	
 							<div id=""  class="fd-ui-tl-item-ct-el full-bg">
@@ -72,7 +71,7 @@
 										<span class="fd-utils-avatar small default" style="background-image:url(<%= asset_path("ui/fd-ui-ux-sprite.png"); %>)"></span>
 										<span class="fd-utils-avatar small default" style="background-image:url(<%= asset_path("ui/fd-ui-ux-sprite.png"); %>)"></span>
 									</div>
-									
+
 								</div>
 							</div>
 							<div id=""  class="fd-ui-tl-item-ct-el full-bg">
@@ -110,7 +109,7 @@
 									</div>
 								</div>
 								<span class="clear"></span>
-								
+
 								<ol class="cmt-reply">
 									<% 3.times do %>
 									<li>
@@ -142,7 +141,7 @@
 				</div>	
 			</div>
 			<footer class="fd-ui-tl-item-ft">
-				
+
 			</footer>
 		</article>
 		<% end %>

@@ -52,13 +52,13 @@ end
 group :test do
     gem 'turn', '~> 0.8.3', :require => false # Pretty printed test output
     gem 'rspec-rails', '2.6.1'
-	  gem 'webrat', '0.7.1'
-	  gem 'spork', '0.9.0.rc5'
-	  gem 'factory_girl_rails', '1.0'
-	  gem 'cucumber-rails'
+    gem 'webrat', '0.7.1'
+    gem 'spork', '0.9.0.rc5'
+    gem 'factory_girl_rails', '1.0'
+    gem 'cucumber-rails'
     gem 'capybara'
     gem 'launchy'
-	  gem 'database_cleaner'
+    gem 'database_cleaner'
 end
 
 

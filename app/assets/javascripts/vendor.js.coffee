@@ -20,8 +20,8 @@
 
 	# Sliding element to the right
 	$.fn.toggleSlideRight = (duration = 1500) ->
-		w = $(this).width() # get width
-		dist = '-' + w + 'px'
+		w = $(this).width() 	# get width
+		dist = '-' + w + 'px'	
 
 		if parseInt($(this).css("right")) >= -1
 			$(this).animate { right: dist}, duration
