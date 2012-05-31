@@ -3,7 +3,7 @@ source 'http://rubygems.org'
 
 # CORE GEMS
 # ==============================================
-gem 'rails', '3.1.4'
+gem 'rails', '3.1.5'
 gem 'jquery-rails'
 
 # Bundle edge Rails instead:
