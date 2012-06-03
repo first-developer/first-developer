@@ -52,4 +52,15 @@
 			return
 		return
 
+
+	# --------------------------------
+	# Checkboxes
+	# --------------------------------
+
+	$.fn.beCheckable = () ->
+		return
+
+
+
+
 )(jQuery)

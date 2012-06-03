@@ -5,9 +5,7 @@
 	<header class="fd-ui-tl-item-hd">
 		<span class="fd-ui-avt small default" style="background-image:url(<%= asset_path("ui/fd-ui-ux-sprite.png"); %>)"></span>
 		<div id="" class="fd-ui-actions btns">
-			<% ["share", "heart","star", "clip", "more"].each do |name| %>
-			<i rel="tooltip" title="<%= name %>" class="fd-ui-icons icon-<%= name %> fd-ui-btn"></i>
-			<% end %>
+			<i rel="tooltip" title="more" class="fd-ui-icons icon-more fd-ui-btn"></i>
 		</div>
 	</header>
 	<div id=""  class="fd-ui-tl-item-ct">
@@ -40,8 +38,11 @@
 		</div>	
 
 		<div id=""  class="fd-ui-tl-item-ct-el full-bg">
-			<button class="btn more"><i class="icon-chevron-down"></i></button>
-		</div>	
+			<p class="fd-ui-checkbox"><input type="checkbox" class="checkbox-slot" />Publish this post.</p>
+		</div>
+
+		<%= render "shared/action_btns_slot" %>
+
 	</div>
 	<footer class="fd-ui-tl-item-ft"></footer>
 </article>

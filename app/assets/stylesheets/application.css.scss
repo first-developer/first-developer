@@ -28,7 +28,6 @@
 		border:none;
 		top:0;
 		color:$fd-ui-ft-col-blk5;
-		@include  border-radius(2px);
 		p {
 			line-height: 33px;
 			margin: 0 0 0 60px;
@@ -628,6 +627,7 @@
                     @include box-shadow(none);
                     &:focus {
                     	background: $fd-ui-ly-col-lyel;
+                    	@include box-shadow(0 0 7px 0 #E8E9CA inset);
                     }
 		        }
 		        .entry-categroy-slot {
