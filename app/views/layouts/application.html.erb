@@ -1,160 +1,66 @@
+
+<%# 
+=======================================
+	Page Header
+=======================================
+%>
 <%= render "layouts/header" %>
 
 <%#= render "shared/modal" %>
 
+
+<%# 
+=======================================
+	Page Container
+=======================================
+%>
 <div  class="fd-ui-container">
+	<%# 
+	---------------------------------------   
+		Sidebar navigation   
+	---------------------------------------
+	%>
 	<div id="fd-ui-sidebar-left">
 		<%= render "layouts/sidebar" %>
 	</div>
+
+
 	<div id="fd-ui-center" >
-		<div id="" class="fd-ui-tools">
-			<div class="btn-group" data-toggle="buttons-radio">
-				<button class="btn">Daily</button>
-				<button class="btn">Weekly</button>
-				<button class="btn">Monthly</button>
-			</div>
-			<div class="notifs">
-				<button class="btn default disabled">Notifications &nbsp;→<span class="btn primary count">0</span></button>
-			</div>
-		</div>
+		<%# 
+		---------------------------------------   
+			Toolbar
+		---------------------------------------
+		%>
+		<%= render "layouts/toolbar" %>
+
+		<%# 
+		---------------------------------------   
+			Timeline
+		---------------------------------------
+		%>
 		<div class="timeline">
-			<% ["post", "video","music", "edit", "update"].each do |type|%>
-			<article id="" class="fd-ui-tl-item">
-				<span class="fd-ui-icon <%= type %>"></span>
-				<span class="fd-ui-tl-item-indic"></span>
-				<header class="fd-ui-tl-item-hd">
-					<span class="fd-ui-avt small default" style="background-image:url(<%= asset_path("ui/fd-ui-ux-sprite.png"); %>)"></span>
-					<div id="" class="fd-ui-actions btns">
-						<% ["share", "heart","star", "clip", "more"].each do |name| %>
-						<i rel="tooltip" title="<%= name %>" class="fd-ui-icons icon-<%= name %> fd-ui-btn"></i>
-						<% end %>
-					</div>
-				</header>
-				<div id=""  class="fd-ui-tl-item-ct">
-					<div id=""  class="fd-ui-tl-item-ct-el full-size">
-						<hgroup class="fd-ui-tl-item-title">
-							<h4>By <span class="author">Nathan Pitman</span> | November 17, 2010</h4>
-							<h1>Working on the UI for a web app we're developing</h1>
-							<p class="details"> 
-								<span class="fd-ui-cst-btn tag f-l">Ruby</span>
-								<span class="fd-ui-cst-btn tag f-l">Programming</span>
-								<span class="fd-ui-cst-btn tag-style f-r">26 Comments →</span><span class="clear"></span></p>
-							</hgroup>
-							<div class="fd-ui-item-ct-text">
-								<%= render("shared/audio_player") %>
-								<!--<iframe width="604" height="375" frameborder="0" allowfullscreen="" src="http://blip.tv/play/AYLv%2BzQC.html?p=1" style="border: 1px none; margin: 21px;"></iframe>-->
 
-								<% text = "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut ore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-
-h3. Organize your template files →
-
-h4. Everything about templating sytem
-
-
-								Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. \"first-developer.fr\":http://first-developer.fr Ut enim ad minim veniam,quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo.
-
-p(fd\-ui\-text\-info). <i class=\"icon-share-alt\"></i> Lorem ipsum dolor sit amet, consectetur adipisicing elit, seo eiusmod tempor incididu " 
-									%>
-									<%= raw RedCloth.new(text).to_html %>
-
-									<button class="btn continue-reading">Continue reading</button>
-
-								</div>
-							</div>	
-							<div id=""  class="fd-ui-tl-item-ct-el full-bg">
-								<div class="liking">
-									<div class="f-r likes">
-										<i class="fd-ui-icons icon-heart fd-ui-btn like"></i><span class="likes-count">125</span>
-									</div>
-									<div class="likers f-r">
-										<span class="fd-utils-avatar small default" style="background-image:url(<%= asset_path("ui/fd-ui-ux-sprite.png"); %>)"></span>
-										<span class="fd-utils-avatar small default" style="background-image:url(<%= asset_path("ui/fd-ui-ux-sprite.png"); %>)"></span>
-										<span class="fd-utils-avatar small default" style="background-image:url(<%= asset_path("ui/fd-ui-ux-sprite.png"); %>)"></span>
-									</div>
-
-								</div>
-							</div>
-							<div id=""  class="fd-ui-tl-item-ct-el full-bg">
-								<input type="text"  class="full" name="" value="" placeholder="Enter your comment here ...">
-							</div>	
-							<div id=""  class="fd-ui-tl-item-ct-el full-bg">
-								<div id="" class="fd-ui-flash-msg warning">
-									<i class="flash-icon"><img src="<%= asset_path("ui/loader.gif"); %>" alt=""></i><p>You must login to comment this post!</p>
-									<i class="flash-close">×</i>
-								</div>
-							</div>	
-							<div id=""  class="fd-ui-tl-item-ct-el full-bg">
-								<button class="btn default">Save   </button>
-								<button class="btn primary">Cancel </button>
-								<button class="btn  danger">Delete </button>
-							</div>	
-							<div id=""  class="fd-ui-tl-item-ct-el full-bg">
-								<ol id="" class="fd-ui-comments">
-									<% 3.times do %>
-									<li class="cmt">
-										<div class="cmt-avt">
-											<span class="fd-utils-avatar small default" style="background-image:url(<%= asset_path("ui/fd-ui-ux-sprite.png"); %>)"></span>
-										</div>
-										<div class="cmt-ct">
-									<!-- <div class="cmt-ct-hd">
-										<a href="" class="cmt-user">Chris Brown</a>
-									</div> -->
-									<div class="cmt-ct-txt">
-										<p> <a href="" class="cmt-user">Chris Brown <span class="arrow">→</span> </a>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-											tempor incididunt ut labore et dolore magna aliqua.
-										</p>
-									</div>
-									<div class="cmt-ct-ft">
-										<span class="cmt-time">Il y a 25 minutes | 21h15</span>
-									</div>
-								</div>
-								<span class="clear"></span>
-
-								<ol class="cmt-reply">
-									<% 3.times do %>
-									<li>
-										<div class="cmt-avt">
-											<span class="fd-utils-avatar small default" style="background-image:url(<%= asset_path("ui/fd-ui-ux-sprite.png"); %>)"></span>
-										</div>
-										<div class="cmt-ct">
-										<!-- <div class="cmt-ct-hd">
-											<a href="" class="cmt-user">Chris Brown</a>
-										</div> -->
-										<div class="cmt-ct-txt">
-											<p> <a href="" class="cmt-user">Chris Brown <span class="arrow">→</span> </a>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-												tempor incididunt ut labore et dolore magna aliqua.
-											</p>
-										</div>
-										<div class="cmt-ct-ft">
-											<span class="cmt-time">Il y a 25 minutes | 21h15</span>
-										</div>
-									</div>
-								</li>
-								<% end %>
-							</ol>
-						</li>
-						<% end %>
-					</ol><!-- / -->
-				</div>	
-				<div id=""  class="fd-ui-tl-item-ct-el full-bg">
-					<button class="btn more"><i class="icon-chevron-down"></i></button>
-				</div>	
-			</div>
-			<footer class="fd-ui-tl-item-ft">
-
-			</footer>
-		</article>
-		<% end %>
-
+			<%= yield %>
+			
+		</div>
 	</div>
-	<div  class="">
-		<%= yield %>
+	
+
+	<%# 
+	---------------------------------------   
+		Sidebar my profile  
+	---------------------------------------
+	%>
+	<div id="fd-ui-sidebar-right2">
+		<%= render "layouts/sidebar_infos" %>
 	</div>
-</div>
-<div id="fd-ui-sidebar-right2">
-	<%= render "layouts/sidebar_infos" %>
-</div>
+	
 </div>
 
 
+<%# 
+=======================================
+	Page Footer
+=======================================
+%>
 <%= render "layouts/footer" %>

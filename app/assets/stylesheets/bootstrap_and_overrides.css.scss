@@ -29,9 +29,9 @@ body { padding-top:0px;}
 	}
 	&.pending {
 		background-image: $fd-ui-bg-img-loadm;
-	    background-position: 80% 11px;
-	    background-repeat: no-repeat;
-	    padding-right: 40px;
+		background-position: 80% 11px;
+		background-repeat: no-repeat;
+		padding-right: 40px;
 	}
 	&.more {
 		width: 99.5%;	
@@ -48,23 +48,23 @@ body { padding-top:0px;}
 				visibility:hidden;
 			}
 			background-image: $fd-ui-bg-img-load;
-		  background-position: center 10px;
-		  background-repeat: no-repeat;
+			background-position: center 10px;
+			background-repeat: no-repeat;
 		}
 	}
 	&.default {
 		color: $fd-ui-ft-col-blk2;
 		text-shadow:0 1px 0 #FFFFFF;
 		&:hover, &:focus, :active {
-    	color: $fd-ui-ft-col-blk1;
-    }
+			color: $fd-ui-ft-col-blk1;
+		}
 	}
 	&.primary, &.danger {
 		text-shadow: 0 -1px 0 #000000;
 		color: $white;
-    &:hover, &:focus, :active {
-    	color: $fd-ui-ft-col-blk5;
-    }
+		&:hover, &:focus, :active {
+			color: $fd-ui-ft-col-blk5;
+		}
 	}
 	&.primary {
 		@include buttonBackground($fd-ui-ft-col-blk2, $fd-ui-ft-col-blk1);
@@ -82,38 +82,37 @@ body { padding-top:0px;}
 }
 
 .btn-group{
-	&.active {
-		.btn {
-			background-image: none;
-	    border: 1px solid $fd-ui-ft-col-blk3;
-	    box-shadow: 0 0 4px 0 #E0E0E0 inset;
-	    outline: 0 none;
-		}
-	}   
 	.btn.active, .btn:active {
-    background-image: none;
-    box-shadow: 0 2px 4px rgba(137, 137, 137, 0.15) inset, 0 1px 2px transparent;
-    outline: 0 none;
+		background-image: none;
+		box-shadow: 0 2px 4px rgba(137, 137, 137, 0.15) inset, 0 1px 2px transparent;
+		outline: 0 none;
+		i {
+			@extend .icon-white;
+		}
 	}
 	.btn:hover, .btn.disabled, .btn[disabled] {
-    background-color: #F6F6F6;
-    border: 1px solid #A3A3A3;
+		background-color: #F6F6F6;
+		border: 1px solid #A3A3A3;
 	}
 	.btn:active, .btn.active {
 		background-color: $fd-ui-ft-col-blk2;
-	  border: 1px solid $fd-ui-ft-col-blk1;
-	  color: $white;
-	  text-shadow: 0 -1px 0 #000000;
+		border: 1px solid $fd-ui-ft-col-blk1 inset;
+		color: $white;
+		text-shadow: 0 -1px 0 #000000;
+		box-shadow: 0 0px 0 1px #000 inset;
+		i {
+			@extend .icon-white;
+		}
 	}
 }
 
 .btn-group .btn:first-child {
-  border-bottom-left-radius: 	2px;
-  border-top-left-radius: 		2px;
+	border-bottom-left-radius: 	2px;
+	border-top-left-radius: 		2px;
 }
 .btn-group .btn:last-child {
-  border-bottom-right-radius: 2px;
-  border-top-right-radius: 		2px;
+	border-bottom-right-radius: 2px;
+	border-top-right-radius: 		2px;
 }    
 
 
@@ -150,19 +149,19 @@ a,a:hover { text-decoration: none;cursor:pointer;}
 // Inputs 
 // ========================
 
-input, textarea {
-  border: 1px solid #CCCCCC;
-  border-radius: 0 0 0 0;
-  height: 21px;
-  margin: 0;
-  padding: 4px 10px 3px;
+input, textarea, select {
+	border: 1px solid #CCCCCC;
+	border-radius: 0 0 0 0;
+	height: 21px;
+	margin: 0;
+	padding: 4px 10px 3px;
 }
 
 
 input:focus, textarea:focus {
-  border-color: rgba(198, 75, 75, 0.8);
-  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.075) inset, 0 0 8px rgba(248, 202, 202, 0.6) inset;
-  outline: 0 none;
+	border-color: rgba(198, 75, 75, 0.8);
+	box-shadow: 0 1px 1px rgba(0, 0, 0, 0.075) inset, 0 0 8px rgba(248, 202, 202, 0.6) inset;
+	outline: 0 none;
 }
 
 input[type=submit]:focus {
@@ -177,15 +176,15 @@ input[type=submit]:focus {
 
 .tooltip-inner {
 	opacity:0.99;
-    background-color: $fd-ui-ft-col-blk1;
-    @include border-radius(2px);
-    padding: 4px 8px;
-    text-align: center;
-    font-size: 12.1px;
-    font-weight:bold;
-    opacity: 0.99;
-    text-decoration: none;
-    text-shadow: 0 -1px 0 #000;
+	background-color: $fd-ui-ft-col-blk1;
+	@include border-radius(2px);
+	padding: 4px 8px;
+	text-align: center;
+	font-size: 12.1px;
+	font-weight:bold;
+	opacity: 0.99;
+	text-decoration: none;
+	text-shadow: 0 -1px 0 #000;
 }
 
 
@@ -223,9 +222,9 @@ input[type=submit]:focus {
 		}
 		h3 {
 			color: $fd-ui-ft-col-blk1; //$fd-ui-ft-col-blk2;
-            font-size: 1.3em;
-            font-weight: bold;
-            margin: 1px 0 0;
+			font-size: 1.3em;
+			font-weight: bold;
+			margin: 1px 0 0;
 		}
 	}
 	.modal-footer {
@@ -236,90 +235,90 @@ input[type=submit]:focus {
 	.modal-body {
 		.fd-ui-flash-msg {
 			margin: 10px 0;
-            position:relative;
-            width: 99.5%;
-            border:none;
-            z-index: 1;
+			position:relative;
+			width: 99.5%;
+			border:none;
+			z-index: 1;
 
-            @include  border-radius(2px);
-            p {
-                line-height: 33px;
-                margin: 0 0 0 60px;
-            }
-            .flash-icon-size {
-                background-image: $fd-ui-bg-sprite;
-                height: 33px;
-                left: 0;
-                position: absolute;
-                width: 48px;
-                @include  border-radius(2px 0 0 2px);
-                }
-            .flash-close {
-                font-size: 32px;
-                font-weight: normal;
-                opacity: 0.9;
-                position: absolute;
-                right: 2%;
-                @include text-shadow(none);
-                top: 8px;
-                opacity:0.2;
-                cursor:pointer;
-                &:hover {
-                    opacity:0.99;
-                }   
-            }
-            &.errors {
-                background-color: $fd-ui-al-col-lred;
+			@include  border-radius(2px);
+			p {
+				line-height: 33px;
+				margin: 0 0 0 60px;
+			}
+			.flash-icon-size {
+				background-image: $fd-ui-bg-sprite;
+				height: 33px;
+				left: 0;
+				position: absolute;
+				width: 48px;
+				@include  border-radius(2px 0 0 2px);
+			}
+			.flash-close {
+				font-size: 32px;
+				font-weight: normal;
+				opacity: 0.9;
+				position: absolute;
+				right: 2%;
+				@include text-shadow(none);
+				top: 8px;
+				opacity:0.2;
+				cursor:pointer;
+				&:hover {
+					opacity:0.99;
+				}   
+			}
+			&.errors {
+				background-color: $fd-ui-al-col-lred;
                 //@include box-shadow(0 4px 0 0 #FFE6E6);
                 //border-left: 1px solid $fd-ui-ly-col-red;
                 //border-top: 1px solid $fd-ui-ly-col-red;
                 color:$fd-ui-ly-col-red;;
                 .flash-icon {
-                    @extend .flash-icon-size;
-                    background-position: -472px -174px;
-                    img { display:none;}
+                	@extend .flash-icon-size;
+                	background-position: -472px -174px;
+                	img { display:none;}
                 }
             }
             &.warning {
-                background-color: $fd-ui-ly-col-yel;
+            	background-color: $fd-ui-ly-col-yel;
                 //@include box-shadow(0 4px 0 0 #FFE6E6);
                 //border-left: 1px solid $fd-ui-ly-col-byel;
                 //border-top: 1px solid $fd-ui-ly-col-byel;
                 color:$warningText ;
                 .flash-icon {
-                    @extend .flash-icon-size;
-                    background-position:-470px -78px;
-                    img { display:none;}
+                	@extend .flash-icon-size;
+                	background-position:-470px -78px;
+                	img { display:none;}
                 }
             }
             &.success {
-                background-color: $fd-ui-al-col-lgrn;
+            	background-color: $fd-ui-al-col-lgrn;
                 //@include box-shadow(0 4px 0 0 #FFE6E6);
                 //border-left: 1px solid $fd-ui-al-col-bgrn;
                 //border-top: 1px solid $fd-ui-al-col-bgrn;
                 color:$fd-ui-al-col-bgrn;
                 .flash-icon {
-                    @extend .flash-icon-size;
-                    background-position:-474px -221px;
-                    img { display:none;}
+                	@extend .flash-icon-size;
+                	background-position:-474px -221px;
+                	img { display:none;}
                 }
             }
             &.loading {
-                background-color: $fd-ui-ft-col-blk2;
+            	background-color: $fd-ui-ft-col-blk2;
                 //@include box-shadow(0 4px 0 0 #FFE6E6);
                 //border-left: 1px solid $fd-ui-ft-col-blk2;
                 //border-top: 1px solid $fd-ui-ft-col-blk2;
                 color:$fd-ui-ft-col-blk3;
                 .flash-icon {
-                    @extend .flash-icon-size;
-                    background-position:-470px -129px;
-                    img {
-                         padding: 4px 12px;
-                    }
+                	@extend .flash-icon-size;
+                	background-position:-470px -129px;
+                	img {
+                		padding: 4px 12px;
+                	}
                 }
             }
         }
-	}
+    }
 }
 
 

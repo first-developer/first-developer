@@ -1,10 +1,19 @@
+# --------------------------------
+# Feature: Managing entries 
+# --------------------------------
+
 Feature: Managing entries 
   As an user
   I want to create some easily
 
+
+  # --------------------------------
+  # Scenarios: 
+  # --------------------------------
   
+  # [1]
   Scenario: Creating an entry
-    Given I am on the homepage
+  	Given I am on the homepage
     When I follow "add entry"
     And I fill the form with the following data:
     	|title           |body|

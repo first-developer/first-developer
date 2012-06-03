@@ -1,0 +1,79 @@
+<%= form_for entry, :html => { :class => 'form-horizontal' } do |f| %>
+<article id="" class="fd-ui-tl-item fd-ui-slot-container">
+	<span class="fd-ui-icon post"></span>
+	<span class="fd-ui-tl-item-indic"></span>
+	<header class="fd-ui-tl-item-hd">
+		<span class="fd-ui-avt small default" style="background-image:url(<%= asset_path("ui/fd-ui-ux-sprite.png"); %>)"></span>
+		<div id="" class="fd-ui-actions btns">
+			<% ["share", "heart","star", "clip", "more"].each do |name| %>
+			<i rel="tooltip" title="<%= name %>" class="fd-ui-icons icon-<%= name %> fd-ui-btn"></i>
+			<% end %>
+		</div>
+	</header>
+	<div id=""  class="fd-ui-tl-item-ct">
+		<div id=""  class="fd-ui-tl-item-ct-el full-size">
+			<hgroup class="fd-ui-tl-item-title">
+				<h4>By <span class="author">Nathan Pitman</span> | <%= time_info(Time.now) %></h4>
+				<h1>
+					<%= f.text_field :title, 
+							class: "text_field title-for-content-slot", 
+							placeholder: "Enter title here …" %>
+				</h1>
+				
+			</hgroup>
+			<div class="fd-ui-item-ct-text">
+				<%= f.text_area :body, 
+						class: 'text_area body-for-content-slot',
+						placeholder: "What's up dude ? " %>
+			</div>
+		</div>
+
+		<%#= render "shared/entry_extras_slot" %>
+		
+		<%#= render "shared/comments_slot" %>
+		
+		<%= render "shared/category_slot" %>
+
+		<div id=""  class="fd-ui-tl-item-ct-el full-bg">
+			<i class="icon-tags slot-label"></i>
+			<input type="text" class="entry-tags-slot" value="" />
+		</div>	
+
+		<div id=""  class="fd-ui-tl-item-ct-el full-bg">
+			<button class="btn more"><i class="icon-chevron-down"></i></button>
+		</div>	
+	</div>
+	<footer class="fd-ui-tl-item-ft"></footer>
+</article>
+
+
+  <fieldset>
+    <legend><%= controller.action_name.capitalize %> Entry</legend>
+
+    <div class="control-group">
+      <%= f.label :title, :class => 'control-label' %>
+      <div class="controls">
+        <%= f.text_field :title, :class => 'text_field' %>
+      </div>
+    </div>
+
+    <div class="control-group">
+      <%= f.label :body, :class => 'control-label' %>
+      <div class="controls">
+        <%= f.text_area :body, :class => 'text_area' %>
+      </div>
+    </div>
+
+    <div class="control-group">
+      <%= f.label :published, :class => 'control-label' %>
+      <div class="controls">
+        <%= f.check_box :published, :class => 'check_box' %>
+      </div>
+    </div>
+
+    <div class="form-actions">
+      <%= f.submit "create entry", :class => 'btn btn-primary' %>
+      <%= link_to 'Cancel', entries_path, :class => 'btn' %>
+    </div>
+  </fieldset>
+<% end %>

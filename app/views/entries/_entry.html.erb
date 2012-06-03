@@ -1,0 +1,40 @@
+
+<article id="" class="fd-ui-tl-item">
+	<span class="fd-ui-icon post"></span>
+	<span class="fd-ui-tl-item-indic"></span>
+	<header class="fd-ui-tl-item-hd">
+		<span class="fd-ui-avt small default" style="background-image:url(<%= asset_path("ui/fd-ui-ux-sprite.png"); %>)"></span>
+		<div id="" class="fd-ui-actions btns">
+			<% ["share", "heart","star", "clip", "more"].each do |name| %>
+			<i rel="tooltip" title="<%= name %>" class="fd-ui-icons icon-<%= name %> fd-ui-btn"></i>
+			<% end %>
+		</div>
+	</header>
+	<div id=""  class="fd-ui-tl-item-ct">
+		<div id=""  class="fd-ui-tl-item-ct-el full-size">
+			<hgroup class="fd-ui-tl-item-title">
+				<h4>By <span class="author">Nathan Pitman</span> | November 17, 2010</h4>
+				<h1>Working on the UI for a web app we're developing</h1>
+				<p class="details"> 
+					<span class="fd-ui-cst-btn tag f-l">Ruby</span>
+					<span class="fd-ui-cst-btn tag f-l">Programming</span>
+					<span class="fd-ui-cst-btn tag-style f-r">26 Comments →</span><span class="clear"></span>
+				</p>
+			</hgroup>
+			<div class="fd-ui-item-ct-text">
+				<%= raw RedCloth.new(entry.body).to_html unless entry.body.nil? %>
+				<button class="btn continue-reading">Continue reading</button>
+			</div>
+		</div>
+
+		<%#= render "shared/entry_extras_slot" %>
+		
+		<%#= render "shared/comments_slot" %>
+
+		<div id=""  class="fd-ui-tl-item-ct-el full-bg">
+			<button class="btn more"><i class="icon-chevron-down"></i></button>
+		</div>	
+	</div>
+	<footer class="fd-ui-tl-item-ft"></footer>
+</article>
+

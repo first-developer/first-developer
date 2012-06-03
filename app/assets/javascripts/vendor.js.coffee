@@ -1,9 +1,13 @@
 
 # --------------------------------
-# ANIMATIONS METHODS
+# PLUGINS & HELPERS
 # --------------------------------
 
 (($) ->
+
+	# --------------------------------
+	# Animations & easing
+	# --------------------------------
 	
 	# Sliding element to the left
 	$.fn.toggleSlideLeft = (duration = 1500) ->

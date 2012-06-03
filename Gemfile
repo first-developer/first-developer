@@ -17,15 +17,16 @@ gem "mysql2"
 # ASSETS 
 # ==============================================
 group :assets do
-	gem 'sass-rails',   '~> 3.1.5'
-	gem 'coffee-rails', '~> 3.1.1'
-	gem 'therubyracer'
-	gem 'uglifier', '>= 1.0.3'
-	#gem 'twitter-bootstrap-rails'
-  #gem 'bootstrap-sass', '~> 2.0.2', git: 'https://github.com/thomas-mcdonald/bootstrap-sass.git'
-  gem 'anjlab-bootstrap-rails', :require => 'bootstrap-rails',
-                              :git => 'git://github.com/anjlab/bootstrap-rails.git'
+  gem 'sass-rails',   '~> 3.1.5'
+  gem 'coffee-rails', '~> 3.1.1'
+  gem 'therubyracer'
+  gem 'uglifier', '>= 1.0.3'
+  #gem 'twitter-bootstrap-rails'
+  gem 'bootstrap-sass', '~> 2.0.2', git: 'https://github.com/thomas-mcdonald/bootstrap-sass.git'
+  #gem 'anjlab-bootstrap-rails', :require => 'bootstrap-rails',
+  #                           :git => 'git://github.com/anjlab/bootstrap-rails.git'
   gem 'bourbon'
+  gem "select2-rails", path: '/Users/firstdeveloper/Playground/Web/select2-rails/'
   gem 'oily_png'
   gem 'compass-rails'
 end

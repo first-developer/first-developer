@@ -1,3 +1,7 @@
+# --------------------------------
+# Entry step definitions
+# --------------------------------
+
 Given /^I am on the homepage$/ do
   visit(root_url)
 end
@@ -20,7 +24,7 @@ When /^I press "([^\"]*)"$/ do |button|
 end
 
 Then /^I should see the notification "([^\"]*)"$/ do |arg1|
-  
+  page.should have_content("Entry has been well created")
 end
 
 Then /^also see details of this new created entry$/ do
