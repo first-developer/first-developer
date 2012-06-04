@@ -32,16 +32,23 @@
 	# SELECT2
 	# --------------------------------
 	# 1.
-	$(".entry-category-slot").select2(
+	$(".entry-category-slot").select2
 		placeholder: "Which category ?",
 		width: "94%"
-	);
 
 	# 2.
-	$(".entry-tags-slot").select2(
+	$(".entry-tags-slot").select2
 		tags:["programming", "other", "jQuery"],
 		width: "94%"
-	);
+	
+
+	# --------------------------------
+	# AUTOSIZE TEXTAREA
+	# --------------------------------
+	# 1. body entry
+	$("textarea.body-for-content-slot").autogrow()
+	#$('textarea').autosize()
+
 
 	return
 

@@ -11,5 +11,6 @@
 //= require bootstrap-dropdown
 //= require bootstrap-button
 //= require select2
+//= require jquery.autoGrow
 //= require_tree .
 

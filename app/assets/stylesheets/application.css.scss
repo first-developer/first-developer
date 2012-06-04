@@ -613,12 +613,11 @@
 		        }
 		        .body-for-content-slot {
 		        	width: 96%;
-					padding: 0;
 					border-top: 1px solid $white !important;
 		            border-left: 1px solid $white !important;
 		            border-right: 1px solid $white !important;
                     border-bottom: 1px solid $white !important;
-                    min-height: 200px;
+                    height: 100px;
                     padding: 10px;
                     margin:10px 0 20px;
                     line-height: 28px;
