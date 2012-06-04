@@ -5,7 +5,9 @@
 ---------------------------------------
 %>
 
-<%= render "entry", entry: @entries.first %>
 
-<%= render "shared/multi_form", entry: @entries.first %>
-
+<% unless @entries.blank? %>
+	<%  @entries.each do |entry| %>
+		<%= render "entry", entry: entry %>
+	<% end %>
+<% end %>

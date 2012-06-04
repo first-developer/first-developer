@@ -5,14 +5,18 @@
 		Notifications area
 	---------------------------------------
 	%>
-	<div id="notification_area" class="fd-ui-flash-msg success">
-		<i class="flash-icon">
-			<img src="<%= asset_path("ui/loader.gif"); %>" alt="">
-		</i>
-		<p>You must login to comment this post!	</p>
-		<i class="flash-close">×</i>
-	</div>
-
+	
+	<% flash.each do |key, msg| %>	
+		<% unless flash[key].blank?  %>
+		<div id="notification_area" class="fd-ui-flash-msg <%= key %>">
+			<i class="flash-icon">
+				<img src="<%= asset_path("ui/loader.gif"); %>" alt="">
+			</i>
+			<p><% msg %></p>
+			<i class="flash-close">×</i>
+		</div>
+		<% end %>
+	<% end %>
 
 	<%# 
 	---------------------------------------   

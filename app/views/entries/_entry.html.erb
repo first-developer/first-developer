@@ -13,7 +13,7 @@
 	<div id=""  class="fd-ui-tl-item-ct">
 		<div id=""  class="fd-ui-tl-item-ct-el full-size">
 			<hgroup class="fd-ui-tl-item-title">
-				<h4>By <span class="author">Nathan Pitman</span> | November 17, 2010</h4>
+				<h4>By <span class="author">Nathan Pitman</span> | <%= time_info entry.created_at %></h4>
 				<h1>Working on the UI for a web app we're developing</h1>
 				<p class="details"> 
 					<span class="fd-ui-cst-btn tag f-l">Ruby</span>
@@ -31,9 +31,8 @@
 		
 		<%#= render "shared/comments_slot" %>
 
-		<div id=""  class="fd-ui-tl-item-ct-el full-bg">
-			<button class="btn more"><i class="icon-chevron-down"></i></button>
-		</div>	
+		<%#= render "shared/show_more_slot" %>
+
 	</div>
 	<footer class="fd-ui-tl-item-ft"></footer>
 </article>

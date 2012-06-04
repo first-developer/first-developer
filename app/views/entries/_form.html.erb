@@ -3,35 +3,49 @@
   Entries : 	[P] 	form    
 ---------------------------------------
 %>
-
 <%= form_for @entry, :html => { :class => 'form-horizontal' } do |f| %>
-  <fieldset>
-    <legend><%= controller.action_name.capitalize %> Entry</legend>
+<article id="" class="fd-ui-tl-item fd-ui-slot-container">
+	<span class="fd-ui-icon post"></span>
+	<span class="fd-ui-tl-item-indic"></span>
+	<header class="fd-ui-tl-item-hd">
+		<span class="fd-ui-avt small default" style="background-image:url(<%= asset_path("ui/fd-ui-ux-sprite.png"); %>)"></span>
+		<div id="" class="fd-ui-actions btns">
+			<i rel="tooltip" title="more" class="fd-ui-icons icon-more fd-ui-btn"></i>
+		</div>
+	</header>
+	<div id=""  class="fd-ui-tl-item-ct">
+		<div id=""  class="fd-ui-tl-item-ct-el full-size">
+			<hgroup class="fd-ui-tl-item-title">
+				<h4>By <span class="author">Nathan Pitman</span> | <%= time_info(Time.now) %></h4>
+				<h1>
+					<%= f.text_field :title, class: "text_field title-for-content-slot",
+							placeholder: "Enter title here …" %>
+				</h1>
 
-    <div class="control-group">
-      <%= f.label :title, :class => 'control-label' %>
-      <div class="controls">
-        <%= f.text_field :title, :class => 'text_field' %>
-      </div>
-    </div>
+			</hgroup>
+			<div class="fd-ui-item-ct-text">
+				<%= f.text_area :body, class: 'text_area body-for-content-slot', placeholder: "What's up dude ? " %>
+			</div>
+		</div>
 
-    <div class="control-group">
-      <%= f.label :body, :class => 'control-label' %>
-      <div class="controls">
-        <%= f.text_area :body, :class => 'text_area' %>
-      </div>
-    </div>
+		<%#= render "shared/entry_extras_slot" %>
 
-    <div class="control-group">
-      <%= f.label :published, :class => 'control-label' %>
-      <div class="controls">
-        <%= f.check_box :published, :class => 'check_box' %>
-      </div>
-    </div>
+		<%#= render "shared/comments_slot" %>
 
-    <div class="form-actions">
-      <%= f.submit "create entry", :class => 'btn btn-primary' %>
-      <%= link_to 'Cancel', entries_path, :class => 'btn' %>
-    </div>
-  </fieldset>
+		<%#= render "shared/category_slot" %>
+
+		<%# render "shared/category_slot" %> 
+
+		<div id=""  class="fd-ui-tl-item-ct-el full-bg">
+			<p class="fd-ui-checkbox"><input type="checkbox" class="checkbox-slot" />Publish this post.</p>
+		</div>
+
+		<div id=""  class="fd-ui-tl-item-ct-el full-bg">
+			<%= f.submit "create entry", :class => 'btn default' %>
+			<%= link_to 'Cancel', entries_path, :class => 'btn primary' %>
+		</div>  
+
+	</div>
+	<footer class="fd-ui-tl-item-ft"></footer>
+</article>
 <% end %>
