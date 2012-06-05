@@ -40,6 +40,8 @@ class EntriesController < ApplicationController
   # POST /entries
   # POST /entries.json
   def create
+
+    #raise params[:entry].to_yaml
     @entry = Entry.new(params[:entry])
 
     respond_to do |format|

@@ -24,7 +24,7 @@
 				</p>
 			</hgroup>
 			<div class="fd-ui-item-ct-text">
-				<%= entry.body unless entry.body.nil? %>
+				<%= simple_format (auto_link (entry.body)) unless entry.body.nil? %>
 			</div>
 		</div>
 

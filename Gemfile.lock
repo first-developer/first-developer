@@ -167,6 +167,7 @@ GEM
     rdoc (3.12)
       json (~> 1.4)
     redcarpet (2.1.1)
+    rinku (1.5.1)
     rspec (2.6.0)
       rspec-core (~> 2.6.0)
       rspec-expectations (~> 2.6.0)
@@ -255,6 +256,7 @@ DEPENDENCIES
   rack-pygmentize
   rails (= 3.1.5)
   redcarpet
+  rinku
   rspec-rails (= 2.6.1)
   sass-rails (~> 3.1.5)
   select2-rails!

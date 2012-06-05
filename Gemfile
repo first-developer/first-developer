@@ -68,6 +68,7 @@ end
 # ==============================================
 gem "RedCloth"
 gem "simple_form" 
+gem 'rinku'
 gem 'country_select'
 gem "amplify" 		    # Use Request - Store - Pubsub from AmplifyJS
 gem "js-routes" 			# Get access to rails routes in JS files 
