@@ -4,25 +4,4 @@
 ---------------------------------------
 %>
 
-<h1>Entry</h1>
-
-<p>
-  <b>Title</b><br>
-  <%= @entry.title %>
-</p>
-
-<p>
-  <b>Body</b><br>
-  <%= @entry.body %>
-</p>
-
-<p>
-  <b>Published</b><br>
-  <%= @entry.published %>
-</p>
-
-<div class="form-actions">
-  <%= link_to 'Back', entries_path, :class => 'btn'  %>
-  <%= link_to 'Edit', edit_entry_path(@entry), :class => 'btn' %>
-  <%= link_to 'Delete', entry_path(@entry), :method => 'delete', :confirm => 'Are you sure?', :class => 'btn btn-danger' %>
-</div>
+<%= render "entry", entry: @entry %>

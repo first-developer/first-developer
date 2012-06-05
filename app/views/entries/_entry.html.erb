@@ -1,4 +1,6 @@
+<% with_actions_btns ||= false %>
 
+<% unless entry.blank? %>
 <article id="" class="fd-ui-tl-item">
 	<span class="fd-ui-icon post"></span>
 	<span class="fd-ui-tl-item-indic"></span>
@@ -14,7 +16,7 @@
 		<div id=""  class="fd-ui-tl-item-ct-el full-size">
 			<hgroup class="fd-ui-tl-item-title">
 				<h4>By <span class="author">Nathan Pitman</span> | <%= time_info entry.created_at %></h4>
-				<h1>Working on the UI for a web app we're developing</h1>
+				<h1><%= entry.title %></h1>
 				<p class="details"> 
 					<span class="fd-ui-cst-btn tag f-l">Ruby</span>
 					<span class="fd-ui-cst-btn tag f-l">Programming</span>
@@ -22,8 +24,7 @@
 				</p>
 			</hgroup>
 			<div class="fd-ui-item-ct-text">
-				<%= raw RedCloth.new(entry.body).to_html unless entry.body.nil? %>
-				<button class="btn continue-reading">Continue reading</button>
+				<%= entry.body unless entry.body.nil? %>
 			</div>
 		</div>
 
@@ -33,7 +34,20 @@
 
 		<%#= render "shared/show_more_slot" %>
 
+
+		<%# ----------   Action buttons ------------  %>
+		<% if with_actions_btns %>
+		<div id=""  class="fd-ui-tl-item-ct-el full-bg">
+	      <%= link_to 'Back', entries_path, :class => 'btn primary'  %>
+	      <%= link_to 'Edit', edit_entry_path(entry), :class => 'btn' %>
+	      <%= link_to 'Delete', 
+	                  entry_path(entry), 
+	                  :method => 'delete', 
+	                  :confirm => 'Are you sure?', 
+	                  :class => 'btn danger' %>
+	    </div>  
+	    <% end %>
 	</div>
 	<footer class="fd-ui-tl-item-ft"></footer>
 </article>
-
+<% end %> 

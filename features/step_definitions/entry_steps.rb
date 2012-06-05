@@ -2,12 +2,13 @@
 # Entry step definitions
 # --------------------------------
 
+
 Given /^I am on the homepage$/ do
-  visit(root_url)
+  visit root_path
 end
 
-When /^I follow "([^\"]*)"$/ do |link|
-	click_on link
+When /^I press the add entry button$/ do
+  click_link 'add_entry_btn'
 end
 
 When /^I fill the form with the following data:$/ do |table|
@@ -24,9 +25,10 @@ When /^I press "([^\"]*)"$/ do |button|
 end
 
 Then /^I should see the notification "([^\"]*)"$/ do |arg1|
-  page.should have_content("Entry has been well created")
+  page.should have_selector("#notification_area p", content: "Entry has been well created" )
 end
 
 Then /^also see details of this new created entry$/ do
-  pending # express the regexp above with the code you wish you had
+  page.should have_selector(".fd-ui-tl-item-title h1", content: "Eurovision 2012")
+  page.should have_selector(".fd-ui-item-ct-text", content: "some text about the winner")
 end

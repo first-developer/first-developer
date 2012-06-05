@@ -14,7 +14,7 @@ Feature: Managing entries
   # [1]
   Scenario: Creating an entry
   	Given I am on the homepage
-    When I follow "add entry"
+    When I press the add entry button
     And I fill the form with the following data:
     	|title           |body|
     	|Eurovision 2012 |some text about the winner|

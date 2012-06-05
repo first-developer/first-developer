@@ -52,6 +52,7 @@ end
 # ==============================================
 group :test do
     gem 'turn', '~> 0.8.3', :require => false # Pretty printed test output
+    gem 'shoulda',  '<= 2.0.6'
     gem 'rspec-rails', '2.6.1'
     gem 'webrat', '0.7.1'
     gem 'spork', '0.9.0.rc5'

@@ -9,6 +9,6 @@ module ApplicationHelper
 		icon_text = '<i class="icon-plus"></i>'.html_safe
 		url = new_entry_path
 		classes = 'btn'
-		link_to icon_text, url, class: classes 
+		link_to icon_text, url, id: "add_entry_btn", class: classes 
 	end
 end
