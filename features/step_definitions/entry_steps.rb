@@ -32,3 +32,8 @@ Then /^also see details of this new created entry$/ do
   page.should have_selector(".fd-ui-tl-item-title h1", content: "Eurovision 2012")
   page.should have_selector(".fd-ui-item-ct-text", content: "some text about the winner")
 end
+
+
+Then /^I should see the notification "([^"]*)" mentioning that "([^"]*)"$/ do |flashKey, msg|
+  page.should have_selector(".#{flashKey} p", content: "#{msg}")
+end

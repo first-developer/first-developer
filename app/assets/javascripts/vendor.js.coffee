@@ -10,7 +10,7 @@
 	# --------------------------------
 	
 	# Sliding element to the left
-	$.fn.toggleSlideLeft = (duration = 1500) ->
+	$.fn.toggleSlideLeft = (duration = 1000) ->
 		sb = $(this)
 
 		sb.removeClass "sidebar-closed" 
@@ -27,7 +27,7 @@
 		return
 
 	# Sliding element to the right
-	$.fn.toggleSlideRight = (duration = 1500) ->
+	$.fn.toggleSlideRight = (duration = 1000) ->
 		sb = $(this)
 
 		sb.removeClass "sidebar-closed" 

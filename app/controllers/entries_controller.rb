@@ -49,6 +49,7 @@ class EntriesController < ApplicationController
         format.html { redirect_to @entry, notice: "Entry has been well created" }
         format.json { render json: @entry, status: :created, location: @entry }
       else
+        flash[:errors] = "Entry hasn't been created! Verify that every required fields are filled." 
         format.html { render action: "new" }
         format.json { render json: @entry.errors, status: :unprocessable_entity }
       end
