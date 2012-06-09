@@ -51,6 +51,18 @@
 	#$('textarea').autosize()
 
 
+	# --------------------------------
+	# NOTIFICATIONS
+	# --------------------------------
+	# 1. Handle closing of the notification area
+	$("div.#notification_area").find("i.flash-close").live "click", () ->
+			parent = $(this).closest("div#notification_area") 
+			parent.slideUp 1000, () -> 
+				parent.remove()	
+
+
+
+
 	return
 
 )(jQuery)
