@@ -29,3 +29,10 @@ Feature: Managing entries
     When I press the add entry button
     And I press "create entry"
     Then I should see the notification "errors" mentioning that "Entry hasn't been created! Verify that every required fields are filled." 
+
+  # [3]
+  @wip
+  Scenario: Listing all projects 
+    Given there is an entry title "iOS 6"
+    And I am on the homepage
+    Then I should see the entry titled "iOS 6"

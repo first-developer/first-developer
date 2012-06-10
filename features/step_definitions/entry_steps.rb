@@ -37,3 +37,13 @@ end
 Then /^I should see the notification "([^"]*)" mentioning that "([^"]*)"$/ do |flashKey, msg|
   page.should have_selector(".#{flashKey} p", content: "#{msg}")
 end
+
+
+
+Given /^there is an entry title "([^"]*)"$/ do |entry_title|
+  Factory(:entry, title: entry_title)
+end
+
+Then /^I should see the entry titled "([^"]*)"$/ do |title|
+  page.should have_content(title)
+end
