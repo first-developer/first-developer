@@ -38,13 +38,13 @@
 		<%# ----------   Action buttons ------------  %>
 		<% if with_actions_btns %>
 		<div id=""  class="fd-ui-tl-item-ct-el full-bg">
-	      <%= link_to 'Back', entries_path, :class => 'btn primary'  %>
-	      <%= link_to 'Edit', edit_entry_path(entry), :class => 'btn' %>
-	      <%= link_to 'Delete', 
-	                  entry_path(entry), 
-	                  :method => 'delete', 
-	                  :confirm => 'Are you sure?', 
-	                  :class => 'btn danger' %>
+			<%= link_to 'Edit', edit_entry_path(entry), :class => 'btn' %>
+			<%= link_to 'Delete', 
+			          entry_path(entry), 
+			          :method => 'delete', 
+			          :confirm => 'Are you sure?', 
+			          :class => 'btn danger' %>
+	      	<%= link_to 'Back', entries_path, :class => 'btn primary'  %>
 	    </div>  
 	    <% end %>
 	</div>

@@ -34,16 +34,38 @@ Then /^also see details of this new created entry$/ do
 end
 
 
-Then /^I should see the notification "([^"]*)" mentioning that "([^"]*)"$/ do |flashKey, msg|
+Then /^I should see the notification "([^\"]*)" mentioning that "([^\"]*)"$/ do |flashKey, msg|
   page.should have_selector(".#{flashKey} p", content: "#{msg}")
 end
 
 
 
-Given /^there is an entry title "([^"]*)"$/ do |entry_title|
+Given /^there is an entry titled "([^\"]*)"$/ do |entry_title|
   Factory(:entry, title: entry_title)
 end
 
-Then /^I should see the entry titled "([^"]*)"$/ do |title|
+Then /^I should see the entry titled "([^\"]*)"$/ do |title|
+  page.should have_content(title)
+end
+
+
+
+Given /^there is an exsiting entry titled "([^\"]*)"$/ do |title|
+  step 'there is an entry titled "#{title}"'
+end
+
+When /^I press the edit entry button$/ do
+  click_link 'Edit'
+end
+
+When /^I press the button to save my updates$/ do
+  step 'I press "Save"'
+end
+
+Then /^I should be notice by "([^\"]*)"$/ do |message|
+  step 'I should see the notification "notice" mentioning that "#{message}"'
+end
+
+Then /^I should be on the entry page titled "([^\"]*)"$/ do |title|
   page.should have_content(title)
 end
