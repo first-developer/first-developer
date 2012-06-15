@@ -117,10 +117,44 @@
 // HEADER
 // =======================
 
+.navbar {
+    .navbar-inner {
+        @include box-shadow(0 5px 0 $fd-ui-ly-col-red);
+        #logo {
+            background: image-url("ui/fd-ui-ux-sprite.png") left -10px no-repeat transparent;
+            float: left;
+            height: 40px;
+            overflow: hidden;
+            position: relative;
+            top: 4px;
+            left: 30px;
+            width: 310px;
+        }
+        .fd-hd-search-form {
+            float: left;
+            position: relative;
+            top: 9px;
+            form {
+                margin:0;
+            }
+            input[type=search] {
+                background: url("/assets/ui/search-ico.png") no-repeat scroll 392px 2px white;
+                height: 30px;
+                width: 400px;
+                border: 2px solid $fd-ui-ft-col-blk1;
+                @include border-radius(2px);
+                padding: 0 10px 0;
+            }
+        }
+    }
+    
+}
+
 #header.fd-ui-ct-header {
-	background: $fd-ui-bg-img-lgry transparent;
-	border-bottom: 4px solid $fd-ui-ly-col-org;
-	display: block;
+    display:none;
+    background: $fd-ui-bg-img-lgry transparent;
+    border-bottom: 4px solid $fd-ui-ly-col-org;
+	//display: block;
 	height: 126px;
 	position: fixed;
 	top: 40px;
@@ -422,7 +456,7 @@
     	width: 230px;
     	left:0;
     	height:100%;
-    	top: 169px;
+    	top: 55px;
     	z-index: 7;
     	&.sidebar-closed {
     		left:-230px;
@@ -457,7 +491,7 @@
      float: left;
      margin-left: 230px;
      position: absolute;
-     top: 200px;
+     top: 100px;
      //bottom:0;
 
      @extend .span10;
@@ -470,7 +504,7 @@
             height: 40px;
             opacity: 0.94;
             position: fixed;
-            top: 169px;
+            top: 55px;
             z-index: 3;
             left:0;
             padding: 10px 20px 0 240px;
@@ -602,13 +636,13 @@
 
             @extend .not-yet;
 
-        	&.fd-ui-slot-container {
-		        .title-for-content-slot {
-		            width: 100%;
-		            border-top: 1px solid $white !important;
-		            border-left: 1px solid $white !important;
-		            border-right: 1px solid $white !important;
-                    border-bottom: 2px dotted $fd-ui-ft-col-blk41;
+            &.fd-ui-slot-container {
+              .title-for-content-slot {
+                  width: 100%;
+                  border-top: 1px solid $white !important;
+                  border-left: 1px solid $white !important;
+                  border-right: 1px solid $white !important;
+                  border-bottom: 2px dotted $fd-ui-ft-col-blk41;
 		            font-size: 1.1em; // 18.9px;
                     font-weight: normal;
                     height:36px;
@@ -616,56 +650,56 @@
                     padding: 0;
                     color: $fd-ui-ly-col-red;
                     @include box-shadow(none);
-		        }
-		        .body-for-content-slot {
-		        	width: 96%;
-					border-top: 1px solid $white !important;
-		            border-left: 1px solid $white !important;
-		            border-right: 1px solid $white !important;
-                    border-bottom: 1px solid $white !important;
-                    height: 100px;
-                    padding: 10px;
-                    margin:10px 0 20px;
-                    line-height: 28px;
-                    background-color: #fcfcfc;
-                    @include border-radius(5px);
-                    @include box-shadow(none);
-                    &:focus {
-                    	background: $fd-ui-ly-col-lyel;
-                    	@include box-shadow(0 0 7px 0 #E8E9CA inset);
-                    }
-		        }
-		        .entry-categroy-slot {
-		        	width: 99.5%;
+                }
+                .body-for-content-slot {
+                 width: 96%;
+                 border-top: 1px solid $white !important;
+                 border-left: 1px solid $white !important;
+                 border-right: 1px solid $white !important;
+                 border-bottom: 1px solid $white !important;
+                 height: 100px;
+                 padding: 10px;
+                 margin:10px 0 20px;
+                 line-height: 28px;
+                 background-color: #fcfcfc;
+                 @include border-radius(5px);
+                 @include box-shadow(none);
+                 &:focus {
+                   background: $fd-ui-ly-col-lyel;
+                   @include box-shadow(0 0 7px 0 #E8E9CA inset);
+               }
+           }
+           .entry-category-slot {
+             width: 99.5%;
 
-		        	.multi.select2-container-active .select2-choices {}
-		        }
-		    }
+             .multi.select2-container-active .select2-choices {}
+         }
+     }
 
 
 
-        	.fd-ui-tl-item-hd {
-        		padding: 2px  5px 7px 5px;
+     .fd-ui-tl-item-hd {
+      padding: 2px  5px 7px 5px;
 
-        		.fd-ui-avt {
-        			@extend .fd-utils-avatar;
-        		}	
-        	}
-        	.fd-ui-tl-item-ct {
-        		background: none repeat scroll 0 0 $white;
-        		p {
-        			line-height:$txtLineHeight;
-        		}
-        		.fd-ui-tl-item-ct-el {
-        			@extend .fd-divider-top;
-        			padding: 5px;
-        			width: 98.6%;
-        			i.slot-label {
-        				margin: 0px 10px 0;
-						position: relative;
-						float: left;
-						top: 13px;
-        			}
+      .fd-ui-avt {
+         @extend .fd-utils-avatar;
+     }	
+ }
+ .fd-ui-tl-item-ct {
+  background: none repeat scroll 0 0 $white;
+  p {
+     line-height:$txtLineHeight;
+ }
+ .fd-ui-tl-item-ct-el {
+     @extend .fd-divider-top;
+     padding: 5px;
+     width: 98.6%;
+     i.slot-label {
+        margin: 0px 10px 0;
+        position: relative;
+        float: left;
+        top: 13px;
+    }
                     // alert messages 
                     .fd-ui-flash-msg {
                     	position:relative;
@@ -1087,7 +1121,7 @@
     	float: right;
     	width: 320px;
     	height: 100%;
-    	top:169px;
+    	top:55px;
     	z-index: 5;
     }
     #fd-ui-sidebar-right1 {

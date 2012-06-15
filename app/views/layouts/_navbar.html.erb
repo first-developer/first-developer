@@ -26,27 +26,29 @@
 	<div class="navbar-inner">
 		<div class="container-fluid">
 
-			<%# 
-			---------------------------------------   
-				Navigation bar collapsed   
-			---------------------------------------
-			%>
+			<%# -------  LOGO -------- %>
+			<div id="logo" class="logo"></div>
+
+			<%# --------  Search bar   -------%>
+			<div class="fd-hd-search-form">
+				<form action="_ct-header_submit" method="get" accept-charset="utf-8">
+					<input type="search" name="" value="" placeholder="What are you looking for?">		
+				</form>
+			</div>
+
+			<%# ------ Navigation bar collapsed  ----------- %>
 			<a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
 				<span class="icon-bar"></span>
 				<span class="icon-bar"></span>
 				<span class="icon-bar"></span>
 			</a>
 
-			<%# 
-			---------------------------------------   
-				Menu  
-			---------------------------------------
-			%>
+			<%# -------------  Menu  --------------	%>
 			<div class="nav-collapse">
 				<!-- .nav, .navbar-search, .navbar-form, etc -->
 				<ul class="nav pull-right">
 					<li class="">
-						<a href="#" class="orange">Hire me</a>
+						<a href="#" class="red">Hire me</a>
 					</li>
 					<li class="">
 						<a href="#">Blog</a>

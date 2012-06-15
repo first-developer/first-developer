@@ -3,7 +3,7 @@ source 'http://rubygems.org'
 
 # CORE GEMS
 # ==============================================
-gem 'rails', '3.1.5'
+gem 'rails', '3.1.6'
 gem 'jquery-rails'
 
 # Bundle edge Rails instead:
@@ -17,7 +17,7 @@ gem "mysql2"
 # ASSETS 
 # ==============================================
 group :assets do
-  gem 'sass-rails',   '~> 3.1.5'
+  gem 'sass-rails',   '3.1.4'
   gem 'coffee-rails', '~> 3.1.1'
   gem 'therubyracer'
   gem 'uglifier', '>= 1.0.3'
@@ -66,6 +66,10 @@ end
 
 # EXTRAS / UTILS
 # ==============================================
+
+
+gem "stringex"			# Some [hopefully] useful extensions to Ruby’s String class. 
+				# It is made up of three libraries: ActsAsUrl, Unidecoder, and StringExtensions.
 gem "RedCloth"
 gem "simple_form" 
 gem 'rinku'

@@ -28,10 +28,12 @@ test: &test
 
 production:
   adapter: mysql2
-  database: fd
-  username: root
+  encoding: utf8
+  host: localhost
+  database: fd_prod
+  username: fd
+  password: fd
   pool: 5
-  timeout: 5000
 
 cucumber:
   <<: *test

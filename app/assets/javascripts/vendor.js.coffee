@@ -16,7 +16,7 @@
 		sb.removeClass "sidebar-closed" 
 		
 		w = sb.width() # get width
-		dist = '-' + w + 'px'
+		dist = "-#{w}px"
 
 		if parseInt($(this).css('left')) >= 0
 			sb.animate { left: dist}, duration
@@ -33,7 +33,7 @@
 		sb.removeClass "sidebar-closed" 
 
 		w = sb.width() 	# get width
-		dist = '-' + w + 'px'	
+		dist = "-#{w}px"
 
 		if parseInt($(this).css("right")) >= -1
 			sb.animate { right: dist}, duration

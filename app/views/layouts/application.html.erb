@@ -1,43 +1,23 @@
-
-<%# 
-=======================================
-	Page Header
-=======================================
-%>
+<!-- HEADER -->
 <%= render "layouts/header" %>
 
 <%#= render "shared/modal" %>
 
 
-<%# 
-=======================================
-	Page Container
-=======================================
-%>
+<!-- MAIN CONTAINER -->
 <div  class="fd-ui-container">
-	<%# 
-	---------------------------------------   
-		Sidebar navigation   
-	---------------------------------------
-	%>
+
+	<!-- Sidebar navigation -->
 	<div id="fd-ui-sidebar-left">
 		<%= render "layouts/sidebar" %>
 	</div>
 
 
 	<div id="fd-ui-center" >
-		<%# 
-		---------------------------------------   
-			Toolbar
-		---------------------------------------
-		%>
+		<!-- Toolbar -->
 		<%= render "layouts/toolbar" %>
 
-		<%# 
-		---------------------------------------   
-			Timeline
-		---------------------------------------
-		%>
+		<!-- Timeline -->
 		<div class="timeline">
 
 			<%= yield %>
@@ -46,11 +26,8 @@
 	</div>
 	
 
-	<%# 
-	---------------------------------------   
-		Sidebar my profile  
-	---------------------------------------
-	%>
+	
+	<!-- Sidebar my profile -->
 	<div id="fd-ui-sidebar-right2" class="sidebar-closed">
 		<%= render "layouts/sidebar_infos" %>
 	</div>
@@ -58,9 +35,5 @@
 </div>
 
 
-<%# 
-=======================================
-	Page Footer
-=======================================
-%>
+<!-- FOOTER -->
 <%= render "layouts/footer" %>

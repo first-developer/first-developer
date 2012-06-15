@@ -34,8 +34,11 @@
 	# --------------------------------
 	# 1.
 	$(".entry-category-slot").select2
+		tags: [],
 		placeholder: "Which category ?",
 		width: "94%"
+	# fixing issues with empty value of tag
+	if $(".select2-search-choice").text() is "[]" then $(".select2-search-choice").remove()
 
 	# 2.
 	$(".entry-tags-slot").select2

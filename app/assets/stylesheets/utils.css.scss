@@ -271,6 +271,12 @@
 .orange {
 	color: #FFA900 !important;
 }
+.red {
+	color: #E24B48 !important;
+	&:hover {
+	 	color: #FF6764 !important;
+	}
+}
 
 // AUDIO PLAYER
 
