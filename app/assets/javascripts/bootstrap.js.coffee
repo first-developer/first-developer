@@ -5,7 +5,7 @@
 	# TOOLTIPS
 	# --------------------------------
 	# 1.
-	$(".timeline .fd-ui-btn").tooltip({placement: 'top'})
+	$(".timeline .fd-ui-btn").tooltip({ placement: 'top'})
 
 
 	# --------------------------------
@@ -18,7 +18,7 @@
 	# --------------------------------
 	# ANIMATIONS
 	# --------------------------------
-	# 1. Silding sidebar info and category sidebar
+	# 1. Sliding sidebar info and category sidebar
 	$('.hide-sidebar').toggleSidebar '#fd-ui-sidebar-left'
 	$('.hide-sidebar-info').toggleSidebar '#fd-ui-sidebar-right2', 'right'
 	$('#fd-ui-sidebar-right2').toggleSlideRight(0)
@@ -40,10 +40,7 @@
 	# fixing issues with empty value of tag
 	if $(".select2-search-choice").text() is "[]" then $(".select2-search-choice").remove()
 
-	# 2.
-	$(".entry-tags-slot").select2
-		tags:["programming", "other", "jQuery"],
-		width: "94%"
+
 	
 
 	# --------------------------------

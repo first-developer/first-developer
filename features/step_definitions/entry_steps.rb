@@ -24,20 +24,19 @@ When /^I press "([^\"]*)"$/ do |button|
 	click_button button
 end
 
-Then /^I should see the notification "([^\"]*)"$/ do |arg1|
-  page.should have_selector("#notification_area p", content: "Entry has been well created" )
-end
-
 Then /^also see details of this new created entry$/ do
   page.should have_selector(".fd-ui-tl-item-title h1", content: "Eurovision 2012")
   page.should have_selector(".fd-ui-item-ct-text", content: "some text about the winner")
 end
 
 
-Then /^I should see the notification "([^\"]*)" mentioning that "([^\"]*)"$/ do |flashKey, msg|
-  page.should have_selector(".#{flashKey} p", content: "#{msg}")
+Then /^I should see the notification "([^\"]*)"$/ do |flashKey|
+    page.should have_selector ".#{flashKey}"
 end
 
+Then /^also see the message "([^"]*)"$/ do |msg|
+  page.should have_content msg
+end
 
 
 Given /^there is an entry titled "([^\"]*)"$/ do |entry_title|
@@ -45,7 +44,7 @@ Given /^there is an entry titled "([^\"]*)"$/ do |entry_title|
 end
 
 Then /^I should see the entry titled "([^\"]*)"$/ do |title|
-  page.should have_content(title)
+  page.should have_content title 
 end
 
 
@@ -62,9 +61,6 @@ When /^I press the button to save my updates$/ do
   step 'I press "Save"'
 end
 
-Then /^I should be notice by "([^\"]*)"$/ do |message|
-  step 'I should see the notification "notice" mentioning that "#{message}"'
-end
 
 Then /^I should be on the entry page titled "([^\"]*)"$/ do |title|
   page.should have_content(title)
