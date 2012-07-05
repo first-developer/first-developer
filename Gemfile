@@ -61,8 +61,13 @@ group :test do
     gem 'capybara'
     gem 'launchy'
     gem 'database_cleaner'
+    gem 'guard-cucumber'
 end
 
+
+group :development, :test do
+    gem 'ruby_gntp'
+end
 
 # EXTRAS / UTILS
 # ==============================================

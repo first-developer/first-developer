@@ -7,7 +7,7 @@ I want create some potentiel categories
 
 
 
-@wip
+
 Scenario: Creating one category for a new entry
 
 	Given I am on the homepage

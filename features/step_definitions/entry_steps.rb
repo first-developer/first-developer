@@ -48,7 +48,6 @@ Then /^I should see the entry titled "([^\"]*)"$/ do |title|
 end
 
 
-
 Given /^there is an exsiting entry titled "([^\"]*)"$/ do |title|
   step 'there is an entry titled "#{title}"'
 end
