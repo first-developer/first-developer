@@ -41,7 +41,6 @@ group :development do
   	gem 'faker', '0.3.1'
   	gem 'guard'
   	#gem 'libnotify'
-	gem "erb2haml"
 end
 
 

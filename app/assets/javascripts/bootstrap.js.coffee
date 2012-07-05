@@ -19,9 +19,9 @@
 	# ANIMATIONS
 	# --------------------------------
 	# 1. Sliding sidebar info and category sidebar
-	$('.hide-sidebar').toggleSidebar '#fd-ui-sidebar-left'
-	$('.hide-sidebar-info').toggleSidebar '#fd-ui-sidebar-right2', 'right'
-	$('#fd-ui-sidebar-right2').toggleSlideRight(0)
+	$('.hide-sidebar')			.toggleSidebar 		'#fd-ui-sidebar-left'
+	$('.hide-sidebar-info')		.toggleSidebar 		'#fd-ui-sidebar-right2', 'right'
+	$('#fd-ui-sidebar-right2')	.toggleSlideRight 	0
 
 	# 2. Handle cliping of timeline items	
 	$(".icon-clip").bind "click", () ->
