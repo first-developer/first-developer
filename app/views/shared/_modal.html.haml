@@ -1,0 +1,25 @@
+#myModal.modal
+  .modal-header
+    %i.icon.window
+    %button.close{"data-dismiss" => "modal"} ×
+    %h3 Notifications (3)
+  .modal-body
+    .fd-ui-flash-msg.warning{:id => ""}
+      %i.flash-icon
+        %img{:alt => "", :src => asset_path("ui/loader.gif");}/
+      %p You must login to comment this post!
+      %i.flash-close ×
+    .fd-ui-flash-msg.errors{:id => ""}
+      %i.flash-icon
+        %img{:alt => "", :src => asset_path("ui/loader.gif");}/
+      %p You must login to comment this post!
+      %i.flash-close ×
+    .fd-ui-flash-msg.success{:id => ""}
+      %i.flash-icon
+        %img{:alt => "", :src => asset_path("ui/loader.gif");}/
+      %p You must login to comment this post!
+      %i.flash-close ×
+  .modal-footer
+    %a.btn.primary{:href => "#"} Close
+    %a.btn.danger{:href => "#"} Save changes
+.overlay

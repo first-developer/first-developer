@@ -1,0 +1,18 @@
+/ HEADER
+= render "layouts/header"
+  / MAIN CONTAINER
+  .fd-ui-container
+    / Sidebar navigation
+    #fd-ui-sidebar-left
+      = render "layouts/sidebar"
+    #fd-ui-center
+      / Toolbar
+      = render "layouts/toolbar"
+      / Timeline
+      .timeline
+        = yield
+    / Sidebar my profile
+    #fd-ui-sidebar-right2.sidebar-closed
+      = render "layouts/sidebar_infos"
+  / FOOTER
+  = render "layouts/footer"
