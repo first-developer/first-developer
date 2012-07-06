@@ -16,4 +16,17 @@ class Entry < ActiveRecord::Base
 		self.category_ids = Category.ids_from_tokens(tokens)
 	end
 
+	def categories_stringlified
+		result = ""
+		cats = categories;
+		unless ( cats.blank? ) 
+			arr_result = cats.collect do |c|
+				c.name
+			end
+			result = arr_result.join(",")
+		end
+		return result
+	end 
+
 end
+

@@ -1,4 +1,4 @@
-
+<% tokens ||= "" %>
 
 <%= simple_form_for @entry, :html => { :class => 'form-horizontal' } do |f| %>
 <article id="" class="fd-ui-tl-item fd-ui-slot-container">
@@ -31,7 +31,7 @@
 
 		<div id=""  class="fd-ui-tl-item-ct-el full-bg">
 			<i class="icon-tasks slot-label"></i>
-			<%= f.text_field :category_tokens, class: "entry-category-slot" %>
+			<%= f.text_field :category_tokens, class: "entry-category-slot", value: "#{tokens}" %>
 		</div>	
 
 		<%= render "shared/tags_slot" %> 
