@@ -1,10 +1,6 @@
 <div class="navbar navbar-fixed-top">
 
-	<%# 
-	---------------------------------------   
-		Notifications area
-	---------------------------------------
-	%>
+	<!--	NOTIFICATION AREA   -->
 	
 	<% flash.each do |key, msg| %>	
 		<% unless flash[key].blank?  %>
@@ -12,38 +8,35 @@
 			<i class="flash-icon">
 				<img src="<%= asset_path("ui/loader.gif"); %>" alt="">
 			</i>
-			<p><%= msg %></p>
+			<p><%= msg %> </p>
 			<i class="flash-close">×</i>
 		</div>
 		<% end %>
 	<% end %>
 
-	<%# 
-	---------------------------------------   
-		Navigation bar content   
-	---------------------------------------
-	%>
+	<!-- 		NATIFICATION BAR  -->
+	 
 	<div class="navbar-inner">
 		<div class="container-fluid">
 
-			<%# -------  LOGO -------- %>
+			<!--   LOGO   -->
 			<div id="logo" class="logo"></div>
 
-			<%# --------  Search bar   -------%>
+			<!--    SEARCH BAR    -->
 			<div class="fd-hd-search-form">
 				<form action="_ct-header_submit" method="get" accept-charset="utf-8">
 					<input type="search" name="" value="" placeholder="What are you looking for?">		
 				</form>
 			</div>
 
-			<%# ------ Navigation bar collapsed  ----------- %>
+			<!--     NAVIGATION BAR COLLAPSE    -->
 			<a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
 				<span class="icon-bar"></span>
 				<span class="icon-bar"></span>
 				<span class="icon-bar"></span>
 			</a>
 
-			<%# -------------  Menu  --------------	%>
+			<!--      MENU     -->
 			<div class="nav-collapse">
 				<!-- .nav, .navbar-search, .navbar-form, etc -->
 				<ul class="nav pull-right">

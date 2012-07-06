@@ -3,11 +3,11 @@ Feature: Creating categories
 
 In other to assign categories to an entry
 As a user
-I want create some potentiel categories
+I want create some potential categories
 
 
 
-
+@wip
 Scenario: Creating one category for a new entry
 
 	Given I am on the homepage
@@ -19,4 +19,4 @@ Scenario: Creating one category for a new entry
 	And   I press "Save"
 	Then  I should see the notification "notice"
 	And   also the message "Entry has been well created" 
-	And   I should see the category "Testing" in entry details
+	And   I should see the category 'Testing' in entry details

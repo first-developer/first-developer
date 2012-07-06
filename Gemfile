@@ -40,6 +40,8 @@ group :development do
   	gem 'nifty-generators'   	# another scaffold
   	gem 'faker', '0.3.1'
   	gem 'guard'
+	gem 'pry'
+	gem 'pry-nav'
   	#gem 'libnotify'
 end
 
@@ -73,7 +75,7 @@ end
 # ==============================================
 
 
-gem "slim-rails"		# New template engine
+gem 'slim-rails'		# New template engine
 gem "stringex"			# Some [hopefully] useful extensions to Ruby’s String class. 
 				# It is made up of three libraries: ActsAsUrl, Unidecoder, and StringExtensions.
 gem "RedCloth"

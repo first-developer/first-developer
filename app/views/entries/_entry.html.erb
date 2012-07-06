@@ -1,6 +1,7 @@
 <% with_actions_btns ||= false %>
 
 <% unless entry.blank? %>
+
 <article id="" class="fd-ui-tl-item">
 	<span class="fd-ui-icon post"></span>
 	<span class="fd-ui-tl-item-indic"></span>
@@ -17,9 +18,14 @@
 			<hgroup class="fd-ui-tl-item-title">
 				<h4>By <span class="author">Nathan Pitman</span> | <%= time_info entry.created_at %></h4>
 				<h1><%= entry.title %></h1>
-				<p class="details"> 
-					<span class="fd-ui-cst-btn tag f-l">Ruby</span>
-					<span class="fd-ui-cst-btn tag f-l">Programming</span>
+				<p class="details">
+				
+				<% unless entry.categories.blank? %>
+					<% entry.categories.each do |category| %>
+					<span class="fd-ui-cst-btn tag f-l"><%= category.name.to_s.capitalize %></span>
+					<% end %>
+				<% end %>
+
 					<span class="fd-ui-cst-btn tag-style f-r">26 Comments →</span><span class="clear"></span>
 				</p>
 			</hgroup>

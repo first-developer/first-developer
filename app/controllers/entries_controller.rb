@@ -59,8 +59,15 @@ class EntriesController < ApplicationController
   # PUT /entries/1
   # PUT /entries/1.json
   def update
+    
     @entry = Entry.find(params[:id])
 
+    tokens = params[:entry][:category_tokens].to_s
+    
+    params[:entry][:category_ids] = Category.ids_from_tokens(tokens)
+    
+    tokens = params[:entry].delete([:category_tokens])
+    
     respond_to do |format|
       if @entry.update_attributes(params[:entry])
         format.html { redirect_to @entry, notice: 'Entry was nicely updated.' }

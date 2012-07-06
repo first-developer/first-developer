@@ -1,11 +1,4 @@
 
-<%# 
----------------------------------------   
-  Entries : 	[V] 	index    
----------------------------------------
-%>
-
-
 <% unless @entries.blank? %>
 	<%  @entries.each do |entry| %>
 		<%= render "entry", entry: entry, with_actions_btns: true %>
