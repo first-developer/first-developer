@@ -27,7 +27,8 @@
 	$(".icon-clip").bind "click", () ->
 		$this = $(this)
 		ct = $this.closest(".fd-ui-tl-item").find(".fd-ui-tl-item-ct")
-		ct.toggle("clip")
+		ct.toggle("blind")
+		$this.toggleClass("on")
 
 	# --------------------------------
 	# SELECT2

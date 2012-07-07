@@ -97,10 +97,27 @@
 	}
 	&.icon-clip {
 		background-position: -5px -723px !important ;//-86px -173px !important;
-    @extend .icon-size;
-    &:hover {
-    	background-position: -5px -749px !important;
-    }
+	    @extend .icon-size;
+	    &:hover {
+	    	background-position: -5px -749px !important;
+	    }
+	    &.on {
+	    	background-position: -5px -749px !important;
+	    }
+	}
+	&.icon-clip-show {
+		background-position: -5px -723px !important ;//-86px -173px !important;
+	    @extend .icon-size;
+	    &:hover {
+	    	background-position: -5px -749px !important;
+	    }
+	}
+	&.icon-clip-hide {
+		background-position: -5px -723px !important ;//-86px -173px !important;
+	    @extend .icon-size;
+	    &:hover {
+	    	background-position: -5px -749px !important;
+	    }
 	}
 	&.icon-heart {
 		background-position: -170px -723px !important ;//-86px -173px !important;
