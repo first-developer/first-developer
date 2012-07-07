@@ -11,4 +11,13 @@ module ApplicationHelper
 		classes = 'btn'
 		link_to icon_text, url, id: "add_entry_btn", class: classes 
 	end
+
+	# Format body text using Markdown
+	def markdown(text) 
+		options 	= [filter_html: true, no_intra_emphasis: true]
+		renderer 	= Redcarpet::Render::HTML.new(*options)
+	    extensions 	= {fenced_code: true, autolink: true}
+	    markdown 	= Redcarpet::Markdown.new(renderer, extensions)
+		markdown.render(text).to_html.html_safe
+	end
 end

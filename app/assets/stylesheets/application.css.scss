@@ -6,6 +6,7 @@
  *= require select2
  *= require bootstrap_and_overrides 
  *= require like_button
+
 */
 
 @import "settings";
@@ -917,12 +918,22 @@
                             color: $fd-ui-ly-col-red; //$fd-ui-ft-col-blk2;
                             font-size: 1.3em;
                             font-weight: normal;
-                            margin: 10px 0 0;
+                            margin: 15px 0 0;
+                            
+                            &:after {
+                                content: "→";
+                                padding-left: 10px;
+                            }
+
+                            &.no-st {
+                                margin-bottom: 10px;
+                            }
                         }
                         h4 {
                         	color: $fd-ui-ft-col-blk3;
                         	font-size: $baseFontSize;
                         	font-weight: normal;
+                            margin-bottom: 10px;
                         }
                     }
                     &.full-bg {

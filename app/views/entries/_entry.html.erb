@@ -32,7 +32,7 @@
 				
 				<% unless entry.categories.blank? %>
 					<% entry.categories.each do |category| %>
-					<span class="fd-ui-cst-btn tag f-l"><%= category.name.to_s.capitalize %></span>
+					<span class="fd-ui-cst-btn category f-l"><%= category.name.to_s.capitalize %></span>
 					<% end %>
 				<% end %>
 
@@ -40,7 +40,7 @@
 				</p>
 			</hgroup>
 			<div class="fd-ui-item-ct-text">
-				<%= simple_format (auto_link (entry.body)) unless entry.body.nil? %>
+				<%= markdown(entry.body) unless entry.body.nil? %>
 			</div>
 		</div>
 

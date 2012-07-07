@@ -230,13 +230,13 @@
 	&.common-style {
 		color: $fd-ui-ft-col-blk2;
 		background: $fd-ui-ft-col-blk5;
-    @include border-radius(20px);
-    padding: 0 10px;
-    cursor:pointer;
-    &:hover {
-    	color: $fd-ui-ly-col-red;
-    	background: $fd-ui-ft-col-blk4;
-    }
+	    @include border-radius(20px);
+	    padding: 0 10px;
+	    cursor:pointer;
+	    &:hover {
+	    	color: $fd-ui-ly-col-red;
+	    	background: $fd-ui-ft-col-blk4;
+	    }
 	}
 	&.tag-style {
 		@extend .common-style;
@@ -245,10 +245,21 @@
 		@extend .common-style;
 		background: $fd-ui-ly-col-yel;
 		&:hover {
-    	color: $fd-ui-ft-col-blk2;
-    	cursor: default;
-    	background: $fd-ui-ly-col-yel;
-    }
+	    	color: $fd-ui-ft-col-blk2;
+	    	cursor: default;
+	    	background: $fd-ui-ly-col-yel;
+	    }
+	}
+
+	&.category {
+		@extend .common-style;
+		background: $fd-ui-ly-col-yel;
+		&:hover {
+	    	color: $fd-ui-ft-col-blk2;
+	    	cursor: default;
+	    	background: $fd-ui-ly-col-yel;
+	    }
+		border: 1px solid #F0DF64 !important;	
 	}
 }
 

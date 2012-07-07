@@ -1,7 +1,8 @@
-# --------------------------------
-# Entry step definitions
-# --------------------------------
 
+
+# ---------------------------------------------------------------------------------------------
+# Scenario: Creating an entry / Creating an entry without title and/ or body
+# ---------------------------------------------------------------------------------------------
 
 Given /^I am on the homepage$/ do
   visit root_path
@@ -24,20 +25,24 @@ When /^I press "([^\"]*)"$/ do |button|
 	click_button button
 end
 
+Then /^I should see the notification "([^\"]*)"$/ do |flashKey|
+    page.should have_selector ".#{flashKey}"
+end
+
+Then /^also see the message "([^\"]*)"$/ do |msg|
+  page.should have_content msg
+end
+
 Then /^also see details of this new created entry$/ do
   page.should have_selector(".fd-ui-tl-item-title h1", content: "Eurovision 2012")
   page.should have_selector(".fd-ui-item-ct-text", content: "some text about the winner")
 end
 
 
-Then /^I should see the notification "([^\"]*)"$/ do |flashKey|
-    page.should have_selector ".#{flashKey}"
-end
 
-Then /^also see the message "([^"]*)"$/ do |msg|
-  page.should have_content msg
-end
-
+# ---------------------------------------------------------------------------------------------
+# Scenario: Listing all projects 
+# ---------------------------------------------------------------------------------------------
 
 Given /^there is an entry titled "([^\"]*)"$/ do |entry_title|
   Factory(:entry, title: entry_title)
@@ -47,6 +52,11 @@ Then /^I should see the entry titled "([^\"]*)"$/ do |title|
   page.should have_content title 
 end
 
+
+
+# ---------------------------------------------------------------------------------------------
+# Scenario: Editing an existing entry from the homepage
+# ---------------------------------------------------------------------------------------------
 
 Given /^there is an exsiting entry titled "([^\"]*)"$/ do |title|
   step 'there is an entry titled "#{title}"'

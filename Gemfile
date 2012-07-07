@@ -82,6 +82,7 @@ gem 'slim-rails'		# New template engine
 gem "stringex"			# Some [hopefully] useful extensions to Ruby’s String class. 
 				# It is made up of three libraries: ActsAsUrl, Unidecoder, and StringExtensions.
 gem "RedCloth"
+gem "redcarpet"
 gem "simple_form" 
 gem 'rinku'
 gem 'country_select'

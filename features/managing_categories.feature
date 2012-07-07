@@ -21,4 +21,7 @@ Scenario: Creating one category for a new entry
 
 @wip
 Scenario: See preload categories when editing an entry
-	Given I have an article titled "Managing rails 3 w"
+	Given I have an article titled "Managing rails 3" with "Rails" as category
+	When  I go to its edit page
+	Then  I should be in the edit page of this article
+	And   I should see "Rails" in the category field of the form
