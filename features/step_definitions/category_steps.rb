@@ -3,7 +3,7 @@ When /^I fill the category input with "([^\"]*)"$/ do |category|
 end
 
 Then /^also the message "([^\"]*)"$/ do |msg|
-   page.should have_selector 	"#notification_area p", content: msg
+   page.should have_css "#notification_area p", text: msg
 end
 
 Then /^I should see the category '([^"]*)' in entry details$/ do |category|

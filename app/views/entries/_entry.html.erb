@@ -1,18 +1,20 @@
-<% with_actions_btns ||= false %>
-
-<% unless entry.blank? %>
-
-<article id="" class="fd-ui-tl-item">
-	<span class="fd-ui-icon post"></span>
-	<span class="fd-ui-tl-item-indic"></span>
-	<header class="fd-ui-tl-item-hd">
-		<span class="fd-ui-avt small default" style="background-image:url(<%= asset_path("ui/fd-ui-ux-sprite.png"); %>)"></span>
-		<div id="" class="fd-ui-actions btns">
-			<% ["share", "heart","star", "clip", "more"].each do |name| %>
-			<i rel="tooltip" title="<%= name %>" class="fd-ui-icons icon-<%= name %> fd-ui-btn"></i>
-			<% end %>
-		</div>
-	</header>
+<div>
+	<% with_actions_btns ||= false %>
+	
+	<% unless entry.blank? %>
+	
+	<article id="" class="fd-ui-tl-item">
+		<span class="fd-ui-icon post"></span>
+		<span class="fd-ui-tl-item-indic"></span>
+		<header class="fd-ui-tl-item-hd">
+			<span class="fd-ui-avt small default" style="background-image:url(<%= asset_path("ui/fd-ui-ux-sprite.png"); %>)"></span>
+			<div id="" class="fd-ui-actions btns">
+				<% ["share", "heart","star", "clip", "more"].each do |name| %>
+				<i rel="tooltip" title="<%= name %>" class="fd-ui-icons icon-<%= name %> fd-ui-btn"></i>
+				<% end %>
+			</div>
+		</header>
+		
 	<div id=""  class="fd-ui-tl-item-ct">
 		<div id=""  class="fd-ui-tl-item-ct-el full-size">
 			<hgroup class="fd-ui-tl-item-title">

@@ -1,0 +1,22 @@
+@import "settings";
+@import "compass";
+
+
+.fd-ui-like-btn {
+	.default {
+		background-image: $fd-ui-bg-sprite;
+		height: 30px;
+		padding: 5px;
+		@include border-radius(3px);
+		background-color: $white;
+		border: 1px solid $fd-ui-ft-col-blk4;
+	}
+
+	.up {
+		background-position: 0px 0px;
+	}
+
+	.down {
+		background-position: 0px 0px;
+	}
+}

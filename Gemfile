@@ -69,6 +69,7 @@ end
 
 group :development, :test do
     gem 'ruby_gntp'
+#    gem 'guard-spork'
 end
 
 # EXTRAS / UTILS
