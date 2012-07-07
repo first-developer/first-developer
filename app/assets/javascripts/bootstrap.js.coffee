@@ -27,7 +27,7 @@
 	$(".icon-clip").bind "click", () ->
 		$this = $(this)
 		ct = $this.closest(".fd-ui-tl-item").find(".fd-ui-tl-item-ct")
-		ct.toggle("blind")
+		ct.toggle("blind", {easing: "easeOutExpo"}, 800)
 		$this.toggleClass("on")
 
 	# --------------------------------

@@ -19,9 +19,20 @@ Scenario: Creating one category for a new entry
 	And   also the message "Entry has been well created" 
 	And   I should see the category 'Testing' in entry details
 
-@wip
+
 Scenario: See preload categories when editing an entry
 	Given I have an article titled "Managing rails 3" with "Rails" as category
 	When  I go to its edit page
 	Then  I should be in the edit page of this article
 	And   I should see "Rails" in the category field of the form
+
+
+Scenario: Access categories with the number of entries wthin the sidebar 
+	Given I have in the category "Testing" the following entries:
+			|title                           |body |
+	        |Using Capybara with Cucumber    |some text about the winner |
+	        |Combine Rspec and Test-unit     |some text about the winner |
+	        |Sellenium VS capybara selectors |some text about the winner |
+	When  I go to the homepage
+	Then  I should be see within the sidebar the "Testing" category
+	And   I should see 3 as the number of entries for this category
