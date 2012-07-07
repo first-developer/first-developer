@@ -8,6 +8,14 @@
 		<span class="fd-ui-tl-item-indic"></span>
 		<header class="fd-ui-tl-item-hd">
 			<span class="fd-ui-avt small default" style="background-image:url(<%= asset_path("ui/fd-ui-ux-sprite.png"); %>)"></span>
+
+			<!-- Like buttons -->
+			<div class="fd-ui-like-btns">
+				<span class="fd-ui-like-btn up">+8</span>
+				<span class="fd-ui-like-btn down">-12</span>
+			</div>
+
+
 			<div id="" class="fd-ui-actions btns">
 				<% ["share", "heart","star", "clip", "more"].each do |name| %>
 				<i rel="tooltip" title="<%= name %>" class="fd-ui-icons icon-<%= name %> fd-ui-btn"></i>

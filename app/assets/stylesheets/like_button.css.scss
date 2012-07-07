@@ -1,22 +1,41 @@
 @import "settings";
 @import "compass";
 
-
-.fd-ui-like-btn {
-	.default {
-		background-image: $fd-ui-bg-sprite;
-		height: 30px;
-		padding: 5px;
+.fd-ui-like-btns {
+	.fd-ui-like-btn {
+		background-image: 	$fd-ui-bg-sprite;
+		height: 			25px;
+		padding: 			5px;
 		@include border-radius(3px);
-		background-color: $white;
-		border: 1px solid $fd-ui-ft-col-blk4;
+		background-color: 	$white;
+		border: 			1px solid $fd-ui-ft-col-blk4;
+		display: 			block;
+		margin: 			1px 2px 0;
+		float: 				left;
+		font-size: 			25px;
+		//font-weight: 		bold;
+		line-height: 		25px;
+		padding: 			5px 7px 5px 40px;
+
+		&.up {
+			background-position: -413px -351px;
+			color: 			#329A4A
+		}
+
+		&.down {
+			background-position: -413px -413px;
+			color: 			#A63C39;
+		}
 	}
 
-	.up {
-		background-position: 0px 0px;
-	}
-
-	.down {
-		background-position: 0px 0px;
+	&.pending {
+		background-image: $fd-ui-bg-img-loadm;
+		background-position: 88% 11px;
+		background-repeat: no-repeat;
+		padding-right: 45px;
+		&:after {
+			content: "";
+			padding-left: 0px;
+		}
 	}
 }

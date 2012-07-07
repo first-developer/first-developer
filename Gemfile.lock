@@ -1,4 +1,10 @@
 GIT
+  remote: git://github.com/thedarkone/rails-dev-boost.git
+  revision: a995f0a3734ecf36da74dcce32ed2ba74e25c56d
+  specs:
+    rails-dev-boost (0.1.1)
+
+GIT
   remote: https://github.com/thomas-mcdonald/bootstrap-sass.git
   revision: 3c9a4761122387926d1fa5d6a8d9b063fb3f7609
   specs:
@@ -90,7 +96,11 @@ GEM
       nokogiri (>= 1.5.0)
     database_cleaner (0.8.0)
     diff-lcs (1.1.3)
+    em-websocket (0.3.6)
+      addressable (>= 2.1.1)
+      eventmachine (>= 0.12.9)
     erubis (2.7.0)
+    eventmachine (0.12.10)
     execjs (1.4.0)
       multi_json (~> 1.0)
     factory_girl (1.3.3)
@@ -108,6 +118,10 @@ GEM
     guard-cucumber (1.2.0)
       cucumber (>= 1.2.0)
       guard (>= 1.1.0)
+    guard-livereload (1.0.0)
+      em-websocket (>= 0.2.0)
+      guard (>= 1.1.0)
+      multi_json (~> 1.0)
     hike (1.2.1)
     hpricot (0.8.6)
     i18n (0.6.0)
@@ -276,6 +290,7 @@ DEPENDENCIES
   faker (= 0.3.1)
   guard
   guard-cucumber
+  guard-livereload
   jquery-rails
   js-routes
   launchy
@@ -288,6 +303,7 @@ DEPENDENCIES
   pry-nav
   rack-pygmentize
   rails (= 3.1.6)
+  rails-dev-boost!
   redcarpet
   rinku
   rspec-rails (= 2.6.1)

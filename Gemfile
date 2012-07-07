@@ -40,9 +40,11 @@ group :development do
   	gem 'nifty-generators'   	# another scaffold
   	gem 'faker', '0.3.1'
   	gem 'guard'
-	gem 'pry'
-	gem 'pry-nav'
+	  gem 'pry'
+	  gem 'pry-nav'
+    gem 'rails-dev-boost', :git => 'git://github.com/thedarkone/rails-dev-boost.git', :require => 'rails_development_boost'
   	#gem 'libnotify'
+    gem 'guard-livereload'
 end
 
 
