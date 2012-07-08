@@ -49,3 +49,38 @@ Then /^I should see "(.*?)" in the category field of the form$/ do |category_nam
   values 		 =  category_field.value.split(",")
   (category_name.in? values ).should == true
 end
+
+
+# ---------------------------------------------------------------------------------------------
+# Scenario: Access categories with the number of entries wthin the sidebar 
+# ---------------------------------------------------------------------------------------------
+
+Given /^I have in the category "(.*?)" the following entries:$/ do |name, table|
+  entries_arr = table.raw
+  entries_arr.shift            # Remove table headers
+
+  category    = Factory.create(:category, name: name)
+
+  entries_arr.each do |entry_data| 
+    category.entries << Factory.create(:entry, title: entry_data[0], body: entry_data[1])
+  end
+  
+  (category.present?).should == true
+end
+
+When /^I go to the homepage$/ do
+  visit root_path
+end
+
+Then /^I should be see within the sidebar the "(.*?)" category$/ do |name|
+  page.should have_selector("ul.sidebar-submenu a", content: name)
+end
+
+Then /^I should see (\d+) as the number of entries for "(.*?)" category$/ do |entry_count, name|
+  category_tag = nil
+  within(:xpath, "//ul[@class='sidebar-submenu']/li[@title='#{name}']") do
+    category_tag = page.find("a")  
+  end
+  
+  category_tag.should have_selector(".count", text: entry_count)
+end

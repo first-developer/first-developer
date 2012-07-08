@@ -1,34 +1,21 @@
+<% all_categories ||= Category.all %>
+
 <span href="" class="hide-sidebar opened"></span>
 <aside id="sidebar">
 	<ul class="sidebar-menu">
 		<li class="">
-			<a href="#">PROGRAMMING</a>
-			<ul class="sidebar-submenu">
-					<li><a class=""><span class="count">15</span>jQuery</a></li>
-					<li><a class=""><span class="count">12</span>Javascript</a></li>
-					<li><a class=""><span class="count">50</span>Unix/linux</a></li>
-					<li><a class=""><span class="count">33</span>HTML5/CSS3</a></li>
-					<li><a class=""><span class="count">11</span>JAVA / J2EE</a></li>
-				</ul>
-		</li>
-		<li class="">
-			<a href="#">WEB DEVELOPMENT</i></a>
-			<ul class="sidebar-submenu">
-					<li><a class=""><span class="count">15</span>jQuery</a></li>
-					<li><a class=""><span class="count">12</span>Javascript</a></li>
-					<li><a class=""><span class="count">50</span>Unix/linux</a></li>
-					<li><a class=""><span class="count">33</span>HTML5/CSS3</a></li>
-					<li><a class=""><span class="count">11</span>JAVA / J2EE</a></li>
-			</ul>
-		</li>
-		<li>
 			<a href="#">BLOG</a>
 			<ul class="sidebar-submenu">
-					<li><a class=""><span class="count">15</span>jQuery</a></li>
-					<li><a class=""><span class="count">12</span>Javascript</a></li>
-					<li><a class=""><span class="count">50</span>Unix/linux</a></li>
-					<li><a class=""><span class="count">33</span>HTML5/CSS3</a></li>
-					<li><a class=""><span class="count">11</span>JAVA / J2EE</a></li>
+				<% unless all_categories.blank? %>
+				<% all_categories.each do |category| %>
+				<li title="<%= category.name %>">
+					<a class="">
+						<span class="count"><%= category.entries.size %></span>
+						<%= category.name %>
+					</a>
+				</li>
+				<% end %>
+				<% end %>
 			</ul>
 		</li>
 	</ul>

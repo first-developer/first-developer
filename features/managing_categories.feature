@@ -26,13 +26,13 @@ Scenario: See preload categories when editing an entry
 	Then  I should be in the edit page of this article
 	And   I should see "Rails" in the category field of the form
 
-
+@wip
 Scenario: Access categories with the number of entries wthin the sidebar 
 	Given I have in the category "Testing" the following entries:
 			|title                           |body |
 	        |Using Capybara with Cucumber    |some text about the winner |
 	        |Combine Rspec and Test-unit     |some text about the winner |
 	        |Sellenium VS capybara selectors |some text about the winner |
-	When  I go to the homepage
+	And   I am on the homepage
 	Then  I should be see within the sidebar the "Testing" category
-	And   I should see 3 as the number of entries for this category
+	And   I should see 3 as the number of entries for "Testing" category
