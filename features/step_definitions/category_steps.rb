@@ -84,3 +84,18 @@ Then /^I should see (\d+) as the number of entries for "(.*?)" category$/ do |en
   
   category_tag.should have_selector(".count", text: entry_count)
 end
+
+
+
+# ---------------------------------------------------------------------------------------------
+# Scenario: Hiding categories that have no entry
+# ---------------------------------------------------------------------------------------------
+
+Given /^I have in the category "(.*?)"$/ do |name|
+  category    = Factory.create(:category, name: name)
+  category.present? .should == true
+end
+
+Then /^I should not see within the sidebar the "(.*?)" category$/ do |name|
+  ! step 'I should be see within the sidebar the "#{name}" category'
+end
