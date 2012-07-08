@@ -10,7 +10,7 @@
 	# --------------------------------
 	
 	# Sliding element to the left
-	$.fn.toggleSlideLeft = (duration = 1000) ->
+	$.fn.toggleSlideLeft = (duration = 1000, easing = 'easeInOutExpo') ->
 		sb = $(this)
 
 		sb.removeClass "sidebar-closed" 
@@ -19,15 +19,15 @@
 		dist = "-#{w}px"
 
 		if parseInt($(this).css('left')) >= 0
-			sb.animate { left: dist}, duration
+			sb.animate { left: dist}, duration, easing
 			$('.fd-ui-tools').css({left: '0px'})
 		else
-			sb.animate { left: '0px'}, duration
+			sb.animate { left: '0px'}, duration, easing
 			$('.fd-ui-tools').css({left: 'none'})
 		return
 
 	# Sliding element to the right
-	$.fn.toggleSlideRight = (duration = 1000) ->
+	$.fn.toggleSlideRight = (duration = 1000, easing = 'easeInOutExpo') ->
 		sb = $(this)
 
 		sb.removeClass "sidebar-closed" 
@@ -35,10 +35,10 @@
 		w = sb.width() 	# get width
 		dist = "-#{w}px"
 
-		if parseInt($(this).css("right")) >= -1
-			sb.animate { right: dist}, duration
-		else
-			sb.animate { right: '-1px'}, duration
+		if parseInt($(this).css("right")) >= -1  	# Closed
+			sb.animate { right: dist}, duration, easing
+		else										# opened	
+			sb.animate { right: '-1px'}, duration, easing
 		return
 
 	# Toggling the slide effet on an element
