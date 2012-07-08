@@ -8,12 +8,14 @@
 			<ul class="sidebar-submenu">
 				<% unless all_categories.blank? %>
 				<% all_categories.each do |category| %>
+				<%  unless (count = category.entries.size).zero? %>
 				<li title="<%= category.name %>">
 					<a class="">
-						<span class="count"><%= category.entries.size %></span>
+						<span class="count"><%= count %></span>
 						<%= category.name %>
 					</a>
 				</li>
+				<% end %>
 				<% end %>
 				<% end %>
 			</ul>

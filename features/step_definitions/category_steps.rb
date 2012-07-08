@@ -81,8 +81,7 @@ Then /^I should see (\d+) as the number of entries for "(.*?)" category$/ do |en
   within(:xpath, "//ul[@class='sidebar-submenu']/li[@title='#{name}']") do
     category_tag = page.find("a")  
   end
-  
-  category_tag.should have_selector(".count", text: entry_count)
+  category_tag.has_selector?("span", content: entry_count)
 end
 
 
@@ -97,5 +96,5 @@ Given /^I have in the category "(.*?)"$/ do |name|
 end
 
 Then /^I should not see within the sidebar the "(.*?)" category$/ do |name|
-  ! step 'I should be see within the sidebar the "#{name}" category'
+  page.has_no_selector?("ul.sidebar-submenu li", content: name)
 end
