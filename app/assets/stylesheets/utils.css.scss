@@ -74,15 +74,15 @@
 }
 
 .fd-ui-icons {
-	background:transparent $fd-ui-bg-sprite no-repeat !important;
+	
 	display:block;
 	@extend .icon-size;
 	&.fd-ui-btn {
 		cursor:pointer;
 		border-left: 1px solid #EBEBEB;
-    box-shadow: -1px 0 0 0 #FFFFFF;
-    margin: 0 5px;
-    padding: 0 0 0 10px;
+    	box-shadow: -1px 0 0 0 #FFFFFF;
+    	margin: 0 5px;
+    	padding: 0 0 0 10px;
 	}
 	&.icon-size {
 		width:24px;
@@ -96,10 +96,11 @@
     }
 	}
 	&.icon-clip {
-		background-position: -5px -723px !important ;//-86px -173px !important;
+
+		background:transparent $fd-ui-bg-sprite no-repeat -5px -723px ;//-86px -173px !important;
 	    @extend .icon-size;
 	    &:hover {
-	    	background-position: -5px -749px !important;
+	    	//background-position: -5px -749px !important;
 	    }
 	    &.on {
 	    	background-position: -5px -749px !important;

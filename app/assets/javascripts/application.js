@@ -12,6 +12,7 @@
 //= require bootstrap-button
 //= require select2
 //= require jquery.autoGrow
+//= require jquery.backgroundPos
 //= require_tree .
 
 

@@ -1,3 +1,5 @@
+<% available ||= false %>
+
 <div>
 	<% with_actions_btns ||= false %>
 	
@@ -10,11 +12,12 @@
 			<span class="fd-ui-avt small default" style="background-image:url(<%= asset_path("ui/fd-ui-ux-sprite.png"); %>)"></span>
 
 			<!-- Like buttons -->
+			<% if available %>
 			<div class="fd-ui-like-btns">
 				<span class="fd-ui-like-btn up">+8</span>
 				<span class="fd-ui-like-btn down">-12</span>
 			</div>
-
+			<% end %>
 
 			<div id="" class="fd-ui-actions btns">
 				<i class="fd-ui-icons icon-clip fd-ui-btn"></i>

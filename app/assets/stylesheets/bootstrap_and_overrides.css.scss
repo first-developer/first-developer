@@ -144,7 +144,12 @@ a,a:hover { text-decoration: none;cursor:pointer;}
 		.caret{
 			margin-top: 14px;
 		}
+		
 	}
+}
+
+.navbar .nav li.dropdown.open > .dropdown-toggle, .navbar .nav li.dropdown.active > .dropdown-toggle, .navbar .nav li.dropdown.open.active > .dropdown-toggle {
+  background-color: black;
 }
 
 .navbar .divider-vertical {
