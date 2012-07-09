@@ -34,29 +34,17 @@
 		ct = $this.closest(".fd-ui-tl-item").find ".fd-ui-tl-item-ct"
 		ct.toggle "blind", {easing: "easeOutExpo"}, 800
 		$this.toggleClass "on"
-		isClipped = not isClipped
 
 	# 3. Animation the background image when mouse is hover the clip button
 	$(".icon-clip").mouseover () ->
 		$this = $(this)
-		if isClipped 
-			# expand
-			$this.stop().animate({backgroundPosition: "-5px -723px"}, "fast")
-			isClipped = false
-		else
-			# clip
+		if not $this.hasClass("on")
 			$this.stop().animate({backgroundPosition: "-5px -749px"}, "fast")
-			isClipped = true
+	
 	$(".icon-clip").mouseout () ->
 		$this = $(this)
-		if isClipped 
-			# expand
+		if not $this.hasClass("on")
 			$this.stop().animate({backgroundPosition: "-5px -723px"}, "fast")
-			isClipped = false
-		else
-			# clip
-			$this.stop().animate({backgroundPosition: "-5px -749px"}, "fast")
-			isClipped = true
 
 
 	# --------------------------------
