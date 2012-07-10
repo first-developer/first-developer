@@ -900,7 +900,6 @@
                         }
 
                     	> p,h3,h4, blockquote {
-
                     		text-align:justify;
                     	}
                     	> p {
@@ -939,27 +938,32 @@
                         blockquote {
                         	@extend .cite;
                         }
+
                         h3 {
                             //border-bottom: 2px solid #EEEEEE;
                             color: $fd-ui-ly-col-red; //$fd-ui-ft-col-blk2;
                             font-size: 1.3em;
                             font-weight: normal;
                             margin: 15px 0 0;
-                            
+                            border-left: 4px solid $fd-ui-ly-col-red;
+                            padding-left: 10px;
+
                             &:after {
                                 content: "→";
                                 padding-left: 10px;
                             }
 
                             &.no-st {
-                                margin-bottom: 10px;
+                                margin-bottom: 20px;
                             }
                         }
                         h4 {
                         	color: $fd-ui-ft-col-blk3;
                         	font-size: $baseFontSize;
                         	font-weight: normal;
-                            margin-bottom: 10px;
+                            margin-bottom: 20px;
+                            border-left: 4px solid $fd-ui-ft-col-blk4;
+                            padding-left: 10px;
                         }
                     }
                     &.full-bg {
