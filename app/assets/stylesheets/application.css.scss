@@ -876,11 +876,27 @@
 
                         .fd-entry-shot {
                             background: $fd-ui-ft-col-blk6;
+                            position:   relative;
                             border:     1px solid $fd-ui-ft-col-blk4;
                             @include box-shadow(0 0 0 4px $white inset);
                             text-align: center;
                             padding:    5px;
-                            @include rotate(3deg);
+                            @include rotate(1deg);
+                            margin:     10px 0 20px;   
+
+                            .paperclip {
+                                background: $fd-ui-bg-sprite no-repeat top right transparent;
+                                position:   absolute;
+                                height:     105px;
+                                width:      105px;
+                                display:    block;
+                                right:      -60px;
+                                top:        -10px;
+                            }
+
+                            img {
+                                height: 345px;
+                            }
                         }
 
                     	> p,h3,h4, blockquote {
