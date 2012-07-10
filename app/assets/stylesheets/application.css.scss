@@ -872,7 +872,17 @@
                         }
                     }
                     .fd-ui-item-ct-text {
-                    	margin: 0px 20px;;
+                    	margin: 0px 20px;
+
+                        .fd-entry-shot {
+                            background: $fd-ui-ft-col-blk6;
+                            border:     1px solid $fd-ui-ft-col-blk4;
+                            @include box-shadow(0 0 0 4px $white inset);
+                            text-align: center;
+                            padding:    5px;
+                            @include rotate(3deg);
+                        }
+
                     	> p,h3,h4, blockquote {
 
                     		text-align:justify;

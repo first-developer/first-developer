@@ -14,7 +14,7 @@ module ApplicationHelper
 
 	# Format body text using Markdown
 	def markdown(text) 
-		options 	= [filter_html: true, no_intra_emphasis: true]
+		options 	= [filter_html: false, no_intra_emphasis: true]
 		renderer 	= Redcarpet::Render::HTML.new(*options)
 	    extensions 	= {fenced_code: true, autolink: true}
 	    markdown 	= Redcarpet::Markdown.new(renderer, extensions)
