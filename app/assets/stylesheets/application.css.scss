@@ -877,8 +877,8 @@
                         .fd-entry-shot {
                             background: $fd-ui-ft-col-blk6;
                             position:   relative;
-                            border:     1px solid $fd-ui-ft-col-blk4;
-                            @include box-shadow(0 0 0 4px $white inset);
+                            border:     1px solid $fd-ui-ft-col-blk41;
+                            @include box-shadow(0 0 0 4px white inset, -7px 8px 0px -3px #EEEEEE); // #F5F5F5
                             text-align: center;
                             padding:    5px;
                             @include rotate(1deg);
