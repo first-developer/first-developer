@@ -1,0 +1,13 @@
+<div id=""  class="fd-ui-tl-item-ct-el full-bg">
+  <div class="entry-type-choice-slot">
+  	<ul>
+  		<% Type::TYPES.each do |type| %>
+  		<li>
+  			<i class="choice-label <%= type %> "></i>
+  			<input type="radio" name="entry_type" value="<%= type %>" class="type-input-choice">
+  		</li>
+  		<% end %>
+  	</ul>
+  	<span class="clear"></span>
+  </div>
+</div> 
