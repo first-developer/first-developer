@@ -1,10 +1,10 @@
 <div id=""  class="fd-ui-tl-item-ct-el full-bg">
   <div class="entry-type-choice-slot">
   	<ul>
-  		<% Type::TYPES.each do |type| %>
+  		<% Type::TYPES.each_with_index do |type, i| %>
   		<li>
   			<i class="choice-label <%= type %> "></i>
-  			<input type="radio" name="entry_type" value="<%= type %>" class="type-input-choice">
+  			<input type="radio" name="entry_type" value="<%= i %>" class="type-input-choice">
   		</li>
   		<% end %>
   	</ul>
