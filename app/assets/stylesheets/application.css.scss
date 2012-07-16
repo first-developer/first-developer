@@ -121,7 +121,7 @@
 
 .navbar {
 	.navbar-inner {
-		@include box-shadow(0 5px 0 $fd-ui-ly-col-red);
+		@include box-shadow(0 5px 0 #903230);
 		#logo {
 			background: image-url("ui/fd-ui-ux-sprite.png") left -10px no-repeat transparent;
 			float: left;
@@ -148,6 +148,14 @@
 				padding: 0 10px 0;
 			}
 		}
+
+		#hire-me {
+		background: #903230;
+		color: $fd-ui-ft-col-blk5;
+		&:hover {
+			color: $white;
+		}
+	}
 	}
 
 }
@@ -183,7 +191,7 @@
 			width: 500px;
 		}
 	}
-	#hire-me {
+	#hire-me-band {
 		background: image-url("ui/fd-ui-ux-sprite.png") right -124px no-repeat transparent;
 		overflow: hidden;
 		width: 370px;
@@ -194,7 +202,6 @@
 			background: image-url("ui/fd-ui-ux-sprite.png") right -262px no-repeat transparent;
 		}
 	}
-
 }
 
 
@@ -261,6 +268,9 @@
                     	span.count {
                     		background-color:$white;
                     		color: $fd-ui-ft-col-blk2;
+                    	}
+                    	a{
+                    		color: $white;
                     	}
                     }
                 }
