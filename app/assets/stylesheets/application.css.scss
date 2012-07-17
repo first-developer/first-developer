@@ -140,12 +140,16 @@
 				margin:0;
 			}
 			input[type=search] {
-				background: url("/assets/ui/search-ico.png") no-repeat scroll 392px 2px white;
+				background: url("/assets/ui/search-ico.png") no-repeat scroll 392px 2px $white !important;
 				height: 30px;
 				width: 400px;
 				border: 2px solid $fd-ui-ft-col-blk1;
+				@include box-shadow(none);
 				@include border-radius(2px);
 				padding: 0 10px 0;
+				&:focus {
+					background: url("/assets/ui/search-ico.png") no-repeat scroll 392px 2px #FFEAEA !important;
+				}
 			}
 		}
 
@@ -944,13 +948,20 @@
                             margin:     10px 0 20px;   
 
                             .paperclip {
-                            	background: $fd-ui-bg-sprite no-repeat top right transparent;
+                            	background: $fd-ui-bg-sprite no-repeat  -1027px -9px transparent;
                             	position:   absolute;
-                            	height:     105px;
+                            	height:     85px;
                             	width:      105px;
                             	display:    block;
                             	right:      -60px;
                             	top:        -10px;
+                            	&.expand {
+                            		background: $fd-ui-bg-sprite no-repeat  -1027px -106px transparent;
+                            	}
+                            	&:hover {
+                            		background: $fd-ui-bg-sprite no-repeat  -1027px -106px transparent;
+                            	}
+
                             }
 
                             img {
