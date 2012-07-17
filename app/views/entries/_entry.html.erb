@@ -42,6 +42,7 @@
 			</hgroup>
 			<div class="fd-ui-item-ct-text">
 				<%= markdown(entry.body) unless entry.body.nil? %>
+				<%= render("shared/audio_player") %>
 			</div>
 		</div>
 

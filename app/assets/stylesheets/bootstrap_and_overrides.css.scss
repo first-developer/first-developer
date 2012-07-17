@@ -128,7 +128,7 @@ a,a:hover { text-decoration: none;cursor:pointer;}
 	.navbar-inner {
 		@include border-radius(0px);
 
-
+		background-image: none;
 		.nav.pull-right {
 			.dropdown-menu:after {
 				right:7px;
@@ -150,7 +150,11 @@ a,a:hover { text-decoration: none;cursor:pointer;}
 	}
 	.dropdown {
 		.caret{
-			margin-top: 14px;
+			margin-top: 4px;
+			width: 14px;
+			height: 25px;
+			background: url(ui/caret.png) -5px -8px no-repeat;
+			border:none;
 		}
 		
 	}
@@ -158,6 +162,8 @@ a,a:hover { text-decoration: none;cursor:pointer;}
 }
 
 .dropdown-menu {
+	@include box-shadow(6px 7px -2px rgba(0, 0, 0, 0.2));
+	@include border-radius(0px);
 	a {
 		padding: 5px 15px;
 	}

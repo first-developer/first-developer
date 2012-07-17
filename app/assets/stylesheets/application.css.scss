@@ -335,7 +335,7 @@
 					background-position: center center;
 					&.default {
 						background-position: -339px -3019px;
-						background-image: url("/assets/ui/fd-ui-ux-sprite.png");
+						background-image: $fd-ui-bg-sprite;
 					}
 					&.big {
 						height:75px;
