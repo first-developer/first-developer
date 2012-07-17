@@ -955,7 +955,8 @@
                             	display:    block;
                             	right:      -60px;
                             	top:        -10px;
-                            	&.expand {
+                            	cursor: 	pointer;
+                            	&.expandable {
                             		background: $fd-ui-bg-sprite no-repeat  -1027px -106px transparent;
                             	}
                             	&:hover {
