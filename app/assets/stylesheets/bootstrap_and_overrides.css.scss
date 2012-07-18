@@ -202,8 +202,9 @@ input, textarea, select {
 
 input:focus, textarea:focus {
 	border-color: rgba(198, 75, 75, 0.8);
-	box-shadow: 0 1px 1px rgba(0, 0, 0, 0.075) inset, 0 0 8px rgba(248, 202, 202, 0.6) inset !important;
+	@include box-shadow(0 0 8px rgba(248, 202, 202, 0.6) inset !important);
 	outline: 0 none;
+	background-color: #FDF8F8 !important;
 }
 
 input[type=submit]:focus {
@@ -247,7 +248,16 @@ input[type=submit]:focus {
 
 .modal {
 	@include border-radius(3px);
-	@include box-shadow(0 6px 18px 4px rgba(0, 0, 0, 0.3));
+	@include box-shadow(14px 14px 0px -4px rgba(0, 0, 0, 0.3)); //0 6px 18px 4px rgba(0, 0, 0, 0.3));
+	input, textarea, select {
+		border: 1px solid #CCCCCC !important;
+		border-radius: 0 0 0 0;
+		height: 29px;
+		margin: 0;
+		padding: 4px 10px 3px;
+		overflow: hidden;
+		width: 96%;
+	}
 	.modal-header {
 		background-color: $fd-ui-ft-col-blk6;
 		.icon {

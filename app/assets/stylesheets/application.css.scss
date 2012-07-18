@@ -140,16 +140,16 @@
 				margin:0;
 			}
 			input[type=search] {
-				background: url("/assets/ui/search-ico.png") no-repeat scroll 392px 2px $white !important;
+				background: url("/assets/ui/search-ico.png") no-repeat scroll 392px 2px $white;
 				height: 30px;
 				width: 400px;
 				border: 2px solid $fd-ui-ft-col-blk1;
 				@include box-shadow(none);
-				@include border-radius(2px);
+				//@include border-radius(2px);
 				padding: 0 10px 0;
-				&:focus {
-					background: url("/assets/ui/search-ico.png") no-repeat scroll 392px 2px #FFEAEA !important;
-				}
+				// &:focus {
+				// 	background: url("/assets/ui/search-ico.png") no-repeat scroll 392px 2px #FFEAEA !important;
+				// }
 			}
 		}
 
@@ -1015,9 +1015,10 @@
                             color: $fd-ui-ly-col-red; //$fd-ui-ft-col-blk2;
                             font-size: 1.3em;
                             font-weight: normal;
-                            margin: 15px 0 0;
+                            margin: 15px 0;
                             border-left: 4px solid $fd-ui-ly-col-red;
                             padding-left: 10px;
+                            background-color: $fd-ui-al-col-lred;
 
                             &:after {
                             	content: "→";

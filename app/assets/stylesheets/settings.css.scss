@@ -27,7 +27,7 @@ $fd-ui-ft-col-blk5: #F8F8F8;
 $fd-ui-ft-col-blk6: #F9F9F9;
 
 // alert messages color
-$fd-ui-al-col-lred: #FFD0D0;
+$fd-ui-al-col-lred: #FFEEEE;//#FFD0D0
 $fd-ui-al-col-bgrn: #4F8E50;
 $fd-ui-al-col-lgrn: #CBEEB8;
 $fd-ui-al-col-btwt: #45B0E3;
@@ -112,8 +112,8 @@ $iconWhiteSpritePath	: asset-url('glyphicons-halflings-white.png', image);
 //$fluidGridGutterWidth :;
 
 // Typography
-$baseFontSize 				  : 12.5px; //12px;
-$PostTitleFontSize 			: 1.5em; 
+$baseFontSize 			 	: 12.5px; //12px;
+$PostTitleFontSize 			: 1.8em; 
 $PostSectionFontSize 		: 1.3em; 
 $mediumFontSize					: 16px;
 $baseFontFamily				  : Arial, sans-serif;//'droid sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;

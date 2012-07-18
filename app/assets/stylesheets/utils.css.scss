@@ -244,6 +244,7 @@
 	display:block;
 	line-height: 23px;
 	border: 1px solid #ccc;
+	text-shadow:0 1px 0 $white;
 	margin: 0 5px 0 0;
 	&.common-style {
 		color: $fd-ui-ft-col-blk2;
