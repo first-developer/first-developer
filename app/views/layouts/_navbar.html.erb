@@ -1,3 +1,5 @@
+<% available ||= false %>
+
 <div class="navbar navbar-fixed-top">
 
 	<!--	NOTIFICATION AREA   -->
@@ -23,11 +25,13 @@
 			<div id="logo" class="logo"></div>
 
 			<!--    SEARCH BAR    -->
+			<% if available %>
 			<div class="fd-hd-search-form">
 				<form action="_ct-header_submit" method="get" accept-charset="utf-8">
 					<input type="search" name="" value="" placeholder="What are you looking for?">		
 				</form>
 			</div>
+			<% end %>
 
 			<!--     NAVIGATION BAR COLLAPSE    -->
 			<a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">

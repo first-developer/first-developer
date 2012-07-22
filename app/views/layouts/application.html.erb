@@ -1,8 +1,7 @@
 <!-- HEADER -->
 <%= render "layouts/header" %>
-
+  
 <%#= render "shared/modal" %>
-
 
 <!-- ==========  MAIN CONTAINER  ========== -->
 
@@ -12,22 +11,15 @@
 	<div id="fd-ui-sidebar-left">
 		<%= render "layouts/sidebar" %>
 	</div>
-
-
 	<div id="fd-ui-center" >
 		<!-- Toolbar -->
 		<%= render "layouts/toolbar" %>
 
 		<!-- Timeline -->
 		<div class="timeline">
-
 			<%= yield %>
-			
 		</div>
 	</div>
-	
-
-	
 	<!-- Sidebar my profile -->
 	<div id="fd-ui-sidebar-right2" class="sidebar-closed">
 		<%= render "layouts/sidebar_infos" %>

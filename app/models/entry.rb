@@ -1,7 +1,7 @@
 class Entry < ActiveRecord::Base
 
 	# CONSTANTS
-
+  
 
 	# ATTRIBUTES
 	attr_accessible  :title, :body, :category_tokens, :category_ids
