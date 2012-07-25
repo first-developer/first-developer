@@ -327,19 +327,19 @@
 
 // SIRI
 .siri {
-  border: transparent;
-  background: transparent;
-  color: transparent;
-  height: 20px;
-  width: 20px;
-  border-radius: 20px;
-  text-align: center;
-  padding: 7px 7px 6px 5px;
-  position: absolute;
-  left: 43%;
-  top: 9px;
-  -webkit-transform: scale(2, 2.0);
-  box-shadow: none;
-  cursor: pointer;
+  border: transparent !important;
+  background: transparent !important;
+  color: transparent !important;
+  height: 20px !important;
+  width: 20px !important;
+  border-radius: 20px !important;
+  text-align: center !important;
+  padding: 7px 7px 6px 5px !important;
+  position: absolute !important;
+  left: 43% !important;
+  top: 9px !important;
+  -webkit-transform: scale(2, 2.0) !important;
+  box-shadow: none !important;
+  cursor: pointer !important;
 }
 
