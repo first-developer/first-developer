@@ -1,3 +1,22 @@
+
+class Type < ActiveRecord::Base
+
+	# CONSTANTS
+	TYPES = %w( post music flash video snippet update )
+
+	# VALIDATIONS
+	validates :name, :inclusion => {:in => TYPES}
+
+  # ASSOCIATIONS
+  has_many  :entries
+
+  # METHODS
+  def get_index_by_name name
+    TYPES.index name
+  end
+end
+
+
 <% ["post", "video","music", "edit", "update"].each do |type|%>
 			<article id="" class="fd-ui-tl-item">
 				<span class="fd-ui-icon <%= type %>"></span>

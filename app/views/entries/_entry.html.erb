@@ -4,9 +4,9 @@
 	<% with_actions_btns ||= false %>
 	
 	<% unless entry.blank? %>
-	
+  <% entry_type = entry.type.blank? ? "" : entry.type.name %> 	
 	<article id="" class="fd-ui-tl-item">
-		<span class="fd-ui-icon post"></span>
+		<span class="fd-ui-icon <%= entry_type %>"></span>
 		<span class="fd-ui-tl-item-indic"></span>
 		<header class="fd-ui-tl-item-hd">
 			<span class="fd-ui-avt small default" style="background-image:url(<%= asset_path("ui/fd-ui-ux-sprite.png"); %>)"></span>

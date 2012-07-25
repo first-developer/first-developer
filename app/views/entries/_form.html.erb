@@ -34,7 +34,7 @@
 			<%= f.text_field :category_tokens, class: "entry-category-slot", value: "#{tokens}" %>
 		</div>	
 
-		<%= render "shared/type_choice_slot" %> 
+		<%= render "shared/type_choice_slot", f: f %> 
 
 		<div id=""  class="fd-ui-tl-item-ct-el full-bg">
 			<p class="fd-ui-checkbox"><input type="checkbox" class="checkbox-slot" />Publish this post.</p>

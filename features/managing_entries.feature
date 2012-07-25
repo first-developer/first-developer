@@ -1,5 +1,5 @@
 
-Feature: Managing entries
+Feature: Manage entries
  
 As an user
 I want to create some easily
@@ -48,3 +48,16 @@ Scenario: Editing an existing entry from the homepage
 	And   also see the message "Entry was nicely updated." 
 	And   I should be on the entry page titled "iOS 6 the new Apple OS"
 
+Scenario: Assigning a type to a specfic entry 
+  Given I have the following entry:
+    |title                        |body |
+    |The winner of the Eurovision |Loreen from Sweeden won the eurovision with|
+  And   I have the following entry types:
+    |id  |name         | 
+    |1   |post         | 
+    |2   |music        | 
+    |3   |video        | 
+  When  I follow "The winner of the Eurovision"'s edit page
+  And   I choose the "music" type for the entry 
+  And   I press "Save"
+  Then  I should see the "music" icon as this entry type indicator 

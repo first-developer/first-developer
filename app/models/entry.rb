@@ -4,12 +4,12 @@ class Entry < ActiveRecord::Base
   
 
 	# ATTRIBUTES
-	attr_accessible  :title, :body, :category_tokens, :category_ids
+	attr_accessible  :title, :body, :category_tokens, :category_ids, :type_id
 	attr_reader :category_tokens
 
 	# ASSOCIATIONS
 	has_and_belongs_to_many 	:categories
-	# has_one 					:type
+  belongs_to 					      :type
 
 	# VALIDATIONS
 	validates :title, :body, :presence => true

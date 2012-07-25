@@ -1,10 +1,13 @@
 class Type < ActiveRecord::Base
 
-	# CONSTANTS
-	TYPES = %w( post music flash video snippet update )
+  # ATTRIBUTES
+  attr_accessible :name
+  # ASSOCIATIONS
+  has_many  :entries
 
-	# VALIDATIONS
-	validates :name, :inclusion => {:in => TYPES}
+  # VALIDATIONS
 
+  # METHODS
+  
 
 end

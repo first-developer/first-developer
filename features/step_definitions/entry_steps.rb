@@ -74,3 +74,36 @@ end
 Then /^I should be on the entry page titled "([^\"]*)"$/ do |title|
   page.should have_content(title)
 end
+
+
+Given /^I have the following entry:$/ do |table|
+  data 	= table.hashes[0]
+  title = data["title"]
+  body	= data["body"]
+  @entry 	= Factory.create :entry, title: title
+  @entry.nil?.should == false
+end
+
+When /^I follow "(.*?)"'s edit page$/ do |link_title|
+  visit edit_entry_path(@entry)
+end
+
+Given /^I have the following entry types:$/ do |table|
+  @types  = []
+  table.hashes.each do |item|
+    @types << Factory.create(:type, id: item["id"], name: item["name"])  
+  end
+  @types.count.should == table.hashes.size
+end
+
+
+When /^I choose the "(.*?)" type for the entry$/ do |typeName|
+  type_id  = @types.select { |type| type.name == typeName }
+  type_id  = type_id.first.id
+  radio_id = ["entry", "type_id", type_id].join("_") 
+  choose(radio_id)
+end
+
+Then /^I should see the "(.*?)" icon as this entry type indicator$/ do |typeName|
+  page.has_selector?("span.#{typeName}").should be_true
+end
