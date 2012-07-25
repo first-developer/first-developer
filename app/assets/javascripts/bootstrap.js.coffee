@@ -99,24 +99,40 @@
 	# --------------------------------
 	# 1. Handle closing of the notification area
 	$("div.#notification_area").find("i.flash-close").live "click", () ->
-			parent = $(this).closest("div#notification_area") 
-			parent.slideUp 400, () -> 
-				parent.remove()	
+    parent = $(this).closest("div#notification_area") 
+		  parent.slideUp 400, () -> 
+		    parent.remove()	
 
 
 
-	$(".type-input-choice").each () ->
-		$this = $(this)
-		$this.bind "click", () ->
-			label = $(this).prev	"label.choice-label"
-			if $this.is ":checked" 
-				label .addClass	   "on"	
-				$(".type-input-choice").not(":checked").prev().removeClass "on"	
+  $(".type-input-choice").each =>
+    $this = $(this)
+    $this.bind "click", ->
+      label = $(this).prev	"label.choice-label"
+      if $this.is ":checked" 
+        label .addClass	   "on"	
+        $(".type-input-choice").not(":checked").prev().removeClass "on"	
+	
 
+	# --------------------------------
+	# SIRI & SPEECH FEATURE
+	# --------------------------------
 
+	# Siri feature 
+  $("#fd-siri").bind "click", ->
+    $("#jpId").remove()
+    $("<div id=\"jpId\"></div>").appendTo("body").jPlayer
+      ready: ->
+    	  $(this).jPlayer "setMedia",
+    		  mp3: "assets/siri_sound.mp3"
 
+      swfPath: "assets/Jplayer.swf"
 
-
-	return
+    $("#jpId").bind $.jPlayer.event.ready, ->
+      $(this).jPlayer "play"    
+    
+  
+	
+  return  
 
 )(jQuery)

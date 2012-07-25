@@ -13,7 +13,9 @@
 //= require select2
 //= require jquery.autoGrow
 //= require jquery.backgroundPos
+//= require jquery.jplayer.min
 //= require_tree .
+
 
 
 
