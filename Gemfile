@@ -3,7 +3,7 @@ source 'http://rubygems.org'
 
 # CORE GEMS
 # ==============================================
-gem 'rails', '3.1.6'
+gem 'rails', '3.1.7'
 gem 'jquery-rails'
 
 # Bundle edge Rails instead:
@@ -77,7 +77,8 @@ end
 # EXTRAS / UTILS
 # ==============================================
 
-
+gem 'awesome_nested_set'
+gem 'acts_as_commentable_with_threading'  # For comments
 gem 'slim-rails'		# New template engine
 gem "stringex"			# Some [hopefully] useful extensions to Ruby’s String class. 
 				# It is made up of three libraries: ActsAsUrl, Unidecoder, and StringExtensions.
