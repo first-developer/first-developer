@@ -5,7 +5,7 @@
 	
 	<% unless entry.blank? %>
   <% entry_type = entry.type.blank? ? "" : entry.type.name %> 	
-	<article id="" class="fd-ui-tl-item">
+	<article id="<%= attr_id_for(entry) %>" class="fd-ui-tl-item">
 		<span class="fd-ui-icon <%= entry_type %>"></span>
 		<span class="fd-ui-tl-item-indic"></span>
 		<header class="fd-ui-tl-item-hd">
@@ -28,7 +28,13 @@
 		<div id=""  class="fd-ui-tl-item-ct-el full-size">
 			<hgroup class="fd-ui-tl-item-title">
 				<h4>By <span class="author">Nathan Pitman</span> | <%= time_info entry.created_at %></h4>
-				<h1><%= entry.title %></h1>
+				<h1>
+          <% if action_name == "edit" || action_name == "show" %>
+            <%= entry.title %>
+          <% else %>
+            <%= link_to entry.title, entry_path(entry) %>
+          <% end %>
+        </h1>
 				<p class="details">
 				
 				<% unless entry.categories.blank? %>
@@ -42,7 +48,10 @@
 			</hgroup>
 			<div class="fd-ui-item-ct-text">
 				<%= markdown(entry.body) unless entry.body.nil? %>
-				<%= render("shared/audio_player") %>
+        <strong style="font-size:30"><%= entry.body.size %> </strong>
+        <% if entry.has_excerpt? %>
+        <button class="btn continue-reading">Continue reading</button>
+        <% end %>
 			</div>
 		</div>
 

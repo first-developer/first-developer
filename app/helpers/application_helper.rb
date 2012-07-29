@@ -20,4 +20,10 @@ module ApplicationHelper
 	    markdown 	= Redcarpet::Markdown.new(renderer, extensions)
 		markdown.render(text).to_html.html_safe
 	end
+
+
+  # generate id attribute for record 
+  def attr_id_for record 
+    [record.class.name.downcase, record.id].to_s.parameterize
+  end
 end

@@ -1,7 +1,11 @@
 class Entry < ActiveRecord::Base
+  # HELPERS
+  extend FriendlyId
+  friendly_id :title, :use => :slugged
+
 
 	# CONSTANTS
-  
+  LIMIT_WORD_COUNT = 250
 
 	# ATTRIBUTES
 	attr_accessible  :title, :body, :category_tokens, :category_ids, :type_id
@@ -20,7 +24,6 @@ class Entry < ActiveRecord::Base
 		self.category_ids = Category.ids_from_tokens(tokens)
 	end
 
-
 	# Returns a string with elements separated by comma
 	def categories_stringlified
 		result = ""
@@ -34,8 +37,11 @@ class Entry < ActiveRecord::Base
 		return result
 	end 
 
-
-	# To check whether an entry has its type included in Type::TYPES
+  def has_excerpt?
+    self.body.size > LIMIT_WORD_COUNT
+  end
+	
+  # To check whether an entry has its type included in Type::TYPES
 	# Type::TYPES.each do |type| 
 	# 	define_method "#{type}?" do
 	# 		type.exists?(:name => role_type) 

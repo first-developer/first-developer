@@ -77,6 +77,7 @@ end
 # EXTRAS / UTILS
 # ==============================================
 
+gem "friendly_id", "~> 4.0.1"             # To have a pretty URL for records
 gem 'awesome_nested_set'
 gem 'acts_as_commentable_with_threading'  # For comments
 gem 'slim-rails'		# New template engine

@@ -96,7 +96,6 @@ Given /^I have the following entry types:$/ do |table|
   @types.count.should == table.hashes.size
 end
 
-
 When /^I choose the "(.*?)" type for the entry$/ do |typeName|
   type_id  = @types.select { |type| type.name == typeName }
   type_id  = type_id.first.id
@@ -107,3 +106,29 @@ end
 Then /^I should see the "(.*?)" icon as this entry type indicator$/ do |typeName|
   page.has_selector?("span.#{typeName}").should be_true
 end
+
+# ==================================================================
+
+Given /^I have an entry titled "(.*?)"$/ do |title|
+  @entry = Factory.create(:entry, title: title)
+  @entry.blank?.should_not be_true
+end
+
+Given /^the following entry body:$/ do |text|
+  @entry.body = text
+  @entry.save
+  @entry.body.blank?.should_not be_true
+end
+
+Then /^I should see the read more button for this entry$/ do 
+  within("#entry-#{@entry.id}") do 
+    page.has_selector?(".continue-reading").should be_true
+  end 
+end
+
+Then /^I should not see the read more button for this entry$/ do
+  within("#entry-#{@entry.id}") do 
+    page.has_selector?(".continue-reading").should be_false
+  end 
+end
+

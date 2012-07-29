@@ -1073,6 +1073,11 @@
               font-weight: normal;
               line-height: 36px;
               color: $fd-ui-ly-col-red;
+              a {
+                &:hover:after {
+                  content: " →"
+                }
+              }
             }
             h4 {
               color: #AAAAAA;

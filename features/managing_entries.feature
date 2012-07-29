@@ -61,3 +61,25 @@ Scenario: Assigning a type to a specfic entry
   And   I choose the "music" type for the entry 
   And   I press "Save"
   Then  I should see the "music" icon as this entry type indicator 
+
+@wip 
+Scenario: Hide the read more button for short entries
+  Given I have an entry titled "Nike short"
+  And   the following entry body:
+    """
+    Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Nullam quis risus eget urna mollis ornare vel eu leo. Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+    """
+  When  I go to the homepage
+  Then  I should not see the read more button for this entry
+
+
+Scenario: Show the read more button for full entries
+  Given I have an entry titled "Nike"
+  And   the following entry body:
+    """
+    Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum. Nullam quis risus eget urna mollis ornare vel eu leo. Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+    Cras mattis consectetur purus sit amet fermentum. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec sed odio dui. Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor. Donec sed odio dui. Donec sed odio dui. Maecenas sed diam eget risus varius blandit sit amet non magna.
+    """
+  When  I go to the homepage
+  Then  I should see the read more button for this entry
+
