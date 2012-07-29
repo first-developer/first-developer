@@ -91,6 +91,7 @@
 	# --------------------------------
 	# 1. body entry
 	$("textarea.body-for-content-slot").autogrow()
+	$("textarea.cmt-user-text").autogrow()
 	#$('textarea').autosize()
 
 

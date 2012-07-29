@@ -760,6 +760,53 @@
           @extend .fd-divider-top;
           padding: 5px;
           width: 98.6%;
+          i.fd-comment-icon {
+            height: 35px;
+            width: 35px;
+            background: $fd-ui-bg-sprite no-repeat  -140px -349px;
+            display: block;
+            margin: 0 auto;
+          }
+          &.fd-cmt-form {
+            background-color: $white !important;
+            .fd-cmt-form-field {
+              margin: 5px 0px;
+              width: 45%;
+              padding: 0px 10px;
+              height: 30px;
+              background-color: $white;
+              border-bottom:1px solid $fd-ui-ft-col-blk4 !important;
+              border-left:  1px solid $white !important;
+              border-right: 1px solid $white !important;
+              border-top:   1px solid $white !important;
+              @include border-radius(0 !important);
+              line-height: 30px;
+              height: 30px;
+              @include box-shadow(none);
+              &:focus {
+                background-color: $white !important;
+                @include box-shadow(none !important);
+                border-bottom:1px solid #EBBBBB !important;
+                border-left:  1px solid $white !important;
+                border-right: 1px solid $white !important;
+                border-top:   1px solid $white !important;
+              }
+              &.cmt-user-pseudo {
+                margin-bottom: 10px;
+              }
+              &.cmt-user-email {
+                margin-bottom: 10px;
+              }
+              &.cmt-user-text {
+                margin:5px 0px;
+                width: 97%;
+              }
+            }
+          }
+
+          &.cmt-area {
+            background-color: $cmt-area-bg-color !important;
+          }
           i.slot-label {
             margin: 0px 10px 0;
             position: relative;
@@ -855,6 +902,10 @@
             &.full {
               width: 626px;
             }
+            &.cmt-form {
+              margin:0;
+            }
+
           } 
           .btn {
             margin-right:3px;
