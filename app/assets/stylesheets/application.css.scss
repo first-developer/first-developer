@@ -941,17 +941,21 @@
             .fd-entry-shot {
               background: $fd-ui-ft-col-blk6;
               position:   relative;
-              border:     1px solid $fd-ui-ft-col-blk41;
-              @include box-shadow(0 0 0 4px white inset, -7px 8px 0px -3px #EEEEEE); // #F5F5F5
+              //@include box-shadow(0 0 0 4px white inset, -7px 8px 0px -3px #EEEEEE); // #F5F5F5
               text-align: center;
-              padding:    5px;
-              @include rotate(1deg);
-              margin:     10px 0 20px;   
+              //@include rotate(1deg);
+              margin:     10px 0 70px;   
               figcaption {
                 position: relative;
-                top: 40px;
+                top: 44px;
                 color: white;
                 text-shadow: 0 -2px 0 black;
+                height: 40px;
+                background: url(ui/shot-info.png) #333 no-repeat;
+                line-height: 40px;
+                width: 100%;
+                display: block;
+                position: relative;
               }
               .paperclip {
                 background: $fd-ui-bg-sprite no-repeat  -1027px -9px transparent;
