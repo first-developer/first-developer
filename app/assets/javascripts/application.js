@@ -14,6 +14,14 @@
 //= require jquery.autoGrow
 //= require jquery.backgroundPos
 //= require jquery.jplayer.min
+//= require ../../../vendor/assets/javascripts/rainbow/rainbow.min
+//= require ../../../vendor/assets/javascripts/rainbow/language/java
+//= require ../../../vendor/assets/javascripts/rainbow/language/php
+//= require ../../../vendor/assets/javascripts/rainbow/language/ruby
+//= require ../../../vendor/assets/javascripts/rainbow/language/html
+//= require ../../../vendor/assets/javascripts/rainbow/language/css
+//= require ../../../vendor/assets/javascripts/rainbow/language/javascript
+//= require ../../../vendor/assets/javascripts/rainbow/language/coffeescript
 //= require_tree .
 
 
