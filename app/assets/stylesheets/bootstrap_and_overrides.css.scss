@@ -388,6 +388,7 @@ input[type=submit]:focus {
     display: block;
     width: 100%;
     color: white;
+    text-shadow: 0 -2px 0 #000000;
     text-align: center;
     line-height: 40px;
     background: url(ui/fc-code-icon.png) #333 no-repeat left top;

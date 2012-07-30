@@ -106,14 +106,15 @@
 
 
 
-  $(".type-input-choice").each =>
+  $(".type-input-choice").each ->
     $this = $(this)
     $this.bind "click", ->
       label = $(this).prev	"label.choice-label"
       if $this.is ":checked" 
         label .addClass	   "on"	
-        $(".type-input-choice").not(":checked").prev().removeClass "on"	
-	
+        $(".type-input-choice").not(":checked").prev().removeClass "on"
+        return
+      return	
 
 	# --------------------------------
 	# SIRI & SPEECH FEATURE
