@@ -380,7 +380,7 @@ input[type=submit]:focus {
 // =======================================
 .fd-code {
   border:none !important;
-  background-color: $fd-ui-ft-col-blk6;
+  background-color: $fd-ui-ft-col-blk5;
   clear: both;
   span.fd-code-title {
     height:40px;
@@ -395,6 +395,7 @@ input[type=submit]:focus {
   }
 pre {
   border: none;
+  background-color: $fd-ui-ft-col-blk5;
   height: auto;
   padding: 0 20px;
   font-family: Menlo, Consolas, 'Liberation Mono', Courier, monospace;
