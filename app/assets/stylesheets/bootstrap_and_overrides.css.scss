@@ -393,17 +393,20 @@ input[type=submit]:focus {
     line-height: 40px;
     background: url(ui/fc-code-icon.png) #333 no-repeat left top;
   }
-pre {
-  border: none;
-  background-color: $fd-ui-ft-col-blk5;
-  height: auto;
-  padding: 0 20px;
-  font-family: Menlo, Consolas, 'Liberation Mono', Courier, monospace;
-  position: relative;
-  clear: both;
-  border-color: $white !important;
-  @include border-radius(0 !important);
-  border:none !important;
-  font-size: $baseFontSize;
-}
+  pre {
+    border: none;
+    background-color: $fd-ui-ft-col-blk5;
+    height: auto;
+    padding: 0 20px;
+    font-family: Menlo, Consolas, 'Liberation Mono', Courier, monospace;
+    position: relative;
+    clear: both;
+    border-color: $white !important;
+    @include border-radius(0 !important);
+    border:none !important;
+    font-size: $baseFontSize !important;
+  }
+  pre, pre code{
+    font-size: $baseFontSize !important;
+  }
 }

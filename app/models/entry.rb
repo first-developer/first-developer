@@ -1,5 +1,6 @@
 class Entry < ActiveRecord::Base
   # HELPERS
+  acts_as_commentable
   extend FriendlyId
   friendly_id :title, :use => :slugged
 

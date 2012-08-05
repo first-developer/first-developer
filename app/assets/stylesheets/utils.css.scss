@@ -7,155 +7,155 @@
 //------------------
 
 .no {
-	&.m {
-		margin: 		0px !important;
-	}
-	&.ml {
-		margin-left: 	0px !important;
-	}
-	&.mr {
-		margin-right: 	0px !important;
-	}
-	&.md {
-		margin-down: 	0px !important;
-	}
-	&.mu {
-		margin-up: 		0px !important;
-	}
+  &.m {
+    margin: 		0px !important;
+  }
+  &.ml {
+    margin-left: 	0px !important;
+  }
+  &.mr {
+    margin-right: 	0px !important;
+  }
+  &.md {
+    margin-down: 	0px !important;
+  }
+  &.mu {
+    margin-up: 		0px !important;
+  }
 
-	&.p {
-		padding: 		0px !important;
-	}
-	&.pl {
-		padding-left: 	0px !important;
-	}
-	&.pr {
-		padding-right: 	0px !important;
-	}
-	&.pd {
-		padding-down: 	0px !important;
-	}
-	&.pt {
-		padding-top: 	0px !important;
-	}
+  &.p {
+    padding: 		0px !important;
+  }
+  &.pl {
+    padding-left: 	0px !important;
+  }
+  &.pr {
+    padding-right: 	0px !important;
+  }
+  &.pd {
+    padding-down: 	0px !important;
+  }
+  &.pt {
+    padding-top: 	0px !important;
+  }
 }
 
 .pd-20 {
-	padding: 20px !important;
+  padding: 20px !important;
 }
 .pd-10-20 {
-	padding: 10px 20px;
+  padding: 10px 20px;
 }
 .pd-10-20-b {
-	padding: 10px 20px !important;
+  padding: 10px 20px !important;
 }
 .pd-40 {
-	padding: 40px !important;
+  padding: 40px !important;
 }
 .pd-10 {
-	padding: 10px !important;
+  padding: 10px !important;
 }
 
 
 // divider
 .fd-divider-common {
-	clear:both;
-	display: block;	
+  clear:both;
+  display: block;	
 }
 .fd-divider-bottom {
-	border-bottom: 1px solid $fd-ui-ly-col-gry;
-	@include box-shadow(0 1px 0 0 $white);
-	@extend .fd-divider-common;
+  border-bottom: 1px solid $fd-ui-ly-col-gry;
+  @include box-shadow(0 1px 0 0 $white);
+  @extend .fd-divider-common;
 }
 .fd-divider-top {
-	border-top: 1px solid $fd-ui-ly-col-gry;
-	@include box-shadow(0 -1px 0 0 $white);
-	@extend .fd-divider-common;
+  border-top: 1px solid $fd-ui-ly-col-gry;
+  @include box-shadow(0 -1px 0 0 $white);
+  @extend .fd-divider-common;
 }
 
 .fd-ui-icons {
-	
-	display:block;
-	@extend .icon-size;
-	&.fd-ui-btn {
-		cursor:pointer;
-		border-left: 1px solid #EBEBEB;
-    	box-shadow: -1px 0 0 0 #FFFFFF;
-    	margin: 0 5px;
-    	padding: 0 0 0 10px;
-	}
-	&.icon-size {
-		width:24px;
-		height:24px;
-	}
-	&.icon-more {
-		background-position: -113px -723px  !important;
+
+  display:block;
+  @extend .icon-size;
+  &.fd-ui-btn {
+    cursor:pointer;
+    border-left: 1px solid #EBEBEB;
+    box-shadow: -1px 0 0 0 #FFFFFF;
+    margin: 0 5px;
+    padding: 0 0 0 10px;
+  }
+  &.icon-size {
+    width:24px;
+    height:24px;
+  }
+  &.icon-more {
+    background-position: -113px -723px  !important;
     @extend .icon-size;
     &:hover {
-    	background-position: -113px -748px !important;
+      background-position: -113px -748px !important;
     }
-	}
-	&.icon-clip {
+  }
+  &.icon-clip {
 
-		background:transparent $fd-ui-bg-sprite no-repeat -5px -723px ;//-86px -173px !important;
-	    @extend .icon-size;
-	    &:hover {
-	    	//background-position: -5px -749px !important;
-	    }
-	    &.on {
-	    	background-position: -5px -749px !important;
-	    }
-	}
-	&.icon-clip-show {
-		background-position: -5px -723px !important ;//-86px -173px !important;
-	    @extend .icon-size;
-	    &:hover {
-	    	background-position: -5px -749px !important;
-	    }
-	}
-	&.icon-clip-hide {
-		background-position: -5px -723px !important ;//-86px -173px !important;
-	    @extend .icon-size;
-	    &:hover {
-	    	background-position: -5px -749px !important;
-	    }
-	}
-	&.icon-heart {
-		background-position: -170px -723px !important ;//-86px -173px !important;
+    background:transparent $fd-ui-bg-sprite no-repeat -5px -723px ;//-86px -173px !important;
     @extend .icon-size;
-	    &:hover {
-	    	background-position: -170px -747px !important;
-	    }
-    &.like {
-    	background-position: -182px -748px !important;	
+    &:hover {
+      //background-position: -5px -749px !important;
     }
-	}
-	&.icon-star {
-		background-position: -229px -723px !important ;//-86px -173px !important;
-	    @extend .icon-size;
-	    &:hover {
-	    	background-position: -229px -747px !important;
-	    }
-	}
-	&.icon-reply {
-		background-position: -343px -723px !important ;//-86px -173px !important;
-	    @extend .icon-size;
-	    &:hover {
-	    	background-position: -343px -744px !important;
-	    }
-	}
-	&.icon-share {
-		background-position: -290px -719px !important ;//-86px -173px !important;
-    	@extend .icon-size;
-	    &:hover {
-	    	background-position: -290px -746px !important;
-	    }
+    &.on {
+      background-position: -5px -749px !important;
+    }
+  }
+  &.icon-clip-show {
+    background-position: -5px -723px !important ;//-86px -173px !important;
+    @extend .icon-size;
+    &:hover {
+      background-position: -5px -749px !important;
+    }
+  }
+  &.icon-clip-hide {
+    background-position: -5px -723px !important ;//-86px -173px !important;
+    @extend .icon-size;
+    &:hover {
+      background-position: -5px -749px !important;
+    }
+  }
+  &.icon-heart {
+    background-position: -170px -723px !important ;//-86px -173px !important;
+    @extend .icon-size;
+    &:hover {
+      background-position: -170px -747px !important;
+    }
+    &.like {
+      background-position: -182px -748px !important;	
+    }
+  }
+  &.icon-star {
+    background-position: -229px -723px !important ;//-86px -173px !important;
+    @extend .icon-size;
+    &:hover {
+      background-position: -229px -747px !important;
+    }
+  }
+  &.icon-reply {
+    background-position: -343px -723px !important ;//-86px -173px !important;
+    @extend .icon-size;
+    &:hover {
+      background-position: -343px -744px !important;
+    }
+  }
+  &.icon-share {
+    background-position: -290px -719px !important ;//-86px -173px !important;
+    @extend .icon-size;
+    &:hover {
+      background-position: -290px -746px !important;
+    }
 
-	}
+  }
 }
 
 .end {
-	margin:0;
+  margin:0;
 }
 
 
@@ -163,66 +163,66 @@
 // FLOATING
 
 .f-l {
-	float:left;
+  float:left;
 }
 .f-r {
-	float:right;
+  float:right;
 }
 
 // SOCIALS 
 
 .fd-social {
-	&.fd-ico-size {
-		height:50px;
-		width:50px;
-	}
-	&.twitter {
-		background: $fd-ui-ico-twt;
-		@extend .fd-ico-size;
-	}	
-	&.facebook {
-		background: $fd-ui-ico-fbk;
-		@extend .fd-ico-size;
-	}
-	&.google-plus {
-		background: $fd-ui-ico-gpl;
-		@extend .fd-ico-size;
-	}
-	&.github {
-		background: $fd-ui-ico-ghb;
-		@extend .fd-ico-size;
-	}
-	&.skype {
-		@extend .fd-ico-size;
-		background: $fd-ui-ico-skp;
-	}
+  &.fd-ico-size {
+    height:50px;
+    width:50px;
+  }
+  &.twitter {
+    background: $fd-ui-ico-twt;
+    @extend .fd-ico-size;
+  }	
+  &.facebook {
+    background: $fd-ui-ico-fbk;
+    @extend .fd-ico-size;
+  }
+  &.google-plus {
+    background: $fd-ui-ico-gpl;
+    @extend .fd-ico-size;
+  }
+  &.github {
+    background: $fd-ui-ico-ghb;
+    @extend .fd-ico-size;
+  }
+  &.skype {
+    @extend .fd-ico-size;
+    background: $fd-ui-ico-skp;
+  }
 }
 
 .clear {
-	clear:both;
+  clear:both;
 }
 
 // AVATAR
 
 .fd-utils-avatar {
-	display:block;
-	@include border-radius(1000px);
-	border: 2px solid #FFFFFF;
-	@include box-shadow(0 1px 2px 0 #333333 inset);
-	margin-right:10px;
-	float:left;
-	&.default {
-		background-position:-451px -3057px;
-	}
-	&.small {
-		height:35px;
-		width:35px;
-	}
+  display:block;
+  @include border-radius(1000px);
+  border: 2px solid #FFFFFF;
+  @include box-shadow(0 1px 2px 0 #333333 inset);
+  margin-right:10px;
+  float:left;
+  &.default {
+    background-position:-451px -3057px;
+  }
+  &.small {
+    height:35px;
+    width:35px;
+  }
 }
 
 
 .cite {
-	border-left: 4px solid #EEEEEE;
+  border-left: 4px solid #EEEEEE;
   color: #9A9A9A;
   display: block;
   font-style: italic;
@@ -241,88 +241,88 @@
 // }
 
 .fd-ui-cst-btn {
-	display:block;
-	line-height: 23px;
-	border: 1px solid #ccc;
-	text-shadow:0 1px 0 $white;
-	margin: 0 5px 0 0;
-	&.common-style {
-		color: $fd-ui-ft-col-blk2;
-		background: $fd-ui-ft-col-blk5;
-	    @include border-radius(20px);
-	    padding: 0 10px;
-	    cursor:pointer;
-	    &:hover {
-	    	color: $fd-ui-ly-col-red;
-	    	background: $fd-ui-ft-col-blk4;
-	    }
-	}
-	&.tag-style {
-		@extend .common-style;
-	}
-	&.tag {
-		@extend .common-style;
-		background: $fd-ui-ly-col-yel;
-		&:hover {
-	    	color: $fd-ui-ft-col-blk2;
-	    	cursor: default;
-	    	background: $fd-ui-ly-col-yel;
-	    }
-	}
+  display:block;
+  line-height: 23px;
+  border: 1px solid #ccc;
+  text-shadow:0 1px 0 $white;
+  margin: 0 5px 0 0;
+  &.common-style {
+    color: $fd-ui-ft-col-blk2;
+    background: $fd-ui-ft-col-blk5;
+    @include border-radius(20px);
+    padding: 0 10px;
+    cursor:pointer;
+    &:hover {
+      color: $fd-ui-ly-col-red;
+      background: $fd-ui-ft-col-blk4;
+    }
+  }
+  &.tag-style {
+    @extend .common-style;
+  }
+  &.tag {
+    @extend .common-style;
+    background: $fd-ui-ly-col-yel;
+    &:hover {
+      color: $fd-ui-ft-col-blk2;
+      cursor: default;
+      background: $fd-ui-ly-col-yel;
+    }
+  }
 
-	&.category {
-		@extend .common-style;
-		background: $fd-ui-ly-col-yel;
-		&:hover {
-	    	color: $fd-ui-ft-col-blk2;
-	    	cursor: default;
-	    	background: $fd-ui-ly-col-yel;
-	    }
-		border: 1px solid #F0DF64 !important;	
-	}
+  &.category {
+    @extend .common-style;
+    background: $fd-ui-ly-col-yel;
+    &:hover {
+      color: $fd-ui-ft-col-blk2;
+      cursor: default;
+      background: $fd-ui-ly-col-yel;
+    }
+    border: 1px solid #F0DF64 !important;	
+  }
 }
 
 
 // CHECKBOX
 
 .fd-ui-checkbox {
-	display:block;
-	margin: 5px 0 0 0;
-	text-shadow: 0 2px 0 
-	white;
-	.checkbox-slot{
-		margin: 0px 14px 0 10px;
-	}
+  display:block;
+  margin: 5px 0 0 0;
+  text-shadow: 0 2px 0 
+  white;
+  .checkbox-slot{
+    margin: 0px 14px 0 10px;
+  }
 }
 
 
 // TEXT COLORS 
 
 .orange {
-	color: #FFA900 !important;
+  color: #FFA900 !important;
 }
 .red {
-	color: #E24B48 !important;
-	&:hover {
-	 	color: #FF6764 !important;
-	}
+  color: #E24B48 !important;
+  &:hover {
+    color: #FF6764 !important;
+  }
 }
 
 // AUDIO PLAYER
 
 .fd-audio-player {
-	background: $fd-ui-ico-player;
-	display: inline-block;
+  background: $fd-ui-ico-player;
+  display: inline-block;
   height: 50px;
   margin: 20px 56px;
   padding: 0 0 0 191px;
-	.player {
-		display: inline-block;
-		border: 8px solid $fd-ui-ft-col-blk4;
-		@include border-radius(4px);
-		height:40px;
-		@include box-shadow(0 -1px 0px 0px #ddd);
-	}
+  .player {
+    display: inline-block;
+    border: 8px solid $fd-ui-ft-col-blk4;
+    @include border-radius(4px);
+    height:40px;
+    @include box-shadow(0 -1px 0px 0px #ddd);
+  }
 }
 
 // SIRI
@@ -341,5 +341,25 @@
   -webkit-transform: scale(2, 2.0) !important;
   box-shadow: none !important;
   cursor: pointer !important;
+}
+
+.tweet {
+  background: $fd-ui-bg-img-tweet -25px center no-repeat;
+  padding: 0px 5px 0px 50px;
+  display: block;
+  border-radius: 2px;
+  position: absolute;
+  top: -3px;
+  right: 52px;
+  height: 29px;
+  line-height: 29px; 
+  border: 2px solid #189FBC;
+}
+
+.tweet .count{
+  color:   #189FBC;
+  font-size: 16px;
+  font-weight: normal;
+  letter-spacing: 0.4px;
 }
 
