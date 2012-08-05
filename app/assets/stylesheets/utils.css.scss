@@ -344,7 +344,7 @@
 }
 
 .tweet {
-  background: $fd-ui-bg-img-tweet -25px center no-repeat;
+  background: $fd-ui-bg-img-tweet -25px center no-repeat $white;
   padding: 0px 5px 0px 50px;
   display: block;
   border-radius: 2px;
@@ -353,11 +353,11 @@
   right: 52px;
   height: 29px;
   line-height: 29px; 
-  border: 2px solid #189FBC;
+  border: 2px solid $fd-tweet-color;
 }
 
 .tweet .count{
-  color:   #189FBC;
+  color:   $fd-tweet-color;
   font-size: 16px;
   font-weight: normal;
   letter-spacing: 0.4px;
