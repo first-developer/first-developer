@@ -354,6 +354,22 @@
   height: 29px;
   line-height: 29px; 
   border: 2px solid $fd-tweet-color;
+
+  &:hover{
+    @include box-shadow(0 0px 0px 1px #009AD5 inset);
+  }
+
+  &.pending:before{
+    content: " ";
+    margin-right: 5px;
+    height:25px;
+    width:25px;
+    position:absolute;
+    display:block;
+    left:-40px;
+    top:12px;
+    background: url(/assets/ui/load-mini.gif) no-repeat 0 0;
+  }
 }
 
 .tweet .count{
